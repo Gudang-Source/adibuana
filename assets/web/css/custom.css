@@ -1,0 +1,50 @@
+.bgc-sintec{
+    background-color: #2185D0;
+}
+.main-menu > ul > li > a {
+    color: white;
+}
+.megatron.inline .logo {
+    width: 150px;
+    height: auto;
+}
+.megatron .logo img {
+    width: 100%;
+    height: 100%;
+}
+.pengurus-section{
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.pengurus-section img{
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.article .inner{
+    padding: 10px;
+}
+
+.article .article-image{
+    width: 30%;
+    float:left;
+    padding-right: 10px;
+}
+.article .deskripsi{
+    width: 60%;
+    float:left;
+    padding-left: 10px;
+}
+.article .short-desc{
+    line-height: 1.8;
+}
+.article .detail.post{
+    padding-bottom: 0px;
+}
+.article .detail.post .__meta{
+    margin-bottom: 0px;
+}
