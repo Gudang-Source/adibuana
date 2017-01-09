@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Megatron - Multipurpose Responsive HTML5 Template</title>
+    <title>Universitas PGRI Adi Buana Surabaya</title>
     <meta name="description" content="Megatron - Multipurpose Responsive HTML5 Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-touch-icon-57x57.png">
@@ -32,6 +32,8 @@
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/web/fonts/megatron/styles.css">
     <!--Main stylesheet-->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/web/css/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/web/css/custom.css">
+
     <!--Modernizr js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
   </head>
@@ -50,9 +52,9 @@
                 <div class="megatron inline logo-light">
                   <div class="cell-vertical-wrapper">
                     <div class="cell-middle"><a href="index.html">
-                        <div class="logo"><svg viewBox="0 0 100 100"> <g> <path d="M64.264,31.886v56.803l-14.319,8.259l-14.319-8.259v-74.3L14.157,26.771v41.271l7.156,4.128V30.905   l13.467-7.768v8.26l-6.311,3.64V84.56L7,72.178v-49.54L42.781,2v82.553l7.162,4.132l7.163-4.132V27.758L64.264,31.886z    M43.626,26.294l6.317-3.644L71.42,35.038V84.56l21.469-12.382v-49.54L57.106,2v15.546l7.157,4.128v-7.285l21.469,12.382v41.271   l-7.156,4.128V30.905L49.943,14.391l-6.317,3.644V26.294z"/> </g> </svg>
+                        <div class="logo"><img src="assets/images/logo.png">
                         </div>
-                        <div class="brand">MEGATRON</div></a></div>
+                        </a></div>
                   </div>
                 </div>
               </div>
@@ -60,431 +62,120 @@
                 <nav class="os-menu  main-menu text-center">
                   <ul>
                     <li><a href="#">HOME</a>
+                    </li>
+                    <li><a href="#">TENTANG KAMI</a>
                       <ul class="multi-floor-menu">
-                        <li><a href="homepage-landing-page.html">LANDING PAGE</a>
+                        <li><a href="#"><i class="__icon"></i>Para Pendiri UNIPA</a>
                         </li>
-                        <li><a href="#">DEMOS</a>
+                        <li><a href="#"><i class="__icon"></i>Sambutan Rektor</a>
+                        </li>
+                        <li><a href="#"><i class="__icon"></i>Visi dan Misi</a>
+                        </li>
+                        <li><a href="#"><i class="__icon"></i>Sejarah</a>
+                        </li>
+                        <li><a href="#"><i class="__icon"></i>Peta Kampus</a>
                           <ul>
-                            <li><a href="demo-construction-homepage.html">DEMO CONSTRUCTION</a>
+                            <li><a href="#">Kampus Ngagel Dadi</a>
                             </li>
-                            <li><a href="demo-hospital-homepage.html">DEMO HOSPITAL</a>
-                            </li>
-                            <li><a href="demo-handyman-homepage.html">DEMO HANDYMAN</a>
-                            </li>
-                            <li><a href="demo-cleaning-homepage.html">DEMO CLEANING</a>
-                            </li>
-                            <li><a href="demo-fitness-homepage.html">DEMO FITNESS</a>
-                            </li>
-                            <li><a href="demo-interior-homepage.html">DEMO INTERIOR</a>
-                            </li>
-                            <li><a href="demo-lawyer-homepage.html">DEMO LAWYER</a>
-                            </li>
-                            <li><a href="demo-logistics-homepage.html">DEMO LOGISTICS</a>
-                            </li>
-                            <li><a href="#">UPDATING...</a>
+                            <li><a href="#">Kampus Menanggal</a>
                             </li>
                           </ul>
                         </li>
-                        <li><a href="#">CREATIVE</a>
-                          <ul>
-                            <li><a href="homepage-creative-1.html">CREATIVE 01</a>
-                            </li>
-                            <li><a href="homepage-creative-2.html">CREATIVE 02</a>
-                            </li>
-                            <li><a href="homepage-creative-3.html">CREATIVE 03</a>
-                            </li>
-                          </ul>
+                        <li><a href="#"><i class="__icon"></i>Luas Tanah dan Desain</a>
                         </li>
-                        <li><a href="#">BUSINESS</a>
-                          <ul>
-                            <li><a href="homepage-business-1.html">BUSINESS 01</a>
-                            </li>
-                            <li><a href="homepage-business-2.html">BUSINESS 02</a>
-                            </li>
-                            <li><a href="homepage-business-3.html">BUSINESS 03</a>
-                            </li>
-                          </ul>
+                        <li><a href="#"><i class="__icon"></i>Jejaring UNIPA Surabaya</a>
                         </li>
-                        <li><a href="#">ONEPAGE</a>
-                          <ul>
-                            <li><a href="homepage-onepage-1.html">ONEPAGE 01</a>
-                            </li>
-                            <li><a href="homepage-onepage-2.html">ONEPAGE 02</a>
-                            </li>
-                            <li><a href="homepage-onepage-3.html">ONEPAGE 03</a>
-                            </li>
-                          </ul>
+                        <li><a href="#"><i class="__icon"></i>Daftar Hibah UNIPA Surabaya</a>
                         </li>
-                        <li><a href="#">AGENCY</a>
-                          <ul>
-                            <li><a href="homepage-agency-1.html">AGENCY 01</a>
-                            </li>
-                            <li><a href="homepage-agency-2.html">AGENCY 02</a>
-                            </li>
-                            <li><a href="homepage-agency-3.html">AGENCY 03</a>
-                            </li>
-                          </ul>
+                        <li><a href="#"><i class="__icon"></i>Logo, Hymne, dan Mars</a>
                         </li>
-                        <li><a href="#">VIDEO HEADER</a>
-                          <ul>
-                            <li><a href="homepage-video-1.html">VIDEO HEADER 01</a>
-                            </li>
-                            <li><a href="homepage-video-2.html">VIDEO HEADER 02</a>
-                            </li>
-                            <li><a href="homepage-video-3.html">VIDEO HEADER 03</a>
-                            </li>
-                          </ul>
+                        <li><a href="#"><i class="__icon"></i>Sarana</a>
                         </li>
-                        <li><a href="#">ALTERNATIVE</a>
-                          <ul>
-                            <li><a href="homepage-alternative-1.html">ALTERNATIVE 01</a>
-                            </li>
-                            <li><a href="homepage-alternative-2.html">ALTERNATIVE 02</a>
-                            </li>
-                            <li><a href="homepage-alternative-3.html">ALTERNATIVE 03</a>
-                            </li>
-                            <li><a href="homepage-alternative-4.html">ALTERNATIVE 04</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li><a href="homepage-christmas-1.html">CHRISTMAS</a>
-                        </li>
-                        <li><a href="#">PORTFOLIO</a>
-                          <ul>
-                            <li><a href="homepage-portfolio-1.html">PORTFOLIO 01</a>
-                            </li>
-                            <li><a href="homepage-portfolio-2.html">PORTFOLIO 02</a>
-                            </li>
-                            <li><a href="homepage-portfolio-3.html">PORTFOLIO 03</a>
-                            </li>
-                            <li><a href="homepage-portfolio-4.html">PORTFOLIO 04</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li><a href="homepage-leftmenu.html">LEFTMENU</a>
-                        </li>
-                        <li><a href="#">STORE</a>
-                          <ul>
-                            <li><a href="homepage-store-1.html">HOMEPAGE SHOP 01</a>
-                            </li>
-                            <li><a href="homepage-store-2.html">HOMEPAGE SHOP 02</a>
-                            </li>
-                            <li><a href="homepage-store-3.html">HOMEPAGE SHOP 03</a>
-                            </li>
-                          </ul>
+                        <li><a href="#"><i class="__icon"></i>Unit Kerja</a>
+                            <ul>
+                                <li><a href="#">Kemahasiswaan</a>
+                                </li>
+                            </ul>
                         </li>
                       </ul>
                     </li>
-                    <li><a href="#">PAGES</a>
-                      <ul class="mega-menu menu-3-col menu-hr-heading">
-                        <li><a href="#">GROUP 01</a>
-                          <ul>
-                            <li><a href="page-about-us-1.html">ABOUT US</a>
-                            </li>
-                            <li><a href="page-about-us-2.html">ABOUT US 2</a>
-                            </li>
-                            <li><a href="page-about-us-3.html">ABOUT US 3</a>
-                            </li>
-                            <li><a href="page-about-us-4.html">ABOUT US 4</a>
-                            </li>
-                            <li><a href="page-about-me.html">ABOUT ME</a>
-                            </li>
-                            <li><a href="page-services.html">SERVICES</a>
-                            </li>
-                            <li><a href="page-faq.html">FAQ</a>
-                            </li>
-                          </ul>
+                    <li><a href="#">FAKULTAS</a>
+                      <ul class="multi-floor-menu">
+                        <li><a href="#"><i class="__icon"></i>Fakultas dan Program Studi</a>
                         </li>
-                        <li><a href="#">GROUP 02</a>
-                          <ul>
-                            <li><a href="page-contact-us.html">CONTACT US</a>
-                            </li>
-                            <li><a href="page-contact-us-2.html">CONTACT US 2</a>
-                            </li>
-                            <li><a href="page-contact-us-3.html">CONTACT US 3</a>
-                            </li>
-                            <li><a href="page-fullwidth.html">PAGE FULLWIDTH</a>
-                            </li>
-                            <li><a href="page-sidebar-left.html">PAGE SIDEBAR LEFT</a>
-                            </li>
-                            <li><a href="page-sidebar-right.html">PAGE SIDEBAR RIGHT</a>
-                            </li>
-                            <li><a href="page-policy.html">POLICY</a>
-                            </li>
-                          </ul>
+                        <li><a href="#"><i class="__icon"></i>FKIP</a>
+                            <ul>
+                                <li><a href="#">Bimbingan dan Konseling</a>
+                                </li>
+                                <li><a href="#">Pendidikan Kesejahteraan Keluarga</a>
+                                </li>
+                                <li><a href="#">Pendidikan Moral Pancasila dan Kewarganegaraan</a>
+                                </li>
+                                <li><a href="#">Pendidikan Bahasa dan Sastra Indonesia</a>
+                                </li>
+                                <li><a href="#">Pendidikan Matematika</a>
+                                </li>
+                                <li><a href="#">Pendidikan Bahasa Inggris</a>
+                                </li>
+                                <li><a href="#">Pendidikan Kepelatihan Olahraga</a>
+                                </li>
+                                <li><a href="#">Pendidikan Seni Rupa</a>
+                                </li>
+                                <li><a href="#">Pendidikan Guru Sekolah Dasar</a>
+                                </li>
+                                <li><a href="#">Pendidikan Guru - PAUD</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li><a href="#">GROUP 03</a>
-                          <ul>
-                            <li><a href="404.html">404 ERROR</a>
-                            </li>
-                            <li><a href="page-underconstruction.html">UNDERCONSTRUCTION</a>
-                            </li>
-                            <li><a href="page-search-result.html">SEARCH RESULT</a>
-                            </li>
-                            <li><a href="page-portfolio.html">PAGE PORTFOLIO</a>
-                            </li>
-                            <li><a href="page-portfolio-blog.html">PAGE PORTFOLIO BLOG</a>
-                            </li>
-                            <li><a href="page-login-vs-register.html">LOGIN VS REGISTER</a>
-                            </li>
-                          </ul>
+                        <li><a href="#"><i class="__icon"></i>Fakultas Ekonomi</a>
+                            <ul>
+                                <li><a href="#">Akuntansi</a>
+                                </li>
+                                <li><a href="#">Manajemen</a>
+                                </li>
+                            </ul>
                         </li>
-                      </ul>
-                    </li>
-                    <li><a href="#">FEATURES</a>
-                      <ul class="mega-menu menu-5-col menu-fullwidth menu-hr-heading">
-                        <li><a href="#">SHORTCODES 01</a>
-                          <ul>
-                            <li><a href="shortcode-accordion.html"><i class="__icon fa fa-bars"></i>ACCORDION</a>
-                            </li>
-                            <li><a href="shortcode-alert-message.html"><i class="__icon fa fa-exclamation-triangle"></i>ALERT MESSAGE<span class="__flag border-danger color-danger">HOT</span></a>
-                            </li>
-                            <li><a href="shortcode-blockquotes.html"><i class="__icon fa fa-quote-right"></i>BLOCKQUOTES</a>
-                            </li>
-                            <li><a href="shortcode-blogpost.html"><i class="__icon fa fa-pencil-square-o"></i>BLOGPOST</a>
-                            </li>
-                            <li><a href="shortcode-button.html"><i class="__icon fa fa-anchor"></i>BUTTON</a>
-                            </li>
-                            <li><a href="shortcode-call-to-action.html"><i class="__icon fa fa-building"></i>CALL TO ACTION</a>
-                            </li>
-                            <li><a href="shortcode-clients.html"><i class="__icon fa fa-user-secret"></i>CLIENTS</a>
-                            </li>
-                            <li><a href="shortcode-columns.html"><i class="__icon fa fa-columns"></i>COLUMNS</a>
-                            </li>
-                            <li><a href="shortcode-contact-form.html"><i class="__icon fa fa-keyboard-o"></i>CONTACT FORM</a>
-                            </li>
-                            <li><a href="shortcode-counter.html"><i class="__icon fa fa-money"></i>COUNTER</a>
-                            </li>
-                            <li><a href="shortcode-coverbox.html"><i class="__icon fa fa-bicycle"></i>COVERBOX</a>
-                            </li>
-                          </ul>
+                        <li><a href="#"><i class="__icon"></i>FMIPA</a>
+                            <ul>
+                                <li><a href="#">Biologi</a>
+                                </li>
+                                <li><a href="#">Statistika</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li><a href="#">SHORTCODES 02</a>
-                          <ul>
-                            <li><a href="shortcode-dropcaps.html"><i class="__icon fa fa-align-right"></i>DROPCAPS</a>
-                            </li>
-                            <li><a href="shortcode-expendable-section.html"><i class="__icon fa fa-expand"></i>EXPENDABLE SECTION</a>
-                            </li>
-                            <li><a href="shortcode-google-map.html"><i class="__icon fa fa-google"></i>GOOGLE MAP</a>
-                            </li>
-                            <li><a href="shortcode-heading.html"><i class="__icon fa fa-header"></i>HEADING</a>
-                            </li>
-                            <li><a href="shortcode-hightlight.html"><i class="__icon fa fa-bookmark-o"></i>HIGHTLIGHT</a>
-                            </li>
-                            <li><a href="shortcode-iconboxes.html"><i class="__icon fa fa-asterisk"></i>ICONBOXES</a>
-                            </li>
-                            <li><a href="shortcode-iconboxes-carousel.html"><i class="__icon fa fa-arrows-h"></i>ICONBOXES CAROUSEL</a>
-                            </li>
-                            <li><a href="shortcode-iconlists.html"><i class="__icon fa fa-list"></i>ICONLISTS</a>
-                            </li>
-                            <li><a href="shortcode-icons.html"><i class="__icon fa fa-briefcase"></i>ICONS</a>
-                            </li>
-                            <li><a href="shortcode-interactive-banner.html"><i class="__icon fa fa-diamond"></i>INTERACTIVE BANNER</a>
-                            </li>
-                            <li><a href="shortcode-lists.html"><i class="__icon fa fa-list-ol"></i>LISTS</a>
-                            </li>
-                          </ul>
+                        <li><a href="#"><i class="__icon"></i>FT SP</a>
+                            <ul>
+                                <li><a href="#">Teknik Lingkungan</a>
+                                </li>
+                                <li><a href="#">Perancangan Wilayah dan Kota</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li><a href="#">SHORTCODES 03</a>
-                          <ul>
-                            <li><a href="shortcode-pagination.html"><i class="__icon fa fa-pagelines"></i>PAGINATION</a>
-                            </li>
-                            <li><a href="shortcode-parallax.html"><i class="__icon fa fa-file-image-o"></i>PARALLAX</a>
-                            </li>
-                            <li><a href="shortcode-piechart.html"><i class="__icon fa fa-pie-chart"></i>PIECHART</a>
-                            </li>
-                            <li><a href="shortcode-piechart2.html"><i class="__icon fa fa-pie-chart"></i>PIECHART 02<span class="__flag border-primary color-primary">NEW</span></a>
-                            </li>
-                            <li><a href="shortcode-piechart3.html"><i class="__icon fa fa-pie-chart"></i>PIECHART 03<span class="__flag border-primary color-primary">NEW</span></a>
-                            </li>
-                            <li><a href="shortcode-pricing-table.html"><i class="__icon fa fa-list-alt"></i>PRICING TABLE</a>
-                            </li>
-                            <li><a href="shortcode-process.html"><i class="__icon fa fa-check-square"></i>PROCESS</a>
-                            </li>
-                            <li><a href="shortcode-progressbar.html"><i class="__icon fa fa-server"></i>PROGRESSBAR</a>
-                            </li>
-                            <li><a href="shortcode-qrcode.html"><i class="__icon fa fa-qrcode"></i>QRCODE</a>
-                            </li>
-                            <li><a href="shortcode-separator.html"><i class="__icon fa fa-minus"></i>SEPARATOR</a>
-                            </li>
-                            <li><a href="shortcode-service-table.html"><i class="__icon fa fa-th"></i>SERVICE TABLE</a>
-                            </li>
-                          </ul>
+                        <li><a href="#"><i class="__icon"></i>FTI</a>
+                            <ul>
+                                <li><a href="#">Teknik Elektro</a>
+                                </li>
+                                <li><a href="#">Teknik Industri</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li><a href="#">SHORTCODES 04</a>
-                          <ul>
-                            <li><a href="shortcode-tab.html"><i class="__icon fa fa-th-large"></i>TAB</a>
-                            </li>
-                            <li><a href="shortcode-table.html"><i class="__icon fa fa-table"></i>TABLE</a>
-                            </li>
-                            <li><a href="shortcode-team.html"><i class="__icon fa fa-users"></i>TEAM</a>
-                            </li>
-                            <li><a href="shortcode-testimonials.html"><i class="__icon fa fa-comments"></i>TESTIMONIALS</a>
-                            </li>
-                            <li><a href="shortcode-typography.html"><i class="__icon fa fa-text-height"></i>TYPOGRAPHY</a>
-                            </li>
-                            <li><a href="shortcode-vertical-progressbar.html"><i class="__icon fa fa-bar-chart"></i>VERTICAL PROGRESSBAR</a>
-                            </li>
-                            <li><a href="shortcode-widget.html"><i class="__icon fa fa-cube"></i>WIDGET</a>
-                            </li>
-                            <li><a href="shortcode-image-gallery.html"><i class="__icon fa fa-file-image-o"></i>IMAGE GALLERY</a>
-                            </li>
-                            <li><a href="shortcode-image-slider.html"><i class="__icon fa fa-picture-o"></i>IMAGE SLIDER</a>
-                            </li>
-                            <li><a href="shortcode-share-module.html"><i class="__icon fa fa-paper-plane-o"></i>SHARE MODULE</a>
-                            </li>
-                          </ul>
+                        <li><a href="#"><i class="__icon"></i>Program Diploma</a>
+                            <ul>
+                                <li><a href="#">Kebidanan</a>
+                                </li>
+                            </ul>
                         </li>
-                        <li><a href="#">MANY FEATURES</a>
-                          <ul>
-                            <li><a href="#">BOOTSTRAP 3 GRID SYSTEM</a>
-                            </li>
-                            <li><a href="#">HTML5 &amp; CSS3 ANIMATION</a>
-                            </li>
-                            <li><a href="#">AUTOMATE YOUR WORKFLOW</a>
-                            </li>
-                            <li><a href="#">NODE TEMPLATE ENGINE</a>
-                            </li>
-                            <li><a href="#">LESS PRE-PROCESSOR</a>
-                            </li>
-                            <li><a href="#">FONT AWESOME INCLUDED</a>
-                            </li>
-                            <li><a href="#">+1000 ICON FONTS </a>
-                            </li>
-                            <li><a href="#">FULLY RESPONSIVE</a>
-                            </li>
-                            <li><a href="#">FREE GOOGLE FONTS</a>
-                            </li>
-                            <li><a href="#">PARALLAX BACKGROUND</a>
-                            </li>
-                            <li><a href="#">WIDE AND BOXED LAYOUT</a>
-                            </li>
-                          </ul>
+                        <li><a href="#"><i class="__icon"></i>Pascasarjana</a>
+                            <ul>
+                                <li><a href="#">Teknologi Pembelajaran</a>
+                                </li>
+                            </ul>
                         </li>
                       </ul>
                     </li>
                     <li><a href="#">OPTIONS</a>
-                      <ul class="multi-floor-menu">
-                        <li><a href="#"><i class="__icon fa fa-files-o"></i>HEADER OPTIONS</a>
-                          <ul>
-                            <li><a href="header-option-1.html">HEADER STYLE 01</a>
-                            </li>
-                            <li><a href="header-option-2.html">HEADER STYLE 02</a>
-                            </li>
-                            <li><a href="header-option-3.html">HEADER STYLE 03</a>
-                            </li>
-                            <li><a href="header-option-4.html">HEADER STYLE 04</a>
-                            </li>
-                            <li><a href="header-option-5.html">HEADER STYLE 05</a>
-                            </li>
-                            <li><a href="header-option-6.html">HEADER STYLE 06</a>
-                            </li>
-                            <li><a href="header-option-7.html">HEADER STYLE 07</a>
-                            </li>
-                            <li><a href="header-option-8.html">HEADER STYLE 08</a>
-                            </li>
-                            <li><a href="header-option-12.html">HEADER STYLE 09</a>
-                            </li>
-                            <li><a href="header-option-16.html">HEADER STYLE 10</a>
-                            </li>
-                            <li><a href="header-option-20.html">HEADER STYLE 11</a>
-                            </li>
-                            <li><a href="header-option-17.html">HEADER STYLE 12</a>
-                            </li>
-                            <li><a href="#">AND MUCH MORE</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li><a href="#"><i class="__icon fa fa-magic"></i>FOOTER OPTIONS</a>
-                          <ul>
-                            <li><a href="footer-option-1.html#footer">FOOTER STYLE 01</a>
-                            </li>
-                            <li><a href="footer-option-2.html#footer">FOOTER STYLE 02</a>
-                            </li>
-                            <li><a href="footer-option-3.html#footer">FOOTER STYLE 03</a>
-                            </li>
-                            <li><a href="footer-option-4.html#footer">FOOTER STYLE 04</a>
-                            </li>
-                            <li><a href="footer-option-5.html#footer">FOOTER STYLE 05</a>
-                            </li>
-                            <li><a href="footer-option-6.html#footer">FOOTER STYLE 06</a>
-                            </li>
-                            <li><a href="footer-option-7.html#footer">FOOTER STYLE 07</a>
-                            </li>
-                            <li><a href="footer-option-8.html#footer">FOOTER STYLE 08</a>
-                            </li>
-                            <li><a href="footer-option-9.html#footer">FOOTER STYLE 09</a>
-                            </li>
-                            <li><a href="footer-option-10.html#footer">FOOTER STYLE 10</a>
-                            </li>
-                            <li><a href="#">AND MUCH MORE</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li><a href="#"><i class="__icon fa fa-youtube-play"></i>VIDEO OPTIONS</a>
-                          <ul>
-                            <li><a href="homepage-video-1.html">YOUTUBE VIDEO</a>
-                            </li>
-                            <li><a href="homepage-video-2.html">HTML5 VIDEO</a>
-                            </li>
-                            <li><a href="homepage-video-3.html">SLIDER &amp; VIDEO</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li><a href="#"><i class="__icon fa fa-diamond"></i>WIDGET OPTIONS</a>
-                          <ul>
-                            <li><a href="shortcode-widget.html">CATEGORIES</a>
-                            </li>
-                            <li><a href="shortcode-widget.html">RECENT POSTS</a>
-                            </li>
-                            <li><a href="shortcode-widget.html">IMAGES GALLERY</a>
-                            </li>
-                            <li><a href="shortcode-widget.html">RECENT TWEETS</a>
-                            </li>
-                            <li><a href="shortcode-widget.html">POPULAR TAGS</a>
-                            </li>
-                            <li><a href="shortcode-widget.html">SEARCH BOX</a>
-                            </li>
-                            <li><a href="shortcode-widget.html">FILTER BY PRICE</a>
-                            </li>
-                            <li><a href="shortcode-widget.html">ACCORDION WIDGET</a>
-                            </li>
-                            <li><a href="shortcode-widget.html">RECENT PRODUCTS</a>
-                            </li>
-                            <li><a href="shortcode-widget.html">FREE TEXT WIDGET</a>
-                            </li>
-                            <li><a href="shortcode-widget.html">SLIDER IMAGES</a>
-                            </li>
-                            <li><a href="shortcode-widget.html">SOCIAL ICONS</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li><a href="#"><i class="__icon fa fa-cubes"></i>MENU OPTIONS</a>
-                          <ul>
-                            <li><a href="#">DROPDOWN MENU</a>
-                            </li>
-                            <li><a href="#">MEGAMENU 2 COLUMNS</a>
-                            </li>
-                            <li><a href="#">MEGAMENU 3 COLUMNS</a>
-                            </li>
-                            <li><a href="#">MEGAMENU 4 COLUMNS</a>
-                            </li>
-                            <li><a href="#">MEGAMENU 5 COLUMNS</a>
-                            </li>
-                            <li><a href="#">MEGAMENU WITH HEADING</a>
-                            </li>
-                            <li><a href="#">OFF CANVAS MENU</a>
-                            </li>
-                            <li><a href="#">STICKY MENU</a>
-                            </li>
-                            <li><a href="#">MENU WITH ICON</a>
-                            </li>
-                            <li><a href="#">MENU WITH FLAG</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li><a href="#"><i class="__icon fa fa-spinner"></i>UPDATING...</a>
-                        </li>
+                      <ul class="mega-menu menu-5-col menu-fullwidth menu-hr-heading">
+                        
                       </ul>
                     </li>
                     <li><a href="#">BLOG</a>
@@ -2162,16 +1853,15 @@
       <header class="page-header home home-slider-1">
         <div class="slider caption-slider control-nav direction-nav">
           <div class="block-caption-slider overlay-container">
-            <div style="background-image: url(assets/images/background/background-63.jpg); background-position: undefined" class="__img-background"></div>
-            <div class="overlay bgc-dark-o-5">
+            <div style="background-image: url(assets/images/slider1.jpg); background-position: undefined" class="__img-background"></div>
+            <div class="overlay">
               <div class="cell-vertical-wrapper">
                 <div class="cell-middle">
-                  <div class="caption-preset-simple-5 text-center">
+                  <div class="caption-preset-simple-5 text-right">
                     <div class="container">
-                      <div class="caption-wrapper">
-                        <h1 class="text-responsive size-ll caption">MEGATRON BUSINESS <br/> RESPONSIVE HTML5 THEME</h1>
+                      <div class="caption-wrapper caption-slider">
+                        <h1 class="text-responsive size-ll caption">Laboratorium <br/> FMIPA</h1>
                         <p class="font-serif-italic fz-3 caption">This is time to build your great brand new website</p>
-                        <div class="__buttons caption"><a href="index.html" class="btn btn-primary fullwidth">SELECT DEMO</a><br/><a href="http://goo.gl/fi9Eas" target="_blank" class="btn btn-secondary fullwidth">PURCHASE NOW</a></div>
                       </div>
                     </div>
                   </div>
@@ -2180,7 +1870,7 @@
             </div>
           </div>
           <div class="block-caption-slider overlay-container">
-            <div style="background-image: url(assets/images/background/background-66.jpg); background-position: undefined" class="__img-background"></div>
+            <div style="background-image: url(assets/images/slider2.jpg); background-position: undefined" class="__img-background"></div>
             <div class="overlay bgc-dark-o-5">
               <div class="cell-vertical-wrapper">
                 <div class="cell-middle">
@@ -2189,7 +1879,6 @@
                       <div class="caption-wrapper">
                         <h1 class="text-responsive size-ll caption">30+ UNIQUE HOMEPAGES</h1>
                         <p class="font-serif-italic fz-3 caption">Create your dream website with Megatron</p>
-                        <div class="__buttons caption"><a href="index.html" class="btn btn-primary fullwidth">SELECT DEMO</a><br/><a href="http://goo.gl/fi9Eas" target="_blank" class="btn btn-secondary fullwidth">PURCHASE NOW</a></div>
                       </div>
                     </div>
                   </div>
@@ -2198,7 +1887,7 @@
             </div>
           </div>
           <div class="block-caption-slider overlay-container">
-            <div style="background-image: url(assets/images/background/background-4.jpg); background-position: undefined" class="__img-background"></div>
+            <div style="background-image: url(assets/images/slider3.jpg); background-position: undefined" class="__img-background"></div>
             <div class="overlay bgc-dark-o-5">
               <div class="cell-vertical-wrapper">
                 <div class="cell-middle">
@@ -2207,7 +1896,6 @@
                       <div class="caption-wrapper">
                         <h1 class="text-responsive size-ll caption">CREATIVITY HAS NO <br/>BOUNDARIES</h1>
                         <p class="font-serif-italic fz-3 caption">Start your website in easiest way with Megatron</p>
-                        <div class="__buttons caption"><a href="index.html" class="btn btn-primary fullwidth">SELECT DEMO</a><br/><a href="http://goo.gl/fi9Eas" target="_blank" class="btn btn-secondary fullwidth">PURCHASE NOW</a></div>
                       </div>
                     </div>
                   </div>
