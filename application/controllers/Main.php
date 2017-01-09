@@ -28,6 +28,9 @@
 
               $this->template_website->display('web/content/areafakultas');
         }
+        function detilfakultas(){
+            $this->template_website->display('web/content/fakultasdetil');
+        }
         function satuankerja(){
 
         }

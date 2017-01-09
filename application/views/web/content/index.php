@@ -3,7 +3,7 @@
   <div class="slider caption-slider control-nav direction-nav">
     <div class="block-caption-slider overlay-container">
       <div style="background-image: url(assets/images/slider1.jpg); background-position: undefined" class="__img-background"></div>
-      <div class="overlay">
+      <div class="overlay bgc-dark-o-5">
         <div class="cell-vertical-wrapper">
           <div class="cell-middle">
             <div class="caption-preset-simple-5 text-right">
