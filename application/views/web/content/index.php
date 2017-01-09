@@ -2,16 +2,15 @@
 <header class="page-header home home-slider-1">
   <div class="slider caption-slider control-nav direction-nav">
     <div class="block-caption-slider overlay-container">
-      <div style="background-image: url(assets/images/background/background-63.jpg); background-position: undefined" class="__img-background"></div>
-      <div class="overlay bgc-dark-o-5">
+      <div style="background-image: url(assets/images/slider1.jpg); background-position: undefined" class="__img-background"></div>
+      <div class="overlay">
         <div class="cell-vertical-wrapper">
           <div class="cell-middle">
-            <div class="caption-preset-simple-5 text-center">
+            <div class="caption-preset-simple-5 text-right">
               <div class="container">
-                <div class="caption-wrapper">
-                  <h1 class="text-responsive size-ll caption">MEGATRON BUSINESS <br/> RESPONSIVE HTML5 THEME</h1>
+                <div class="caption-wrapper caption-slider">
+                  <h1 class="text-responsive size-ll caption">Laboratorium <br/> FMIPA</h1>
                   <p class="font-serif-italic fz-3 caption">This is time to build your great brand new website</p>
-                  <div class="__buttons caption"><a href="index.html" class="btn btn-primary fullwidth">SELECT DEMO</a><br/><a href="http://goo.gl/fi9Eas" target="_blank" class="btn btn-secondary fullwidth">PURCHASE NOW</a></div>
                 </div>
               </div>
             </div>
@@ -20,7 +19,7 @@
       </div>
     </div>
     <div class="block-caption-slider overlay-container">
-      <div style="background-image: url(assets/images/background/background-66.jpg); background-position: undefined" class="__img-background"></div>
+      <div style="background-image: url(assets/images/slider2.jpg); background-position: undefined" class="__img-background"></div>
       <div class="overlay bgc-dark-o-5">
         <div class="cell-vertical-wrapper">
           <div class="cell-middle">
@@ -29,7 +28,6 @@
                 <div class="caption-wrapper">
                   <h1 class="text-responsive size-ll caption">30+ UNIQUE HOMEPAGES</h1>
                   <p class="font-serif-italic fz-3 caption">Create your dream website with Megatron</p>
-                  <div class="__buttons caption"><a href="index.html" class="btn btn-primary fullwidth">SELECT DEMO</a><br/><a href="http://goo.gl/fi9Eas" target="_blank" class="btn btn-secondary fullwidth">PURCHASE NOW</a></div>
                 </div>
               </div>
             </div>
@@ -38,7 +36,7 @@
       </div>
     </div>
     <div class="block-caption-slider overlay-container">
-      <div style="background-image: url(assets/images/background/background-4.jpg); background-position: undefined" class="__img-background"></div>
+      <div style="background-image: url(assets/images/slider3.jpg); background-position: undefined" class="__img-background"></div>
       <div class="overlay bgc-dark-o-5">
         <div class="cell-vertical-wrapper">
           <div class="cell-middle">
@@ -47,7 +45,6 @@
                 <div class="caption-wrapper">
                   <h1 class="text-responsive size-ll caption">CREATIVITY HAS NO <br/>BOUNDARIES</h1>
                   <p class="font-serif-italic fz-3 caption">Start your website in easiest way with Megatron</p>
-                  <div class="__buttons caption"><a href="index.html" class="btn btn-primary fullwidth">SELECT DEMO</a><br/><a href="http://goo.gl/fi9Eas" target="_blank" class="btn btn-secondary fullwidth">PURCHASE NOW</a></div>
                 </div>
               </div>
             </div>
