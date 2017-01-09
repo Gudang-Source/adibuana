@@ -1111,7 +1111,7 @@
           </ul>
         </div>
       </div>
-      <!-- Page Navigation-->      
+      <!-- Page Navigation-->
       <?php echo $_content ?>
       <!--Page Footer-->
       <footer id="footer" class="page-footer footer-preset-5">
@@ -1194,8 +1194,6 @@
         </div>
       </footer>
       <!--End Page Footer-->
-      <!--Purchase Button--><a href="http://goo.gl/fi9Eas" class="purchase-button"><img src="assets/images/other/purchase-btn.jpg" alt="megatron"></a><a href="http://themeforest.net/item/megatron-responsive-multipurpose-wordpress-theme/14063654?ref=OSThemes" class="referrals-button"><img src="assets/images/other/wordpress-btn.jpg" alt="megatron"></a>
-      <!--End Purchase Button-->
     </div>
     <!--End Page content-->
     <!--Javascript Library-->
