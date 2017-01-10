@@ -23,7 +23,7 @@
       <div class="overlay bgc-dark-o-5">
         <div class="cell-vertical-wrapper">
           <div class="cell-middle">
-            <div class="caption-preset-simple-5 text-center">
+            <div class="caption-preset-simple-5 text-right">
               <div class="container">
                 <div class="caption-wrapper">
                   <h1 class="text-responsive size-ll caption">30+ UNIQUE HOMEPAGES</h1>
@@ -40,7 +40,7 @@
       <div class="overlay bgc-dark-o-5">
         <div class="cell-vertical-wrapper">
           <div class="cell-middle">
-            <div class="caption-preset-simple-5 text-center">
+            <div class="caption-preset-simple-5 text-right">
               <div class="container">
                 <div class="caption-wrapper">
                   <h1 class="text-responsive size-ll caption">CREATIVITY HAS NO <br/>BOUNDARIES</h1>
@@ -118,6 +118,9 @@
             </div>
 
           </div>
+        </div>
+        <div class="col-md-12 text-center">
+          <a href="#"><button class="btn btn-primary" type="button" name="button">Berita Lainnya <i class="fa fa-chevron-right" aria-hidden="true"></i></button></a>
         </div>
     </div>
   </section>
