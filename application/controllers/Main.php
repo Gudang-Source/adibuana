@@ -36,8 +36,12 @@
 
               $this->template_website->display('web/content/areafakultas');
         }
-        function detilfakultas(){
-            $this->template_website->display('web/content/fakultasdetil');
+        function detilfakultas($slug_faculty, $id_faculty, $slug_prodi=null, $id_prodi=null){
+            $this->load->model('FacultyModel', 'faculty_model');
+
+            $data['fakultas'] = $this->faculty_model->get_by_id($id_prodi);
+
+            $this->template_website->display('web/content/fakultasdetil', $data);
         }
         function satuankerja(){
 

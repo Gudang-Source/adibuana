@@ -6,7 +6,7 @@
               <div class="col-md-9 section-block-p">
                 <header class="hr-header">
                   <h2 class="smb"><?php echo $page->title_ina ?></h2>
-                  <p class="common-serif __caption">UNIVERSITAS PGRI ADI BUANA SURABAYA JAWA TIMUR</p>
+                  <p class="common-serif __caption"></p>
                   <div class="separator-2-color"></div>
                 </header>
 
