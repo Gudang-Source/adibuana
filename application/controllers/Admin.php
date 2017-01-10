@@ -31,7 +31,20 @@
                     # code...
                     break;
             }
-
             
+        }
+
+        function sekilas($aksi='index', $id=null){
+            switch ($aksi) {
+                case 'index':
+                    $this->template_admin->display('admin/content/indexsekilas');
+                    break;
+                case 'add':
+                    $this->template_admin->display('admin/content/addsekilas');
+                    break;
+                default:
+                    # code...
+                    break;
+            }
         }
     }
