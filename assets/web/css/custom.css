@@ -129,3 +129,11 @@ section#middle-section{
 .orange{
     color: #FF6600;
 }
+
+.__header.blog-detail-thumb{
+    text-align: center;
+}
+.__header.blog-detail-thumb img{
+    display: inline-block;
+    max-height: 400px;
+}

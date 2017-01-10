@@ -9,7 +9,7 @@
         }
 
         function index(){
-          $data = $this->data;
+            $data = $this->data;
             $this->load->model('NewsModel', 'news_model');
 
             $data['berita_terbaru'] = $this->news_model->get_berita_terbaru();
@@ -22,7 +22,13 @@
         }
 
         function detilberitadanpengumuman($slug, $id){
-          echo $slug;
+          $data = $this->data;
+          $this->load->model('NewsModel', 'news_model');
+
+          $data['berita'] = $this->news_model->get_berita_by_id($id);
+          $data['kategori'] = $this->news_model->get_all_kategori();
+
+          $this->template_website->display('web/content/detilberitadanpengumuman', $data);
         }
 
         function sekilas($slug, $id){

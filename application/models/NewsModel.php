@@ -12,4 +12,16 @@
             ->offset(0);
       return $this->db->get()->result();
     }
+    function get_berita_by_id($id){
+      $this->db->select('*')
+            ->from('adi_news')
+            ->where('id', $id);
+      return $this->db->get()->row();
+    }
+    function get_all_kategori(){
+      $this->db->select('*')
+          ->from('adi_news_type');
+
+      return $this->db->get()->result();
+    }
   }
