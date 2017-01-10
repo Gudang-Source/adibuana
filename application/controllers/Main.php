@@ -20,8 +20,10 @@
         }
 
         function sekilas($slug, $id){
+            $this->load->model('PageModel', 'page_model');
 
-            $this->template_website->display('web/content/sekilas');
+            $data['page'] = $this->page_model->get_by_id($id);
+            $this->template_website->display('web/content/sekilas', $data);
         }
         function areafakultas($slug, $id){
 
@@ -48,6 +50,7 @@
         }
         function galeri(){
 
+          $this->template_website->display('web/content/galeri');
         }
 
     }

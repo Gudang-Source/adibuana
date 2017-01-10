@@ -65,7 +65,7 @@
       <div class="row">
         <div class="col-md-12">
           <header class="hr-header adibuana-header">
-            <div class="header"><div class="icon icon-newspaper"></div> Berita Terbaru</div>
+            <div class="header"><div class="icon icon-newspaper"></div> <span class="title">Berita Terbaru</span></div>
           </header>
           <div class="berita">
             <div class="col-md-3">
@@ -125,86 +125,56 @@
     </div>
   </section>
 
-  <section>
+  <section id="middle-section">
     <div class="container">
       <div class=" row">
         <div class="col-md-4">
-
+          <header class="hr-header adibuana-header">
+            <div class="header"><div class="icon icon-newspaper"></div><span class="title">Pengumuman</span></div>
+          </header>
+          <div class="pengumuman">
+            <ul>
+              <li>
+                <div class="wrapper-pengumuman">
+                  <img class="img-thumbnail" src="http://www.unipasby.ac.id/css/data_images/news/news_5A54154261284D6A479E2C1BC0617AA3.jpg" alt="">
+                  <div class="deskripsi">
+                    <a ref="#">Hasil Seleksi Mahasiswa Baru Pasca Sarjana Semester Genap Tahun Akademik 2016-2017 Gelombang I 21 Desember 2016 Universitas Pgri Adi Buana Surabaya</a>
+                  </div>
+                  <div class="clearfix"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="col-md-4">
+          <header class="hr-header adibuana-header">
+            <div class="header"><div class="icon icon-newspaper"></div> <span class="title">Kegiatan</span></div>
+          </header>
+          <div class="agenda">
+            <ul>
+              <li>
+                <div class="tanggal">
+                  
+                </div>
+                <div class="deskripsi">
 
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="col-md-4">
+          <header class="hr-header adibuana-header">
+            <div class="header"><div class="icon icon-newspaper"></div> <span class="title">Peta Lokasi</span></div>
+          </header>
+          <div class="petalokasi">
 
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Features-->
-  <section>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="container-fluid border-top">
-          <div class="row">
-            <div class="group-icon-box-vertical-creative">
-              <div data-item-width='400' class="slider slide swipe-to-slide border-bottom">
-                <div data-wow-delay="0.3s" class="block-icon-box-vertical wow fadeInUp">
-                  <div class="__icon simple-icon icon-trophy"></div>
-                  <h4 class="__heading smb">HTML5 &amp; CSS3 ANIMATION</h4>
-                  <p class="__caption font-serif italic">Lorem ipsum dolor sit amet</p>
-                  <p class="__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam</p>
-                </div>
-                <div data-wow-delay="0.3s" class="block-icon-box-vertical wow fadeInUp">
-                  <div class="__icon simple-icon icon-layers"></div>
-                  <h4 class="__heading smb">AUTOMATE YOUR WORKFLOW</h4>
-                  <p class="__caption font-serif italic">Lorem ipsum dolor sit amet</p>
-                  <p class="__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam</p>
-                </div>
-                <div data-wow-delay="0.3s" class="block-icon-box-vertical wow fadeInUp">
-                  <div class="__icon simple-icon icon-edit"></div>
-                  <h4 class="__heading smb">NODE TEMPLATE ENGINE</h4>
-                  <p class="__caption font-serif italic">Lorem ipsum dolor sit amet</p>
-                  <p class="__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam</p>
-                </div>
-                <div data-wow-delay="0.3s" class="block-icon-box-vertical wow fadeInUp">
-                  <div class="__icon simple-icon icon-traget"></div>
-                  <h4 class="__heading smb">LESS PRE-PROCESSOR</h4>
-                  <p class="__caption font-serif italic">Lorem ipsum dolor sit amet</p>
-                  <p class="__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam</p>
-                </div>
-                <div data-wow-delay="0.3s" class="block-icon-box-vertical wow fadeInUp">
-                  <div class="__icon simple-icon icon-mobile"></div>
-                  <h4 class="__heading smb">FULLY RESPONSIVE</h4>
-                  <p class="__caption font-serif italic">Lorem ipsum dolor sit amet</p>
-                  <p class="__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam</p>
-                </div>
-                <div data-wow-delay="0.3s" class="block-icon-box-vertical wow fadeInUp">
-                  <div class="__icon simple-icon icon-desktop"></div>
-                  <h4 class="__heading smb">RETINA READY</h4>
-                  <p class="__caption font-serif italic">Lorem ipsum dolor sit amet</p>
-                  <p class="__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam</p>
-                </div>
-                <div data-wow-delay="0.3s" class="block-icon-box-vertical wow fadeInUp">
-                  <div class="__icon simple-icon icon-tools"></div>
-                  <h4 class="__heading smb">DROPDOWN AND MEGAMENU</h4>
-                  <p class="__caption font-serif italic">Lorem ipsum dolor sit amet</p>
-                  <p class="__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam</p>
-                </div>
-                <div data-wow-delay="0.3s" class="block-icon-box-vertical wow fadeInUp">
-                  <div class="__icon simple-icon icon-pictures"></div>
-                  <h4 class="__heading smb">PARALLAX BACKGROUND</h4>
-                  <p class="__caption font-serif italic">Lorem ipsum dolor sit amet</p>
-                  <p class="__content">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam</p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- End Features-->
+
   <!-- Our Skill-->
   <section class="page-section">
     <div class="container">

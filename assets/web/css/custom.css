@@ -86,7 +86,43 @@
   padding-left: 15px;
 }
 .adibuana-header .header{
-  font-size: 28px;
+  font-size: 26px;
+}
+
+.adibuana-header .header .icon{
+  color: #00B863;
+}
+span.title{
+  font-size: 20px;
+  margin-left: 5px;
+}
+section#middle-section{
+  background: #EEEEEE;
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+}
+
+.pengumuman ul img{
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  float: left;
+  margin-top: 5px;
+}
+.pengumuman ul .deskripsi{
+  float: left;
+  margin-left: 10px;
+  width: 75%;
+}
+
+.berita-terbaru{
+  margin-top: 10px;
+}
+
+.pengumuman .wrapper-pengumuman{
+  padding-left: 10px;
+  margin-top: 10px;
 }
 
 .orange{
