@@ -68,55 +68,30 @@
             <div class="header"><div class="icon icon-newspaper"></div> <span class="title">Berita Terbaru</span></div>
           </header>
           <div class="berita">
-            <div class="col-md-3">
-              <div class="card">
-               <img src="http://www.unipasby.ac.id/css/data_images/news/CBCD53F0B3964766BACEDA9EFBECC5FE.jpg" alt="Avatar" style="width:100%">
-               <div class="container">
-                 <a href="#">26 Atlet Denmark Kunjungi Unipa Surabaya Tunjukan Senam Artistik</a>
-               </div>
-            </div>
-            </div>
-            <div class="col-md-3">
-              <div class="card">
-               <img src="http://www.unipasby.ac.id/css/data_images/news/CBCD53F0B3964766BACEDA9EFBECC5FE.jpg" alt="Avatar" style="width:100%">
-               <div class="container">
-                 <a href="#">26 Atlet Denmark Kunjungi Unipa Surabaya Tunjukan Senam Artistik</a>
-               </div>
-            </div>
-            </div>
-            <div class="col-md-3">
-              <div class="card">
-               <img src="http://www.unipasby.ac.id/css/data_images/news/CBCD53F0B3964766BACEDA9EFBECC5FE.jpg" alt="Avatar" style="width:100%">
-               <div class="container">
-                 <a href="#">26 Atlet Denmark Kunjungi Unipa Surabaya Tunjukan Senam Artistik</a>
-               </div>
-            </div>
-            </div>
-            <div class="col-md-3">
-              <div class="card">
-               <img src="http://www.unipasby.ac.id/css/data_images/news/CBCD53F0B3964766BACEDA9EFBECC5FE.jpg" alt="Avatar" style="width:100%">
-               <div class="container">
-                 <a href="#">26 Atlet Denmark Kunjungi Unipa Surabaya Tunjukan Senam Artistik</a>
-               </div>
-            </div>
-            </div>
-            <div class="col-md-3">
-              <div class="card">
-               <img src="http://www.unipasby.ac.id/css/data_images/news/CBCD53F0B3964766BACEDA9EFBECC5FE.jpg" alt="Avatar" style="width:100%">
-               <div class="container">
-                 <a href="#">26 Atlet Denmark Kunjungi Unipa Surabaya Tunjukan Senam Artistik</a>
-               </div>
-            </div>
-            </div>
-            <div class="col-md-3">
-              <div class="card">
-               <img src="http://www.unipasby.ac.id/css/data_images/news/CBCD53F0B3964766BACEDA9EFBECC5FE.jpg" alt="Avatar" style="width:100%">
-               <div class="container">
-                 <a href="#">26 Atlet Denmark Kunjungi Unipa Surabaya Tunjukan Senam Artistik</a>
-               </div>
-            </div>
-            </div>
-
+            <?php
+              foreach ($berita_terbaru as $q_terbaru) {
+                ?>
+                <div class="col-md-3">
+                  <div class="card">
+                    <?php
+                      if($q_terbaru->picture == ''){
+                        ?>
+                        <img src="http://shopproject30.com/wp-content/themes/venera/images/placeholder-camera-green.png" alt="<?php echo $q_terbaru->title_ina ?>" style="width:100%; height:200px; object-fit:cover">
+                        <?php
+                      }else{
+                        ?>
+                        <img src="http://www.unipasby.ac.id/css/data_images/news/<?php echo $q_terbaru->picture; ?>" alt="<?php echo $q_terbaru->title_ina ?>" style="width:100%; height:200px; object-fit:cover">
+                        <?php
+                      }
+                    ?>
+                   <div class="container">
+                     <a href="<?php echo base_url(); ?>detil-berita-dan-pengumuman/<?php echo slugify($q_terbaru->title_ina); ?>/<?php echo $q_terbaru->id ?>"><?php echo $q_terbaru->title_ina ?></a>
+                   </div>
+                </div>
+              </div>
+                <?php
+              }
+            ?>
           </div>
         </div>
         <div class="col-md-12 text-center">
@@ -154,7 +129,7 @@
             <ul>
               <li>
                 <div class="tanggal">
-                  
+
                 </div>
                 <div class="deskripsi">
 

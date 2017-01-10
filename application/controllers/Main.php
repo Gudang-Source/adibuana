@@ -9,14 +9,20 @@
         }
 
         function index(){
-            $data = $this->data;
+          $data = $this->data;
+            $this->load->model('NewsModel', 'news_model');
 
+            $data['berita_terbaru'] = $this->news_model->get_berita_terbaru();
             $this->template_website->display('web/content/index', $data);
         }
 
 
         function beritadanpengumuman($slug, $id){
 
+        }
+
+        function detilberitadanpengumuman($slug, $id){
+          echo $slug;
         }
 
         function sekilas($slug, $id){
