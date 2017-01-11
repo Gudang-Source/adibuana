@@ -24,4 +24,14 @@
 
       return $this->db->get()->result();
     }
+
+    function get_berita_katagori($id){
+        $this->db->select('*')
+            ->from('adi_news')
+            ->where('id_type', $id)
+            ->order_by('post_date', 'DESC')
+            ->limit(8)
+            ->offset(0);
+      return $this->db->get()->result();
+    }
   }

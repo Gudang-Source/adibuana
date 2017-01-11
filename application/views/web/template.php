@@ -205,27 +205,27 @@
                         <ul class="multi-floor-menu">
                           <li><a href="#"><i class="__icon"></i>Kegiatan</a>
                           </li>
-                          <li><a href="#"><i class="__icon"></i>Berita Kampus</a>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/berita-kampus/01"><i class="__icon"></i>Berita Kampus</a>
                           </li>
-                          <li><a href="#"><i class="__icon"></i>Artikel</a>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/artikel/02"><i class="__icon"></i>Artikel</a>
                           </li>
-                          <li><a href="#"><i class="__icon"></i>Pengumuman</a>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/pengumuman/04"><i class="__icon"></i>Pengumuman</a>
                           </li>
-                          <li><a href="#"><i class="__icon"></i>Umum</a>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/umum/8616012013102515"><i class="__icon"></i>Umum</a>
                           </li>
-                          <li><a href="#"><i class="__icon"></i>Pendidikan</a>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/pendidikan/8529012013082338"><i class="__icon"></i>Pendidikan</a>
                           </li>
-                          <li><a href="#"><i class="__icon"></i>Olahraga</a>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/olahraga/929012013082919"><i class="__icon"></i>Olahraga</a>
                           </li>
-                          <li><a href="#"><i class="__icon"></i>Kesehatan</a>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/kesehatan/5129012013085629"><i class="__icon"></i>Kesehatan</a>
                           </li>
-                          <li><a href="#"><i class="__icon"></i>Gaya Hidup</a>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/gaya-hidup/6329012013091038"><i class="__icon"></i>Gaya Hidup</a>
                           </li>
-                          <li><a href="#"><i class="__icon"></i>Kehilangan</a>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/kehilangan/8110102013131219"><i class="__icon"></i>Kehilangan</a>
                           </li>
-                          <li><a href="#"><i class="__icon"></i>Beasiswa</a>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/beasiswa/7107022014111113"><i class="__icon"></i>Beasiswa</a>
                           </li>
-                          <li><a href="#"><i class="__icon"></i>Sambutan Rektor</a>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/sambutan-rektor/9515022016145900"><i class="__icon"></i>Sambutan Rektor</a>
                           </li>
                         </ul>
                       </li>
@@ -235,33 +235,9 @@
                           </li>
                           <li><a href="#"><i class="__icon"></i>KRS Online</a>
                           </li>
-                          <li><a href="#"><i class="__icon"></i>Karier</a>
+                          <li><a href="<?php echo base_url() ?>karier"><i class="__icon"></i>Karier</a>
                           </li>
                           <li><a href="#"><i class="__icon"></i>Blog</a>
-                              <ul>
-                                  <li><a href="#">Alumni</a>
-                                  </li>
-                                  <li><a href="#">Dosen</a>
-                                  </li>
-                                  <li><a href="#">Mahasiswa</a>
-                                  </li>
-                                  <li><a href="#">UKM</a>
-                                  </li>
-                                  <li><a href="#">Referensi</a>
-                                  </li>
-                                  <li><a href="#">Kesehatan</a>
-                                  </li>
-                              </ul>
-                          </li>
-                          <li><a href="#"><i class="__icon"></i>Alumni</a>
-                          </li>
-                          <li><a href="#"><i class="__icon"></i>Galeri</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a href="#">KONTAK</a>
-                      </li>
-
                     </ul>
                   </nav>
                 </div>
