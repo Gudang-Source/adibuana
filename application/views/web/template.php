@@ -41,197 +41,250 @@
     <div class="page-content">
       <!-- Page Navigation-->
       <div class="main-nav bgc-blue large-container ">
-        <div class="__middle">
-          <div class="container">
-            <div class="nav-content-wrapper">
-              <div class="pull-left">
-                <div class="megatron inline logo-light">
-                  <div class="cell-vertical-wrapper">
-                    <div class="cell-middle"><a href="index.html">
-                        <div class="logo"><img src="<?php echo base_url(); ?>assets/images/logo.png">
-                        </div>
-                        </a></div>
+        <div class="wrapper-box bgc-white">
+          <div class="__header bgc-white">
+            <div class="container">
+              <div class="nav-content-wrapper">
+                <div class="pull-left">
+                  <div class="nav-info nav-item">
+                    <div class="__info select-language dropdown"><a href="#" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe color-primary"></i>Language: English</a>
+                      <div class="dropdown-menu menu menu-link-block">
+                        <ul>
+                          <li><a href="#"><img src="assets/images/flag/united_kingdom.png" alt="flag" class="flag">ENGLISH</a></li>
+                          <li><a href="#"><img src="assets/images/flag/france.png" alt="flag" class="flag">FRANCE</a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+
                   </div>
                 </div>
-              </div>
-              <div class="pull-right">
-                <nav class="os-menu  main-menu text-center">
-                  <ul>
-                    <li><a href="<?php echo base_url() ?>">HOME</a>
-                    </li>
-                    <li><a href="#">TENTANG KAMI</a>
-                      <ul class="multi-floor-menu">
-                        <li><a href="<?php echo base_url() ?>sekilas/para-pendiri-unipa/8617092013100647"><i class="__icon"></i>Para Pendiri UNIPA</a>
-                        </li>
-                        <li><a href="<?php echo base_url() ?>sekilas/sambutan-rektor/319092013084049"><i class="__icon"></i>Sambutan Rektor</a>
-                        </li>
-                        <li><a href="<?php echo base_url() ?>sekilas/visi-dan-misi/5325032014161225"><i class="__icon"></i>Visi dan Misi</a>
-                        </li>
-                        <li><a href="<?php echo base_url() ?>sekilas/sejarah/E_020"><i class="__icon"></i>Sejarah</a>
-                        </li>
-                        <li><a href="#"><i class="__icon"></i>Peta Kampus</a>
-                          <ul>
-                            <li><a href="#">Kampus Ngagel Dadi</a>
-                            </li>
-                            <li><a href="#">Kampus Menanggal</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li><a href="<?php echo base_url() ?>sekilas/luas-tanah-dan-disain/1119032014110946"><i class="__icon"></i>Luas Tanah dan Desain</a>
-                        </li>
-                        <li><a href="<?php echo base_url() ?>sekilas/jejaring-unipa-surabaya/719092013094952"><i class="__icon"></i>Jejaring UNIPA Surabaya</a>
-                        </li>
-                        <li><a href="<?php echo base_url() ?>sekilas/daftar-hibah-unipa-surabaya/9719092013115310"><i class="__icon"></i>Daftar Hibah UNIPA Surabaya</a>
-                        </li>
-                        <li><a href="<?php echo base_url() ?>sekilas/logo-hymne-mars/1415012013092135"><i class="__icon"></i>Logo, Hymne, dan Mars</a>
-                        </li>
-                        <li><a href="<?php echo base_url() ?>"><i class="__icon"></i>Sarana</a>
-                        </li>
-                        <li><a href="#"><i class="__icon"></i>Unit Kerja</a>
-                            <ul>
-                                <li><a href="#">Kemahasiswaan</a>
-                                </li>
-                            </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a href="#">FAKULTAS</a>
-                      <ul class="multi-floor-menu">
-                        <li><a href="#"><i class="__icon"></i>Fakultas dan Program Studi</a>
-                        </li>
-                        <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735"><i class="__icon"></i>FKIP</a>
-                            <ul>
-                                <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/bimbingan-dan-konseling/6514012013110508">Bimbingan dan Konseling</a>
-                                </li>
-                                <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-kesejahteraan-keluarga/4214012013104259">Pendidikan Kesejahteraan Keluarga</a>
-                                </li>
-                                <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-moral-pancasila-dan-kewarganegaraan/4614012013103909">Pendidikan Moral Pancasila dan Kewarganegaraan</a>
-                                </li>
-                                <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-bahasa-dan-sastra-indonesia/3312012013112127">Pendidikan Bahasa dan Sastra Indonesia</a>
-                                </li>
-                                <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-matematika/114012013110833">Pendidikan Matematika</a>
-                                </li>
-                                <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-bahasa-inggris/4214012013100537">Pendidikan Bahasa Inggris</a>
-                                </li>
-                                <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-kepelatihan-olahraga/5914012013103449">Pendidikan Kepelatihan Olahraga</a>
-                                </li>
-                                <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-seni-rupa/1714012013102837">Pendidikan Seni Rupa</a>
-                                </li>
-                                <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-guru-sekolah-dasar/3914012013104611">Pendidikan Guru Sekolah Dasar</a>
-                                </li>
-                                <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-guru-paud/8814012013105731">Pendidikan Guru - PAUD</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="#"><i class="__icon"></i>Fakultas Ekonomi</a>
-                            <ul>
-                                <li><a href="<?php echo base_url() ?>fakultas-detil/ekonomi/6912012013115003/akuntansi/5914012013092358">Akuntansi</a>
-                                </li>
-                                <li><a href="<?php echo base_url() ?>fakultas-detil/ekonomi/6912012013115003/manajemen/6214012013093635">Manajemen</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="#"><i class="__icon"></i>FMIPA</a>
-                            <ul>
-                                <li><a href="<?php echo base_url() ?>fakultas-detil/fmipa/8320122012121610/biologi/4011012013143843">Biologi</a>
-                                </li>
-                                <li><a href="<?php echo base_url() ?>fakultas-detil/fmipa/8320122012121610/statistika/2011012013150052">Statistika</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="#"><i class="__icon"></i>FT SP</a>
-                            <ul>
-                                <li><a href="<?php echo base_url() ?>fakultas-detil/ftsp/2412012013124252/teknik-lingkungan/1714012013111816">Teknik Lingkungan</a>
-                                </li>
-                                <li><a href="<?php echo base_url() ?>fakultas-detil/ftsp/2412012013124252/perencanaan-wilayan-dan-kota/5014012013112103">Perancangan Wilayah dan Kota</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="#"><i class="__icon"></i>FTI</a>
-                            <ul>
-                                <li><a href="<?php echo base_url() ?>fakultas-detil/fti/1812012013114634/teknik-elektro/4714012013111529">Teknik Elektro</a>
-                                </li>
-                                <li><a href="<?php echo base_url() ?>fakultas-detil/fti/1812012013114634/teknik-industri/714012013111042">Teknik Industri</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="#"><i class="__icon"></i>Program Diploma</a>
-                            <ul>
-                                <li><a href="<?php echo base_url() ?>fakultas-detil/">Kebidanan</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="#"><i class="__icon"></i>Pascasarjana</a>
-                            <ul>
-                                <li><a href="<?php echo base_url() ?>">Teknologi Pembelajaran</a>
-                                </li>
-                            </ul>
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a href="#">BERITA</a>
-                      <ul class="multi-floor-menu">
-                        <li><a href="#"><i class="__icon"></i>Kegiatan</a>
-                        </li>
-                        <li><a href="#"><i class="__icon"></i>Berita Kampus</a>
-                        </li>
-                        <li><a href="#"><i class="__icon"></i>Artikel</a>
-                        </li>
-                        <li><a href="#"><i class="__icon"></i>Pengumuman</a>
-                        </li>
-                        <li><a href="#"><i class="__icon"></i>Umum</a>
-                        </li>
-                        <li><a href="#"><i class="__icon"></i>Pendidikan</a>
-                        </li>
-                        <li><a href="#"><i class="__icon"></i>Olahraga</a>
-                        </li>
-                        <li><a href="#"><i class="__icon"></i>Kesehatan</a>
-                        </li>
-                        <li><a href="#"><i class="__icon"></i>Gaya Hidup</a>
-                        </li>
-                        <li><a href="#"><i class="__icon"></i>Kehilangan</a>
-                        </li>
-                        <li><a href="#"><i class="__icon"></i>Beasiswa</a>
-                        </li>
-                        <li><a href="#"><i class="__icon"></i>Sambutan Rektor</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a href="#">EKSTRA</a>
-                      <ul class="multi-floor-menu">
-                        <li><a href="#"><i class="__icon"></i>Daftar KKN</a>
-                        </li>
-                        <li><a href="#"><i class="__icon"></i>KRS Online</a>
-                        </li>
-                        <li><a href="#"><i class="__icon"></i>Karier</a>
-                        </li>
-                        <li><a href="#"><i class="__icon"></i>Blog</a>
-                            <ul>
-                                <li><a href="#">Alumni</a>
-                                </li>
-                                <li><a href="#">Dosen</a>
-                                </li>
-                                <li><a href="#">Mahasiswa</a>
-                                </li>
-                                <li><a href="#">UKM</a>
-                                </li>
-                                <li><a href="#">Referensi</a>
-                                </li>
-                                <li><a href="#">Kesehatan</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li><a href="#"><i class="__icon"></i>Alumni</a>
-                        </li>
-                        <li><a href="#"><i class="__icon"></i>Galeri</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a href="#">KONTAK</a>
-                    </li>
-                  
+                <div class="pull-right">
+                  <div class="nav-info nav-item mr-20"><span class="fz-6-s"><i class="fa fa-send color-primary"></i>info@osthemes.com</span></div>
+                  <ul class="social nav-item">
+                    <li><a href="#"><i class="icon icon-facebook-1"></i></a></li>
+                    <li><a href="#"><i class="icon icon-pinterest"></i></a></li>
+                    <li><a href="#"><i class="icon icon-twitter-1"></i></a></li>
+                    <li><a href="#"><i class="icon icon-linkedin-1"></i></a></li>
                   </ul>
-                </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper-box bgc-light-blue">
+          <div class="__middle">
+            <div class="container container-home">
+              <div class="nav-content-wrapper">
+                <div class="pull-left">
+                  <div class="megatron inline logo-light">
+                    <div class="cell-vertical-wrapper">
+                      <div class="cell-middle"><a href="index.html">
+                          <div class="logo"><img src="<?php echo base_url(); ?>assets/images/logo.png">
+                          </div>
+                          </a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="pull-right">
+                  <nav class="os-menu  main-menu text-center">
+                    <ul>
+                      <li><a href="<?php echo base_url() ?>">HOME</a>
+                      </li>
+                      <li><a href="#">TENTANG KAMI</a>
+                        <ul class="multi-floor-menu">
+                          <li><a href="<?php echo base_url() ?>sekilas/para-pendiri-unipa/8617092013100647"><i class="__icon"></i>Para Pendiri UNIPA</a>
+                          </li>
+                          <li><a href="<?php echo base_url() ?>sekilas/sambutan-rektor/319092013084049"><i class="__icon"></i>Sambutan Rektor</a>
+                          </li>
+                          <li><a href="<?php echo base_url() ?>sekilas/visi-dan-misi/5325032014161225"><i class="__icon"></i>Visi dan Misi</a>
+                          </li>
+                          <li><a href="<?php echo base_url() ?>sekilas/sejarah/E_020"><i class="__icon"></i>Sejarah</a>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i>Peta Kampus</a>
+                            <ul>
+                              <li><a href="#">Kampus Ngagel Dadi</a>
+                              </li>
+                              <li><a href="#">Kampus Menanggal</a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li><a href="<?php echo base_url() ?>sekilas/luas-tanah-dan-disain/1119032014110946"><i class="__icon"></i>Luas Tanah dan Desain</a>
+                          </li>
+                          <li><a href="<?php echo base_url() ?>sekilas/jejaring-unipa-surabaya/719092013094952"><i class="__icon"></i>Jejaring UNIPA Surabaya</a>
+                          </li>
+                          <li><a href="<?php echo base_url() ?>sekilas/daftar-hibah-unipa-surabaya/9719092013115310"><i class="__icon"></i>Daftar Hibah UNIPA Surabaya</a>
+                          </li>
+                          <li><a href="<?php echo base_url() ?>sekilas/logo-hymne-mars/1415012013092135"><i class="__icon"></i>Logo, Hymne, dan Mars</a>
+                          </li>
+                          <li><a href="<?php echo base_url() ?>"><i class="__icon"></i>Sarana</a>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i>Unit Kerja</a>
+                              <ul>
+                                  <li><a href="#">Kemahasiswaan</a>
+                                  </li>
+                              </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a href="#">FAKULTAS</a>
+                        <ul class="multi-floor-menu">
+                          <li><a href="#"><i class="__icon"></i>Fakultas dan Program Studi</a>
+                          </li>
+                          <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735"><i class="__icon"></i>FKIP</a>
+                              <ul>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/bimbingan-dan-konseling/6514012013110508">Bimbingan dan Konseling</a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-kesejahteraan-keluarga/4214012013104259">Pendidikan Kesejahteraan Keluarga</a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-moral-pancasila-dan-kewarganegaraan/4614012013103909">Pendidikan Moral Pancasila dan Kewarganegaraan</a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-bahasa-dan-sastra-indonesia/3312012013112127">Pendidikan Bahasa dan Sastra Indonesia</a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-matematika/114012013110833">Pendidikan Matematika</a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-bahasa-inggris/4214012013100537">Pendidikan Bahasa Inggris</a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-kepelatihan-olahraga/5914012013103449">Pendidikan Kepelatihan Olahraga</a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-seni-rupa/1714012013102837">Pendidikan Seni Rupa</a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-guru-sekolah-dasar/3914012013104611">Pendidikan Guru Sekolah Dasar</a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-guru-paud/8814012013105731">Pendidikan Guru - PAUD</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i>Fakultas Ekonomi</a>
+                              <ul>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/ekonomi/6912012013115003/akuntansi/5914012013092358">Akuntansi</a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/ekonomi/6912012013115003/manajemen/6214012013093635">Manajemen</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i>FMIPA</a>
+                              <ul>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fmipa/8320122012121610/biologi/4011012013143843">Biologi</a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fmipa/8320122012121610/statistika/2011012013150052">Statistika</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i>FT SP</a>
+                              <ul>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/ftsp/2412012013124252/teknik-lingkungan/1714012013111816">Teknik Lingkungan</a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/ftsp/2412012013124252/perencanaan-wilayan-dan-kota/5014012013112103">Perancangan Wilayah dan Kota</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i>FTI</a>
+                              <ul>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fti/1812012013114634/teknik-elektro/4714012013111529">Teknik Elektro</a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fti/1812012013114634/teknik-industri/714012013111042">Teknik Industri</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i>Program Diploma</a>
+                              <ul>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/">Kebidanan</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i>Pascasarjana</a>
+                              <ul>
+                                  <li><a href="<?php echo base_url() ?>">Teknologi Pembelajaran</a>
+                                  </li>
+                              </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a href="#">BERITA</a>
+                        <ul class="multi-floor-menu">
+                          <li><a href="#"><i class="__icon"></i>Kegiatan</a>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i>Berita Kampus</a>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i>Artikel</a>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i>Pengumuman</a>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i>Umum</a>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i>Pendidikan</a>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i>Olahraga</a>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i>Kesehatan</a>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i>Gaya Hidup</a>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i>Kehilangan</a>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i>Beasiswa</a>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i>Sambutan Rektor</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a href="#">EKSTRA</a>
+                        <ul class="multi-floor-menu">
+                          <li><a href="#"><i class="__icon"></i>Daftar KKN</a>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i>KRS Online</a>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i>Karier</a>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i>Blog</a>
+                              <ul>
+                                  <li><a href="#">Alumni</a>
+                                  </li>
+                                  <li><a href="#">Dosen</a>
+                                  </li>
+                                  <li><a href="#">Mahasiswa</a>
+                                  </li>
+                                  <li><a href="#">UKM</a>
+                                  </li>
+                                  <li><a href="#">Referensi</a>
+                                  </li>
+                                  <li><a href="#">Kesehatan</a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i>Alumni</a>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i>Galeri</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a href="#">KONTAK</a>
+                      </li>
+
+                    </ul>
+                  </nav>
+                </div>
+              </div>
+              <div class="left-bg">
+
+              </div>
+              <div class="right-bg">
+
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="wrapper-box bgc-blue">
+          <div class="__bottom">
+            <div class="container container-home">
+              <div class="nav-content-wrapper">
+                <div class="header-phone"><h2>1-800-643-4300</h2><h4>E104 Dharti II, Ahmedabad, Gujarat, India.</h4> <span class="triangle-arrow">&nbsp;</span></div>
+                <div class="header-tagline"><h3>Admission Open for 2014 click here to Get Form</h3></div>
+                <div class="clearfix">
+
+                </div>
               </div>
             </div>
           </div>
@@ -952,7 +1005,7 @@
       <!--Page Footer-->
       <footer id="footer" class="page-footer footer-preset-5">
         <div class="footer-body bgc-gray-darker">
-          <div class="container">
+          <div class="container container-home">
             <div class="row">
               <div class="col-lg-3 col-sm-6 col-xs-12 __block-wrapper-1">
                 <div class="footer-widget-about"><a href="index.html" class="megatron inline size-2">
