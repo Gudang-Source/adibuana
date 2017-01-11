@@ -18,6 +18,11 @@
 
 
         function beritadanpengumuman($slug, $id){
+            $data = $this->data;
+            $this->load->model('NewsModel', 'news_model');
+
+            $data['berita_katagori'] = $this->news_model->get_berita_katagori($id);
+            $this->template_website->display('web/content/beritadanpengumuman', $data);
 
         }
 
@@ -56,7 +61,11 @@
 
         }
         function karier(){
+            $data = $this->data;
+            $this->load->model('KarirModel', 'karir_model');
 
+            $data['karir'] = $this->karir_model->get_by_id();
+            $this->template_website->display('web/content/karier', $data);
         }
         function blog(){
 

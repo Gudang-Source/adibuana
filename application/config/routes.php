@@ -56,3 +56,5 @@ $route['translate_uri_dashes'] = FALSE;
 $route['detil-berita-dan-pengumuman/(:any)/(:any)'] = 'main/detilberitadanpengumuman/$1/$2';
 $route['sekilas/(:any)/(:any)'] = 'main/sekilas/$1/$2';
 $route['fakultas-detil/(:any)/(:any)/(:any)/(:any)'] = 'main/detilfakultas/$1/$2/$3/$4';
+$route['berita-dan-pengumuman/(:any)/(:any)'] = 'main/beritadanpengumuman/$1/$2';
+$route['karier'] = 'main/karier';
