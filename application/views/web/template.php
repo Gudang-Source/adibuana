@@ -204,7 +204,7 @@
                       </li>
                       <li><a href="#">BERITA</a>
                         <ul class="multi-floor-menu">
-                          <li><a href="#"><i class="__icon"></i>Kegiatan</a>
+                          <li><a href="<?php echo base_url() ?>kegiatan"><i class="__icon"></i>Kegiatan</a>
                           </li>
                           <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/berita-kampus/01"><i class="__icon"></i>Berita Kampus</a>
                           </li>
@@ -234,12 +234,16 @@
                         <ul class="multi-floor-menu">
                           <li><a href="#"><i class="__icon"></i>Daftar KKN</a>
                           </li>
-                          <li><a href="#"><i class="__icon"></i>KRS Online</a>
+                          <li><a href="http://siakad.unipasby.ac.id"><i class="__icon"></i>KRS Online</a>
                           </li>
                           <li><a href="<?php echo base_url() ?>karier"><i class="__icon"></i>Karier</a>
                           </li>
                           <li><a href="#"><i class="__icon"></i>Blog</a>
-                    </ul>
+                        </ul>
+                      </li>
+                      <li>
+                          <a href="#">KONTAK</a>
+                      </li>
                   </nav>
                 </div>
               </div>

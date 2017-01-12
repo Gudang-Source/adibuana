@@ -78,4 +78,11 @@
           $this->template_website->display('web/content/galeri');
         }
 
+        function kegiatan(){
+            $data = $this->data;
+            $this->load->model('EventModel', 'event_model');
+
+            $data['kegiatan'] = $this->event_model->get_by_id();
+            $this->template_website->display('web/content/listkegiatan', $data);
+        }
     }
