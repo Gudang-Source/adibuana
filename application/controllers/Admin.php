@@ -9,31 +9,6 @@
             $this->template_admin->display('admin/content/index', $data);
         }
 
-        function kategori($aksi='index', $id=null){
-            $data = ['Makanan', 'Minuman'];
-
-            switch ($aksi) {
-                case 'index':
-                   $this->template_admin->display('admin/content/indexkategori', $data);
-                    break;
-                case 'tambah':
-                   $this->template_admin->display('admin/content/tambahkategori', $data);
-                    break;
-                case 'edit':
-                   $this->template_admin->display('admin/content/indexkategori', $data);
-                    break;
-                case 'update':
-                    break;
-                case 'delete':
-
-                    break;
-                default:
-                    # code...
-                    break;
-            }
-            
-        }
-
         function sekilas($aksi='index', $id=null){
             switch ($aksi) {
                 case 'index':
@@ -41,6 +16,20 @@
                     break;
                 case 'add':
                     $this->template_admin->display('admin/content/addsekilas');
+                    break;
+                default:
+                    # code...
+                    break;
+            }
+        }
+
+        function berita($aksi='index', $id=null){
+            switch ($aksi) {
+                case 'index':
+                    $this->template_admin->display('admin/content/indexberita');
+                    break;
+                case 'add':
+                    $this->template_admin->display('admin/content/addberita');
                     break;
                 default:
                     # code...
