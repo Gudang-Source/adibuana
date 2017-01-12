@@ -1,60 +1,21 @@
-<!--Page Header-->
-<header class="page-header home home-slider-1">
-  <div class="slider caption-slider control-nav direction-nav">
-    <div class="block-caption-slider overlay-container">
-      <div style="background-image: url(assets/images/slider1.jpg); background-position: undefined" class="__img-background"></div>
-      <div class="overlay bgc-dark-o-5">
-        <div class="cell-vertical-wrapper">
-          <div class="cell-middle">
-            <div class="caption-preset-simple-5 text-right">
-              <div class="container">
-                <div class="caption-wrapper caption-slider">
-                  <h1 class="text-responsive size-ll caption">Laboratorium <br/> FMIPA</h1>
-                  <p class="font-serif-italic fz-3 caption">This is time to build your great brand new website</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="block-caption-slider overlay-container">
-      <div style="background-image: url(assets/images/slider2.jpg); background-position: undefined" class="__img-background"></div>
-      <div class="overlay bgc-dark-o-5">
-        <div class="cell-vertical-wrapper">
-          <div class="cell-middle">
-            <div class="caption-preset-simple-5 text-right">
-              <div class="container">
-                <div class="caption-wrapper">
-                  <h1 class="text-responsive size-ll caption">30+ UNIQUE HOMEPAGES</h1>
-                  <p class="font-serif-italic fz-3 caption">Create your dream website with Megatron</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="block-caption-slider overlay-container">
-      <div style="background-image: url(assets/images/slider3.jpg); background-position: undefined" class="__img-background"></div>
-      <div class="overlay bgc-dark-o-5">
-        <div class="cell-vertical-wrapper">
-          <div class="cell-middle">
-            <div class="caption-preset-simple-5 text-right">
-              <div class="container">
-                <div class="caption-wrapper">
-                  <h1 class="text-responsive size-ll caption">CREATIVITY HAS NO <br/>BOUNDARIES</h1>
-                  <p class="font-serif-italic fz-3 caption">Start your website in easiest way with Megatron</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>
-<!--End Page Header-->
+
+
+<section class="slider">
+   <div class="flexslider">
+     <ul class="slides">
+       <li>
+         <img src="assets/images/slider1.jpg" />
+       </li>
+       <li>
+         <img src="assets/images/slider2.jpg" />
+       </li>
+       <li>
+         <img src="assets/images/slider3.jpg" />
+       </li>
+     </ul>
+   </div>
+ </section>
+
 
 <!--Page Body-->
 <div id="page-body" class="page-body">

@@ -28,6 +28,11 @@
   width: 80%;
   margin-left: auto;
   margin-right: auto;
+  height: 480px;
+}
+.home-slider-1 img {
+    width: 100%;
+    height: 100%;
 }
 .container.container-home{
   width: 90%;
@@ -223,4 +228,17 @@ section#middle-section{
     width: 0;
     right: -58px;
     top: 0;
+}
+
+.header-phone .kampus1 h2, .header-phone .kampus2 h2 {
+    font-size: 12px;
+    margin-bottom: 0px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+section.slider{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 65px;
 }

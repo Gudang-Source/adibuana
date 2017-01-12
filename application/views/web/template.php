@@ -28,6 +28,7 @@
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/web/fonts/megatron/styles.css">
     <!--Main stylesheet-->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/web/css/main.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/web/css/flexslider.css">
     <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/web/css/custom.css">
 
     <!--Modernizr js-->
@@ -256,8 +257,16 @@
           <div class="__bottom">
             <div class="container container-home">
               <div class="nav-content-wrapper">
-                <div class="header-phone"><h2>1-800-643-4300</h2><h4>E104 Dharti II, Ahmedabad, Gujarat, India.</h4> <span class="triangle-arrow">&nbsp;</span></div>
-                <div class="header-tagline"><h3>Admission Open for 2014 click here to Get Form</h3></div>
+                <div class="header-phone">
+                  <div class="kampus1">
+                    <h2>Kampus 1 : <span>Jl. Ngagel Dadi III-B/37, Surabaya, 60245 </span></h2>
+                  </div>
+                  <div class="kampus2">
+                    <h2>Kampus 2 : <span>Jl. Dukuh Menanggal XII, Surabaya 60234</span></h2>
+                  </div>
+                  <span class="triangle-arrow">&nbsp;</span>
+                </div>
+                <div class="header-tagline"><h3>Info Pendaftaran Mahasiswa Baru <button class="btn-border btn-light">Disini</button></h3></div>
                 <div class="clearfix">
 
                 </div>
@@ -1077,6 +1086,19 @@
     <script type="text/javascript" src="<?php echo base_url() ?>assets/vendors/jquery-modal/jquery.modal.min.js"></script>
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwtb7cR_XBPEvxtQ_Yq3_xKsOWQroCTPA&amp;sensor=false"></script>
     <script type="text/javascript" src="<?php echo base_url() ?>assets/web/js/main.js"></script>
+    <script type="text/javascript" src="<?php echo base_url() ?>assets/web/js/jquery.flexslider-min.js"></script>
+
+    <script type="text/javascript">
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+        animation: "fade",
+        start: function(slider){
+          $('body').removeClass('loading');
+        }
+      });
+    });
+  </script>
+
     <!-- Google analytics-->
     <script type="text/javascript">(function(b,o,i,l,e,r){b.GoogleAsnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-57387972-3');ga('send','pageview');</script>
     <!--End Javascript Library-->
