@@ -16,6 +16,9 @@
    </div>
  </section>
 
+ <div class="bg-footer bg-secondary">
+
+ </div>
 
 <!--Page Body-->
 <div id="page-body" class="page-body">
@@ -26,7 +29,7 @@
       <div class="row">
         <div class="col-md-12">
           <header class="hr-header adibuana-header">
-            <div class="header"><div class="icon icon-newspaper"></div> <span class="title">Berita Terbaru</span></div>
+            <div class="header"><div class="icon icon-newspaper color-secondary"></div> <span class="title">Berita <span>Terbaru</span></span></div>
           </header>
           <div class="berita">
             <?php
@@ -66,7 +69,7 @@
       <div class=" row">
         <div class="col-md-4">
           <header class="hr-header adibuana-header">
-            <div class="header"><div class="icon icon-newspaper"></div><span class="title">Pengumuman</span></div>
+            <div class="header"><div class="icon icon-newspaper color-secondary"></div><span class="title">Pengumuman</span></div>
           </header>
           <div class="pengumuman">
             <ul>
@@ -84,7 +87,7 @@
         </div>
         <div class="col-md-4">
           <header class="hr-header adibuana-header">
-            <div class="header"><div class="icon icon-newspaper"></div> <span class="title">Kegiatan</span></div>
+            <div class="header"><div class="icon icon-newspaper color-secondary"></div> <span class="title">Kegiatan</span></div>
           </header>
           <div class="agenda">
             <ul>
@@ -101,7 +104,7 @@
         </div>
         <div class="col-md-4">
           <header class="hr-header adibuana-header">
-            <div class="header"><div class="icon icon-newspaper"></div> <span class="title">Peta Lokasi</span></div>
+            <div class="header"><div class="icon icon-newspaper color-secondary"></div> <span class="title">Peta Lokasi</span></div>
           </header>
           <div class="petalokasi">
 

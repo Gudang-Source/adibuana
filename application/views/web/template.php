@@ -21,9 +21,8 @@
     <meta name="msapplication-TileImage" content="favicon/mstile-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendors/animate.css/animate.min.css">
-    <link href="//fonts.googleapis.com/css?family=Montserrat:700,400" rel="stylesheet" type="text/css">
-    <link href="//fonts.googleapis.com/css?family=Playfair+Display:400,700,900,400italic,700italic,900italic&amp;subset=latin,latin-ext,cyrillic" rel="stylesheet" type="text/css">
-    <link href="//fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/web/fonts/megatron/styles.css">
     <!--Main stylesheet-->
@@ -48,11 +47,11 @@
               <div class="nav-content-wrapper">
                 <div class="pull-left">
                   <div class="nav-info nav-item">
-                    <div class="__info select-language dropdown"><a href="#" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe color-primary"></i>Language: English</a>
+                    <div class="__info select-language dropdown"><a href="#" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe color-secondary"></i>Bahasa: Indonesia</a>
                       <div class="dropdown-menu menu menu-link-block">
                         <ul>
-                          <li><a href="#"><img src="assets/images/flag/united_kingdom.png" alt="flag" class="flag">ENGLISH</a></li>
-                          <li><a href="#"><img src="assets/images/flag/france.png" alt="flag" class="flag">FRANCE</a></li>
+                          <li><a href="#"><img src="assets/images/flag/united_kingdom.png" alt="flag" class="flag">Indonesia</a></li>
+                          <li><a href="#"><img src="assets/images/flag/france.png" alt="flag" class="flag">English</a></li>
                         </ul>
                       </div>
                     </div>
@@ -61,12 +60,9 @@
                   </div>
                 </div>
                 <div class="pull-right">
-                  <div class="nav-info nav-item mr-20"><span class="fz-6-s"><i class="fa fa-send color-primary"></i>info@osthemes.com</span></div>
                   <ul class="social nav-item">
                     <li><a href="#"><i class="icon icon-facebook-1"></i></a></li>
-                    <li><a href="#"><i class="icon icon-pinterest"></i></a></li>
                     <li><a href="#"><i class="icon icon-twitter-1"></i></a></li>
-                    <li><a href="#"><i class="icon icon-linkedin-1"></i></a></li>
                   </ul>
                 </div>
               </div>
@@ -90,9 +86,9 @@
                 <div class="pull-right">
                   <nav class="os-menu  main-menu text-center">
                     <ul>
-                      <li><a href="<?php echo base_url() ?>">HOME</a>
+                      <li><a href="<?php echo base_url() ?>">Home</a>
                       </li>
-                      <li><a href="#">TENTANG KAMI</a>
+                      <li><a href="#">Tentang Kami</a>
                         <ul class="multi-floor-menu">
                           <li><a href="<?php echo base_url() ?>sekilas/para-pendiri-unipa/8617092013100647"><i class="__icon"></i>Para Pendiri UNIPA</a>
                           </li>
@@ -128,7 +124,7 @@
                           </li>
                         </ul>
                       </li>
-                      <li><a href="#">FAKULTAS</a>
+                      <li><a href="#">Fakultas</a>
                         <ul class="multi-floor-menu">
                           <li><a href="#"><i class="__icon"></i>Fakultas dan Program Studi</a>
                           </li>
@@ -202,7 +198,7 @@
                           </li>
                         </ul>
                       </li>
-                      <li><a href="#">BERITA</a>
+                      <li><a href="#">Berita</a>
                         <ul class="multi-floor-menu">
                           <li><a href="#"><i class="__icon"></i>Kegiatan</a>
                           </li>
@@ -230,7 +226,7 @@
                           </li>
                         </ul>
                       </li>
-                      <li><a href="#">EKSTRA</a>
+                      <li><a href="#">Ekstra</a>
                         <ul class="multi-floor-menu">
                           <li><a href="#"><i class="__icon"></i>Daftar KKN</a>
                           </li>
@@ -259,14 +255,14 @@
               <div class="nav-content-wrapper">
                 <div class="header-phone">
                   <div class="kampus1">
-                    <h2>Kampus 1 : <span>Jl. Ngagel Dadi III-B/37, Surabaya, 60245 </span></h2>
+                    <h2><i class="fa fa-phone fa-2x"></i> Kampus 1 <span> (021) 887836182 </span></h2>
                   </div>
                   <div class="kampus2">
-                    <h2>Kampus 2 : <span>Jl. Dukuh Menanggal XII, Surabaya 60234</span></h2>
+                    <h2><i class="fa fa-phone fa-2x"></i> Kampus 2 <span> (021) 887836182 </span></h2>
                   </div>
                   <span class="triangle-arrow">&nbsp;</span>
                 </div>
-                <div class="header-tagline"><h3>Info Pendaftaran Mahasiswa Baru <button class="btn-border btn-light">Disini</button></h3></div>
+                <div class="header-tagline"><h3>Info Pendaftaran Mahasiswa Baru <button class="btn-border btn-light btn-pmb">Disini</button></h3></div>
                 <div class="clearfix">
 
                 </div>
@@ -1092,6 +1088,7 @@
     $(window).load(function(){
       $('.flexslider').flexslider({
         animation: "fade",
+        controlNav: false,
         start: function(slider){
           $('body').removeClass('loading');
         }

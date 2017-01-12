@@ -1,24 +1,44 @@
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+.page-section{
+  padding-top: 50px;
+}
+.color-secondary{
+  color: #5B9CFC;
+}
 .bgc-blue{
     background-color: #005DBA;
 }
 .bgc-light-blue{
-    background-color: #70A8FC;
+    background-color: #5B9CFC;
 }
 .bgc-white{
     background-color: #FFFFFF;
 }
+.btn-pmb{
+  padding: 10px 40px;
+  background-color: #005dba;
+}
 .main-nav .left-bg{
   position: absolute;
-  background-color: #70A8FC;
+  background-color: #5B9CFC;
   height: 100px;
   width: 100%;
   left: -100%;
   z-index: 2;
 }
+.main-nav .__middle .megatron {
+    height: 70px;
+}
+.main-nav .__middle .nav-content-wrapper, .main-nav .__middle .megatron {
+    height: 70px;
+}
 .main-nav .right-bg{
   position: absolute;
   background-color: #C2C2C2;
-  height: 160px;
+  height: 140px;
   width: 12.5%;
   left: 100%;
   z-index: 2;
@@ -54,12 +74,19 @@
 .main-menu > ul > li > a {
     color: white;
 }
+.main-nav .__middle .main-menu > ul > li > a {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.main-nav .__middle .main-menu > ul > li > a:hover {
+  background-color: #5B9CFC;
+}
 .megatron.inline .logo {
     width: 250px;
     height: auto;
 }
 .megatron .logo img {
-    width: 300px;
+    width: 175px;
     height: 100%;
 }
 .pengurus-section{
@@ -143,9 +170,17 @@
 .adibuana-header .header .icon{
   color: #00B863;
 }
+.bg-footer{
+  background: #5B9CFC;
+  height: 60px;
+}
 span.title{
   font-size: 20px;
   margin-left: 5px;
+  font-weight: 600;
+}
+span.title span{
+  color: #F87462;
 }
 section#middle-section{
   background: #EEEEEE;
@@ -195,7 +230,7 @@ section#middle-section{
 }
 
 .header-phone {
-    background-color: #70a8fc;
+    background-color: #5B9CFC;
     width: 40%;
     height: 100px;
     padding: 20px 0 20px 75px;
@@ -213,7 +248,7 @@ section#middle-section{
 .header-tagline {
     float: right;
     height: 70px;
-    padding: 8px 0;
+    padding: 16px 0;
     text-align: center;
     width: 60%;
     background: #C2C2C2;
@@ -221,7 +256,7 @@ section#middle-section{
 }
 .triangle-arrow {
     border-right: 58px solid transparent;
-    border-top: 100px solid #70A8FC;
+    border-top: 100px solid #5B9CFC;
     display: block;
     position: absolute;
     height: 0;
@@ -233,12 +268,23 @@ section#middle-section{
 .header-phone .kampus1 h2, .header-phone .kampus2 h2 {
     font-size: 12px;
     margin-bottom: 0px;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 10px;
 }
+.header{
+  border-bottom: 1px solid gray;
+  margin-bottom: 20px;
+}
 section.slider{
-  width: 80%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 65px;
+  height: 420px;
+}
+.flexslider{
+  border: none;
+}
+.flex-direction-nav a {
+  top:40%;
 }
