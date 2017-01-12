@@ -20,45 +20,60 @@
                 <form class="form-horizontal">
                   <div class="box-body">
                     <div class="form-group">
-                      <label class="col-sm-2 control-label">ID Type</label>
-                      <div class="col-sm-10">
-                        <input type="text" name="id_type" class="form-control" placeholder="ID Type">
+                      <label class="col-sm-2 control-label">News Type</label>
+                      <div class="col-sm-2">
+                        <select class="form-control" name="news_type">
+                          <option> </option>
+                          <option> </option>
+                        </select>
                       </div>
                     </div>
                     <div class="form-group">
-                      <label class="col-sm-2 control-label">Title Indonesian</label>
-                      <div class="col-sm-10">
+                      <label class="col-sm-2 control-label">Title (Indonesia)</label>
+                      <div class="col-sm-8">
                         <input type="text" name="title_ina" class="form-control" placeholder="Title">
                       </div>
                     </div>
                     <div class="form-group">
-                      <label class="col-sm-2 control-label">Title English</label>
-                      <div class="col-sm-10">
+                      <label class="col-sm-2 control-label">Title (English)</label>
+                      <div class="col-sm-8">
                         <input type="text" name="title_eng" class="form-control" placeholder="Title">
                       </div>
                     </div>
                     <div class="form-group">
-                      <label class="col-sm-2 control-label">Lead Indonesian</label>
+                      <label class="col-sm-2 control-label">Author</label>
+                      <div class="col-sm-4">
+                        <input type="text" name="author" class="form-control" placeholder="Author">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Lead (Indonesia)</label>
                       <div class="col-sm-10">
                         <input type="text" name="lead_ina" class="form-control" placeholder="Lead">
                       </div>
                     </div>
                     <div class="form-group">
-                      <label class="col-sm-2 control-label">Lead English</label>
+                      <label class="col-sm-2 control-label">Lead (English)</label>
                       <div class="col-sm-10">
                         <input type="text" name="lead_eng" class="form-control" placeholder="Lead">
                       </div>
                     </div>
                     <div class="form-group">
-                      <label class="col-sm-2 control-label">Content Indonesian</label>
+                      <label class="col-sm-2 control-label">Content (Indonesia)</label>
                       <div class="col-sm-10">
                        <textarea name="konten_ina" rows="10" cols="100" placeholder="Content"></textarea>
                       </div>
                     </div>
                     <div class="form-group">
-                      <label class="col-sm-2 control-label">Content English</label>
+                      <label class="col-sm-2 control-label">Content (English)</label>
                       <div class="col-sm-10">
                        <textarea name="konten_eng" rows="10" cols="100" placeholder="Content"></textarea>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Thumb</label>
+                      <div class="col-sm-10">
+                        <input type="file" name="thumb">
                       </div>
                     </div>
                     <div class="form-group">
@@ -68,8 +83,14 @@
                       </div>
                     </div>
                     <div class="form-group">
-                      <label class="col-sm-2 control-label">Hot</label>
+                      <label class="col-sm-2 control-label">Banner</label>
                       <div class="col-sm-10">
+                        <input type="file" name="banner">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">Highlight</label>
+                      <div class="col-sm-2">
                         <select class="form-control" name="hot">
                           <option> </option>
                           <option>Yes</option>
@@ -78,15 +99,9 @@
                       </div>
                     </div>
                     <div class="form-group">
-                      <label class="col-sm-2 control-label">BPict</label>
-                      <div class="col-sm-10">
-                        <input type="text" name="bpict" class="form-control" placeholder="BPict">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-sm-2 control-label">Banner</label>
-                      <div class="col-sm-10">
-                        <select class="form-control" name="banner">
+                      <label class="col-sm-2 control-label">Banner View</label>
+                      <div class="col-sm-2">
+                        <select class="form-control" name="banner_view">
                           <option> </option>
                           <option>Yes</option>
                           <option>No</option>
@@ -94,34 +109,12 @@
                       </div>
                     </div>
                     <div class="form-group">
-                      <label class="col-sm-2 control-label">Hit</label>
-                      <div class="col-sm-10">
-                        <input type="text" name="hit" class="form-control" placeholder="Hit">
-                      </div>
-                    </div>
-                    <div class="form-group">
                       <label class="col-sm-2 control-label">Published</label>
-                      <div class="col-sm-10">
+                      <div class="col-sm-2">
                         <select class="form-control" name="published">
                           <option> </option>
                           <option>Inactive</option>
                           <option>Active</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-sm-2 control-label">Author</label>
-                      <div class="col-sm-10">
-                        <input type="text" name="author" class="form-control" placeholder="Author">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-sm-2 control-label">Post BY</label>
-                      <div class="col-sm-10">
-                        <select class="form-control" name="post_by">
-                          <option> </option>
-                          <option> </option>
-                          <option> </option>
                         </select>
                       </div>
                     </div>

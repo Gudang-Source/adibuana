@@ -235,10 +235,31 @@
                           <li><a href="<?php echo base_url() ?>karier"><i class="__icon"></i>Karier</a>
                           </li>
                           <li><a href="#"><i class="__icon"></i>Blog</a>
+                            <ul>
+                                <li>
+                                    <a href="#">Alumni</a>
+                                </li>
+                                <li>
+                                    <a href="#">Dosen</a>
+                                </li>
+                                <li>
+                                    <a href="#">Mahasiswa</a>
+                                </li>
+                                <li>
+                                    <a href="#">UKM</a>
+                                </li>
+                                <li>
+                                    <a href="#">Referensi</a>
+                                </li>
+                                <li>
+                                    <a href="#">Kesehatan</a>
+                                </li>
+                            </ul>
+                          </li>
                         </ul>
                       </li>
                       <li>
-                          <a href="#">KONTAK</a>
+                          <a href="#">Kontak</a>
                       </li>
                   </nav>
                 </div>

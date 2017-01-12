@@ -27,52 +27,85 @@
       <ul class="sidebar-menu">
         <li class="header">MENU</li>
 
-        <li class="active treeview">
+        <li class="treeview">
           <a href="#">
-            <i class="fa"></i>
-            <span>Sekilas</span>
+            <i class=""></i>
+            <span>Data</span>
+            <i class="fa fa-angle-left pull-right"></i>
           </a>
+          <ul class="treeview-menu">
+              <li><a href="#"><i class="fa fa-circle-o"></i>Fasilitas</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i>Detail Fasilitas</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i>Tentang Kami</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i>Satuan Kerja</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i>Detail Satuan Kerja</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i>Karir</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i>Detail Karir</a></li>
+          </ul>
         </li>
 
         <li class="treeview">
           <a href="#">
-            <i class="fa"></i>
-            <span>Fakultas Detil</span>
+            <i class=""></i>
+            <span>Berita</span>
+            <i class="fa fa-angle-left pull-right"></i>
           </a>
+          <ul class="treeview-menu">
+              <li><a href="#"><i class="fa fa-circle-o"></i>Katagori Berita</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i>Detail Berita</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i>Info Kegiatan</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i>Detail Kegiatan</a></li>
+          </ul>
         </li>
 
         <li class="treeview">
           <a href="#">
-            <i class="fa"></i>
-            <span>Fakultas dan Program Studi</span>
+            <i class=""></i>
+            <span>Fakultas</span>
+            <i class="fa fa-angle-left pull-right"></i>
           </a>
+          <ul class="treeview-menu">
+              <li><a href="#"><i class="fa fa-circle-o"></i>Fakultas dan Program Studi</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i>Detail Fakultas</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i>Area Fakultas</a></li>
+          </ul>
         </li>
 
         <li class="treeview">
           <a href="#">
-            <i class="fa"></i>
-            <span>Area Fakultas</span>
+            <i class=""></i>
+            <span>Galeri</span>
+            <i class="fa fa-angle-left pull-right"></i>
           </a>
+          <ul class="treeview-menu">
+              <li><a href="#"><i class="fa fa-circle-o"></i>Katagori Galeri</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i>Daftar Galeri</a></li>
+          </ul>
         </li>
 
         <li class="treeview">
           <a href="#">
-            <i class="fa"></i>
-            <span>Satuan Kerja</span>
-          </a>
-        </li>
-
-        <li class="treeview">
-          <a href="#">
-            <i class="fa"></i>
-            <span>Berita dan Pengumuman</span>
-          </a>
-        </li>
-
-        <li class="treeview">
-          <a href="#">
-            <i class="fa"></i>
+            <i class=""></i>
             <span>Blog</span>
+            <i class="fa fa-angle-left pull-right"></i>
+          </a>
+          <ul class="treeview-menu">
+              <li><a href="#"><i class="fa fa-circle-o"></i>Katagori Blog</a></li>
+              <li><a href="#"><i class="fa fa-circle-o"></i>Daftar Blog</a></li>
+          </ul>
+        </li>
+        
+        <li class="treeview">
+          <a href="#">
+            <i class=""></i>
+            <span>KKN Online</span>
+          </a>
+        </li>
+
+        <li class="treeview">
+          <a href="#">
+            <i class=""></i>
+            <span>Kontak</span>
           </a>
         </li>
       </ul>
