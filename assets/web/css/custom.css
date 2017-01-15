@@ -6,24 +6,36 @@ body{
   padding-top: 50px;
 }
 .color-secondary{
-  color: #5B9CFC;
+  color: #22A7F0;
 }
 .bgc-blue{
-    background-color: #005DBA;
+    background-color: #2261A1;
 }
 .bgc-light-blue{
-    background-color: #5B9CFC;
+    background-color: #22A7F0;
 }
 .bgc-white{
     background-color: #FFFFFF;
 }
 .btn-pmb{
   padding: 10px 40px;
-  background-color: #005dba;
+  background-color: #2261A1;
+}
+.btn-lainnya{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: none;
+  border: 1px solid #22a7f0 !important;
+  border-radius: 2px;
+}
+.btn-lainnya:hover{
+  background-color: #22a7f0;
 }
 .main-nav .left-bg{
   position: absolute;
-  background-color: #5B9CFC;
+  background-color: #22A7F0;
   height: 100px;
   width: 100%;
   left: -100%;
@@ -34,6 +46,12 @@ body{
 }
 .main-nav .__middle .nav-content-wrapper, .main-nav .__middle .megatron {
     height: 70px;
+}
+.main-menu > ul > li > ul.multi-floor-menu a {
+    padding: 10px 20px;
+}
+.main-menu > ul > li ul {
+    border-bottom: 2px solid #22A7F0;
 }
 .main-nav .right-bg{
   position: absolute;
@@ -69,7 +87,7 @@ body{
   width: 100%;
 }
 .main-nav .__middle{
-  background: #005DBA;
+  background: #2261A1;
 }
 .main-menu > ul > li > a {
     color: white;
@@ -79,7 +97,7 @@ body{
     padding-bottom: 20px;
 }
 .main-nav .__middle .main-menu > ul > li > a:hover {
-  background-color: #5B9CFC;
+  background-color: #22A7F0;
 }
 .megatron.inline .logo {
     width: 250px;
@@ -91,7 +109,7 @@ body{
 }
 .pengurus-section{
     padding-top: 20px;
-    padding-bottom: 30px;wid
+    padding-bottom: 30px;
 }
 .pengurus-section img{
     width: 150px;
@@ -160,18 +178,25 @@ body{
     width: 100%;
 }
 
-.adibuana-header{
-  padding-left: 15px;
-}
-.adibuana-header .header{
-  font-size: 26px;
-}
 
+.adibuana-header .header{
+  border-bottom: 2px solid #22A7F0;
+  margin-bottom: 20px;
+}
 .adibuana-header .header .icon{
-  color: #00B863;
+  color: #FFFFFF;
+}
+.adibuana-header .header .title span{
+  padding: 10px;
+  padding-bottom:8px;
+  font-size: 16px;
+  background:#22A7F0;
+  color:white;
+  font-weight:400;
+  
 }
 .bg-footer{
-  background: #5B9CFC;
+  background: #22A7F0;
   height: 60px;
 }
 span.title{
@@ -189,19 +214,46 @@ section#middle-section{
 
 }
 
-.pengumuman ul img{
-  width: 75px;
-  height: 75px;
-  object-fit: cover;
+.pengumuman ul .date{
+  width: 20%;
   float: left;
-  margin-top: 5px;
-}
-.pengumuman ul .deskripsi{
-  float: left;
-  margin-left: 10px;
-  width: 75%;
+  text-align: center;
 }
 
+.pengumuman .date .tanggal{
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1;
+}
+.pengumuman .date .bulan{
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.pengumuman ul .deskripsi{
+  float: left;
+  width: 80%;
+  line-height: 1.4;
+  font-size:12px;
+}
+
+.pengumuman ul li{
+   border-left: 4px solid gray;
+}
+
+.pengumuman ul li:hover{
+  color:#22A7F0;
+  border-left-color: #22A7F0 !important;
+}
+.pengumuman .deskripsi a:hover{
+  color: #22A7F0;
+
+}
+.pengumuman .deskripsi a{
+  transition: none;
+}
+    
 .berita-terbaru{
   margin-top: 10px;
 }
@@ -230,7 +282,7 @@ section#middle-section{
 }
 
 .header-phone {
-    background-color: #5B9CFC;
+    background-color: #22A7F0;
     width: 40%;
     height: 100px;
     padding: 20px 0 20px 75px;
@@ -256,7 +308,7 @@ section#middle-section{
 }
 .triangle-arrow {
     border-right: 58px solid transparent;
-    border-top: 100px solid #5B9CFC;
+    border-top: 100px solid #22A7F0;
     display: block;
     position: absolute;
     height: 0;
@@ -272,8 +324,7 @@ section#middle-section{
     margin-bottom: 10px;
 }
 .header{
-  border-bottom: 1px solid gray;
-  margin-bottom: 20px;
+ 
 }
 section.slider{
   width: 100%;
@@ -287,4 +338,33 @@ section.slider{
 }
 .flex-direction-nav a {
   top:40%;
+}
+.panel{
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+
+.panel-primary {
+    border-color: #22A7F0;
+}
+.panel-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    color: inherit;
+}
+.panel-primary > .panel-heading {
+    color: #fff;
+    background-color: #22A7F0;
+    border-color: #22A7F0;
+}
+.panel-heading {
+    padding: 5px 15px;
+    border-bottom: 1px solid transparent;
+}
+.panel-body {
+    padding: 15px;
 }

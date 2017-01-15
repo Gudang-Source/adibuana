@@ -277,4 +277,23 @@ function slugify($text){
     return $text;
 }
 
+function month_3_char($month){
+	$karakter3 = [
+		'Jan',
+		'Feb',
+		'Mar',
+		'Apr',
+		'Mei',
+		'Jun',
+		'Jul',
+		'Ags',
+		'Sep',
+		'Okt',
+		'Nov',
+		'Des'
+	];
+
+	return $karakter3[$month];
+}
+
 // ------------------------------------------------------------------------

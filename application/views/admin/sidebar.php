@@ -1,114 +1,144 @@
-<!-- Left side column. contains the logo and sidebar -->
-  <aside class="main-sidebar">
-    <!-- sidebar: style can be found in sidebar.less -->
-    <section class="sidebar">
-      <!-- Sidebar user panel -->
-      <div class="user-panel">
-        <div class="pull-left image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-        </div>
-        <div class="pull-left info">
-          <p>Admin</p>
-          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-        </div>
-      </div>
-      <!-- search form -->
-      <form action="#" method="get" class="sidebar-form">
-        <div class="input-group">
-          <input type="text" name="q" class="form-control" placeholder="Search...">
-              <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
-        </div>
-      </form>
-      <!-- /.search form -->
-      <!-- sidebar menu: : style can be found in sidebar.less -->
-      <ul class="sidebar-menu">
-        <li class="header">MENU</li>
+	<!-- Main sidebar -->
+			<div class="sidebar sidebar-main sidebar-default">
+				<div class="sidebar-content">
 
-        <li class="treeview">
-          <a href="#">
-            <i class=""></i>
-            <span>Data</span>
-            <i class="fa fa-angle-left pull-right"></i>
-          </a>
-          <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i>Fasilitas</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>Detail Fasilitas</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>Tentang Kami</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>Satuan Kerja</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>Detail Satuan Kerja</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>Karir</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>Detail Karir</a></li>
-          </ul>
-        </li>
+					<!-- Main navigation -->
+					<div class="sidebar-category sidebar-category-visible">
+						<div class="category-title h6">
+							<span>Main navigation</span>
+							<ul class="icons-list">
+								<li><a href="#" data-action="collapse"></a></li>
+							</ul>
+						</div>
 
-        <li class="treeview">
-          <a href="#">
-            <i class=""></i>
-            <span>Berita</span>
-            <i class="fa fa-angle-left pull-right"></i>
-          </a>
-          <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i>Katagori Berita</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>Detail Berita</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>Info Kegiatan</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>Detail Kegiatan</a></li>
-          </ul>
-        </li>
+						<div class="category-content sidebar-user">
+							<div class="media">
+								<a href="#" class="media-left"><img src="<?php echo base_url() ?>assets/admin/assets/images/placeholder.jpg" class="img-circle img-sm" alt=""></a>
+								<div class="media-body">
+									<span class="media-heading text-semibold">Magang</span>
+									<div class="text-size-mini text-muted">
+										<i class="icon-pin text-size-small"></i> &nbsp;Magang_tranie
+									</div>
+								</div>
 
-        <li class="treeview">
-          <a href="#">
-            <i class=""></i>
-            <span>Fakultas</span>
-            <i class="fa fa-angle-left pull-right"></i>
-          </a>
-          <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i>Fakultas dan Program Studi</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>Detail Fakultas</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>Area Fakultas</a></li>
-          </ul>
-        </li>
+								<div class="media-right media-middle">
+									<ul class="icons-list">
+										<li>
+											<a href="#"><i class="icon-cog3"></i></a>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
 
-        <li class="treeview">
-          <a href="#">
-            <i class=""></i>
-            <span>Galeri</span>
-            <i class="fa fa-angle-left pull-right"></i>
-          </a>
-          <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i>Katagori Galeri</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>Daftar Galeri</a></li>
-          </ul>
-        </li>
+						<div class="category-content no-padding">
+							<ul class="navigation navigation-main navigation-accordion">
 
-        <li class="treeview">
-          <a href="#">
-            <i class=""></i>
-            <span>Blog</span>
-            <i class="fa fa-angle-left pull-right"></i>
-          </a>
-          <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i>Katagori Blog</a></li>
-              <li><a href="#"><i class="fa fa-circle-o"></i>Daftar Blog</a></li>
-          </ul>
-        </li>
-        
-        <li class="treeview">
-          <a href="#">
-            <i class=""></i>
-            <span>KKN Online</span>
-          </a>
-        </li>
+								<!-- Main -->
+								<li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
+								<li><a href="index.html"><i class="icon-home4"></i> <span>Home</span></a></li>
+								<li>
+									<a href="#"><i class="icon-gear"></i> <span>Preferences</span></a>
+									<ul>
+										<li><a href="layout_navbar_fixed.html">Change Password</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#"><i class="icon-image3"></i> <span>Header And Banner</span></a>
+									<ul>
+										<li><a href="../../layout_1/LTR/index.html" id="layout1">Layout 1</a></li>
+										<li><a href="../../layout_2/LTR/index.html" id="layout2">Layout 2</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#"><i class="icon-chip"></i> <span>Data</span></a>
+									<ul>
+										<li><a href="<?php echo base_url(); ?>admin/sekilas">About Us</a></li>
+										<li><a href="<?php echo base_url(); ?>admin/unit">Unit</a></li>
+										<li><a href="<?php echo base_url(); ?>admin/facility">Facility Management</a></li>
+										<li><a href="<?php echo base_url(); ?>admin/facilitydetail">Detail Facility Management</a></li>
+										<li><a href="<?php echo base_url(); ?>admin/link">Link Management</a></li>
+                    					<li><a href="<?php echo base_url(); ?>admin/kkn">KKN Online</a></li>
+									</ul>
+								</li>
 
-        <li class="treeview">
-          <a href="#">
-            <i class=""></i>
-            <span>Kontak</span>
-          </a>
-        </li>
-      </ul>
-    </section>
-    <!-- /.sidebar -->
-  </aside>
+								<li>
+									<a href="#"><i class="icon-library2"></i> <span>Faculty</span></a>
+									<ul>
+										<li><a href="colors_primary.html">Faculty Area Management</a></li>
+										<li><a href="colors_danger.html">Faculty Type Management</a></li>
+										<li><a href="colors_success.html">Faculty Management</a></li>
+										<li><a href="colors_warning.html">Faculty Course Management</a></li>
+										<li><a href="colors_info.html">Faculty Detail Management</a></li>
+                    					<li><a href="colors_info.html">Faculty Courses</a></li>
+									</ul>
+								</li>
+
+								<li>
+									<a href="#"><i class="icon-magazine"></i> <span>News Etc</span></a>
+									<ul>
+										<li><a href="colors_primary.html">Faculty Area Management</a></li>
+										<li><a href="colors_danger.html">Faculty Type Management</a></li>
+										<li><a href="colors_success.html">Faculty Management</a></li>
+										<li><a href="colors_warning.html">Faculty Course Management</a></li>
+										<li><a href="colors_info.html">Faculty Detail Management</a></li>
+                    					<li><a href="colors_info.html">Faculty Courses</a></li>
+									</ul>
+								</li>
+
+								<li>
+									<a href="#"><i class="icon-notebook"></i> <span>Career</span></a>
+									<ul>
+										<li><a href="colors_primary.html">Faculty Area Management</a></li>
+										<li><a href="colors_danger.html">Faculty Type Management</a></li>
+										<li><a href="colors_success.html">Faculty Management</a></li>
+										<li><a href="colors_warning.html">Faculty Course Management</a></li>
+										<li><a href="colors_info.html">Faculty Detail Management</a></li>
+                    					<li><a href="colors_info.html">Faculty Courses</a></li>
+									</ul>
+								</li>
+
+								<li>
+									<a href="#"><i class="icon-images3"></i> <span>Gallery</span></a>
+									<ul>
+										<li><a href="colors_primary.html">Faculty Area Management</a></li>
+										<li><a href="colors_danger.html">Faculty Type Management</a></li>
+										<li><a href="colors_success.html">Faculty Management</a></li>
+										<li><a href="colors_warning.html">Faculty Course Management</a></li>
+										<li><a href="colors_info.html">Faculty Detail Management</a></li>
+                    					<li><a href="colors_info.html">Faculty Courses</a></li>
+									</ul>
+								</li>
+
+								<li>
+									<a href="#"><i class="icon-blog"></i> <span>Blog</span></a>
+									<ul>
+										<li><a href="colors_primary.html">Faculty Area Management</a></li>
+										<li><a href="colors_danger.html">Faculty Type Management</a></li>
+										<li><a href="colors_success.html">Faculty Management</a></li>
+										<li><a href="colors_warning.html">Faculty Course Management</a></li>
+										<li><a href="colors_info.html">Faculty Detail Management</a></li>
+                    					<li><a href="colors_info.html">Faculty Courses</a></li>
+									</ul>
+								</li>
+
+								<li>
+									<a href="#"><i class="icon-phone"></i> <span>Contact</span></a>
+									<ul>
+										<li><a href="colors_primary.html">Faculty Area Management</a></li>
+										<li><a href="colors_danger.html">Faculty Type Management</a></li>
+										<li><a href="colors_success.html">Faculty Management</a></li>
+										<li><a href="colors_warning.html">Faculty Course Management</a></li>
+										<li><a href="colors_info.html">Faculty Detail Management</a></li>
+                    					<li><a href="colors_info.html">Faculty Courses</a></li>
+									</ul>
+								</li>
+
+							</ul>
+						</div>
+					</div>
+					<!-- /main navigation -->
+
+				</div>
+			</div>
+			<!-- /main sidebar -->

@@ -50,8 +50,8 @@
                     <div class="__info select-language dropdown"><a href="#" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe color-secondary"></i>Bahasa: Indonesia</a>
                       <div class="dropdown-menu menu menu-link-block">
                         <ul>
-                          <li><a href="#"><img src="assets/images/flag/united_kingdom.png" alt="flag" class="flag">Indonesia</a></li>
-                          <li><a href="#"><img src="assets/images/flag/france.png" alt="flag" class="flag">English</a></li>
+                          <li><a href="#"><img src="<?php echo base_url() ?>assets/images/flag/united_kingdom.png" alt="flag" class="flag">Indonesia</a></li>
+                          <li><a href="#"><img src="<?php echo base_url() ?>assets/images/flag/france.png" alt="flag" class="flag">English</a></li>
                         </ul>
                       </div>
                     </div>

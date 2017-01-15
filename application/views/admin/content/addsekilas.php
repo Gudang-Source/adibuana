@@ -1,94 +1,65 @@
-     <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-          <h1>
-            PAGE
-          </h1>
-        </section>
+<!-- Main content -->
+			<div class="content-wrapper">
 
-        <!-- Main content -->
-        <section class="content">
-          <div class="row">
-            <!-- right column -->
-            <div class="col-md-11">
-              <!-- Horizontal Form -->
-              <div class="box box-info">
-                <div class="box-header with-border">
-                  <h3 class="box-title">FORM ADD</h3>
-                </div><!-- /.box-header -->
-                <!-- form start -->
+				<!-- Form horizontal -->
+				<div class="panel panel-flat">
+					<div class="panel-heading">
+						<h5 class="panel-title">Basic form inputs</h5>
+						<div class="heading-elements">
+							<ul class="icons-list">
+		                		<li><a data-action="collapse"></a></li>
+		                		<li><a data-action="reload"></a></li>
+		                		<li><a data-action="close"></a></li>
+		                	</ul>
+	                	</div>
+					</div>
+
+					<div class="panel-body">
                 <form class="form-horizontal">
                   <div class="box-body">
                     <div class="form-group">
-                      <label class="col-sm-2 control-label">PAGE</label>
-                      <div class="col-sm-10">
-                        <input type="text" name="page" class="form-control" placeholder="PAGE">
+                      <label class="col-sm-2 control-label">Title Indonesian *</label>
+                      <div class="col-sm-6">
+                        <input type="text" name="title_ina" class="form-control">
                       </div>
                     </div>
                     <div class="form-group">
-                      <label class="col-sm-2 control-label">Title Indonesian</label>
-                      <div class="col-sm-10">
-                        <input type="text" name="title_ina" class="form-control" placeholder="Title">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-sm-2 control-label">Title English</label>
-                      <div class="col-sm-10">
-                        <input type="text" name="title_eng" class="form-control" placeholder="Title">
+                      <label class="col-sm-2 control-label">Title English *</label>
+                      <div class="col-sm-6">
+                        <input type="text" name="title_eng" class="form-control">
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Content Indonesian</label>
                       <div class="col-sm-10">
-                       <textarea name="konten_ina" rows="10" cols="100" placeholder="Content"></textarea>
+                       <textarea id="editor-full" name="konten_ina" rows="10" cols="100"></textarea>
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Content English</label>
                       <div class="col-sm-10">
-                       <textarea name="konten_eng" rows="10" cols="100" placeholder="Content"></textarea>
+                       <textarea id="editor-full-2" name="konten_eng" rows="10" cols="100"></textarea>
                       </div>
                     </div>
                     <div class="form-group">
-                      <label class="col-sm-2 control-label">File Upload</label>
-                      <div class="col-sm-10">
-                        <input type="file" name="file">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-sm-2 control-label">Priority</label>
-                      <div class="col-sm-10">
-                        <input type="text" name="priority" class="form-control" placeholder="Priority">
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-sm-2 control-label">Published</label>
-                      <div class="col-sm-10">
-                        <select class="form-control" name="published">
-                          <option> </option>
-                          <option>Inactive</option>
-                          <option>Active</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="col-sm-2 control-label">Post BY</label>
-                      <div class="col-sm-10">
-                        <select class="form-control" name="post_by">
-                          <option> </option>
-                          <option> </option>
-                          <option> </option>
-                        </select>
-                      </div>
-                    </div>
+											<label class="col-lg-2 control-label">File Upload</label>
+											<div class="col-lg-4">
+												<input type="file" class="file-styled">
+												<span class="help-block">Format : jpg, jpeg, png. Max file size 20Mb</span>
+											</div>
+										</div>
+
                   </div><!-- /.box-body -->
                   <div class="box-footer">
-                    <button type="submit" class="btn btn-default">Cancel</button>
-                    <button type="submit" class="btn btn-info pull-right">Kirim</button>
+                    <div class="text-right">
+                      <button type="submit" class="btn btn-primary">Submit form <i class="icon-arrow-right14 position-right"></i></button>
+                    </div>
                   </div><!-- /.box-footer -->
                 </form>
-              </div><!-- /.box -->
-            </div><!--/.col (right) -->
-          </div>   <!-- /.row -->
-        </section><!-- /.content -->
-      </div><!-- /.content-wrapper -->
+
+					</div>
+				</div>
+				<!-- /form horizontal -->
+
+			</div>
+			<!-- /main content -->    

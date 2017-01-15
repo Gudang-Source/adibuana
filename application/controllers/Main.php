@@ -13,6 +13,7 @@
             $this->load->model('NewsModel', 'news_model');
 
             $data['berita_terbaru'] = $this->news_model->get_berita_terbaru();
+            $data['pengumuman_terbaru'] = $this->news_model->get_pengumuman_terbaru();
             $this->template_website->display('web/content/index', $data);
         }
 

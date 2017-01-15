@@ -12,6 +12,15 @@
             ->offset(0);
       return $this->db->get()->result();
     }
+     function get_pengumuman_terbaru(){
+      $this->db->select('*')
+            ->from('adi_news')
+            ->where('id_type', '04')
+            ->order_by('post_date', 'DESC')
+            ->limit(5)
+            ->offset(0);
+      return $this->db->get()->result();
+    }
     function get_berita_by_id($id){
       $this->db->select('*')
             ->from('adi_news')
