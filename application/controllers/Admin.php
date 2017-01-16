@@ -170,14 +170,139 @@
             }
         }
 
-        function berita($aksi='index', $id=null){
+        function fakultas_area($aksi='index', $id=null){
+            $this->load->model('FacultyModel', 'faculty_model');
             switch ($aksi) {
                 case 'index':
-                    $this->template_admin->display('admin/content/indexberita');
+                    $data['area'] = $this->faculty_model->get_fakultas_area();
+                    $this->template_admin->display('admin/content/indexfakultasarea', $data);
                     break;
-                case 'add':
-                    $this->template_admin->display('admin/content/addberita');
+                
+                default:
+                    # code...
                     break;
+            }
+        }
+
+        function fakultas_tipe($aksi='index', $id=null){
+            $this->load->model('FacultyModel', 'faculty_model');
+            switch ($aksi) {
+                case 'index':
+                    $data['tipe'] = $this->faculty_model->get_fakultas_tipe();
+                    $this->template_admin->display('admin/content/indexfakultastipe', $data);
+                    break;
+                
+                default:
+                    # code...
+                    break;
+            }
+        }
+
+        function fakultas($aksi='index', $id=null){
+            $this->load->model('FacultyModel', 'faculty_model');
+            switch ($aksi) {
+                case 'index':
+                    $data['fakultas'] = $this->faculty_model->get_fakultas();
+                    $this->template_admin->display('admin/content/indexfakultas', $data);
+                    break;
+                
+                default:
+                    # code...
+                    break;
+            }
+        }
+
+        function faculty_course($aksi='index', $id=null){
+            $this->load->model('FacultyModel', 'faculty_model');
+            switch ($aksi) {
+                case 'index':
+                    $data['course'] = $this->faculty_model->get_fakultas_course();
+                    $this->template_admin->display('admin/content/indexfakultascourse', $data);
+                    break;
+                
+                default:
+                    # code...
+                    break;
+            }
+        }
+
+        function news_type($aksi='index', $id=null){
+            $this->load->model('NewsModel', 'news_model');
+            switch ($aksi) {
+                case 'index':
+                    $data['tipe'] = $this->news_model->get_news_type();
+                    $this->template_admin->display('admin/content/indexberitatipe', $data);
+                    break;
+                
+                default:
+                    # code...
+                    break;
+            }
+        }
+
+        function news($aksi='index', $id=null){
+            $this->load->model('NewsModel', 'news_model');
+            switch ($aksi) {
+                case 'index':
+                    $data['news'] = $this->news_model->get_news();
+                    $this->template_admin->display('admin/content/indexberita', $data);
+                    break;
+                
+                default:
+                    # code...
+                    break;
+            }
+        }
+
+        function news_detail($aksi='index', $id=null){
+            $this->load->model('NewsModel', 'news_model');
+            switch ($aksi) {
+                case 'index':
+                    $data['detail'] = $this->news_model->get_detail_news();
+                    $this->template_admin->display('admin/content/indexberitadetail', $data);
+                    break;
+                
+                default:
+                    # code...
+                    break;
+            }
+        }
+
+        function event($aksi='index', $id=null){
+            $this->load->model('EventModel', 'event_model');
+            switch ($aksi) {
+                case 'index':
+                    $data['event'] = $this->event_model->get_event();
+                    $this->template_admin->display('admin/content/indexevent', $data);
+                    break;
+                
+                default:
+                    # code...
+                    break;
+            }
+        }
+
+        function event_detail($aksi='index', $id=null){
+            $this->load->model('EventModel', 'event_model');
+            switch ($aksi) {
+                case 'index':
+                    $data['detail'] = $this->event_model->get_detail_event();
+                    $this->template_admin->display('admin/content/indexeventdetail', $data);
+                    break;
+                
+                default:
+                    # code...
+                    break;
+            }
+        }
+
+        function career($aksi='index', $id=null){
+            $this->load->model('CareerModel', 'career_model');
+            switch ($aksi) {
+                case 'index':
+                    
+                    break;
+                
                 default:
                     # code...
                     break;

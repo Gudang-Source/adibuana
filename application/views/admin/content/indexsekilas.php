@@ -31,9 +31,9 @@
                                         <td><?php echo convertDateTime($q_sekilas->post_date) ?></td>
                                         <td><?php echo convertDateTime($q_sekilas->modify_date) ?></td>
                                         <td>
-                                            <a href="<?php echo base_url(); ?>admin/sekilas/view/<?php echo $q_sekilas->id ?>" class="btn btn-primary">View</a>
+                                            <a href="<?php echo base_url(); ?>admin/sekilas/view/<?php echo $q_sekilas->id ?>" class="btn btn-info">View</a>
                                             <a href="<?php echo base_url(); ?>admin/sekilas/edit/<?php echo $q_sekilas->id ?>" class="btn btn-success">Edit</a>
-                                            <a href="<?php echo base_url(); ?>admin/sekilas/delete/<?php echo $q_sekilas->id ?>" class="btn btn-warning">Hapus</a>
+                                            <a href="<?php echo base_url(); ?>admin/sekilas/delete/<?php echo $q_sekilas->id ?>" class="btn btn-danger">Hapus</a>
                                         </td>
                                     </tr>
                                     <?php
