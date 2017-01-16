@@ -77,60 +77,43 @@
 								<li>
 									<a href="#"><i class="icon-magazine"></i> <span>News Etc</span></a>
 									<ul>
-										<li><a href="colors_primary.html">Faculty Area Management</a></li>
-										<li><a href="colors_danger.html">Faculty Type Management</a></li>
-										<li><a href="colors_success.html">Faculty Management</a></li>
-										<li><a href="colors_warning.html">Faculty Course Management</a></li>
-										<li><a href="colors_info.html">Faculty Detail Management</a></li>
-                    					<li><a href="colors_info.html">Faculty Courses</a></li>
+										<li><a href="colors_danger.html">News Type Management</a></li>
+										<li><a href="colors_success.html">News Management</a></li>
+										<li><a href="colors_warning.html">News Detail Management</a></li>
+										<li><a href="colors_info.html">Event Management</a></li>
+                    					<li><a href="colors_info.html">Event Detail Management</a></li>
 									</ul>
 								</li>
 
 								<li>
 									<a href="#"><i class="icon-notebook"></i> <span>Career</span></a>
 									<ul>
-										<li><a href="colors_primary.html">Faculty Area Management</a></li>
-										<li><a href="colors_danger.html">Faculty Type Management</a></li>
-										<li><a href="colors_success.html">Faculty Management</a></li>
-										<li><a href="colors_warning.html">Faculty Course Management</a></li>
-										<li><a href="colors_info.html">Faculty Detail Management</a></li>
-                    					<li><a href="colors_info.html">Faculty Courses</a></li>
+										<li><a href="colors_primary.html">Career Management</a></li>
+										<li><a href="colors_danger.html">Career Detail Management</a></li>
 									</ul>
 								</li>
 
 								<li>
 									<a href="#"><i class="icon-images3"></i> <span>Gallery</span></a>
 									<ul>
-										<li><a href="colors_primary.html">Faculty Area Management</a></li>
-										<li><a href="colors_danger.html">Faculty Type Management</a></li>
-										<li><a href="colors_success.html">Faculty Management</a></li>
-										<li><a href="colors_warning.html">Faculty Course Management</a></li>
-										<li><a href="colors_info.html">Faculty Detail Management</a></li>
-                    					<li><a href="colors_info.html">Faculty Courses</a></li>
+										<li><a href="colors_primary.html">Gallery Category</a></li>
+										<li><a href="colors_danger.html">Gallery</a></li>
 									</ul>
 								</li>
 
 								<li>
 									<a href="#"><i class="icon-blog"></i> <span>Blog</span></a>
 									<ul>
-										<li><a href="colors_primary.html">Faculty Area Management</a></li>
-										<li><a href="colors_danger.html">Faculty Type Management</a></li>
-										<li><a href="colors_success.html">Faculty Management</a></li>
-										<li><a href="colors_warning.html">Faculty Course Management</a></li>
-										<li><a href="colors_info.html">Faculty Detail Management</a></li>
-                    					<li><a href="colors_info.html">Faculty Courses</a></li>
+										<li><a href="colors_primary.html">Blog Type</a></li>
+										<li><a href="colors_danger.html">Blog</a></li>
 									</ul>
 								</li>
 
 								<li>
 									<a href="#"><i class="icon-phone"></i> <span>Contact</span></a>
 									<ul>
-										<li><a href="colors_primary.html">Faculty Area Management</a></li>
-										<li><a href="colors_danger.html">Faculty Type Management</a></li>
-										<li><a href="colors_success.html">Faculty Management</a></li>
-										<li><a href="colors_warning.html">Faculty Course Management</a></li>
-										<li><a href="colors_info.html">Faculty Detail Management</a></li>
-                    					<li><a href="colors_info.html">Faculty Courses</a></li>
+										<li><a href="colors_primary.html">Contact</a></li>
+										<li><a href="colors_danger.html">Guess Book</a></li>
 									</ul>
 								</li>
 

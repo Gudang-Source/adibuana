@@ -34,4 +34,20 @@
          function delete($id){
 
          }
+
+         function get_event(){
+            $this->db->select('adi_event.*, adi_user.name')
+                    ->from('adi_event')
+                    ->join('adi_user', 'adi_event.post_by = adi_user.id');
+            $event = $this->db->get()->result();
+            return $event;
+         }
+
+         function get_detail_event(){
+            $this->db->select('adi_event_detail.*, adi_user.name')
+                    ->from('adi_event_detail')
+                    ->join('adi_user', 'adi_event_detail.post_by = adi_user.id');
+            $detail = $this->db->get()->result();
+            return $detail;
+         }
      }

@@ -43,4 +43,29 @@
             ->offset(0);
       return $this->db->get()->result();
     }
+
+    function get_news_type(){
+      $this->db->select('adi_news_type.*, adi_user.name')
+              ->from('adi_news_type')
+              ->join('adi_user', 'adi_news_type.post_by = adi_user.id');
+      $news_type = $this->db->get()->result();
+      return $news_type;
+    }
+
+    function get_news(){
+      $this->db->select('adi_news.*, adi_user.name, adi_news_type.type_eng')
+              ->from('adi_news')
+              ->join('adi_user', 'adi_news.post_by = adi_user.id')
+              ->join('adi_news_type', 'adi_news.id_type = adi_news_type.id');
+      $news = $this->db->get()->result();
+      return $news;
+    }
+
+    function get_detail_news(){
+      $this->db->select('adi_news_detail.*, adi_user.name')
+              ->from('adi_news_detail')
+              ->join('adi_user', 'adi_news_detail.post_by = adi_user.id');
+      $detail = $this->db->get()->result();
+      return $detail;
+    }
   }
