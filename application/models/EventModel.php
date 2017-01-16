@@ -16,6 +16,15 @@
             return $page;
 
          }
+         function get_agenda_terbaru(){
+              $page = $this->db->select('*')
+                    ->from('adi_event')
+                    ->order_by('post_date', 'DESC')
+                    ->limit(8)
+                    ->offset(0);
+            $page = $page->get()->result();
+            return $page;
+         }
          function insert(){
 
          }

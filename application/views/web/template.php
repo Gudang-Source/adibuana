@@ -1105,24 +1105,89 @@
     <script type="text/javascript" src="<?php echo base_url() ?>assets/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url() ?>assets/vendors/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url() ?>assets/vendors/jquery-modal/jquery.modal.min.js"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwtb7cR_XBPEvxtQ_Yq3_xKsOWQroCTPA&amp;sensor=false"></script>
     <script type="text/javascript" src="<?php echo base_url() ?>assets/web/js/main.js"></script>
     <script type="text/javascript" src="<?php echo base_url() ?>assets/web/js/jquery.flexslider-min.js"></script>
-
-    <script type="text/javascript">
-    $(window).load(function(){
-      $('.flexslider').flexslider({
-        animation: "fade",
-        controlNav: false,
-        start: function(slider){
-          $('body').removeClass('loading');
-        }
-      });
-    });
-  </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDytkyUX2xb4hze3Gn949SwtKYZx2f2VEQ"></script>    
 
     <!-- Google analytics-->
     <script type="text/javascript">(function(b,o,i,l,e,r){b.GoogleAsnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-57387972-3');ga('send','pageview');</script>
     <!--End Javascript Library-->
+
+        <script type="text/javascript">
+    
+      create_kampus_map();
+
+      $(window).load(function(){
+        $('.flexslider').flexslider({
+          animation: "fade",
+          controlNav: false,
+          start: function(slider){
+            $('body').removeClass('loading');
+          }
+        });
+      });
+    
+      function create_kampus_map(){
+        var map;
+        var bounds = new google.maps.LatLngBounds();
+        var mapOptions = {
+            center: {lat :-7.316562, lng: 112.734288},
+            mapTypeId: 'roadmap'
+        };
+                        
+        // Display a map on the page
+        map = new google.maps.Map(document.getElementById("map_lokasi"), mapOptions);
+        map.setTilt(45);
+            
+        // Multiple Markers
+        var markers = [
+            ['Kampus 1', -7.293631, 112.748913],
+            ['Kampus 2', -7.344623, 112.723200]
+        ];
+                            
+        // Info Window Content
+        var infoWindowContent = [
+            ['<div class="info_content">' +
+            '<h3>Kampus 1</h3>' +
+            '<p>Jl. Ngagel Dadi III-B/37, Surabaya, 60245 <br> Telepon: (031) 5041097, 5041190 <br> Faks: (031) 5042804 </p>' + '</div>'],
+            ['<div class="info_content">' +
+            '<h3>Kampus 2</h3>' +
+            '<p>Jl. Dukuh Menanggal XII, Surabaya 60234 <br> Telepon: (031) 8281181, 8281183 <br> Email: admin@unipasby.ac.id </p>' +
+            '</div>']
+        ];
+            
+        // Display multiple markers on a map
+        var infoWindow = new google.maps.InfoWindow(), marker, i;
+        
+        // Loop through our array of markers & place each one on the map  
+        for( i = 0; i < markers.length; i++ ) {
+            var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
+            bounds.extend(position);
+            marker = new google.maps.Marker({
+                position: position,
+                map: map,
+                title: markers[i][0]
+            });
+            
+            // Allow each marker to have an info window    
+            google.maps.event.addListener(marker, 'click', (function(marker, i) {
+                return function() {
+                    infoWindow.setContent(infoWindowContent[i][0]);
+                    infoWindow.open(map, marker);
+                }
+            })(marker, i));
+
+            // Automatically center the map fitting all markers on the screen
+            map.fitBounds(bounds);
+        }
+
+        // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
+        var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
+            this.setZoom(12);
+            google.maps.event.removeListener(boundsListener);
+        });
+      }
+    </script>
+
   </body>
 </html>

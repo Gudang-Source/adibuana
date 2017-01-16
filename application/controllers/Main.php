@@ -11,9 +11,11 @@
         function index(){
             $data = $this->data;
             $this->load->model('NewsModel', 'news_model');
+            $this->load->model('EventModel', 'event_model');
 
             $data['berita_terbaru'] = $this->news_model->get_berita_terbaru();
             $data['pengumuman_terbaru'] = $this->news_model->get_pengumuman_terbaru();
+            $data['agenda_terbaru'] = $this->event_model->get_agenda_terbaru();
             $this->template_website->display('web/content/index', $data);
         }
 

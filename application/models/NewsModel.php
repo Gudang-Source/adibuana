@@ -8,7 +8,7 @@
             ->from('adi_news')
             ->where('id_type', '01')
             ->order_by('post_date', 'DESC')
-            ->limit(8)
+            ->limit(6)
             ->offset(0);
       return $this->db->get()->result();
     }
