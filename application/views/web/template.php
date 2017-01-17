@@ -23,11 +23,17 @@
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/vendors/animate.css/animate.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/web/fonts/megatron/styles.css">
     <!--Main stylesheet-->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/web/css/main.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/web/css/flexslider.css">
+
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/select2/css/select2.min.css">
+
+    
+
     <link rel="stylesheet" type="text/css" href="<?php echo base_url() ?>assets/web/css/custom.css">
 
     <!--Modernizr js-->
@@ -69,7 +75,7 @@
             </div>
           </div>
         </div>
-        <div class="wrapper-box bgc-light-blue">
+        <div class="wrapper-box <?php echo $hal== 'index'? 'bgc-light-blue':'bgc-blue' ?>">
           <div class="__middle">
             <div class="container container-home">
               <div class="nav-content-wrapper">
@@ -264,37 +270,50 @@
                   </nav>
                 </div>
               </div>
-              <div class="left-bg">
+              <?php 
+                if($hal== 'index'){
+                  ?>
+                  <div class="left-bg">
 
-              </div>
-              <div class="right-bg">
+                  </div>
+                  <div class="right-bg">
 
-              </div>
+                  </div>
+                  <?php
+                }
+              ?>
             </div>
           </div>
 
         </div>
-        <div class="wrapper-box bgc-blue">
-          <div class="__bottom">
-            <div class="container container-home">
-              <div class="nav-content-wrapper">
-                <div class="header-phone">
-                  <div class="kampus1">
-                    <h2><i class="fa fa-phone fa-2x"></i> Kampus 1 <span> (021) 887836182 </span></h2>
-                  </div>
-                  <div class="kampus2">
-                    <h2><i class="fa fa-phone fa-2x"></i> Kampus 2 <span> (021) 887836182 </span></h2>
-                  </div>
-                  <span class="triangle-arrow">&nbsp;</span>
-                </div>
-                <div class="header-tagline"><h3>Info Pendaftaran Mahasiswa Baru <button class="btn-border btn-light btn-pmb">Disini</button></h3></div>
-                <div class="clearfix">
+        <?php
+          if($hal== 'index'){
+            ?>
+            <div class="wrapper-box bgc-blue">
+              <div class="__bottom">
+                <div class="container container-home">
+                  <div class="nav-content-wrapper">
+                    <div class="header-phone">
+                      <div class="kampus1">
+                        <h2><i class="fa fa-phone fa-2x"></i> Kampus 1 <span> (021) 887836182 </span></h2>
+                      </div>
+                      <div class="kampus2">
+                        <h2><i class="fa fa-phone fa-2x"></i> Kampus 2 <span> (021) 887836182 </span></h2>
+                      </div>
+                      <span class="triangle-arrow">&nbsp;</span>
+                    </div>
+                    <div class="header-tagline"><h3>Info Pendaftaran Mahasiswa Baru <button class="btn-border btn-light btn-pmb">Disini</button></h3></div>
+                    <div class="clearfix">
 
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
+            <?php  
+          }
+        ?>
+        
       </div>
       <nav class="offcanvas-nav bgc-gray-darkest"><a href="#" class="offcanvas-nav-toggle"><i class="icon-wrong6"></i></a>
         <h6 class="size-s smb">CUSTOM PAGES</h6>
@@ -1107,7 +1126,14 @@
     <script type="text/javascript" src="<?php echo base_url() ?>assets/vendors/jquery-modal/jquery.modal.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url() ?>assets/web/js/main.js"></script>
     <script type="text/javascript" src="<?php echo base_url() ?>assets/web/js/jquery.flexslider-min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url() ?>assets/select2/js/select2.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDytkyUX2xb4hze3Gn949SwtKYZx2f2VEQ"></script>    
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $(".select-form").select2();
+    });
+</script>
 
     <!-- Google analytics-->
     <script type="text/javascript">(function(b,o,i,l,e,r){b.GoogleAsnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create','UA-57387972-3');ga('send','pageview');</script>

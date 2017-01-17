@@ -15,7 +15,7 @@
 					</div>
 
 					<div class="panel-body">
-                        <form class="form-horizontal">
+                        <form class="form-horizontal" method="post" action="<?php echo base_url().'admin/sekilas/update/'.$sekilas->id ?>" enctype="multipart/form-data">
                         <div class="box-body">
                             <div class="form-group">
                             <label class="col-sm-2 control-label">Title Indonesian *</label>
@@ -44,7 +44,7 @@
                             <div class="form-group">
                                 <label class="col-lg-2 control-label">File Upload</label>
                                 <div class="col-lg-4">
-                                    <input type="file" class="file-styled">
+                                    <input name="foto_sekilas" type="file" class="file-styled">
                                     <span class="help-block">Format Gambar : jpg, jpeg, png. Max file size 20Mb</span>
                                 </div>
                             </div>

@@ -59,3 +59,5 @@ $route['fakultas-detil/(:any)/(:any)/(:any)/(:any)'] = 'main/detilfakultas/$1/$2
 $route['berita-dan-pengumuman/(:any)/(:any)'] = 'main/beritadanpengumuman/$1/$2';
 $route['karier'] = 'main/karier';
 $route['kegiatan'] = 'main/kegiatan';
+$route['login'] = 'main/login';
+$route['kkn'] = 'main/kkn';

@@ -6,10 +6,16 @@
         }
         function index(){
             $data = [];
-            $this->template_admin->display('admin/content/index', $data);
+            if($this->session->userdata('username')){
+                 $this->template_admin->display('admin/content/index', $data);
+            }else{
+                $this->load->view('web/content/login');
+            }
+           
         }
 
         function sekilas($aksi='index', $id=null){
+            check_login();
             $this->load->model('PageModel', 'page_model');
             switch ($aksi) {
                 case 'index':
@@ -29,10 +35,18 @@
                     break;
                 case 'insert':
                     $data = $this->page_model->insert($this->input->post());
-                    if($data){
+                    if($data['success']){
 
                     }else{
                         
+                    }
+                    break;
+                case 'update':
+                    $data = $this->page_model->update($id, $this->input->post());
+                    if($data['success']){
+                        
+                    }else{
+
                     }
                     break;
                 default:
@@ -42,6 +56,7 @@
         }
 
         function unit($aksi='index', $id=null){
+            check_login();
             $this->load->model('PageModel', 'page_model');
             switch ($aksi) {
                 case 'index':
@@ -74,6 +89,7 @@
         }
 
         function facility($aksi='index', $id=null){
+            check_login();
             $this->load->model('FacilityModel', 'facility_model');
             switch ($aksi) {
                 case 'index':
@@ -106,6 +122,7 @@
         }
 
         function facility_detail($aksi='index', $id=null){
+            check_login();
             $this->load->model('FacilityModel', 'facility_model');
             switch ($aksi) {
                 case 'index':
@@ -139,6 +156,7 @@
 
 
         function kkn($aksi='index', $id=null){
+            check_login();
             $this->load->model('KknModel', 'kkn_model');
             switch ($aksi) {
                 case 'index':
@@ -171,6 +189,7 @@
         }
 
         function fakultas_area($aksi='index', $id=null){
+            check_login();
             $this->load->model('FacultyModel', 'faculty_model');
             switch ($aksi) {
                 case 'index':
@@ -185,6 +204,7 @@
         }
 
         function fakultas_tipe($aksi='index', $id=null){
+            check_login();
             $this->load->model('FacultyModel', 'faculty_model');
             switch ($aksi) {
                 case 'index':
@@ -199,6 +219,7 @@
         }
 
         function fakultas($aksi='index', $id=null){
+            check_login();
             $this->load->model('FacultyModel', 'faculty_model');
             switch ($aksi) {
                 case 'index':
@@ -213,6 +234,7 @@
         }
 
         function faculty_course($aksi='index', $id=null){
+            check_login();
             $this->load->model('FacultyModel', 'faculty_model');
             switch ($aksi) {
                 case 'index':
@@ -227,6 +249,7 @@
         }
 
         function news_type($aksi='index', $id=null){
+            check_login();
             $this->load->model('NewsModel', 'news_model');
             switch ($aksi) {
                 case 'index':
@@ -378,5 +401,32 @@
                     # code...
                     break;
             }
+        }
+        function login(){
+            $this->load->model('UserModel', 'user_model');
+            //ajax login
+            if($this->input->is_ajax_request()){
+                if($this->session->userdata('username')){
+                    echo json_encode(['success'=>false, 'message'=>'Anda sudah login']);
+                }else{
+                    $login = $this->user_model->login($this->input->post());
+                    if($login['success']){
+                        $new_session = [
+                            'username'=>$login['data']->username
+                        ];
+                        $this->session->set_userdata($new_session);
+                        echo json_encode(['success'=>true]);
+                    }else{
+                        echo json_encode(['success'=>false, 'message'=>'Username atau Password anda salah']);
+                    }
+                }
+            }else{
+                echo "Not Allowed";
+            }
+        }
+
+        function logout(){
+            $this->session->sess_destroy();
+            redirect(base_url().'admin');
         }
     }

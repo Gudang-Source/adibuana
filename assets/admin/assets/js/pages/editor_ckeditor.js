@@ -12,30 +12,72 @@
 $(function() {
 
     // Full featured editor
-    CKEDITOR.replace( 'editor-full', {
+    var editor1 = CKEDITOR.replace( 'editor-full', {
         height: '300px',
-        extraPlugins: 'forms'
+        extraPlugins: 'forms',
+        filebrowserBrowseUrl : base_url+'assets/admin/ckfinder/ckfinder.html',
+        filebrowserImageBrowseUrl : base_url+'assets/admin/ckfinder/ckfinder.html?type=Images',
+        filebrowserFlashBrowseUrl : base_url+'assets/admin/ckfinder/ckfinder.html?type=Flash',
+        filebrowserUploadUrl : base_url+'assets/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+        filebrowserImageUploadUrl : base_url+'assets/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+        filebrowserFlashUploadUrl : base_url+'assets/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
     });
-     CKEDITOR.replace( 'editor-full-2', {
+    CKFinder.setupCKEditor( editor1, '../' );
+    var editor2 = CKEDITOR.replace( 'editor-full-2', {
         height: '300px',
-        extraPlugins: 'forms'
+        extraPlugins: 'forms',
+        filebrowserBrowseUrl : base_url+'assets/admin/ckfinder/ckfinder.html',
+        filebrowserImageBrowseUrl : base_url+'assets/admin/ckfinder/ckfinder.html?type=Images',
+        filebrowserFlashBrowseUrl : base_url+'assets/admin/ckfinder/ckfinder.html?type=Flash',
+        filebrowserUploadUrl : base_url+'assets/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+        filebrowserImageUploadUrl : base_url+'assets/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+        filebrowserFlashUploadUrl : base_url+'assets/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
     });
-     CKEDITOR.replace( 'editor-full-3', {
+    CKFinder.setupCKEditor( editor2, '../' );
+    var editor3 = CKEDITOR.replace( 'editor-full-3', {
         height: '300px',
-        extraPlugins: 'forms'
+        extraPlugins: 'forms',
+        filebrowserBrowseUrl : base_url+'assets/admin/ckfinder/ckfinder.html',
+        filebrowserImageBrowseUrl : base_url+'assets/admin/ckfinder/ckfinder.html?type=Images',
+        filebrowserFlashBrowseUrl : base_url+'assets/admin/ckfinder/ckfinder.html?type=Flash',
+        filebrowserUploadUrl : base_url+'assets/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+        filebrowserImageUploadUrl : base_url+'assets/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+        filebrowserFlashUploadUrl : base_url+'assets/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
     });
-     CKEDITOR.replace( 'editor-full-4', {
+    CKFinder.setupCKEditor( editor3, '../' );
+    var editor4 = CKEDITOR.replace( 'editor-full-4', {
         height: '300px',
-        extraPlugins: 'forms'
+        extraPlugins: 'forms',
+        filebrowserBrowseUrl : base_url+'assets/admin/ckfinder/ckfinder.html',
+        filebrowserImageBrowseUrl : base_url+'assets/admin/ckfinder/ckfinder.html?type=Images',
+        filebrowserFlashBrowseUrl : base_url+'assets/admin/ckfinder/ckfinder.html?type=Flash',
+        filebrowserUploadUrl : base_url+'assets/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+        filebrowserImageUploadUrl : base_url+'assets/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+        filebrowserFlashUploadUrl : base_url+'assets/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
     });
-     CKEDITOR.replace( 'editor-full-5', {
+    CKFinder.setupCKEditor( editor4, '../' );
+    var editor5 = CKEDITOR.replace( 'editor-full-5', {
         height: '300px',
-        extraPlugins: 'forms'
+        extraPlugins: 'forms',
+        filebrowserBrowseUrl : base_url+'assets/admin/ckfinder/ckfinder.html',
+        filebrowserImageBrowseUrl : base_url+'assets/admin/ckfinder/ckfinder.html?type=Images',
+        filebrowserFlashBrowseUrl : base_url+'assets/admin/ckfinder/ckfinder.html?type=Flash',
+        filebrowserUploadUrl : base_url+'assets/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+        filebrowserImageUploadUrl : base_url+'assets/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+        filebrowserFlashUploadUrl : base_url+'assets/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
     });
-     CKEDITOR.replace( 'editor-full-6', {
+    CKFinder.setupCKEditor( editor5, '../' );
+    var editor6 = CKEDITOR.replace( 'editor-full-6', {
         height: '300px',
-        extraPlugins: 'forms'
+        extraPlugins: 'forms',
+        filebrowserBrowseUrl : base_url+'assets/admin/ckfinder/ckfinder.html',
+        filebrowserImageBrowseUrl : base_url+'assets/admin/ckfinder/ckfinder.html?type=Images',
+        filebrowserFlashBrowseUrl : base_url+'assets/admin/ckfinder/ckfinder.html?type=Flash',
+        filebrowserUploadUrl : base_url+'assets/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files',
+        filebrowserImageUploadUrl : base_url+'assets/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Images',
+        filebrowserFlashUploadUrl : base_url+'assets/admin/ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Flash'
     });
+    CKFinder.setupCKEditor( editor6, '../' );
 
 
 

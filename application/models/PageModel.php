@@ -25,19 +25,19 @@
          function insert($page){
            
          }
-         function update($page, $id){
+         function update($id, $page){
             $data = [
                 'title_ina'=>$page['title_ina'],
-                'title_eng'=>$page['title_page'],
-                'content_ina'=>$page['content_ina'],
-                'content_eng'=>$page['content_eng'],
-                'modifiy_date'=>date('Y-m-d H:i:s')
+                'title_eng'=>$page['title_eng'],
+                'content_ina'=>$page['konten_ina'],
+                'content_eng'=>$page['konten_eng'],
+                'modify_date'=>date('Y-m-d H:i:s')
             ];
 
             $where = ['id'=>$id];
 
             $this->db->update('adi_page', $data, $where);
-            return true;
+            return ['success'=>true];
          }
          function delete($id){
 

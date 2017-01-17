@@ -6,10 +6,13 @@
             $this->data['page'] = '';
             $this->data['title'] = 'Universitas PGRI Adi Buana';
 
+            $this->data['hal'] = '';
+
         }
 
         function index(){
             $data = $this->data;
+            $data['hal'] = 'index';
             $this->load->model('NewsModel', 'news_model');
             $this->load->model('EventModel', 'event_model');
 
@@ -40,17 +43,21 @@
         }
 
         function sekilas($slug, $id){
+            $data = $this->data;
+
             $this->load->model('PageModel', 'page_model');
 
             $data['page'] = $this->page_model->get_by_id($id);
             $this->template_website->display('web/content/sekilas', $data);
         }
         function areafakultas($slug, $id){
-
+            $data = $this->data;
 
               $this->template_website->display('web/content/areafakultas');
         }
         function detilfakultas($slug_faculty, $id_faculty, $slug_prodi=null, $id_prodi=null){
+            $data = $this->data;
+
             $this->load->model('FacultyModel', 'faculty_model');
 
             $data['fakultas'] = $this->faculty_model->get_by_id($id_prodi);
@@ -77,8 +84,9 @@
 
         }
         function galeri(){
+            $data = $this->data;
 
-          $this->template_website->display('web/content/galeri');
+            $this->template_website->display('web/content/galeri');
         }
 
         function kegiatan(){
@@ -87,5 +95,27 @@
 
             $data['kegiatan'] = $this->event_model->get_by_id();
             $this->template_website->display('web/content/listkegiatan', $data);
+        }
+        function login(){
+
+            
+
+            // $this->load->model('UserModel', 'user_model');
+
+            // $login = $this->user_model->do_login($this->input->post());
+
+            
+        }
+        function kkn($aksi='index'){
+            $data = $this->data;
+            switch ($aksi) {
+                case 'index':
+                    $this->template_website->display('web/content/kkn', $data);
+                    break;
+                
+                default:
+                    # code...
+                    break;
+            }            
         }
     }
