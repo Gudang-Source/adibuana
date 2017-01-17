@@ -132,6 +132,14 @@ if (!function_exists('img_holder')){
 	}
 }
 
+if (!function_exists('check_login')){
+	function check_login(){
+		if(!$_SESSION['username']){
+			redirect(base_url().'admin');
+		}
+	}
+}
+
 if (!function_exists('tgl_indo')){
 	function tgl_indo($tgl){
      	$tanggal = substr($tgl,8,2);

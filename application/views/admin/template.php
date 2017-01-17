@@ -33,6 +33,8 @@
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/assets/js/plugins/forms/styling/uniform.min.js"></script>
 
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/ckeditor/ckeditor.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/ckfinder/ckfinder.js"></script>
+
   <script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/assets/js/plugins/tables/datatables/datatables.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/assets/js/core/app.js"></script>
   <?php 
@@ -46,6 +48,10 @@
   <script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/assets/js/pages/datatables_basic.js"></script>
 
 	<!-- /theme JS files -->
+
+	<script>
+		var base_url = '<?php echo base_url(); ?>';
+	</script>
 
 </head>
 
@@ -268,7 +274,7 @@
 						<li><a href="#"><span class="badge bg-teal-400 pull-right">58</span> <i class="icon-comment-discussion"></i> Messages</a></li>
 						<li class="divider"></li>
 						<li><a href="#"><i class="icon-cog5"></i> Account settings</a></li>
-						<li><a href="#"><i class="icon-switch2"></i> Logout</a></li>
+						<li><a href="<?php echo base_url(); ?>admin/logout"><i class="icon-switch2"></i> Logout</a></li>
 					</ul>
 				</li>
 			</ul>
