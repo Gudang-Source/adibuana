@@ -12,4 +12,12 @@
 			$career = $this->db->get()->result();
 			return $career;
 		}
+
+		function get_detail_career(){
+			$this->db->select('adi_career_detail.*, adi_user.name')
+					->from('adi_career_detail')
+					->join('adi_user', 'adi_career_detail.post_by = adi_user.id');
+			$detail = $this->db->get()->result();
+			return $detail;
+		}
 	}

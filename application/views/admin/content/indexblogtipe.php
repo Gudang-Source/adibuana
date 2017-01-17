@@ -4,7 +4,7 @@
 				<!-- Basic datatable -->
 				<div class="panel panel-flat">
 					<div class="panel-heading">
-						<h5 class="panel-title">Blog List<span><a class="btn btn-primary" href="<?php echo base_url(); ?>admin/blog/add">Tambah</a></span> </h5>
+						<h5 class="panel-title">Blog Type<span><a class="btn btn-primary" href="<?php echo base_url(); ?>admin/blog_type/add">Tambah</a></span> </h5>
 					</div>
 
 					
@@ -12,8 +12,7 @@
 					<table class="table datatable-basic">
 						<thead class="bg-blue">
                             <tr>
-                                <th>Owner</th>
-                                <th>Type</th>
+                                <th>Title</th>
                                 <th>Post By</th>
                                 <th>Post Date</th>
                                 <th>Modify Date</th>
@@ -22,10 +21,9 @@
 						</thead>
 						<tbody>
 							 <?php 
-                                foreach ($blog as $q_tipe) {
+                                foreach ($tipe as $q_tipe) {
                                     ?>
                                     <tr>
-                                        <td><?php echo $q_tipe->owner_name ?></td>
                                         <td><?php echo $q_tipe->title_eng ?></td>
                                         <td><?php echo $q_tipe->name ?></td>
                                         <td><?php echo convertDateTime($q_tipe->post_date) ?></td>

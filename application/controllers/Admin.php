@@ -300,7 +300,78 @@
             $this->load->model('CareerModel', 'career_model');
             switch ($aksi) {
                 case 'index':
-                    
+                    $data['career'] = $this->career_model->get_career();
+                    $this->template_admin->display('admin/content/indexcareer', $data);
+                    break;
+                
+                default:
+                    # code...
+                    break;
+            }
+        }
+
+        function detail_career($aksi='index', $id=null){
+            $this->load->model('CareerModel', 'career_model');
+            switch ($aksi) {
+                case 'index':
+                    $data['detail'] = $this->career_model->get_detail_career();
+                    $this->template_admin->display('admin/content/indexcareerdetail', $data);
+                    break;
+                
+                default:
+                    # code...
+                    break;
+            }
+        }
+
+        function gallery_cat($aksi='index', $id=null){
+            $this->load->model('GalleryModel', 'gallery_model');
+            switch ($aksi) {
+                case 'index':
+                    $data['cat_gal'] = $this->gallery_model->get_gallery_cat();
+                    $this->template_admin->display('admin/content/indexgallerycat', $data);
+                    break;
+                
+                default:
+                    # code...
+                    break;
+            }
+        }
+
+        function gallery($aksi='index', $id=null){
+            $this->load->model('GalleryModel', 'gallery_model');
+            switch ($aksi) {
+                case 'index':
+                    $data['gallery'] = $this->gallery_model->get_gallery();
+                    $this->template_admin->display('admin/content/indexgallery', $data);
+                    break;
+                
+                default:
+                    # code...
+                    break;
+            }
+        }
+
+        function blog_type($aksi='index', $id=null){
+            $this->load->model('BlogModel', 'blog_model');
+            switch ($aksi) {
+                case 'index':
+                    $data['tipe'] = $this->blog_model->get_blog_type();
+                    $this->template_admin->display('admin/content/indexblogtipe', $data);
+                    break;
+                
+                default:
+                    # code...
+                    break;
+            }
+        }
+
+        function blog($aksi='index', $id=null){
+            $this->load->model('BlogModel', 'blog_model');
+            switch ($aksi) {
+                case 'index':
+                    $data['blog'] = $this->blog_model->get_blog();
+                    $this->template_admin->display('admin/content/indexblog', $data);  
                     break;
                 
                 default:
