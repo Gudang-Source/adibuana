@@ -58,11 +58,11 @@
               <div class="nav-content-wrapper">
                 <div class="pull-left">
                   <div class="nav-info nav-item">
-                    <div class="__info select-language dropdown"><a href="#" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe color-secondary"></i>Bahasa: Indonesia</a>
+                    <div class="__info select-language dropdown"><a href="#" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-globe color-secondary"></i><?php echo $this->lang->line('language') ?> : <?php echo $this->session->userdata('lang') == 'indonesia'? 'Indonesia':'English' ?></a>
                       <div class="dropdown-menu menu menu-link-block">
                         <ul>
-                          <li><a href="#"><img src="<?php echo base_url() ?>assets/images/flag/united_kingdom.png" alt="flag" class="flag">Indonesia</a></li>
-                          <li><a href="#"><img src="<?php echo base_url() ?>assets/images/flag/france.png" alt="flag" class="flag">English</a></li>
+                          <li><a href="<?php echo base_url(); ?>main/ganti_bahasa/indonesia"><img src="<?php echo base_url() ?>assets/images/flags/f_ina.png" alt="flag" class="flag">Indonesia</a></li>
+                          <li><a href="<?php echo base_url(); ?>main/ganti_bahasa/english"><img src="<?php echo base_url() ?>assets/images/flags/f_eng.png" alt="flag" class="flag">English</a></li>
                         </ul>
                       </div>
                     </div>

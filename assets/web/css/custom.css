@@ -42,6 +42,10 @@ body{
   background-color: #22a7f0;
 }
 
+.flag{
+  width: 14px;
+}
+
 .main-nav .left-bg{
   position: absolute;
   background-color: #22A7F0;
