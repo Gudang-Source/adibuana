@@ -4,7 +4,7 @@
 				<!-- Basic datatable -->
 				<div class="panel panel-flat">
 					<div class="panel-heading">
-						<h5 class="panel-title">Career List<span><a class="btn btn-primary" href="<?php echo base_url(); ?>admin/detail_career/add">Tambah</a></span> </h5>
+						<h5 class="panel-title">Career List </h5>
 					</div>
 
 					
@@ -29,7 +29,6 @@
                                         <td><?php echo convertDateTime($q_career->post_date) ?></td>
                                         <td><?php echo $q_career->modify_date ?></td>
                                         <td>
-                                            <a href="<?php echo base_url(); ?>admin/detail_career/view/<?php echo $q_career->id ?>" class="btn btn-info">View</a>
                                             <a href="<?php echo base_url(); ?>admin/detail_career/edit/<?php echo $q_career->id ?>" class="btn btn-success">Edit</a>
                                             <a href="<?php echo base_url(); ?>admin/detail_career/delete/<?php echo $q_career->id ?>" class="btn btn-danger">Hapus</a>
                                         </td>

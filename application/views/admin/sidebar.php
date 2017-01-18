@@ -56,7 +56,7 @@
 										<li><a href="<?php echo base_url(); ?>admin/sekilas">About Us</a></li>
 										<li><a href="<?php echo base_url(); ?>admin/unit">Unit</a></li>
 										<li><a href="<?php echo base_url(); ?>admin/facility">Facility Management</a></li>
-										<li><a href="<?php echo base_url(); ?>admin/facilitydetail">Detail Facility Management</a></li>
+										<li><a href="<?php echo base_url(); ?>admin/facility_detail">Detail Facility Management</a></li>
 										<li><a href="<?php echo base_url(); ?>admin/link">Link Management</a></li>
                     					<li><a href="<?php echo base_url(); ?>admin/kkn">KKN Online</a></li>
 									</ul>
@@ -65,55 +65,55 @@
 								<li>
 									<a href="#"><i class="icon-library2"></i> <span>Faculty</span></a>
 									<ul>
-										<li><a href="colors_primary.html">Faculty Area Management</a></li>
-										<li><a href="colors_danger.html">Faculty Type Management</a></li>
-										<li><a href="colors_success.html">Faculty Management</a></li>
-										<li><a href="colors_warning.html">Faculty Course Management</a></li>
-										<li><a href="colors_info.html">Faculty Detail Management</a></li>
-                    					<li><a href="colors_info.html">Faculty Courses</a></li>
+										<li><a href="<?php echo base_url(); ?>admin/fakultas_area">Faculty Area Management</a></li>
+										<li><a href="<?php echo base_url(); ?>admin/fakultas_tipe">Faculty Type Management</a></li>
+										<li><a href="<?php echo base_url(); ?>admin/fakultas">Faculty Management</a></li>
+										<li><a href="<?php echo base_url(); ?>admin/faculty_course">Faculty Course Management</a></li>
+										<li><a href="<?php echo base_url(); ?>admin/fakultas_detail">Faculty Detail Management</a></li>
+                    					<li><a href="#">Faculty Courses</a></li>
 									</ul>
 								</li>
 
 								<li>
 									<a href="#"><i class="icon-magazine"></i> <span>News Etc</span></a>
 									<ul>
-										<li><a href="colors_danger.html">News Type Management</a></li>
-										<li><a href="colors_success.html">News Management</a></li>
-										<li><a href="colors_warning.html">News Detail Management</a></li>
-										<li><a href="colors_info.html">Event Management</a></li>
-                    					<li><a href="colors_info.html">Event Detail Management</a></li>
+										<li><a href="<?php echo base_url(); ?>admin/news_type">News Type Management</a></li>
+										<li><a href="<?php echo base_url(); ?>admin/news">News Management</a></li>
+										<li><a href="<?php echo base_url(); ?>admin/news_detail">News Detail Management</a></li>
+										<li><a href="<?php echo base_url(); ?>admin/event">Event Management</a></li>
+                    					<li><a href="<?php echo base_url(); ?>admin/event_detail">Event Detail Management</a></li>
 									</ul>
 								</li>
 
 								<li>
 									<a href="#"><i class="icon-notebook"></i> <span>Career</span></a>
 									<ul>
-										<li><a href="colors_primary.html">Career Management</a></li>
-										<li><a href="colors_danger.html">Career Detail Management</a></li>
+										<li><a href="<?php echo base_url(); ?>admin/career">Career Management</a></li>
+										<li><a href="<?php echo base_url(); ?>admin/detail_career">Career Detail Management</a></li>
 									</ul>
 								</li>
 
 								<li>
 									<a href="#"><i class="icon-images3"></i> <span>Gallery</span></a>
 									<ul>
-										<li><a href="colors_primary.html">Gallery Category</a></li>
-										<li><a href="colors_danger.html">Gallery</a></li>
+										<li><a href="<?php echo base_url(); ?>admin/gallery_cat">Gallery Category</a></li>
+										<li><a href="<?php echo base_url(); ?>admin/gallery">Gallery</a></li>
 									</ul>
 								</li>
 
 								<li>
 									<a href="#"><i class="icon-blog"></i> <span>Blog</span></a>
 									<ul>
-										<li><a href="colors_primary.html">Blog Type</a></li>
-										<li><a href="colors_danger.html">Blog</a></li>
+										<li><a href="<?php echo base_url(); ?>admin/blog_type">Blog Type</a></li>
+										<li><a href="<?php echo base_url(); ?>admin/blog">Blog</a></li>
 									</ul>
 								</li>
 
 								<li>
 									<a href="#"><i class="icon-phone"></i> <span>Contact</span></a>
 									<ul>
-										<li><a href="colors_primary.html">Contact</a></li>
-										<li><a href="colors_danger.html">Guess Book</a></li>
+										<li><a href="#">Contact</a></li>
+										<li><a href="#">Guess Book</a></li>
 									</ul>
 								</li>
 
