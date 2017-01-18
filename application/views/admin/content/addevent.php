@@ -4,7 +4,7 @@
         <!-- Form horizontal -->
         <div class="panel panel-flat">
           <div class="panel-heading">
-            <h5 class="panel-title">Add News</h5>
+            <h5 class="panel-title">Add Event</h5>
             <div class="heading-elements">
               <ul class="icons-list">
                         <li><a data-action="collapse"></a></li>
@@ -18,19 +18,9 @@
                 <form class="form-horizontal">
                   <div class="box-body">
                     <div class="form-group">
-                      <label class="col-sm-2 control-label">Choose News Type*</label>
-                      <div class="col-sm-2">
-                        <select name="tipe" class="form-control">
-                          <option> </option>
-                          <?php
-                            foreach ($tipe as $q_tipe) {
-                              echo'
-                                <option> '.$q_tipe->type_eng.' </option>
-                              ';
-                            }
-                          
-                          ?>
-                        </select>
+                      <label class="col-sm-2 control-label">Author *</label>
+                      <div class="col-sm-6">
+                        <input type="text" name="author" class="form-control">
                       </div>
                     </div>
                     <div class="form-group">
@@ -46,9 +36,15 @@
                       </div>
                     </div>
                     <div class="form-group">
-                      <label class="col-sm-2 control-label">Author</label>
-                      <div class="col-sm-6">
-                        <input type="text" name="author" class="form-control">
+                      <label class="col-sm-2 control-label">Start Date *</label>
+                      <div class="col-sm-3">
+                        <input type="date" name="start_date" class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-sm-2 control-label">End Date *</label>
+                      <div class="col-sm-3">
+                        <input type="date" name="end_date" class="form-control">
                       </div>
                     </div>
                     <div class="form-group">
@@ -97,7 +93,7 @@
                       </div>
                     </div>
                     <div class="form-group">
-                      <label class="col-sm-2 control-label">Highlight News</label>
+                      <label class="col-sm-2 control-label">Hot Event</label>
                       <div class="col-sm-6">
                         <input type="radio" name="hl" value="yes" > Yes
                         <input type="radio" name="hl" value="no" checked> No
@@ -108,6 +104,13 @@
                       <div class="col-sm-6">
                         <input type="radio" name="bv" value="yes" > Yes
                         <input type="radio" name="bv" value="no" checked> No
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="col-lg-2 control-label">File</label>
+                      <div class="col-lg-4">
+                        <input name="file" type="file" class="file-styled">
+                        <span class="help-block">Max size 20MB</span>
                       </div>
                     </div>
                     <div class="form-group">

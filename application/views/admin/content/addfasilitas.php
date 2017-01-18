@@ -87,7 +87,9 @@
                             <span class="help-block">Format : jpg, jpeg, png. Max file size 20Mb</span>
                         </div>
                     </div>
-
+                    <div class="form-group">
+                      <span class="help-block">(*) Must be filed</span>
+                    </div>
                   </div><!-- /.box-body -->
                   <div class="box-footer">
                     <div class="text-right">

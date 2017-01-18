@@ -4,7 +4,7 @@
 				<!-- Basic datatable -->
 				<div class="panel panel-flat">
 					<div class="panel-heading">
-						<h5 class="panel-title">Data fasilitas <span><a class="btn btn-primary" href="<?php echo base_url(); ?>admin/facility/add">Tambah</a></span> </h5>
+						<h5 class="panel-title">Data fasilitas <span><a class="btn btn-primary" href="<?php echo base_url(); ?>admin/facility_detail/add">Tambah</a></span> </h5>
 					</div>
 
 					
@@ -34,9 +34,9 @@
                                          ?>
                                          </td>
                                         <td>
-                                            <a href="<?php echo base_url(); ?>admin/facility/view/<?php echo $q_fasilitas->id ?>" class="btn btn-primary">View</a>
-                                            <a href="<?php echo base_url(); ?>admin/facility/edit/<?php echo $q_fasilitas->id ?>" class="btn btn-success">Edit</a>
-                                            <a href="<?php echo base_url(); ?>admin/facility/delete/<?php echo $q_fasilitas->id ?>" class="btn btn-warning">Hapus</a>
+                                            <a href="<?php echo base_url(); ?>admin/facility_detail/view/<?php echo $q_fasilitas->id ?>" class="btn btn-primary">View</a>
+                                            <a href="<?php echo base_url(); ?>admin/facility_detail/edit/<?php echo $q_fasilitas->id ?>" class="btn btn-success">Edit</a>
+                                            <a href="<?php echo base_url(); ?>admin/facility_detail/delete/<?php echo $q_fasilitas->id ?>" class="btn btn-warning">Hapus</a>
                                         </td>
                                     </tr>
                                     <?php

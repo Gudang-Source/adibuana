@@ -57,4 +57,12 @@
             $course = $this->db->get()->result();
             return $course;
          }
+
+         function get_fakultas_detail(){
+            $this->db->select('adi_faculty_detail.*, adi_user.name')
+                    ->from('adi_faculty_detail')
+                    ->join('adi_user', 'adi_faculty_detail.post_by = adi_user.id');
+            $detail = $this->db->get()->result();
+            return $detail;
+         }
      }
