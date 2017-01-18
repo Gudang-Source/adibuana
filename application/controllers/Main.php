@@ -3,6 +3,10 @@
         function __construct(){
             parent::__construct();
             $this->load->library('template_website');
+            if(!$this->session->userdata('lang')){
+                $this->session->set_userdata('lang', 'indonesia');
+            }
+            $this->lang->load('adibuana', $this->session->userdata('lang'));
             $this->data['page'] = '';
             $this->data['title'] = 'Universitas PGRI Adi Buana';
 
@@ -27,9 +31,29 @@
             $data = $this->data;
             $this->load->model('NewsModel', 'news_model');
 
-            $data['berita_katagori'] = $this->news_model->get_berita_katagori($id);
-            $this->template_website->display('web/content/beritadanpengumuman', $data);
+            if($this->input->is_ajax_request()){
+                $this->load->library('Adi_Pagination', 'adi_pagination');
 
+                $per_page = 10;
+                $page = $this->input->get('page');
+                if($page == null){
+                    $page = 0;
+                }else{
+                    $page = $page - 1;
+                }
+
+                $total_data = sizeof($this->news_model->get_berita_katagori($id, 9999999, 0));
+
+                $data['paging'] = $this->adi_pagination->adibuana_pagination(base_url().'berita-dan-pengumuman/'.$id, $per_page, $page, $total_data);
+
+                $data['berita_katagori'] = $this->news_model->get_berita_katagori($id, $per_page, $page*$per_page);
+                $data['halaman'] = $page;
+                $this->load->view('web/content/ajax/beritadanpengumuman', $data);
+            }else{
+                $data['id'] = $id;
+                $data['kategori'] = $this->news_model->get_all_kategori();
+                $this->template_website->display('web/content/beritadanpengumuman', $data);
+            }
         }
 
         function detilberitadanpengumuman($slug, $id){
@@ -118,4 +142,10 @@
                     break;
             }            
         }
+
+        function ganti_bahasa($lang){
+            $this->session->set_userdata('lang', $lang);
+            redirect(base_url());
+        }
+
     }

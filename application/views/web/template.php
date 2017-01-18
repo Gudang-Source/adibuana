@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Universitas PGRI Adi Buana Surabaya</title>
+    <title><?php echo $this->lang->line('title') ?></title>
     <meta name="description" content="Megatron - Multipurpose Responsive HTML5 Template">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-touch-icon-57x57.png">
@@ -38,6 +38,11 @@
 
     <!--Modernizr js-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+    <script>
+      var base_url = '<?php echo base_url(); ?>';
+    </script>
+
   </head>
   <body>
     <!--[if lt IE 8]>
@@ -92,9 +97,9 @@
                 <div class="pull-right">
                   <nav class="os-menu  main-menu text-center">
                     <ul>
-                      <li><a href="<?php echo base_url() ?>">Home</a>
+                      <li><a href="<?php echo base_url() ?>"><?php echo $this->lang->line('menu_home') ?></a>
                       </li>
-                      <li><a href="#">Tentang Kami</a>
+                      <li><a href="#"><?php echo $this->lang->line('menu_aboutus') ?></a>
                         <ul class="multi-floor-menu">
                           <li><a href="<?php echo base_url() ?>sekilas/para-pendiri-unipa/8617092013100647"><i class="__icon"></i>Para Pendiri UNIPA</a>
                           </li>
@@ -130,7 +135,7 @@
                           </li>
                         </ul>
                       </li>
-                      <li><a href="#">Fakultas</a>
+                      <li><a href="#"><?php echo $this->lang->line('menu_faculty') ?></a>
                         <ul class="multi-floor-menu">
                           <li><a href="#"><i class="__icon"></i>Fakultas dan Program Studi</a>
                           </li>
@@ -1108,6 +1113,10 @@
         </div>
       </footer>
       <!--End Page Footer-->
+      <div class="messagefull info message-load-content" style="display:none">
+        <div class="__icon"><i class="fa fa-circle-o-notch fa-spin" aria-hidden="true"></i></div>
+        <p class="mb-0 fz-6-s">Loading Content</p>
+      </div>
     </div>
     <!--End Page content-->
     <!--Javascript Library-->
@@ -1127,7 +1136,12 @@
     <script type="text/javascript" src="<?php echo base_url() ?>assets/web/js/main.js"></script>
     <script type="text/javascript" src="<?php echo base_url() ?>assets/web/js/jquery.flexslider-min.js"></script>
     <script type="text/javascript" src="<?php echo base_url() ?>assets/select2/js/select2.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url() ?>assets/block-ui/jquery.blockUI.js"></script>
+
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDytkyUX2xb4hze3Gn949SwtKYZx2f2VEQ"></script>    
+
+    <script type="text/javascript" src="<?php echo base_url() ?>assets/web/js/adibuana.js"></script>
+
 
     <script type="text/javascript">
     $(document).ready(function() {

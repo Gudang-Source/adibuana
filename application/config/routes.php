@@ -61,3 +61,4 @@ $route['karier'] = 'main/karier';
 $route['kegiatan'] = 'main/kegiatan';
 $route['login'] = 'main/login';
 $route['kkn'] = 'main/kkn';
+$route['ganti-bahasa/(:any)'] = 'main/ganti_bahasa/$1';
