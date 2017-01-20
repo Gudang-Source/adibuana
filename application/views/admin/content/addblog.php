@@ -25,7 +25,7 @@
                           <?php
                             foreach ($blog as $q_blog) {
                               echo'
-                                <option> '.$q_blog->title_eng.' </option>
+                                <option value="'.$q_blog->id.'"> '.$q_blog->title_eng.' </option>
                               ';
                             }
                           

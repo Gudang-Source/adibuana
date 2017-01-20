@@ -31,9 +31,9 @@
                                         <td><?php echo convertDateTime($q_tipe->post_date) ?></td>
                                         <td><?php echo $q_tipe->modify_date ?></td>
                                         <td>
-                                            <a href="<?php echo base_url(); ?>admin/blog_type/view/<?php echo $q_tipe->id ?>" class="btn btn-info">View</a>
-                                            <a href="<?php echo base_url(); ?>admin/blog_type/edit/<?php echo $q_tipe->id ?>" class="btn btn-success">Edit</a>
-                                            <a href="<?php echo base_url(); ?>admin/blog_type/delete/<?php echo $q_tipe->id ?>" class="btn btn-danger">Hapus</a>
+                                            <a href="<?php echo base_url(); ?>admin/blog/view/<?php echo $q_tipe->id ?>" class="btn btn-info">View</a>
+                                            <a href="<?php echo base_url(); ?>admin/blog/edit/<?php echo $q_tipe->id ?>" class="btn btn-success">Edit</a>
+                                            <a href="<?php echo base_url(); ?>admin/blog/delete/<?php echo $q_tipe->id ?>" class="btn btn-danger">Hapus</a>
                                         </td>
                                     </tr>
                                     <?php

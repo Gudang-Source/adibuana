@@ -50,4 +50,12 @@
             $detail = $this->db->get()->result();
             return $detail;
          }
+
+         function get_event_by_id($id){
+            $event = $this->db->select('*')
+                    ->from('adi_event')
+                    ->where('id', $id);
+            $event = $event->get()->row();
+            return $event;
+         }
      }

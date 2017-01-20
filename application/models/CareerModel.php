@@ -20,4 +20,12 @@
 			$detail = $this->db->get()->result();
 			return $detail;
 		}
+
+		function get_by_id($id){
+			$karir = $this->db->select('*')
+							->from('adi_career')
+							->where('id', $id);
+			$karir = $karir->get()->row();
+			return $karir;
+		}
 	}

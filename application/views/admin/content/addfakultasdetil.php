@@ -25,7 +25,7 @@
                           <?php
                             foreach ($fakultas as $q_fakultas) {
                               echo'
-                                <option> '.$q_fakultas->title_eng.' </option>
+                                <option value="'.$q_fakultas->id.'"> '.$q_fakultas->title_eng.' </option>
                               ';
                             }
                           

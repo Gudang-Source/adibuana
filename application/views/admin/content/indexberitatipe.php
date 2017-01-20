@@ -29,9 +29,9 @@
                                         <td><?php echo convertDateTime($q_tipe->post_date) ?></td>
                                         <td><?php echo $q_tipe->modify_date ?></td>
                                         <td>
-                                            <a href="<?php echo base_url(); ?>admin/news_tipe/view/<?php echo $q_tipe->id ?>" class="btn btn-info">View</a>
-                                            <a href="<?php echo base_url(); ?>admin/news_tipe/edit/<?php echo $q_tipe->id ?>" class="btn btn-success">Edit</a>
-                                            <a href="<?php echo base_url(); ?>admin/news_tipe/delete/<?php echo $q_tipe->id ?>" class="btn btn-danger">Hapus</a>
+                                            <a href="<?php echo base_url(); ?>admin/news_type/view/<?php echo $q_tipe->id ?>" class="btn btn-info">View</a>
+                                            <a href="<?php echo base_url(); ?>admin/news_type/edit/<?php echo $q_tipe->id ?>" class="btn btn-success">Edit</a>
+                                            <a href="<?php echo base_url(); ?>admin/news_type/delete/<?php echo $q_tipe->id ?>" class="btn btn-danger">Hapus</a>
                                         </td>
                                     </tr>
                                     <?php

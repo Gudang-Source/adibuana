@@ -4,7 +4,7 @@
 				<!-- Form horizontal -->
 				<div class="panel panel-flat">
 					<div class="panel-heading">
-						<h5 class="panel-title">Add Gallery</h5>
+						<h5 class="panel-title">Edit Gallery</h5>
 						<div class="heading-elements">
 							<ul class="icons-list">
 		                		<li><a data-action="collapse"></a></li>
@@ -21,7 +21,8 @@
                       <label class="col-sm-2 control-label">Category*</label>
                       <div class="col-sm-6">
                         <select name="katagori" class="form-control">
-                          <option> </option>
+                          <option value="<?php echo $gallery->id_cat ?>"><?php echo $gallery->katagori ?> </option>
+                          <option>---------</option>
                           <?php
                             foreach ($katagori as $q_katagori) {
                               echo'
@@ -36,25 +37,25 @@
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Title (Indonesian)*</label>
                       <div class="col-sm-6">
-                        <input type="text" name="title_ina" class="form-control">
+                        <input type="text" name="title_ina" class="form-control" value="<?php echo $gallery->title_ina ?>">
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Title (English)*</label>
                       <div class="col-sm-6">
-                        <input type="text" name="title_eng" class="form-control">
+                        <input type="text" name="title_eng" class="form-control" value="<?php echo $gallery->title_eng ?>">
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Lead (Indonesian)</label>
                       <div class="col-sm-10">
-                       <textarea id="editor-full" name="lead_ina" rows="10" cols="100"></textarea>
+                       <textarea id="editor-full" name="lead_ina" rows="10" cols="100"><?php echo $gallery->lead_ina ?></textarea>
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Lead (English)</label>
                       <div class="col-sm-10">
-                       <textarea id="editor-full-2" name="lead_eng" rows="10" cols="100"></textarea>
+                       <textarea id="editor-full-2" name="lead_eng" rows="10" cols="100"><?php echo $gallery->lead_eng ?></textarea>
                       </div>
                     </div>
                     <div class="form-group">
@@ -74,8 +75,8 @@
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Highlight Gallery</label>
                       <div class="col-sm-6">
-                        <input type="radio" name="hl" value="yes" > Yes
-                        <input type="radio" name="hl" value="no" checked> No
+                        <input type="radio" name="hl" value="yes" <?php echo ($gallery->hot=='yes')?'checked':'' ?>> Yes
+                        <input type="radio" name="hl" value="no" <?php echo ($gallery->hot=='no')?'checked':'' ?>> No
                       </div>
                     </div>
                     <div class="form-group">
@@ -85,6 +86,7 @@
                   </div><!-- /.box-body -->
                   <div class="box-footer">
                     <div class="text-right">
+                      <a href="<?php echo base_url(); ?>admin/gallery"><button type="button" class="btn btn-default">Back</button></a>
                       <button type="submit" class="btn btn-primary">Submit form <i class="icon-arrow-right14 position-right"></i></button>
                     </div>
                   </div><!-- /.box-footer -->

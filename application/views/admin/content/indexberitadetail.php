@@ -29,7 +29,6 @@
                                         <td><?php echo convertDateTime($q_news->post_date) ?></td>
                                         <td><?php echo $q_news->modify_date ?></td>
                                         <td>
-                                            <a href="<?php echo base_url(); ?>admin/news_detail/edit/<?php echo $q_news->id ?>" class="btn btn-success">Edit</a>
                                             <a href="<?php echo base_url(); ?>admin/news_detail/delete/<?php echo $q_news->id ?>" class="btn btn-danger">Hapus</a>
                                         </td>
                                     </tr>

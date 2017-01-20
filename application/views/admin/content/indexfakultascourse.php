@@ -31,9 +31,9 @@
                                         <td><?php echo convertDateTime($q_course->post_date) ?></td>
                                         <td><?php echo convertDateTime($q_course->modify_date) ?></td>
                                         <td>
-                                            <a href="<?php echo base_url(); ?>admin/fakultas-tipe/view/<?php echo $q_course->id ?>" class="btn btn-info">View</a>
-                                            <a href="<?php echo base_url(); ?>admin/fakultas-tipe/edit/<?php echo $q_course->id ?>" class="btn btn-success">Edit</a>
-                                            <a href="<?php echo base_url(); ?>admin/fakultas-tipe/delete/<?php echo $q_course->id ?>" class="btn btn-danger">Hapus</a>
+                                            <a href="<?php echo base_url(); ?>admin/faculty_course/view/<?php echo $q_course->id ?>" class="btn btn-info">View</a>
+                                            <a href="<?php echo base_url(); ?>admin/faculty_course/edit/<?php echo $q_course->id ?>" class="btn btn-success">Edit</a>
+                                            <a href="<?php echo base_url(); ?>admin/faculty_course/delete/<?php echo $q_course->id ?>" class="btn btn-danger">Hapus</a>
                                         </td>
                                     </tr>
                                     <?php

@@ -25,7 +25,7 @@
                           <?php
                             foreach ($area as $q_area) {
                               echo'
-                                <option> '.$q_area->area_eng.' </option>
+                                <option value="'.$q_area->id.'"> '.$q_area->area_eng.' </option>
                               ';
                             }
                           
@@ -41,7 +41,7 @@
                           <?php
                             foreach ($tipe as $q_tipe) {
                               echo'
-                                <option> '.$q_tipe->type_eng.' </option>
+                                <option value="'.$q_tipe->id.'"> '.$q_tipe->type_eng.' </option>
                               ';
                             }
                           
@@ -76,7 +76,7 @@
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Number of Student</label>
                       <div class="col-sm-2">
-                        <input type="number" name="jumlah_siswa" class="form-control">
+                        <input type="number" name="jumlah_mhs" class="form-control">
                       </div>
                     </div>
                     <div class="form-group">

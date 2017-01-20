@@ -52,6 +52,13 @@
       return $news_type;
     }
 
+    function get_tipe_by_id($id){
+      $this->db->select('*')
+            ->from('adi_news_type')
+            ->where('id', $id);
+      return $this->db->get()->row();
+    }
+
     function get_news(){
       $this->db->select('adi_news.*, adi_user.name, adi_news_type.type_eng')
               ->from('adi_news')
@@ -59,6 +66,14 @@
               ->join('adi_news_type', 'adi_news.id_type = adi_news_type.id');
       $news = $this->db->get()->result();
       return $news;
+    }
+
+    function get_news_by_id($id){
+      $this->db->select('adi_news.*, adi_news_type.type_eng')
+            ->from('adi_news')
+            ->join('adi_news_type', 'adi_news.id_type = adi_news_type.id')
+            ->where('adi_news.id', $id);
+      return $this->db->get()->row();
     }
 
     function get_detail_news(){
