@@ -44,7 +44,7 @@
                     <div class="form-group">
 											<label class="col-lg-2 control-label">File Upload</label>
 											<div class="col-lg-4">
-												<input type="file" class="file-styled">
+												<input type="file" class="file-styled" name="foto_sekilas">
 												<span class="help-block">Format : jpg, jpeg, png. Max file size 20Mb</span>
 											</div>
 										</div>

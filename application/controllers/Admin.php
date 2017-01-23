@@ -36,18 +36,20 @@
                 case 'insert':
                     $data = $this->page_model->insert($this->input->post());
                     if($data['success']){
-
+                        $this->session->set_flashdata('notifikasi', 'Sukses Menambah Data');
                     }else{
-                        
+                        $this->session->set_flashdata('notifikasi', 'Gagal Menambah Data');
                     }
+                    redirect(base_url().'admin/sekilas');
                     break;
                 case 'update':
                     $data = $this->page_model->update($id, $this->input->post());
-                    if($data['success']){
-                        
+                     if($data['success']){
+                        $this->session->set_flashdata('notifikasi', 'Sukses Merubah Data');
                     }else{
-
+                        $this->session->set_flashdata('notifikasi', 'Gagal Merubah Data');
                     }
+                    redirect(base_url().'admin/sekilas');
                     break;
                 default:
                     # code...
@@ -76,11 +78,22 @@
                     break;
                 case 'insert':
                     $data = $this->page_model->insert($this->input->post());
-                    if($data){
-
+                      if($data['success']){
+                        $this->session->set_flashdata('notifikasi', 'Sukses Menambah Data');
                     }else{
-                        
+                        $this->session->set_flashdata('notifikasi', 'Gagal Menambah Data');
+                    
                     }
+                    redirect(base_url().'admin/unit');
+                    break;
+                case 'update':
+                    $data = $this->page_model->update($id, $this->input->post());
+                     if($data['success']){
+                        $this->session->set_flashdata('notifikasi', 'Sukses Merubah Data');
+                    }else{
+                        $this->session->set_flashdata('notifikasi', 'Gagal Merubah Data');
+                    }
+                    redirect(base_url().'admin/unit');
                     break;
                 default:
                     # code...
@@ -104,7 +117,7 @@
                     $this->template_admin->display('admin/content/addfasilitas');
                     break;
                 case 'edit':
-                    $data['unit'] = $this->facility_model->get_by_id($id);
+                    $data['fasilitas'] = $this->facility_model->get_by_id($id);
                     $this->template_admin->display('admin/content/editfasilitas',$data);
                     break;
                 case 'insert':
@@ -138,7 +151,7 @@
                     $this->template_admin->display('admin/content/addfasilitasdetail', $data);
                     break;
                 case 'edit':
-                    $data['unit'] = $this->facility_model->get_by_id($id);
+                    $data['fasilitas'] = $this->facility_model->get_by_id($id);
                     $this->template_admin->display('admin/content/editfasilitas',$data);
                     break;
                 case 'insert':
