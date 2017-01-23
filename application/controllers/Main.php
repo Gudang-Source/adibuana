@@ -23,6 +23,8 @@
             $data['berita_terbaru'] = $this->news_model->get_berita_terbaru();
             $data['pengumuman_terbaru'] = $this->news_model->get_pengumuman_terbaru();
             $data['agenda_terbaru'] = $this->event_model->get_agenda_terbaru();
+
+            $data['kategori_berita'] = $this->news_model->get_news_type_with_content();
             $this->template_website->display('web/content/index', $data);
         }
 

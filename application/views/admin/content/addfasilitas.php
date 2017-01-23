@@ -47,43 +47,52 @@
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Lead Indonesian</label>
                       <div class="col-sm-10">
-                       <textarea id="editor-full" name="konten_ina" rows="10" cols="100"></textarea>
+                       <textarea id="editor-full" name="lead_ina" rows="10" cols="100"></textarea>
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Lead English</label>
                       <div class="col-sm-10">
-                       <textarea id="editor-full-2" name="konten_eng" rows="10" cols="100"></textarea>
+                       <textarea id="editor-full-2" name="lead_eng" rows="10" cols="100"></textarea>
                       </div>
                     </div>
                      <div class="form-group">
                       <label class="col-sm-2 control-label">Tools Indonesian</label>
                       <div class="col-sm-10">
-                       <textarea id="editor-full-3" name="konten_ina" rows="10" cols="100"></textarea>
+                       <textarea id="editor-full-3" name="tools_ina" rows="10" cols="100"></textarea>
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Tools English</label>
                       <div class="col-sm-10">
-                       <textarea id="editor-full-4" name="konten_eng" rows="10" cols="100"></textarea>
+                       <textarea id="editor-full-4" name="tools_eng" rows="10" cols="100"></textarea>
                       </div>
                     </div>
                      <div class="form-group">
                       <label class="col-sm-2 control-label">Etc Indonesian</label>
                       <div class="col-sm-10">
-                       <textarea id="editor-full-5" name="konten_ina" rows="10" cols="100"></textarea>
+                       <textarea id="editor-full-5" name="etc_ina" rows="10" cols="100"></textarea>
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Etc English</label>
                       <div class="col-sm-10">
-                       <textarea id="editor-full-6" name="konten_eng" rows="10" cols="100"></textarea>
+                       <textarea id="editor-full-6" name="etc_eng" rows="10" cols="100"></textarea>
                       </div>
                     </div>
+
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">Thumbnail</label>
+                        <div class="col-lg-4">
+                            <input type="file" class="file-styled" name="thumb_fasilitas">
+                            <span class="help-block">Format : jpg, jpeg, png. Max file size 20Mb</span>
+                        </div>
+                    </div>
+
                     <div class="form-group">
                         <label class="col-lg-2 control-label">Picture</label>
                         <div class="col-lg-4">
-                            <input type="file" class="file-styled">
+                            <input type="file" class="file-styled" name="picture_fasilitas">
                             <span class="help-block">Format : jpg, jpeg, png. Max file size 20Mb</span>
                         </div>
                     </div>

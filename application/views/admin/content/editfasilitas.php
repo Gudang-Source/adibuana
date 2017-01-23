@@ -22,12 +22,12 @@
                       <label class="col-sm-2 control-label">Type *</label>
                       <div class="col-sm-2">
                         <select class="form-control">
-                            <option value="app">Application</option>
-                            <option value="eng">Enginering</option>
-                            <option value="heal">Health</option>
-                            <option value="lab">Laboratory</option>
-                            <option value="tech">Technology</option>
-                            <option value="etc">Etc</option>
+                            <option <?php echo $fasilitas->type == 'app' ?'selected':'' ?> value="app">Application</option>
+                            <option <?php echo $fasilitas->type == 'eng' ?'selected':'' ?> value="eng">Enginering</option>
+                            <option <?php echo $fasilitas->type == 'heal' ?'selected':'' ?> value="heal">Health</option>
+                            <option <?php echo $fasilitas->type == 'lab' ?'selected':'' ?> value="lab">Laboratory</option>
+                            <option <?php echo $fasilitas->type == 'tech' ?'selected':'' ?> value="tech">Technology</option>
+                            <option <?php echo $fasilitas->type == 'etc' ?'selected':'' ?> value="etc">Etc</option>
                         </select>
                       </div>
                     </div>
@@ -80,6 +80,22 @@
                        <textarea id="editor-full-6" name="konten_eng" rows="10" cols="100"><?php echo $fasilitas->etc_eng ?></textarea>
                       </div>
                     </div>
+
+                     <div class="form-group">
+                        <label class="col-lg-2 control-label">Thumb</label>
+                        <div class="col-lg-4">
+                            <?php 
+                                if($fasilitas->thumb != ''){
+                                    ?>
+                                    <img style="width:150px;" src="<?php echo base_url();  ?>assets/images/facility/<?php echo $fasilitas->thumb; ?>" />
+                                    <?php
+                                }
+                            ?>
+                            <input type="file" class="file-styled" name="thumb_fasilitas">
+                            <span class="help-block">Format : jpg, jpeg, png. Max file size 20Mb</span>
+                        </div>  
+                    </div>
+
                     <div class="form-group">
                         <label class="col-lg-2 control-label">Picture</label>
                         <div class="col-lg-4">
@@ -90,10 +106,11 @@
                                     <?php
                                 }
                             ?>
-                            <input type="file" class="file-styled">
+                            <input type="file" class="file-styled" name="picture_fasilitas">
                             <span class="help-block">Format : jpg, jpeg, png. Max file size 20Mb</span>
                         </div>
                     </div>
+                    
                     <div class="form-group">
                       <span class="help-block">(*) Must be filed</span>
                     </div>

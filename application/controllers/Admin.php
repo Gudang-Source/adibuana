@@ -44,7 +44,7 @@
                     break;
                 case 'update':
                     $data = $this->page_model->update($id, $this->input->post());
-                     if($data['success']){
+                    if($data['success']){
                         $this->session->set_flashdata('notifikasi', 'Sukses Merubah Data');
                     }else{
                         $this->session->set_flashdata('notifikasi', 'Gagal Merubah Data');
@@ -78,7 +78,7 @@
                     break;
                 case 'insert':
                     $data = $this->page_model->insert($this->input->post());
-                      if($data['success']){
+                    if($data['success']){
                         $this->session->set_flashdata('notifikasi', 'Sukses Menambah Data');
                     }else{
                         $this->session->set_flashdata('notifikasi', 'Gagal Menambah Data');
@@ -122,11 +122,22 @@
                     break;
                 case 'insert':
                     $data = $this->page_model->insert($this->input->post());
-                    if($data){
-
+                    if($data['success']){
+                        $this->session->set_flashdata('notifikasi', 'Sukses Menambah Data');
                     }else{
-                        
+                        $this->session->set_flashdata('notifikasi', 'Gagal Menambah Data');
+                    
                     }
+                    redirect(base_url().'admin/facility');
+                    break;
+                 case 'update':
+                    $data = $this->page_model->update($id, $this->input->post());
+                   if($data['success']){
+                        $this->session->set_flashdata('notifikasi', 'Sukses Merubah Data');
+                    }else{
+                        $this->session->set_flashdata('notifikasi', 'Gagal Merubah Data');
+                    }
+                    redirect(base_url().'admin/facility');
                     break;
                 default:
                     # code...

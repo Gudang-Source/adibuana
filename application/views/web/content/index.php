@@ -196,39 +196,118 @@
   </section>
 
 
-      <section class="page-section no-padding section-motto">
-          <div class="bgc-light-blue border-top pt-40 pb-0">
-            <div class="counter-group">
-              <div class="container">
-                <div class="col-md-4 col-sm-6 col-xs-12 section-block">
-                  <div class="block-counter text-center">
-                    <img src="http://www.unipasby.ac.id/css/images/content-img1.png"></img>
-                    <h2>SMART</h2>
-                    <p>"Ngelmu iku kalakone kanthi laku" Belajarlah dengan tulus untuk menjadi pintar. Tidak ada orang pintar yang enggan membagi ilmunya melainkan orang-orang bodoh yang mengaku pintar.</p>
-                  </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 section-block">
-                  <div class="block-counter text-center">
-                    <img src="http://www.unipasby.ac.id/css/images/content-img2.png"></img>
-                    <h2>SUCCESS</h2>
-                    <p>"Jer basuki mawa beya" keberhasilan yang digenggam oleh seseorang tidak lepas dari pengorbanan yang dia awali dan lakukan dengan niat baik serta keikhlasan hati.</p>
-                  </div>
-                </div>
-                <div class="col-md-4 col-sm-6 col-xs-12 section-block">
-                  <div class="block-counter text-center">
-                    <img src="http://www.unipasby.ac.id/css/images/content-img3.png"></img>
-                    <h2>EXPERT</h2>
-                    <p>"ing ngarsa sung tulada, ing madya mangun karsa, tut wuri handayani". berikan dorongan kearah kebaikan untuk menggali ide dan inovasi sehingga menjadi contoh baik untuk lainnya.</p>
-                  </div>
-                </div>
+  <section class="page-section no-padding section-motto">
+      <div class="bgc-light-blue border-top pt-40 pb-0">
+        <div class="counter-group">
+          <div class="container">
+            <div class="col-md-4 col-sm-6 col-xs-12 section-block">
+              <div class="block-counter text-center">
+                <img src="http://www.unipasby.ac.id/css/images/content-img1.png"></img>
+                <h2>SMART</h2>
+                <p>"Ngelmu iku kalakone kanthi laku" Belajarlah dengan tulus untuk menjadi pintar. Tidak ada orang pintar yang enggan membagi ilmunya melainkan orang-orang bodoh yang mengaku pintar.</p>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 section-block">
+              <div class="block-counter text-center">
+                <img src="http://www.unipasby.ac.id/css/images/content-img2.png"></img>
+                <h2>SUCCESS</h2>
+                <p>"Jer basuki mawa beya" keberhasilan yang digenggam oleh seseorang tidak lepas dari pengorbanan yang dia awali dan lakukan dengan niat baik serta keikhlasan hati.</p>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-xs-12 section-block">
+              <div class="block-counter text-center">
+                <img src="http://www.unipasby.ac.id/css/images/content-img3.png"></img>
+                <h2>EXPERT</h2>
+                <p>"ing ngarsa sung tulada, ing madya mangun karsa, tut wuri handayani". berikan dorongan kearah kebaikan untuk menggali ide dan inovasi sehingga menjadi contoh baik untuk lainnya.</p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="page-section one-child bgc-light">
+          <div class="container">
+            <div class="header-update">
+              <h2>Info Adibuana</h2>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                 <!-- Nav tabs -->
+                <ul class="nav nav-tabs nav-stacked" role="tablist">
+                  <?php 
+                    $i = 1;
+                    foreach($kategori_berita as $q_kategori){
+                    if($q_kategori->type_ina == 'umum' || $q_kategori->type_ina == 'pendidikan' || $q_kategori->type_ina == 'Kehilangan' || $q_kategori->type_ina == 'beasiswa'){  
+                      ?>
+                      <li <?php echo $i == 1? 'class="active"':'' ?> role="presentation"><a href="#<?php echo $q_kategori->type_ina ?>" aria-controls="home" role="tab" data-toggle="tab"><?php echo ucwords($q_kategori->type_ina); ?></a></li>
+                      <?php
+                      $i++;
+                      }
+                    }
+                  ?>
+                </ul>
+              </div>
+              <div class="col-md-9">
+                  <!-- Tab panes -->
+              <div class="tab-content">
+                <?php 
+                  $i = 1;
+                  foreach($kategori_berita as $q_kategori){
+                    if($q_kategori->type_ina == 'umum' || $q_kategori->type_ina == 'pendidikan' || $q_kategori->type_ina == 'Kehilangan' || $q_kategori->type_ina == 'beasiswa'){  
+                    ?>
+                    <div role="tabpanel" class="tab-pane <?php echo $i == 1?'active':'' ?>" id="<?php echo $q_kategori->type_ina; ?>">
+                      <?php 
+                        foreach($q_kategori->news as $q_news){
+                          ?>
+                          <div class="tab-berita">
+                            <div class="pull-left image-berita">
+                              <?php 
+                                if($q_news->picture != ''){
+                                  ?>
+                                  <img src="<?php echo base_url() ?>assets/images/news/<?php echo $q_news->picture ?>" alt="">
+                                  <?php
+                                }else{
+                                  ?>
+                                  <img src="http://shopproject30.com/wp-content/themes/venera/images/placeholder-camera-green.png" alt="">  
+                                  <?php
+                                }
+                              ?>
+                            </div>
+                            <div class="pull-left deskripsi-berita">
+                              <h3><?php echo $q_news->title_ina; ?></h3>
+                              <p><?php echo substr(strip_tags($q_news->content_ina), 0, 200).' ... <a href="#">Selengkapnya</a>' ?></p>
+                            </div>
+                            <div class="clearfix">
+                              
+                            </div>
+                            <hr>
+                          </div>
+                          <?php
+                        }
+                      ?>
+                      <div class="text-right">
+                        <a href="#" class="btn btn-border btn-lainnya color-secondary">Lainnya >></a>
+                      </div>
+                    </div>
+                    <?php
+                    $i++;
+                    }
+                  }
+                ?>
                 
+                <!--<div role="tabpanel" class="tab-pane" id="profile">asdasd</div>
+                <div role="tabpanel" class="tab-pane" id="messages">gfhfgh</div>
+                <div role="tabpanel" class="tab-pane" id="settings">...</div>-->
+              </div>
               </div>
             </div>
           </div>
         </section>
 
-
-  <section class="page-section">
+    <section class="page-section" style="background-color:#EEEEEE">
       <div class="container">
         <div class="row">
            <div class="col-md-6 col-sm-6 col-xs-12 section-block">
@@ -302,36 +381,5 @@
         </div>
       </div>
   </section>
-
-
-  
-  <!-- New Letter-->
-  <section class="page-section pt-60 pb-60 bgc-dark-o-6">
-    <div data-parallax="scroll" data-position="top" data-image-src="assets/images/background/background-53.jpg" data-speed="0.3" class="parallax-background"></div>
-    <div class="news-letter">
-      <div class="container">
-        <div class="__content-wrapper row">
-          <div class="col-md-6 col-xs-12 __content-left">
-            <div class="cell-vertical-wrapper">
-              <div class="cell-middle">
-                <h2 class="mb-5">NEWSLETTER SIGN-UP</h2>
-                <p class="font-serif-italic mb-0 fz-3">We make sure you do not miss any news</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-xs-12 __content-right">
-            <div class="cell-vertical-wrapper">
-              <div class="cell-middle">
-                <form>
-                  <input type="email" placeholder="Enter your e-mail..."/><a href="#" class="btn-secondary btn no-border">SIGN UP</a>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End New Letter-->
 </div>
 <!--End Page Body-->

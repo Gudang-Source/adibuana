@@ -4,10 +4,10 @@
             $this->ci =&get_instance();
         }
 
-        function upload_image($path, $file, $index){
+        function upload_image($path, $file, $index, $prefix=""){
             $rand_number = rand(1, 999999);
 		    $extension = pathinfo($file[$index]['name'],PATHINFO_EXTENSION);
-		    $new_file_name = $index.date('Y-m-d').$rand_number.'.'.$extension;
+		    $new_file_name = $prefix.strtoupper(md5(uniqid(rand(), true))).'.'.$extension;
 
             $config = array(
                     'allowed_types' => 'jpg|jpeg|png',
