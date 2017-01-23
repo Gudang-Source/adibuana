@@ -228,6 +228,10 @@
                     $data['area'] = $this->faculty_model->get_area_by_id($id);
                     $this->template_admin->display('admin/content/editareafakultas', $data);
                     break;
+                case 'view':
+                    $data['area'] = $this->faculty_model->get_area_by_id($id);
+                    $this->template_admin->display('admin/content/viewfakultasarea', $data);
+                    break;
                 default:
                     # code...
                     break;
@@ -248,6 +252,10 @@
                 case 'edit':
                     $data['fakultas'] = $this->faculty_model->get_tipe_by_id($id);
                     $this->template_admin->display('admin/content/editfakultastipe', $data);
+                    break;
+                case 'view':
+                    $data['fakultas'] = $this->faculty_model->get_tipe_by_id($id);
+                    $this->template_admin->display('admin/content/viewfakultastipe', $data);
                     break;
                 default:
                     # code...
@@ -274,6 +282,10 @@
                     $data['tipe'] = $this->faculty_model->get_fakultas_tipe();
                     $this->template_admin->display('admin/content/editfakultas', $data);
                     break;
+                case 'view':
+                    $data['fakultas'] = $this->faculty_model->get_fakultas_by_id($id);
+                    $this->template_admin->display('admin/content/viewfakultas', $data);
+                    break;
                 default:
                     # code...
                     break;
@@ -296,6 +308,10 @@
                     $data['jurusan'] = $this->faculty_model->get_course_by_id($id);
                     $data['fakultas'] = $this->faculty_model->get_fakultas();
                     $this->template_admin->display('admin/content/editfakultasprodi', $data);
+                    break;
+                case 'view':
+                    $data['jurusan'] = $this->faculty_model->get_course_by_id($id);
+                    $this->template_admin->display('admin/content/viewfakultasprodi', $data);
                     break;
                 default:
                     # code...
@@ -320,6 +336,10 @@
                     $data['fakultas'] = $this->faculty_model->get_fakultas();
                     $this->template_admin->display('admin/content/editfakultasdetil', $data);
                     break;
+                case 'view':
+                    $data['fakultas'] = $this->faculty_model->get_detail_by_id($id);
+                    $this->template_admin->display('admin/content/viewfakultasdetil', $data);
+                    break;
                 default:
                     # code...
                     break;
@@ -340,6 +360,10 @@
                 case 'edit':
                     $data['tipe'] = $this->news_model->get_tipe_by_id($id);
                     $this->template_admin->display('admin/content/editberitatipe', $data);
+                    break;
+                case 'view':
+                    $data['tipe'] = $this->news_model->get_tipe_by_id($id);
+                    $this->template_admin->display('admin/content/viewberitatipe', $data);
                     break;
                 default:
                     # code...
@@ -362,6 +386,10 @@
                     $data['tipe'] = $this->news_model->get_news_type();
                     $data['news'] = $this->news_model->get_news_by_id($id);
                     $this->template_admin->display('admin/content/editberita', $data);
+                    break;
+                case 'view':
+                    $data['news'] = $this->news_model->get_news_by_id($id);
+                    $this->template_admin->display('admin/content/viewberita', $data);
                     break;
                 default:
                     # code...
@@ -397,6 +425,10 @@
                     $data['event'] = $this->event_model->get_event_by_id($id);
                     $this->template_admin->display('admin/content/editevent', $data);
                     break;
+                case 'view':
+                     $data['event'] = $this->event_model->get_event_by_id($id);
+                    $this->template_admin->display('admin/content/viewevent', $data);
+                    break;
                 default:
                     # code...
                     break;
@@ -430,6 +462,10 @@
                 case 'edit':
                     $data['karir'] = $this->career_model->get_by_id($id);
                     $this->template_admin->display('admin/content/editcareer', $data);
+                    break;
+                case 'view':
+                    $data['karir'] = $this->career_model->get_by_id($id);
+                    $this->template_admin->display('admin/content/viewcareer', $data);
                     break;
                 default:
                     # code...
@@ -465,6 +501,10 @@
                     $data['katagori'] = $this->gallery_model->get_cat_by_id($id);
                     $this->template_admin->display('admin/content/editgallerycat', $data);
                     break;
+                case 'view':
+                    $data['katagori'] = $this->gallery_model->get_cat_by_id($id);
+                    $this->template_admin->display('admin/content/viewgallerycat', $data);
+                    break;
                 default:
                     # code...
                     break;
@@ -487,6 +527,10 @@
                     $data['gallery'] = $this->gallery_model->get_gallery_by_id($id);
                     $this->template_admin->display('admin/content/editgallery', $data);
                     break;
+                case 'view':
+                    $data['gallery'] = $this->gallery_model->get_gallery_by_id($id);
+                    $this->template_admin->display('admin/content/viewgallery', $data);
+                    break;
                 default:
                     # code...
                     break;
@@ -506,6 +550,10 @@
                 case 'edit':
                     $data['tipe'] = $this->blog_model->get_type_by_id($id);
                     $this->template_admin->display('admin/content/editblogtipe', $data);
+                    break;
+                case 'view':
+                    $data['tipe'] = $this->blog_model->get_type_by_id($id);
+                    $this->template_admin->display('admin/content/viewblogtipe', $data);
                     break;
                 default:
                     # code...
@@ -528,6 +576,10 @@
                     $data['tipe'] = $this->blog_model->get_blog_type();
                     $data['blog'] = $this->blog_model->get_blog_by_id($id);
                     $this->template_admin->display('admin/content/editblog', $data);
+                    break;
+                case 'view':
+                    $data['blog'] = $this->blog_model->get_blog_by_id($id);
+                    $this->template_admin->display('admin/content/viewblog', $data);
                     break;
                 default:
                     # code...
