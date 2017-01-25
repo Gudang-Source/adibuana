@@ -53,6 +53,7 @@
                 $this->load->view('web/content/ajax/beritadanpengumuman', $data);
             }else{
                 $data['id'] = $id;
+                $data['berita'] = $this->news_model->get_tipe_by_id($id);
                 $data['kategori'] = $this->news_model->get_all_kategori();
                 $this->template_website->display('web/content/beritadanpengumuman', $data);
             }

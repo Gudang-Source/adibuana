@@ -3,12 +3,12 @@
         <div data-parallax="scroll" data-position="center -550px" data-image-src="https://unipasurabaya.files.wordpress.com/2012/09/cropped-unipa-mng.jpg" data-speed="0.3" class="parallax-background"></div>
         <div class="container text-center cell-vertical-wrapper">
           <div class="cell-middle">
-            <h1 class="text-responsive nmb" id="size-header">Berita dan Pengumuman</h1>
+            <h1 class="text-responsive nmb" id="size-header"><?php echo ucwords($this->session->userdata('lang') == 'indonesia'? $berita->type_ina:$berita->type_eng) ?></h1>
           </div>
         </div>
         <div class="ab-bottom col-xs-12">
           <div class="container">
-            <div class="breadcrumb bgc-dark-o-6"><span class="__content italic font-serif fz-6-ss"><span><a href="index.html">Beranda</a></span><span><a href="#">Berita dan Pengumuman</a></span><span><a href="#">Daftar</a></span></span></div>
+            <div class="breadcrumb bgc-dark-o-6"><span class="__content italic font-serif fz-6-ss"><span><a href="index.html">Beranda</a></span><span><a href="#"><?php echo ucwords($this->session->userdata('lang') == 'indonesia'? $berita->type_ina:$berita->type_eng) ?></a></span><span>
           </div>
         </div>
       </header>
@@ -32,12 +32,12 @@
                     </div>
                   </div>
                   <div class="widget widget-categories">
-                    <h6 class="__widget-title">KATEGORI LAIN</h6>
+                    <h6 class="__widget-title"><?php echo $this->lang->line('katagori_lain')?></h6>
                     <ul class="__widget-content">
                       <?php
                         foreach ($kategori as $q_kategori) {
                           ?>
-                              <li><a href="<?php echo base_url(); ?>berita-dan-pengumuman/<?php echo $q_kategori->type_ina ?>/<?php echo $q_kategori->id ?>"><?php echo ucwords($q_kategori->type_ina) ?></a></li>
+                              <li><a href="<?php echo base_url(); ?>berita-dan-pengumuman/<?php echo $q_kategori->type_ina ?>/<?php echo $q_kategori->id ?>"><?php echo ucwords($this->session->userdata('lang') == 'indonesia'? $q_kategori->type_ina:$q_kategori->type_eng) ?></a></li>
                           <?php
                         }
                       ?>

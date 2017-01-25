@@ -8,11 +8,11 @@
                     <div class="__header"><a href="#"><img src="http://www.unipasby.ac.id/css/data_images/career/';?><?php echo $q_karir->picture; ?><?php echo'" alt="No Picture" class="img-responsive"/></a>
                     </div>
                     <div class="__main">
-                      <div class="__title"><a href="blog-single-standard.html">';?><?php echo $q_karir->title_ina; ?><?php echo'</a></div>
+                      <div class="__title"><a href="blog-single-standard.html">';?><?php echo $this->session->userdata('lang') == 'indonesia'? $q_karir->title_ina:$q_karir->title_eng; ?><?php echo'</a></div>
                       <div class="__meta"><span>Posted:&nbsp;<span class="__value">'?><?php echo $q_karir->post_date; ?><?php echo'</span></span><span>By:&nbsp;<span class="__value">'?><?php echo $q_karir->author; ?><?php echo'</span></span><span>Categories:&nbsp;<span class="__value">HTML/CSS</span></span>
                       </div>
-                      <div class="__content">';?><?php echo $q_karir->lead_ina; ?> <?php echo' </div>
-                      <div class="post-index-group-button"><a href="blog-single-standard.html" class="btn btn-primary">SELENGKAPNYA...</a></div>
+                      <div class="__content">';?><?php echo $this->session->userdata('lang') == 'indonesia'? $q_karir->lead_ina:$q_karir->lead_eng; ?> <?php echo' </div>
+                      <div class="post-index-group-button"><a href="blog-single-standard.html" class="btn btn-primary">'.$this->lang->line('more').'</a></div>
                     </div>
                   </div>
                 ';

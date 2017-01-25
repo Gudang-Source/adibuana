@@ -5,23 +5,23 @@
             <div class="row">
               <div class="col-md-9 section-block-p">
                 <header class="hr-header">
-                  <h2 class="smb"><?php echo $fakultas->title_ina; ?></h2>
-                  <p class="common-serif __caption">Detail Program Studi</p>
+                  <h2 class="smb"><?php echo $this->session->userdata('lang') == 'indonesia'? $fakultas->title_ina:$fakultas->title_eng; ?></h2>
+                  <p class="common-serif __caption"><?php echo $this->lang->line('detail_prodi') ?></p>
                   <div class="separator-2-color"></div>
                 </header>
-                <?php echo $fakultas->content_ina; ?>
+                <?php echo $this->session->userdata('lang') == 'indonesia'? $fakultas->content_ina:$fakultas->content_eng; ?>
 
-				<p class="common-serif __caption">Fasilitas</p>
+				<p class="common-serif __caption"><?php echo $this->lang->line('fasilitas') ?></p>
 				<div class="separator-2-color"></div>
-				<?php echo $fakultas->facility_ina; ?>
+				<?php echo $this->session->userdata('lang') == 'indonesia'? $fakultas->facility_ina:$fakultas->facility_eng; ?>
 
-				<p class="common-serif __caption">Kerja Sama</p>
+				<p class="common-serif __caption"><?php echo $this->lang->line('kerja_sama') ?></p>
 				<div class="separator-2-color"></div>
-				<?php echo $fakultas->coo_ina; ?>
+				<?php echo $this->session->userdata('lang') == 'indonesia'? $fakultas->coo_ina:$fakultas->coo_eng; ?>
 
-				<p class="common-serif __caption">Prospek Lulusan</p>
+				<p class="common-serif __caption"><?php echo $this->lang->line('prospek') ?></p>
 				<div class="separator-2-color"></div>
-				<?php echo $fakultas->plulus_ina; ?>
+				<?php echo $this->session->userdata('lang') == 'indonesia'? $fakultas->plulus_ina:$fakultas->plulus_eng; ?>
               </div>
 
               <div class="col-md-3 col-sm-6">

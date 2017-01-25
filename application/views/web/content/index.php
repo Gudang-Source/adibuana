@@ -31,8 +31,8 @@
            <header class="hr-header adibuana-header">
             <div class="header">
                 <div class="title">
-                  <span>Berita Terbaru</span>
-                  <div class="pull-right"><a class="btn btn-lainnya btn-border  color-secondary">Lainnya ></a></div>
+                  <span><?php echo $this->lang->line('berita_baru') ?></span>
+                  <div class="pull-right"><a class="btn btn-lainnya btn-border  color-secondary"><?php echo $this->lang->line('lainnya') ?> ></a></div>
                 </div>
               </div>
           </header>
@@ -45,7 +45,7 @@
                     <?php
                       if($q_terbaru->picture == ''){
                         ?>
-                        <img src="http://shopproject30.com/wp-content/themes/venera/images/placeholder-camera-green.png" alt="<?php echo $q_terbaru->title_ina ?>" style="width:100%; height:200px; object-fit:cover">
+                        <img src="http://shopproject30.com/wp-content/themes/venera/images/placeholder-camera-green.png" alt="<?php echo $this->session->userdata('lang') == 'indonesia'? $q_terbaru->title_ina:$q_terbaru->title_eng ?>" style="width:100%; height:200px; object-fit:cover">
                         <?php
                       }else{
                         ?>
@@ -54,8 +54,8 @@
                       }
                     ?>
                    <div class="container">
-                    <div class="time"><i class="fa fa-clock-o"></i> &nbsp; Di posting tanggal <?php echo convertDateTime($q_terbaru->post_date) ?></div>
-                     <h3><a href="<?php echo base_url(); ?>detil-berita-dan-pengumuman/<?php echo slugify($q_terbaru->title_ina); ?>/<?php echo $q_terbaru->id ?>"><?php echo $q_terbaru->title_ina ?></a></h3>
+                    <div class="time"><i class="fa fa-clock-o"></i> &nbsp; <?php echo $this->lang->line('tgl_posting') ?> <?php echo convertDateTime($q_terbaru->post_date) ?></div>
+                     <h3><a href="<?php echo base_url(); ?>detil-berita-dan-pengumuman/<?php echo slugify($q_terbaru->title_ina); ?>/<?php echo $q_terbaru->id ?>"><?php echo $this->session->userdata('lang') == 'indonesia'? $q_terbaru->title_ina:$q_terbaru->title_eng ?></a></h3>
                    </div>
                 </div>
               </div>
@@ -69,7 +69,7 @@
             <div class="header">
                 <div class="title">
                   <span>Agenda</span>
-                  <div class="pull-right"><a class="btn btn-lainnya btn-border  color-secondary">Lainnya ></a></div>
+                  <div class="pull-right"><a class="btn btn-lainnya btn-border  color-secondary"><?php echo $this->lang->line('lainnya') ?> ></a></div>
                 </div>
               </div>
           </header>
@@ -79,8 +79,8 @@
                 foreach ($agenda_terbaru as $q_agenda) {
                   ?>
                   <li>
-                    <div class="time"><i class="fa fa-clock-o"></i> &nbsp; Di posting tanggal <?php echo convertDateTime($q_agenda->post_date) ?></div>
-                    <p><a><?php echo $q_agenda->title_ina ?></a></p>
+                    <div class="time"><i class="fa fa-clock-o"></i> &nbsp; <?php echo $this->lang->line('tgl_posting') ?> <?php echo convertDateTime($q_agenda->post_date) ?></div>
+                    <p><a><?php echo $this->session->userdata('lang') == 'indonesia'? $q_agenda->title_ina:$q_agenda->title_eng ?></a></p>
                     <hr>
                   </li>
                   <?php
@@ -93,8 +93,8 @@
           <header class="hr-header adibuana-header">
             <div class="header">
                 <div class="title">
-                  <span>Galeri</span>
-                  <div class="pull-right"><a class="btn btn-lainnya btn-border  color-secondary">Lainnya ></a></div>
+                  <span><?php echo $this->lang->line('gallery') ?></span>
+                  <div class="pull-right"><a class="btn btn-lainnya btn-border  color-secondary"><?php echo $this->lang->line('lainnya') ?> ></a></div>
                 </div>
               </div>
           </header>
@@ -123,8 +123,8 @@
           <header class="hr-header adibuana-header">
             <div class="header">
                 <div class="title">
-                  <span>Pengumuman</span>
-                  <div class="pull-right"><a class="btn btn-lainnya btn-border  color-secondary">Lainnya ></a></div>
+                  <span><?php echo $this->lang->line('pengumuman') ?> </span>
+                  <div class="pull-right"><a class="btn btn-lainnya btn-border  color-secondary"><?php echo $this->lang->line('lainnya') ?> ></a></div>
                 </div>
               </div>
           </header>
@@ -146,7 +146,7 @@
                         </div>
                       </div>
                       <div class="deskripsi">
-                        <a href="<?php echo base_url() ?>detil-berita-dan-pengumuman/<?php echo slugify($q_pengumuman->title_ina) ?>/<?php echo $q_pengumuman->id ?>/"><?php echo $q_pengumuman->title_ina ?></a>
+                        <a href="<?php echo base_url() ?>detil-berita-dan-pengumuman/<?php echo slugify($q_pengumuman->title_ina) ?>/<?php echo $q_pengumuman->id ?>/"><?php echo $this->session->userdata('lang') == 'indonesia'? $q_pengumuman->title_ina:$q_pengumuman->title_eng ?></a>
                       </div>
                       <div class="clearfix"></div>
                     </div>
@@ -158,33 +158,11 @@
             </ul>
           </div>
         </div>
-        <!--<div class="col-md-4">
-          <header class="hr-header adibuana-header">
-            <div class="header">
-                <div class="title">
-                  <span>Kegiatan</span>
-                  <div class="pull-right"><a class="btn btn-lainnya btn-border color-secondary">Lainnya ></a></div>
-                </div>
-                
-            </div>
-          </header>
-          <div class="agenda">
-            <ul>
-              <li>
-                <div class="tanggal">
 
-                </div>
-                <div class="deskripsi">
-
-                </div>
-              </li>
-            </ul>
-          </div>
-        </div>-->
         <div class="col-md-8">
            <header class="hr-header adibuana-header">
             <div class="header">
-                <div class="title"><span> Peta Lokasi</span></div>
+                <div class="title"><span> <?php echo $this->lang->line('peta_lokasi') ?></span></div>
               </div>
           </header>
           <div class="petalokasi">
@@ -231,7 +209,7 @@
     <section class="page-section one-child bgc-light">
           <div class="container">
             <div class="header-update">
-              <h2>Info Adibuana</h2>
+              <h2>INFO UNIPA</h2>
             </div>
             <div class="row">
               <div class="col-md-3">
@@ -242,7 +220,7 @@
                     foreach($kategori_berita as $q_kategori){
                     if($q_kategori->type_ina == 'umum' || $q_kategori->type_ina == 'pendidikan' || $q_kategori->type_ina == 'Kehilangan' || $q_kategori->type_ina == 'beasiswa'){  
                       ?>
-                      <li <?php echo $i == 1? 'class="active"':'' ?> role="presentation"><a href="#<?php echo $q_kategori->type_ina ?>" aria-controls="home" role="tab" data-toggle="tab"><?php echo ucwords($q_kategori->type_ina); ?></a></li>
+                      <li <?php echo $i == 1? 'class="active"':'' ?> role="presentation"><a href="#<?php echo $q_kategori->type_ina ?>" aria-controls="home" role="tab" data-toggle="tab"><?php echo ucwords($this->session->userdata('lang') == 'indonesia'? $q_kategori->type_ina:$q_kategori->type_eng); ?></a></li>
                       <?php
                       $i++;
                       }
@@ -277,8 +255,8 @@
                               ?>
                             </div>
                             <div class="pull-left deskripsi-berita">
-                              <h3><?php echo $q_news->title_ina; ?></h3>
-                              <p><?php echo substr(strip_tags($q_news->content_ina), 0, 200).' ... <a href="#">Selengkapnya</a>' ?></p>
+                              <h3><?php echo $this->session->userdata('lang') == 'indonesia'? $q_news->title_ina:$q_news->title_eng; ?></h3>
+                              <p><?php echo substr(strip_tags($this->session->userdata('lang') == 'indonesia'? $q_news->content_ina:$q_news->content_eng), 0, 200).' ... <a href="#">'.$this->lang->line('more').'</a>' ?></p>
                             </div>
                             <div class="clearfix">
                               
@@ -289,7 +267,7 @@
                         }
                       ?>
                       <div class="text-right">
-                        <a href="#" class="btn btn-border btn-lainnya color-secondary">Lainnya >></a>
+                        <a href="#" class="btn btn-border btn-lainnya color-secondary"><?php echo $this->lang->line('lainnya') ?> >></a>
                       </div>
                     </div>
                     <?php
@@ -312,7 +290,7 @@
         <div class="row">
            <div class="col-md-6 col-sm-6 col-xs-12 section-block">
             <div class="panel panel-primary panel-tautan">
-              <div class="panel-heading">Link Lainnya</div>
+              <div class="panel-heading"><?php echo $this->lang->line('link_lainnya') ?></div>
               <div class="panel-body">
                 <div class="col-md-4">
                   <a href="#"><img class="img-responsive" src="http://www.unipasby.ac.id/css/data_images/link/link_1ACF55966615FCD055E087DCE81FE2EC.png" alt=""></a>
@@ -360,7 +338,7 @@
                 </div>
               </div>
               <div class="panel-footer">
-                <a href="#" class="btn btn-border color-secondary">Kunjungi</a>
+                <a href="#" class="btn btn-border color-secondary"><?php echo $this->lang->line('kunjungi') ?></a>
               </div>
             </div>
            
@@ -374,7 +352,7 @@
                 </div>
               </div>
               <div class="panel-footer">
-                <a href="#" class="btn btn-border color-secondary">Daftar</a>
+                <a href="#" class="btn btn-border color-secondary"><?php echo $this->lang->line('daftar') ?></a>
               </div>
             </div>
           </div>
