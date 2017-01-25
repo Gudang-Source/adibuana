@@ -15,23 +15,23 @@
                     ?>
                     </div>
                     <div class="__main">
-                      <div class="__title"><a href="blog-single-standard.html"><?php echo $q_katagori->title_ina; ?></a></div>
+                      <div class="__title"><a href="blog-single-standard.html"><?php echo $this->session->userdata('lang') == 'indonesia'? $q_katagori->title_ina:$q_katagori->title_eng; ?></a></div>
                       <?php 
                         if($q_katagori->post_date == '0000-00-00 00:00:00'){
                             ?>
-                            <div class="__meta"><span>Diposting Tanggal :&nbsp;<span class="__value">00 00 0000</span>
+                            <div class="__meta"><span><?php echo $this->lang->line('tgl_posting')?> :&nbsp;<span class="__value">00 00 0000</span>
                             <?php
                         }else{
                             ?>
-                            <div class="__meta"><span>Diposting Tanggal :&nbsp;<span class="__value"><?php echo convertDateTime($q_katagori->post_date); ?></span>
+                            <div class="__meta"><span><?php echo $this->lang->line('tgl_posting')?> :&nbsp;<span class="__value"><?php echo convertDateTime($q_katagori->post_date); ?></span>
                             <?php
                         }
                       ?>
-                      </span><span>Oleh :&nbsp;<span class="__value"><?php echo $q_katagori->author; ?>
-                      </span></span><span>Kategori :&nbsp;<span class="__value">HTML/CSS</span></span>
+                      </span><span><?php echo $this->lang->line('post_by')?> :&nbsp;<span class="__value"><?php echo $q_katagori->author; ?>
+                      </span></span>
                       </div>
-                      <div class="__content"><?php echo $q_katagori->lead_ina; ?></div>
-                      <div class="post-index-group-button"><a href="<?php echo base_url().'detil-berita-dan-pengumuman/'.slugify($q_katagori->title_ina).'/'.$q_katagori->id ?>" class="btn-border btn-secondary">Selengkapnya...</a></div>
+                      <div class="__content"><?php echo $this->session->userdata('lang') == 'indonesia'? $q_katagori->lead_ina:$q_katagori->lead_eng; ?></div>
+                      <div class="post-index-group-button"><a href="<?php echo base_url().'detil-berita-dan-pengumuman/'.slugify($q_katagori->title_ina).'/'.$q_katagori->id ?>" class="btn-border btn-secondary"><?php echo $this->lang->line('more')?></a></div>
                     </div>
                   </div>
                   <?php

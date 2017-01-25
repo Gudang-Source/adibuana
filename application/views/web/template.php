@@ -101,35 +101,35 @@
                       </li>
                       <li><a href="#"><?php echo $this->lang->line('menu_aboutus') ?></a>
                         <ul class="multi-floor-menu">
-                          <li><a href="<?php echo base_url() ?>sekilas/para-pendiri-unipa/8617092013100647"><i class="__icon"></i>Para Pendiri UNIPA</a>
+                          <li><a href="<?php echo base_url() ?>sekilas/para-pendiri-unipa/8617092013100647"><i class="__icon"></i><?php echo $this->lang->line('about_founder') ?></a>
                           </li>
-                          <li><a href="<?php echo base_url() ?>sekilas/sambutan-rektor/319092013084049"><i class="__icon"></i>Sambutan Rektor</a>
+                          <li><a href="<?php echo base_url() ?>sekilas/sambutan-rektor/319092013084049"><i class="__icon"></i><?php echo $this->lang->line('about_rector') ?></a>
                           </li>
-                          <li><a href="<?php echo base_url() ?>sekilas/visi-dan-misi/5325032014161225"><i class="__icon"></i>Visi dan Misi</a>
+                          <li><a href="<?php echo base_url() ?>sekilas/visi-dan-misi/5325032014161225"><i class="__icon"></i><?php echo $this->lang->line('about_vimi') ?></a>
                           </li>
-                          <li><a href="<?php echo base_url() ?>sekilas/sejarah/E_020"><i class="__icon"></i>Sejarah</a>
+                          <li><a href="<?php echo base_url() ?>sekilas/sejarah/E_020"><i class="__icon"></i><?php echo $this->lang->line('about_history') ?></a>
                           </li>
-                          <li><a href="#"><i class="__icon"></i>Peta Kampus</a>
+                          <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('about_map') ?></a>
                             <ul>
-                              <li><a href="#">Kampus Ngagel Dadi</a>
+                              <li><a href="#"><?php echo $this->lang->line('map1') ?></a>
                               </li>
-                              <li><a href="#">Kampus Menanggal</a>
+                              <li><a href="#"><?php echo $this->lang->line('map2') ?></a>
                               </li>
                             </ul>
                           </li>
-                          <li><a href="<?php echo base_url() ?>sekilas/luas-tanah-dan-disain/1119032014110946"><i class="__icon"></i>Luas Tanah dan Desain</a>
+                          <li><a href="<?php echo base_url() ?>sekilas/luas-tanah-dan-disain/1119032014110946"><i class="__icon"></i><?php echo $this->lang->line('about_area') ?></a>
                           </li>
-                          <li><a href="<?php echo base_url() ?>sekilas/jejaring-unipa-surabaya/719092013094952"><i class="__icon"></i>Jejaring UNIPA Surabaya</a>
+                          <li><a href="<?php echo base_url() ?>sekilas/jejaring-unipa-surabaya/719092013094952"><i class="__icon"></i><?php echo $this->lang->line('about_networking') ?></a>
                           </li>
-                          <li><a href="<?php echo base_url() ?>sekilas/daftar-hibah-unipa-surabaya/9719092013115310"><i class="__icon"></i>Daftar Hibah UNIPA Surabaya</a>
+                          <li><a href="<?php echo base_url() ?>sekilas/daftar-hibah-unipa-surabaya/9719092013115310"><i class="__icon"></i><?php echo $this->lang->line('about_grants') ?></a>
                           </li>
-                          <li><a href="<?php echo base_url() ?>sekilas/logo-hymne-mars/1415012013092135"><i class="__icon"></i>Logo, Hymne, dan Mars</a>
+                          <li><a href="<?php echo base_url() ?>sekilas/logo-hymne-mars/1415012013092135"><i class="__icon"></i><?php echo $this->lang->line('about_logo') ?></a>
                           </li>
-                          <li><a href="<?php echo base_url() ?>"><i class="__icon"></i>Sarana</a>
+                          <li><a href="<?php echo base_url() ?>"><i class="__icon"></i><?php echo $this->lang->line('about_facility') ?></a>
                           </li>
-                          <li><a href="#"><i class="__icon"></i>Unit Kerja</a>
+                          <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('about_unit') ?></a>
                               <ul>
-                                  <li><a href="#">Kemahasiswaan</a>
+                                  <li><a href="#"><?php echo $this->lang->line('unit') ?></a>
                                   </li>
                               </ul>
                           </li>
@@ -137,140 +137,143 @@
                       </li>
                       <li><a href="#"><?php echo $this->lang->line('menu_faculty') ?></a>
                         <ul class="multi-floor-menu">
-                          <li><a href="#"><i class="__icon"></i>Fakultas dan Program Studi</a>
+                          <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('faculty_program') ?></a>
                           </li>
-                          <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735"><i class="__icon"></i>FKIP</a>
+                          <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735"><i class="__icon"></i><?php echo $this->lang->line('faculty_fkip') ?></a>
                               <ul>
-                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/bimbingan-dan-konseling/6514012013110508">Bimbingan dan Konseling</a>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/bimbingan-dan-konseling/6514012013110508"><?php echo $this->lang->line('fkip_bk') ?></a>
                                   </li>
-                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-kesejahteraan-keluarga/4214012013104259">Pendidikan Kesejahteraan Keluarga</a>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-kesejahteraan-keluarga/4214012013104259"><?php echo $this->lang->line('fkip_pkk') ?></a>
                                   </li>
-                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-moral-pancasila-dan-kewarganegaraan/4614012013103909">Pendidikan Moral Pancasila dan Kewarganegaraan</a>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-moral-pancasila-dan-kewarganegaraan/4614012013103909"><?php echo $this->lang->line('fkip_pmpk') ?></a>
                                   </li>
-                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-bahasa-dan-sastra-indonesia/3312012013112127">Pendidikan Bahasa dan Sastra Indonesia</a>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-bahasa-dan-sastra-indonesia/3312012013112127"><?php echo $this->lang->line('fkip_pbsi') ?></a>
                                   </li>
-                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-matematika/114012013110833">Pendidikan Matematika</a>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-matematika/114012013110833"><?php echo $this->lang->line('fkip_mtk') ?></a>
                                   </li>
-                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-bahasa-inggris/4214012013100537">Pendidikan Bahasa Inggris</a>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-bahasa-inggris/4214012013100537"><?php echo $this->lang->line('fkip_pbi') ?></a>
                                   </li>
-                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-kepelatihan-olahraga/5914012013103449">Pendidikan Kepelatihan Olahraga</a>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-kepelatihan-olahraga/5914012013103449"><?php echo $this->lang->line('fkip_pko') ?></a>
                                   </li>
-                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-seni-rupa/1714012013102837">Pendidikan Seni Rupa</a>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-seni-rupa/1714012013102837"><?php echo $this->lang->line('fkip_psr') ?></a>
                                   </li>
-                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-guru-sekolah-dasar/3914012013104611">Pendidikan Guru Sekolah Dasar</a>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-guru-sekolah-dasar/3914012013104611"><?php echo $this->lang->line('fkip_pgsd') ?></a>
                                   </li>
-                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-guru-paud/8814012013105731">Pendidikan Guru - PAUD</a>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-guru-paud/8814012013105731"><?php echo $this->lang->line('fkip_pgpaud') ?></a>
                                   </li>
                               </ul>
                           </li>
-                          <li><a href="#"><i class="__icon"></i>Fakultas Ekonomi</a>
+                          <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('faculty_economy') ?></a>
                               <ul>
-                                  <li><a href="<?php echo base_url() ?>fakultas-detil/ekonomi/6912012013115003/akuntansi/5914012013092358">Akuntansi</a>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/ekonomi/6912012013115003/akuntansi/5914012013092358"><?php echo $this->lang->line('economy_eko') ?></a>
                                   </li>
-                                  <li><a href="<?php echo base_url() ?>fakultas-detil/ekonomi/6912012013115003/manajemen/6214012013093635">Manajemen</a>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/ekonomi/6912012013115003/manajemen/6214012013093635"><?php echo $this->lang->line('economy_man') ?></a>
                                   </li>
                               </ul>
                           </li>
-                          <li><a href="#"><i class="__icon"></i>FMIPA</a>
+                          <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('faculty_fmipa') ?></a>
                               <ul>
-                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fmipa/8320122012121610/biologi/4011012013143843">Biologi</a>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fmipa/8320122012121610/biologi/4011012013143843"><?php echo $this->lang->line('fmipa_bio') ?></a>
                                   </li>
-                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fmipa/8320122012121610/statistika/2011012013150052">Statistika</a>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fmipa/8320122012121610/statistika/2011012013150052"><?php echo $this->lang->line('fmipa_statis') ?></a>
                                   </li>
                               </ul>
                           </li>
-                          <li><a href="#"><i class="__icon"></i>FT SP</a>
+                          <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('faculty_ftsp') ?></a>
                               <ul>
-                                  <li><a href="<?php echo base_url() ?>fakultas-detil/ftsp/2412012013124252/teknik-lingkungan/1714012013111816">Teknik Lingkungan</a>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/ftsp/2412012013124252/teknik-lingkungan/1714012013111816"><?php echo $this->lang->line('ftsp_tl') ?></a>
                                   </li>
-                                  <li><a href="<?php echo base_url() ?>fakultas-detil/ftsp/2412012013124252/perencanaan-wilayan-dan-kota/5014012013112103">Perancangan Wilayah dan Kota</a>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/ftsp/2412012013124252/perencanaan-wilayan-dan-kota/5014012013112103"><?php echo $this->lang->line('ftsp_tatakota') ?></a>
                                   </li>
                               </ul>
                           </li>
-                          <li><a href="#"><i class="__icon"></i>FTI</a>
+                          <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('faculty_fti') ?></a>
                               <ul>
-                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fti/1812012013114634/teknik-elektro/4714012013111529">Teknik Elektro</a>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fti/1812012013114634/teknik-elektro/4714012013111529"><?php echo $this->lang->line('fti_elektro') ?></a>
                                   </li>
-                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fti/1812012013114634/teknik-industri/714012013111042">Teknik Industri</a>
-                                  </li>
-                              </ul>
-                          </li>
-                          <li><a href="#"><i class="__icon"></i>Program Diploma</a>
-                              <ul>
-                                  <li><a href="<?php echo base_url() ?>fakultas-detil/">Kebidanan</a>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fti/1812012013114634/teknik-industri/714012013111042"><?php echo $this->lang->line('fti_industri') ?></a>
                                   </li>
                               </ul>
                           </li>
-                          <li><a href="#"><i class="__icon"></i>Pascasarjana</a>
+                          <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('faculty_diploma') ?>a</a>
                               <ul>
-                                  <li><a href="<?php echo base_url() ?>">Teknologi Pembelajaran</a>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/"><?php echo $this->lang->line('diploma_bidan') ?></a>
+                                  </li>
+                              </ul>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('faculty_pascasarjana') ?></a>
+                              <ul>
+                                  <li><a href="<?php echo base_url() ?>"><?php echo $this->lang->line('pascasarjana_tp') ?></a>
                                   </li>
                               </ul>
                           </li>
                         </ul>
                       </li>
-                      <li><a href="#">Berita</a>
+                      <li><a href="#"><?php echo $this->lang->line('menu_news') ?></a>
                         <ul class="multi-floor-menu">
-                          <li><a href="<?php echo base_url() ?>kegiatan"><i class="__icon"></i>Kegiatan</a>
+                          <li><a href="<?php echo base_url() ?>kegiatan"><i class="__icon"></i><?php echo $this->lang->line('news_event') ?></a>
                           </li>
-                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/berita-kampus/01"><i class="__icon"></i>Berita Kampus</a>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/berita-kampus/01"><i class="__icon"></i><?php echo $this->lang->line('news_collage') ?></a>
                           </li>
-                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/artikel/02"><i class="__icon"></i>Artikel</a>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/artikel/02"><i class="__icon"></i><?php echo $this->lang->line('news_artikel') ?></a>
                           </li>
-                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/pengumuman/04"><i class="__icon"></i>Pengumuman</a>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/pengumuman/04"><i class="__icon"></i><?php echo $this->lang->line('news_announcetment') ?></a>
                           </li>
-                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/umum/8616012013102515"><i class="__icon"></i>Umum</a>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/umum/8616012013102515"><i class="__icon"></i><?php echo $this->lang->line('news_daily') ?></a>
                           </li>
-                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/pendidikan/8529012013082338"><i class="__icon"></i>Pendidikan</a>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/pendidikan/8529012013082338"><i class="__icon"></i><?php echo $this->lang->line('news_edu') ?></a>
                           </li>
-                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/olahraga/929012013082919"><i class="__icon"></i>Olahraga</a>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/olahraga/929012013082919"><i class="__icon"></i><?php echo $this->lang->line('news_sport') ?></a>
                           </li>
-                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/kesehatan/5129012013085629"><i class="__icon"></i>Kesehatan</a>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/kesehatan/5129012013085629"><i class="__icon"></i><?php echo $this->lang->line('news_health') ?></a>
                           </li>
-                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/gaya-hidup/6329012013091038"><i class="__icon"></i>Gaya Hidup</a>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/gaya-hidup/6329012013091038"><i class="__icon"></i><?php echo $this->lang->line('news_life') ?></a>
                           </li>
-                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/kehilangan/8110102013131219"><i class="__icon"></i>Kehilangan</a>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/kehilangan/8110102013131219"><i class="__icon"></i><?php echo $this->lang->line('news_loss') ?></a>
                           </li>
-                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/beasiswa/7107022014111113"><i class="__icon"></i>Beasiswa</a>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/beasiswa/7107022014111113"><i class="__icon"></i><?php echo $this->lang->line('news_bea') ?></a>
                           </li>
-                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/sambutan-rektor/9515022016145900"><i class="__icon"></i>Sambutan Rektor</a>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/sambutan-rektor/9515022016145900"><i class="__icon"></i><?php echo $this->lang->line('news_rektor') ?></a>
                           </li>
                         </ul>
                       </li>
-                      <li><a href="#">Ekstra</a>
+                      <li><a href="#"><?php echo $this->lang->line('menu_ekstra') ?></a>
                         <ul class="multi-floor-menu">
-                          <li><a href="#"><i class="__icon"></i>Daftar KKN</a>
+                          <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('ekstra_kkn') ?></a>
                           </li>
-                          <li><a href="http://siakad.unipasby.ac.id"><i class="__icon"></i>KRS Online</a>
+                          <li><a href="http://siakad.unipasby.ac.id"><i class="__icon"></i><?php echo $this->lang->line('ekstra_krs') ?></a>
                           </li>
-                          <li><a href="<?php echo base_url() ?>karier"><i class="__icon"></i>Karier</a>
+                          <li><a href="<?php echo base_url() ?>karier"><i class="__icon"></i><?php echo $this->lang->line('ekstra_karir') ?></a>
                           </li>
-                          <li><a href="#"><i class="__icon"></i>Blog</a>
+                          <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('ekstra_gallery') ?></a>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('ekstra_blog') ?></a>
                             <ul>
                                 <li>
-                                    <a href="#">Alumni</a>
+                                    <a href="#"><?php echo $this->lang->line('blog_alumni') ?></a>
                                 </li>
                                 <li>
-                                    <a href="#">Dosen</a>
+                                    <a href="#"><?php echo $this->lang->line('blog_dosen') ?></a>
                                 </li>
                                 <li>
-                                    <a href="#">Mahasiswa</a>
+                                    <a href="#"><?php echo $this->lang->line('blog_mhs') ?></a>
                                 </li>
                                 <li>
-                                    <a href="#">UKM</a>
+                                    <a href="#"><?php echo $this->lang->line('blog_ukm') ?></a>
                                 </li>
                                 <li>
-                                    <a href="#">Referensi</a>
+                                    <a href="#"><?php echo $this->lang->line('blog_referensi') ?></a>
                                 </li>
                                 <li>
-                                    <a href="#">Kesehatan</a>
+                                    <a href="#"><?php echo $this->lang->line('blog_heatlh') ?></a>
                                 </li>
                             </ul>
                           </li>
+
                         </ul>
                       </li>
                       <li>
-                          <a href="#">Kontak</a>
+                          <a href="#"><?php echo $this->lang->line('menu_contact') ?></a>
                       </li>
                   </nav>
                 </div>
@@ -300,14 +303,14 @@
                   <div class="nav-content-wrapper">
                     <div class="header-phone">
                       <div class="kampus1">
-                        <h2><i class="fa fa-phone fa-2x"></i> Kampus 1 <span> (021) 887836182 </span></h2>
+                        <h2><i class="fa fa-phone fa-2x"></i> <?php echo $this->lang->line('kampus1') ?> <span> (031) 5041097 </span></h2>
                       </div>
                       <div class="kampus2">
-                        <h2><i class="fa fa-phone fa-2x"></i> Kampus 2 <span> (021) 887836182 </span></h2>
+                        <h2><i class="fa fa-phone fa-2x"></i> <?php echo $this->lang->line('kampus2') ?> <span> (031) 8281181 </span></h2>
                       </div>
                       <span class="triangle-arrow">&nbsp;</span>
                     </div>
-                    <div class="header-tagline"><h3>Info Pendaftaran Mahasiswa Baru <button class="btn-border btn-light btn-pmb">Disini</button></h3></div>
+                    <div class="header-tagline"><h3><?php echo $this->lang->line('info_mhs_baru') ?> <button class="btn-border btn-light btn-pmb"><?php echo $this->lang->line('btn_disini') ?></button></h3></div>
                     <div class="clearfix">
 
                     </div>

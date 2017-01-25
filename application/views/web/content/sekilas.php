@@ -5,13 +5,13 @@
             <div class="row">
               <div class="col-md-9 section-block-p">
                 <header class="hr-header">
-                  <h2 class="smb"><?php echo $page->title_ina ?></h2>
+                  <h2 class="smb"><?php echo $this->session->userdata('lang') == 'indonesia'? $page->title_ina:$page->title_eng ?></h2>
                   <p class="common-serif __caption"></p>
                   <div class="separator-2-color"></div>
                 </header>
 
                   <div class="wrapper-sekilas">
-                    <?php echo $page->content_ina; ?>
+                    <?php echo $this->session->userdata('lang') == 'indonesia'? $page->content_ina:$page->content_eng; ?>
                   </div>
 
               </div>
