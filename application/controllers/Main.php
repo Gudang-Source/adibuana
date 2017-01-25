@@ -134,11 +134,20 @@
         }
         function kkn($aksi='index'){
             $data = $this->data;
+            $this->load->model('FacultyModel', 'faculty_model');
             switch ($aksi) {
                 case 'index':
+                    // $data['course'] = $this->
                     $this->template_website->display('web/content/kkn', $data);
                     break;
-                
+                case 'printpdf':
+                    $this->load->library('pdf');
+                    $data['kkn'] = $this->input->post();
+                    $this->pdf->load_view('web/content/kknpdf', $data);
+                    $this->pdf->set_paper("A4", 'portrait');
+                    $this->pdf->render();
+                    $this->pdf->stream("KKN.pdf");
+                break;
                 default:
                     # code...
                     break;

@@ -230,10 +230,10 @@
 
     <section class="page-section one-child bgc-light">
           <div class="container">
-            <div class="header-update">
-              <h2>Info Adibuana</h2>
-            </div>
             <div class="row">
+              <div class="header-update">
+                <h2>Info Unipa</h2>
+              </div>
               <div class="col-md-3">
                  <!-- Nav tabs -->
                 <ul class="nav nav-tabs nav-stacked" role="tablist">

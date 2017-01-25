@@ -84,6 +84,20 @@
             return $course;
          }
 
+         function get_faculty_by_course($course){
+                 $course = $this->db->get_where('adi_faculty_course', ['title_ina'=>$course])->row();
+                 $faculty = $this->db->get_where('adi_faculty', ['id'=>$course->id_fac])->row();
+
+                 return $faculty;
+         }
+
+         function get_course(){
+                 $this->db->select('adi_course.*')
+                                ->from('adi_course');
+                $course = $this->db->get()->result();
+                return $course;                
+         }
+
          function get_course_by_id($id){
             $fakultas = $this->db->select('adi_faculty_course.*, adi_faculty.title_eng as nama_fakultas')
                     ->from('adi_faculty_course')
