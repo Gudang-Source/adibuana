@@ -1,66 +1,26 @@
-<!--Page Body-->
+ <!--Page Body-->
       <div id="page-body" class="page-body">
-        <section class="page-section bgc-light bgc-light">
+        <section class="page-section">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-9 section-block-p">
+                <header class="hr-header">
+                  <h2 class="smb"><?php echo $this->session->userdata('lang') == 'indonesia'? $page->title_ina:$page->title_eng ?></h2>
+                  <p class="common-serif __caption"></p>
+                  <div class="separator-2-color"></div>
+                </header>
 
-          <div class="section-block container table-responsive">
-            <table class="vertical-table table-striped table-vertical table-info">
-              <thead>
-                <tr>
-                  <th>HEADER 1</th>
-                  <th>HEADER 2</th>
-                  <th>HEADER 3</th>
-                  <th>HEADER 4</th>
-                  <th>HEADER 5</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Item #2</td>
-                  <td>Description of item 2</td>
-                  <td>200 Gb</td>
-                  <td>200 Gb</td>
-                  <td>$20.0</td>
-                </tr>
-                <tr>
-                  <td>Item #3</td>
-                  <td>Description of item 3</td>
-                  <td>300 Gb</td>
-                  <td>300 Gb</td>
-                  <td>$30.0</td>
-                </tr>
-                <tr>
-                  <td>Item #3</td>
-                  <td>Description of item 3</td>
-                  <td>300 Gb</td>
-                  <td>300 Gb</td>
-                  <td>$30.0</td>
-                </tr>
-                <tr>
-                  <td>Item #4</td>
-                  <td>Description of item 4</td>
-                  <td>400 Gb</td>
-                  <td>400 Gb</td>
-                  <td>$40.0</td>
-                </tr>
-                <tr>
-                  <td>Item #5</td>
-                  <td>Description of item 5</td>
-                  <td>500 Gb</td>
-                  <td>500 Gb</td>
-                  <td>$50.0</td>
-                </tr>
-                <tr>
-                  <td>Item #6</td>
-                  <td>Description of item 6</td>
-                  <td>600 Gb</td>
-                  <td>600 Gb</td>
-                  <td>$60.0</td>
-                </tr>
-              </tbody>
-            </table>
+                  <div class="wrapper-sekilas">
+                    <?php echo $this->session->userdata('lang') == 'indonesia'? $page->content_ina:$page->content_eng; ?>
+                  </div>
+
+              </div>
+
+
+              </div>
+              </div>
+            </div>
           </div>
-
         </section>
-
       </div>
       <!--End Page Body-->

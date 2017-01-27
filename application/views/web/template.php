@@ -109,11 +109,11 @@
                           </li>
                           <li><a href="<?php echo base_url() ?>sekilas/sejarah/E_020"><i class="__icon"></i><?php echo $this->lang->line('about_history') ?></a>
                           </li>
-                          <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('about_map') ?></a>
+                          <li><a ><i class="__icon"></i><?php echo $this->lang->line('about_map') ?></a>
                             <ul>
-                              <li><a href="#"><?php echo $this->lang->line('map1') ?></a>
+                              <li><a href="<?php echo base_url() ?>area-fakultas/123"><?php echo $this->lang->line('map1') ?></a>
                               </li>
-                              <li><a href="#"><?php echo $this->lang->line('map2') ?></a>
+                              <li><a href="<?php echo base_url() ?>area-fakultas/234"><?php echo $this->lang->line('map2') ?></a>
                               </li>
                             </ul>
                           </li>
@@ -125,11 +125,11 @@
                           </li>
                           <li><a href="<?php echo base_url() ?>sekilas/logo-hymne-mars/1415012013092135"><i class="__icon"></i><?php echo $this->lang->line('about_logo') ?></a>
                           </li>
-                          <li><a href="<?php echo base_url() ?>"><i class="__icon"></i><?php echo $this->lang->line('about_facility') ?></a>
+                          <li><a href="<?php echo base_url() ?>sarana"><i class="__icon"></i><?php echo $this->lang->line('about_facility') ?></a>
                           </li>
-                          <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('about_unit') ?></a>
+                          <li><a ><i class="__icon"></i><?php echo $this->lang->line('about_unit') ?></a>
                               <ul>
-                                  <li><a href="#"><?php echo $this->lang->line('unit') ?></a>
+                                  <li><a href="<?php echo base_url() ?>satuan-kerja/kemahasiswaan/8216012013093528"><?php echo $this->lang->line('unit') ?></a>
                                   </li>
                               </ul>
                           </li>
@@ -137,9 +137,9 @@
                       </li>
                       <li><a href="#"><?php echo $this->lang->line('menu_faculty') ?></a>
                         <ul class="multi-floor-menu">
-                          <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('faculty_program') ?></a>
+                          <li><a href="<?php echo base_url() ?>fakultas-dan-program-studi/E_033"><i class="__icon"></i><?php echo $this->lang->line('faculty_program') ?></a>
                           </li>
-                          <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735"><i class="__icon"></i><?php echo $this->lang->line('faculty_fkip') ?></a>
+                          <li><a><i class="__icon"></i><?php echo $this->lang->line('faculty_fkip') ?></a>
                               <ul>
                                   <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/bimbingan-dan-konseling/6514012013110508"><?php echo $this->lang->line('fkip_bk') ?></a>
                                   </li>
@@ -163,7 +163,7 @@
                                   </li>
                               </ul>
                           </li>
-                          <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('faculty_economy') ?></a>
+                          <li><a ><i class="__icon"></i><?php echo $this->lang->line('faculty_economy') ?></a>
                               <ul>
                                   <li><a href="<?php echo base_url() ?>fakultas-detil/ekonomi/6912012013115003/akuntansi/5914012013092358"><?php echo $this->lang->line('economy_eko') ?></a>
                                   </li>
@@ -171,7 +171,7 @@
                                   </li>
                               </ul>
                           </li>
-                          <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('faculty_fmipa') ?></a>
+                          <li><a><i class="__icon"></i><?php echo $this->lang->line('faculty_fmipa') ?></a>
                               <ul>
                                   <li><a href="<?php echo base_url() ?>fakultas-detil/fmipa/8320122012121610/biologi/4011012013143843"><?php echo $this->lang->line('fmipa_bio') ?></a>
                                   </li>
@@ -179,7 +179,7 @@
                                   </li>
                               </ul>
                           </li>
-                          <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('faculty_ftsp') ?></a>
+                          <li><a ><i class="__icon"></i><?php echo $this->lang->line('faculty_ftsp') ?></a>
                               <ul>
                                   <li><a href="<?php echo base_url() ?>fakultas-detil/ftsp/2412012013124252/teknik-lingkungan/1714012013111816"><?php echo $this->lang->line('ftsp_tl') ?></a>
                                   </li>
@@ -187,7 +187,7 @@
                                   </li>
                               </ul>
                           </li>
-                          <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('faculty_fti') ?></a>
+                          <li><a ><i class="__icon"></i><?php echo $this->lang->line('faculty_fti') ?></a>
                               <ul>
                                   <li><a href="<?php echo base_url() ?>fakultas-detil/fti/1812012013114634/teknik-elektro/4714012013111529"><?php echo $this->lang->line('fti_elektro') ?></a>
                                   </li>
@@ -195,15 +195,15 @@
                                   </li>
                               </ul>
                           </li>
-                          <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('faculty_diploma') ?>a</a>
+                          <li><a ><i class="__icon"></i><?php echo $this->lang->line('faculty_diploma') ?>a</a>
                               <ul>
-                                  <li><a href="<?php echo base_url() ?>fakultas-detil/"><?php echo $this->lang->line('diploma_bidan') ?></a>
+                                  <li><a href="http://kebidanan.unipasby.ac.id"><?php echo $this->lang->line('diploma_bidan') ?></a>
                                   </li>
                               </ul>
                           </li>
-                          <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('faculty_pascasarjana') ?></a>
+                          <li><a ><i class="__icon"></i><?php echo $this->lang->line('faculty_pascasarjana') ?></a>
                               <ul>
-                                  <li><a href="<?php echo base_url() ?>"><?php echo $this->lang->line('pascasarjana_tp') ?></a>
+                                  <li><a href="http://pps-unipasby.ac.id"><?php echo $this->lang->line('pascasarjana_tp') ?></a>
                                   </li>
                               </ul>
                           </li>
@@ -239,7 +239,7 @@
                       </li>
                       <li><a href="#"><?php echo $this->lang->line('menu_ekstra') ?></a>
                         <ul class="multi-floor-menu">
-                          <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('ekstra_kkn') ?></a>
+                          <li><a href="<?php echo base_url() ?>kkn"><i class="__icon"></i><?php echo $this->lang->line('ekstra_kkn') ?></a>
                           </li>
                           <li><a href="http://siakad.unipasby.ac.id"><i class="__icon"></i><?php echo $this->lang->line('ekstra_krs') ?></a>
                           </li>

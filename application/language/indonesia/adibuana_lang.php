@@ -92,3 +92,7 @@
     $lang['prospek'] = 'Prospek Lulusan';
     $lang['post_by'] = 'Oleh';
     $lang['katagori_lain'] = 'KATEGORI LAIN';
+    $lang['di'] = 'di';
+    $lang['alamat'] = 'Alamat';
+    $lang['contact'] = 'Kontak Kami';
+    $lang['form_kkn'] = 'Form Kuliah Kerja Nyata';

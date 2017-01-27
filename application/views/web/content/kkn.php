@@ -8,7 +8,7 @@
                 <div class="daftarkkn">
 
                     <h3 class="title">
-                        Pendaftaran Kuliah Kerja Nyata
+                        <?php echo $this->lang->line('form_kkn') ?>
                     </h3>
 
                     <hr>
@@ -180,7 +180,7 @@
 
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-9">
-                            <button type="button" id="previewkkn" class="btn btn-success pull-right">Preview </button>
+                            <button type="button" id="previewkkn" class="btn btn-info pull-right">Preview </button>
                             </div>
                         </div>
                     </form>

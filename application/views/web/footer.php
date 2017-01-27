@@ -10,10 +10,10 @@
                     <!--<a href="<?php echo base_url() ?>"><img src="<?php echo base_url() ?>assets/images/logo.png" alt=""></a>-->
                     
                     <div class="__content font-heading fz-6-ss">
-                        <h3>Kampus 1</h3>
-                        <div class="__address"><i class="icon icon-location"></i><span>Jl. Ngagel Dadi III-B/37, Fax. (031) 5042804, Surabaya, 60245</span></div>
-                        <div class="__phone"><i class="icon icon-phone-1"></i><span>(123) 45678910</span></div>
-                        <div class="__email"><i class="icon icon-paper-plane"></i><span>info@osthemes.com</span></div>
+                        <h3><?php echo $this->lang->line('kampus1') ?></h3>
+                        <div class="__address"><i class="icon icon-location"></i><span>Jl. Ngagel Dadi III-B/37, Surabaya (60245)</span></div>
+                        <div class="__phone"><i class="icon icon-phone-1"></i><span>(031) 5041097</span></div>
+                        <div class="__email"><i class="icon icon-paper-plane"></i><span>(031)-5041190</span></div>
                     </div>
                 </div>
               </div>
@@ -21,10 +21,10 @@
                 <div class="footer-widget-gallery footer-widget-contact">
                   <!--<h4>&nbsp</h4>-->
                   <div class="__content font-heading fz-6-ss">
-                        <h3>Kampus 2</h3>
-                        <div class="__address"><i class="icon icon-location"></i><span>Jl. Ngagel Dadi III-B/37, Fax. (031) 5042804, Surabaya, 60245</span></div>
-                        <div class="__phone"><i class="icon icon-phone-1"></i><span>(123) 45678910</span></div>
-                        <div class="__email"><i class="icon icon-paper-plane"></i><span>info@osthemes.com</span></div>
+                        <h3><?php echo $this->lang->line('kampus2') ?></h3>
+                        <div class="__address"><i class="icon icon-location"></i><span>Jl. Dukuh Menanggal XII, Surabaya (60234)</span></div>
+                        <div class="__phone"><i class="icon icon-phone-1"></i><span>(031) 8281181</span></div>
+                        <div class="__email"><i class="icon icon-paper-plane"></i><span>(031) 8281183</span></div>
                     </div>
                 </div>
               </div>

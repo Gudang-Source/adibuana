@@ -91,11 +91,20 @@
 
             $this->template_website->display('web/content/fakultasdetil', $data);
         }
-        function satuankerja(){
+        function satuankerja($slug, $id){
+            $data = $this->data;
 
+            $this->load->model('PageModel', 'page_model');
+
+            $data['page'] = $this->page_model->get_by_id($id);
+            $this->template_website->display('web/content/satuankerja', $data);
         }
         function sarana(){
+            $data = $this->data;
+            $this->load->model('FacilityModel', 'facility_model');
 
+            $data['facility'] = $this->facility_model->get_all();
+            $this->template_website->display('web/content/sarana', $data);
         }
         function karier(){
             $data = $this->data;
@@ -105,9 +114,6 @@
             $this->template_website->display('web/content/karier', $data);
         }
         function blog(){
-
-        }
-        function tracestudy(){
 
         }
         function galeri(){
@@ -160,4 +166,19 @@
             redirect(base_url());
         }
 
+        function fakultas_prodi($id){
+            $data = $this->data;
+
+            $this->load->model('PageModel', 'page_model');
+
+            $data['page'] = $this->page_model->get_by_id($id);
+            $this->template_website->display('web/content/fakultasdanprogram', $data);
+        }
+
+        function area_fakultas($id){
+            $data = $this->data;
+            $this->load->model('FacultyModel', 'faculty_model');
+            $data['area'] = $this->faculty_model->get_area_by_id($id);
+            $this->template_website->display('web/content/peta_kampus', $data);
+        }
     }

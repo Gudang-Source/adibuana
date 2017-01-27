@@ -62,3 +62,7 @@ $route['kegiatan'] = 'main/kegiatan';
 $route['login'] = 'main/login';
 $route['kkn'] = 'main/kkn';
 $route['ganti-bahasa/(:any)'] = 'main/ganti_bahasa/$1';
+$route['satuan-kerja/(:any)/(:any)'] = 'main/satuankerja/$1/$2';
+$route['sarana'] = 'main/sarana';
+$route['fakultas-dan-program-studi/(:any)'] = 'main/fakultas_prodi/$1';
+$route['area-fakultas/(:any)'] = 'main/area_fakultas/$1'; 
