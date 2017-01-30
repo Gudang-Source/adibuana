@@ -3,6 +3,7 @@
         function __construct(){
             parent::__construct();
             $this->load->library('Template_Admin', 'template_admin');
+            $this->load->library('image_upload');
         }
         function index(){
             $data = [];
@@ -391,6 +392,35 @@
                     $data['news'] = $this->news_model->get_news_by_id($id);
                     $this->template_admin->display('admin/content/viewberita', $data);
                     break;
+                case 'insert':
+                    $pict = $this->image_upload->upload_image('assets/images/news/', $_FILES, 'pic', 'pict_');
+                    $thumb = $this->image_upload->upload_image('assets/images/news/', $_FILES, 'thumb', 'thumb_');
+                    $banner = $this->image_upload->upload_image('assets/images/news/', $_FILES, 'banner', 'banner_');
+
+                    $insert = $this->news_model->insert_news($this->input->post(), $pict['filename'], $thumb['filename'], $banner['filename']);
+                    if($insert){
+                        
+                    }
+                    break;
+                case 'update':
+                    $news = $this->news_model->get_news_by_id($id);
+                   
+                    $pict = $this->image_upload->update_image('assets/images/news/', $_FILES, 'pic', 'pict_', $news->picture);
+                    $thumb = $this->image_upload->update_image('assets/images/news/', $_FILES, 'thumb', 'thumb_', $news->thumb);
+                    $banner = $this->image_upload->update_image('assets/images/news/', $_FILES, 'banner', 'banner_', $news->bpict);
+
+                    $this->news_model->update_news($id, $this->input->post(), $pict['filename'], $thumb['filename'], $banner['filename']);
+                    break;
+
+                case 'delete':
+                    $news = $this->news_model->get_news_by_id($id);
+                    $delete = $this->news_model->delete_news($id);
+                    if($delete){
+                        unlink('assets/images/news/'.$news->picture);
+                        unlink('assets/images/news/'.$news->thumb);
+                        unlink('assets/images/news/'.$news->bpict);
+                    }
+                    break;
                 default:
                     # code...
                     break;
@@ -596,7 +626,8 @@
                     $login = $this->user_model->login($this->input->post());
                     if($login['success']){
                         $new_session = [
-                            'username'=>$login['data']->username
+                            'username'=>$login['data']->username,
+                            'id_user'=>$login['data']->id
                         ];
                         $this->session->set_userdata($new_session);
                         echo json_encode(['success'=>true]);

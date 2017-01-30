@@ -303,10 +303,10 @@
                   <div class="nav-content-wrapper">
                     <div class="header-phone">
                       <div class="kampus1">
-                        <h2><i class="fa fa-phone fa-2x"></i> <?php echo $this->lang->line('kampus1') ?> <span> (031) 5041097 </span></h2>
+                        <h2><i class="fa fa-phone fa-2x" style="font-size: 1.5em;"></i> <?php echo $this->lang->line('kampus1') ?> <span> (031) 5041097 </span></h2>
                       </div>
                       <div class="kampus2">
-                        <h2><i class="fa fa-phone fa-2x"></i> <?php echo $this->lang->line('kampus2') ?> <span> (031) 8281181 </span></h2>
+                        <h2><i class="fa fa-phone fa-2x" style="font-size: 1.5em;"></i> <?php echo $this->lang->line('kampus2') ?> <span> (031) 8281181 </span></h2>
                       </div>
                       <span class="triangle-arrow">&nbsp;</span>
                     </div>
@@ -323,6 +323,709 @@
         ?>
         
       </div>
+
+      <div class="main-nav small-nav bgc-blue fixed-tranformed-bg-light nav-fixed border-bottom">
+        <div class="container">
+          <div class="nav-content-wrapper">
+            <div class="pull-left">
+              <div class="megatron inline logo-dark">
+                <div class="cell-vertical-wrapper">
+                  <div class="cell-middle"><a href="index.html">
+                      <div class="logo"><img src="<?php echo base_url(); ?>assets/images/logo.png"></div>
+                      </a></div>
+                </div>
+              </div>
+            </div>
+            <div class="pull-right visible-lg">
+              <nav class="os-menu main-menu">
+                <ul class="ul-node">
+                  <li class="li-node"><a href="#">HOME</a>
+                    <ul class="multi-floor-menu ul-node">
+                      <li><a href="homepage-landing-page.html">LANDING PAGE</a>
+                      </li>
+                      <li class="li-node"><a href="#">DEMOS</a>
+                        <ul>
+                          <li><a href="demo-construction-homepage.html">DEMO CONSTRUCTION</a>
+                          </li>
+                          <li><a href="demo-hospital-homepage.html">DEMO HOSPITAL</a>
+                          </li>
+                          <li><a href="demo-handyman-homepage.html">DEMO HANDYMAN</a>
+                          </li>
+                          <li><a href="demo-cleaning-homepage.html">DEMO CLEANING</a>
+                          </li>
+                          <li><a href="demo-fitness-homepage.html">DEMO FITNESS</a>
+                          </li>
+                          <li><a href="demo-interior-homepage.html">DEMO INTERIOR</a>
+                          </li>
+                          <li><a href="demo-lawyer-homepage.html">DEMO LAWYER</a>
+                          </li>
+                          <li><a href="demo-logistics-homepage.html">DEMO LOGISTICS</a>
+                          </li>
+                          <li><a href="#">UPDATING...</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#">CREATIVE</a>
+                        <ul>
+                          <li><a href="homepage-creative-1.html">CREATIVE 01</a>
+                          </li>
+                          <li><a href="homepage-creative-2.html">CREATIVE 02</a>
+                          </li>
+                          <li><a href="homepage-creative-3.html">CREATIVE 03</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#">BUSINESS</a>
+                        <ul>
+                          <li><a href="homepage-business-1.html">BUSINESS 01</a>
+                          </li>
+                          <li><a href="homepage-business-2.html">BUSINESS 02</a>
+                          </li>
+                          <li><a href="homepage-business-3.html">BUSINESS 03</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#">ONEPAGE</a>
+                        <ul>
+                          <li><a href="homepage-onepage-1.html">ONEPAGE 01</a>
+                          </li>
+                          <li><a href="homepage-onepage-2.html">ONEPAGE 02</a>
+                          </li>
+                          <li><a href="homepage-onepage-3.html">ONEPAGE 03</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#">AGENCY</a>
+                        <ul>
+                          <li><a href="homepage-agency-1.html">AGENCY 01</a>
+                          </li>
+                          <li><a href="homepage-agency-2.html">AGENCY 02</a>
+                          </li>
+                          <li><a href="homepage-agency-3.html">AGENCY 03</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#">VIDEO HEADER</a>
+                        <ul>
+                          <li><a href="homepage-video-1.html">VIDEO HEADER 01</a>
+                          </li>
+                          <li><a href="homepage-video-2.html">VIDEO HEADER 02</a>
+                          </li>
+                          <li><a href="homepage-video-3.html">VIDEO HEADER 03</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#">ALTERNATIVE</a>
+                        <ul>
+                          <li><a href="homepage-alternative-1.html">ALTERNATIVE 01</a>
+                          </li>
+                          <li><a href="homepage-alternative-2.html">ALTERNATIVE 02</a>
+                          </li>
+                          <li><a href="homepage-alternative-3.html">ALTERNATIVE 03</a>
+                          </li>
+                          <li><a href="homepage-alternative-4.html">ALTERNATIVE 04</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a href="homepage-christmas-1.html">CHRISTMAS</a>
+                      </li>
+                      <li class="li-node"><a href="#">PORTFOLIO</a>
+                        <ul>
+                          <li><a href="homepage-portfolio-1.html">PORTFOLIO 01</a>
+                          </li>
+                          <li><a href="homepage-portfolio-2.html">PORTFOLIO 02</a>
+                          </li>
+                          <li><a href="homepage-portfolio-3.html">PORTFOLIO 03</a>
+                          </li>
+                          <li><a href="homepage-portfolio-4.html">PORTFOLIO 04</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a href="homepage-leftmenu.html">LEFTMENU</a>
+                      </li>
+                      <li class="li-node"><a href="#">STORE</a>
+                        <ul>
+                          <li><a href="homepage-store-1.html">HOMEPAGE SHOP 01</a>
+                          </li>
+                          <li><a href="homepage-store-2.html">HOMEPAGE SHOP 02</a>
+                          </li>
+                          <li><a href="homepage-store-3.html">HOMEPAGE SHOP 03</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="li-node" style="position: relative;"><a href="#">PAGES</a>
+                    <ul class="mega-menu menu-3-col menu-hr-heading ul-node">
+                      <li class="li-node"><a href="#">GROUP 01</a>
+                        <ul>
+                          <li><a href="page-about-us-1.html">ABOUT US</a>
+                          </li>
+                          <li><a href="page-about-us-2.html">ABOUT US 2</a>
+                          </li>
+                          <li><a href="page-about-us-3.html">ABOUT US 3</a>
+                          </li>
+                          <li><a href="page-about-us-4.html">ABOUT US 4</a>
+                          </li>
+                          <li><a href="page-about-me.html">ABOUT ME</a>
+                          </li>
+                          <li><a href="page-services.html">SERVICES</a>
+                          </li>
+                          <li><a href="page-faq.html">FAQ</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#">GROUP 02</a>
+                        <ul>
+                          <li><a href="page-contact-us.html">CONTACT US</a>
+                          </li>
+                          <li><a href="page-contact-us-2.html">CONTACT US 2</a>
+                          </li>
+                          <li><a href="page-contact-us-3.html">CONTACT US 3</a>
+                          </li>
+                          <li><a href="page-fullwidth.html">PAGE FULLWIDTH</a>
+                          </li>
+                          <li><a href="page-sidebar-left.html">PAGE SIDEBAR LEFT</a>
+                          </li>
+                          <li><a href="page-sidebar-right.html">PAGE SIDEBAR RIGHT</a>
+                          </li>
+                          <li><a href="page-policy.html">POLICY</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#">GROUP 03</a>
+                        <ul>
+                          <li><a href="404.html">404 ERROR</a>
+                          </li>
+                          <li><a href="page-underconstruction.html">UNDERCONSTRUCTION</a>
+                          </li>
+                          <li><a href="page-search-result.html">SEARCH RESULT</a>
+                          </li>
+                          <li><a href="page-portfolio.html">PAGE PORTFOLIO</a>
+                          </li>
+                          <li><a href="page-portfolio-blog.html">PAGE PORTFOLIO BLOG</a>
+                          </li>
+                          <li><a href="page-login-vs-register.html">LOGIN VS REGISTER</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="li-node"><a href="#">FEATURES</a>
+                    <ul class="mega-menu menu-5-col menu-fullwidth menu-hr-heading ul-node">
+                      <li class="li-node"><a href="#">SHORTCODES 01</a>
+                        <ul>
+                          <li><a href="shortcode-accordion.html"><i class="__icon fa fa-bars"></i>ACCORDION</a>
+                          </li>
+                          <li><a href="shortcode-alert-message.html"><i class="__icon fa fa-exclamation-triangle"></i>ALERT MESSAGE<span class="__flag border-danger color-danger">HOT</span></a>
+                          </li>
+                          <li><a href="shortcode-blockquotes.html"><i class="__icon fa fa-quote-right"></i>BLOCKQUOTES</a>
+                          </li>
+                          <li><a href="shortcode-blogpost.html"><i class="__icon fa fa-pencil-square-o"></i>BLOGPOST</a>
+                          </li>
+                          <li><a href="shortcode-button.html"><i class="__icon fa fa-anchor"></i>BUTTON</a>
+                          </li>
+                          <li><a href="shortcode-call-to-action.html"><i class="__icon fa fa-building"></i>CALL TO ACTION</a>
+                          </li>
+                          <li><a href="shortcode-clients.html"><i class="__icon fa fa-user-secret"></i>CLIENTS</a>
+                          </li>
+                          <li><a href="shortcode-columns.html"><i class="__icon fa fa-columns"></i>COLUMNS</a>
+                          </li>
+                          <li><a href="shortcode-contact-form.html"><i class="__icon fa fa-keyboard-o"></i>CONTACT FORM</a>
+                          </li>
+                          <li><a href="shortcode-counter.html"><i class="__icon fa fa-money"></i>COUNTER</a>
+                          </li>
+                          <li><a href="shortcode-coverbox.html"><i class="__icon fa fa-bicycle"></i>COVERBOX</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#">SHORTCODES 02</a>
+                        <ul>
+                          <li><a href="shortcode-dropcaps.html"><i class="__icon fa fa-align-right"></i>DROPCAPS</a>
+                          </li>
+                          <li><a href="shortcode-expendable-section.html"><i class="__icon fa fa-expand"></i>EXPENDABLE SECTION</a>
+                          </li>
+                          <li><a href="shortcode-google-map.html"><i class="__icon fa fa-google"></i>GOOGLE MAP</a>
+                          </li>
+                          <li><a href="shortcode-heading.html"><i class="__icon fa fa-header"></i>HEADING</a>
+                          </li>
+                          <li><a href="shortcode-hightlight.html"><i class="__icon fa fa-bookmark-o"></i>HIGHTLIGHT</a>
+                          </li>
+                          <li><a href="shortcode-iconboxes.html"><i class="__icon fa fa-asterisk"></i>ICONBOXES</a>
+                          </li>
+                          <li><a href="shortcode-iconboxes-carousel.html"><i class="__icon fa fa-arrows-h"></i>ICONBOXES CAROUSEL</a>
+                          </li>
+                          <li><a href="shortcode-iconlists.html"><i class="__icon fa fa-list"></i>ICONLISTS</a>
+                          </li>
+                          <li><a href="shortcode-icons.html"><i class="__icon fa fa-briefcase"></i>ICONS</a>
+                          </li>
+                          <li><a href="shortcode-interactive-banner.html"><i class="__icon fa fa-diamond"></i>INTERACTIVE BANNER</a>
+                          </li>
+                          <li><a href="shortcode-lists.html"><i class="__icon fa fa-list-ol"></i>LISTS</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#">SHORTCODES 03</a>
+                        <ul>
+                          <li><a href="shortcode-pagination.html"><i class="__icon fa fa-pagelines"></i>PAGINATION</a>
+                          </li>
+                          <li><a href="shortcode-parallax.html"><i class="__icon fa fa-file-image-o"></i>PARALLAX</a>
+                          </li>
+                          <li><a href="shortcode-piechart.html"><i class="__icon fa fa-pie-chart"></i>PIECHART</a>
+                          </li>
+                          <li><a href="shortcode-piechart2.html"><i class="__icon fa fa-pie-chart"></i>PIECHART 02<span class="__flag border-primary color-primary">NEW</span></a>
+                          </li>
+                          <li><a href="shortcode-piechart3.html"><i class="__icon fa fa-pie-chart"></i>PIECHART 03<span class="__flag border-primary color-primary">NEW</span></a>
+                          </li>
+                          <li><a href="shortcode-pricing-table.html"><i class="__icon fa fa-list-alt"></i>PRICING TABLE</a>
+                          </li>
+                          <li><a href="shortcode-process.html"><i class="__icon fa fa-check-square"></i>PROCESS</a>
+                          </li>
+                          <li><a href="shortcode-progressbar.html"><i class="__icon fa fa-server"></i>PROGRESSBAR</a>
+                          </li>
+                          <li><a href="shortcode-qrcode.html"><i class="__icon fa fa-qrcode"></i>QRCODE</a>
+                          </li>
+                          <li><a href="shortcode-separator.html"><i class="__icon fa fa-minus"></i>SEPARATOR</a>
+                          </li>
+                          <li><a href="shortcode-service-table.html"><i class="__icon fa fa-th"></i>SERVICE TABLE</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#">SHORTCODES 04</a>
+                        <ul>
+                          <li><a href="shortcode-tab.html"><i class="__icon fa fa-th-large"></i>TAB</a>
+                          </li>
+                          <li><a href="shortcode-table.html"><i class="__icon fa fa-table"></i>TABLE</a>
+                          </li>
+                          <li><a href="shortcode-team.html"><i class="__icon fa fa-users"></i>TEAM</a>
+                          </li>
+                          <li><a href="shortcode-testimonials.html"><i class="__icon fa fa-comments"></i>TESTIMONIALS</a>
+                          </li>
+                          <li><a href="shortcode-typography.html"><i class="__icon fa fa-text-height"></i>TYPOGRAPHY</a>
+                          </li>
+                          <li><a href="shortcode-vertical-progressbar.html"><i class="__icon fa fa-bar-chart"></i>VERTICAL PROGRESSBAR</a>
+                          </li>
+                          <li><a href="shortcode-widget.html"><i class="__icon fa fa-cube"></i>WIDGET</a>
+                          </li>
+                          <li><a href="shortcode-image-gallery.html"><i class="__icon fa fa-file-image-o"></i>IMAGE GALLERY</a>
+                          </li>
+                          <li><a href="shortcode-image-slider.html"><i class="__icon fa fa-picture-o"></i>IMAGE SLIDER</a>
+                          </li>
+                          <li><a href="shortcode-share-module.html"><i class="__icon fa fa-paper-plane-o"></i>SHARE MODULE</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#">MANY FEATURES</a>
+                        <ul>
+                          <li><a href="#">BOOTSTRAP 3 GRID SYSTEM</a>
+                          </li>
+                          <li><a href="#">HTML5 &amp; CSS3 ANIMATION</a>
+                          </li>
+                          <li><a href="#">AUTOMATE YOUR WORKFLOW</a>
+                          </li>
+                          <li><a href="#">NODE TEMPLATE ENGINE</a>
+                          </li>
+                          <li><a href="#">LESS PRE-PROCESSOR</a>
+                          </li>
+                          <li><a href="#">FONT AWESOME INCLUDED</a>
+                          </li>
+                          <li><a href="#">+1000 ICON FONTS </a>
+                          </li>
+                          <li><a href="#">FULLY RESPONSIVE</a>
+                          </li>
+                          <li><a href="#">FREE GOOGLE FONTS</a>
+                          </li>
+                          <li><a href="#">PARALLAX BACKGROUND</a>
+                          </li>
+                          <li><a href="#">WIDE AND BOXED LAYOUT</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="li-node"><a href="#">OPTIONS</a>
+                    <ul class="multi-floor-menu ul-node">
+                      <li class="li-node"><a href="#"><i class="__icon fa fa-files-o"></i>HEADER OPTIONS</a>
+                        <ul>
+                          <li><a href="header-option-1.html">HEADER STYLE 01</a>
+                          </li>
+                          <li><a href="header-option-2.html">HEADER STYLE 02</a>
+                          </li>
+                          <li><a href="header-option-3.html">HEADER STYLE 03</a>
+                          </li>
+                          <li><a href="header-option-4.html">HEADER STYLE 04</a>
+                          </li>
+                          <li><a href="header-option-5.html">HEADER STYLE 05</a>
+                          </li>
+                          <li><a href="header-option-6.html">HEADER STYLE 06</a>
+                          </li>
+                          <li><a href="header-option-7.html">HEADER STYLE 07</a>
+                          </li>
+                          <li><a href="header-option-8.html">HEADER STYLE 08</a>
+                          </li>
+                          <li><a href="header-option-12.html">HEADER STYLE 09</a>
+                          </li>
+                          <li><a href="header-option-16.html">HEADER STYLE 10</a>
+                          </li>
+                          <li><a href="header-option-20.html">HEADER STYLE 11</a>
+                          </li>
+                          <li><a href="header-option-17.html">HEADER STYLE 12</a>
+                          </li>
+                          <li><a href="#">AND MUCH MORE</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#"><i class="__icon fa fa-magic"></i>FOOTER OPTIONS</a>
+                        <ul>
+                          <li><a href="footer-option-1.html#footer">FOOTER STYLE 01</a>
+                          </li>
+                          <li><a href="footer-option-2.html#footer">FOOTER STYLE 02</a>
+                          </li>
+                          <li><a href="footer-option-3.html#footer">FOOTER STYLE 03</a>
+                          </li>
+                          <li><a href="footer-option-4.html#footer">FOOTER STYLE 04</a>
+                          </li>
+                          <li><a href="footer-option-5.html#footer">FOOTER STYLE 05</a>
+                          </li>
+                          <li><a href="footer-option-6.html#footer">FOOTER STYLE 06</a>
+                          </li>
+                          <li><a href="footer-option-7.html#footer">FOOTER STYLE 07</a>
+                          </li>
+                          <li><a href="footer-option-8.html#footer">FOOTER STYLE 08</a>
+                          </li>
+                          <li><a href="footer-option-9.html#footer">FOOTER STYLE 09</a>
+                          </li>
+                          <li><a href="footer-option-10.html#footer">FOOTER STYLE 10</a>
+                          </li>
+                          <li><a href="#">AND MUCH MORE</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#"><i class="__icon fa fa-youtube-play"></i>VIDEO OPTIONS</a>
+                        <ul>
+                          <li><a href="homepage-video-1.html">YOUTUBE VIDEO</a>
+                          </li>
+                          <li><a href="homepage-video-2.html">HTML5 VIDEO</a>
+                          </li>
+                          <li><a href="homepage-video-3.html">SLIDER &amp; VIDEO</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#"><i class="__icon fa fa-diamond"></i>WIDGET OPTIONS</a>
+                        <ul>
+                          <li><a href="shortcode-widget.html">CATEGORIES</a>
+                          </li>
+                          <li><a href="shortcode-widget.html">RECENT POSTS</a>
+                          </li>
+                          <li><a href="shortcode-widget.html">IMAGES GALLERY</a>
+                          </li>
+                          <li><a href="shortcode-widget.html">RECENT TWEETS</a>
+                          </li>
+                          <li><a href="shortcode-widget.html">POPULAR TAGS</a>
+                          </li>
+                          <li><a href="shortcode-widget.html">SEARCH BOX</a>
+                          </li>
+                          <li><a href="shortcode-widget.html">FILTER BY PRICE</a>
+                          </li>
+                          <li><a href="shortcode-widget.html">ACCORDION WIDGET</a>
+                          </li>
+                          <li><a href="shortcode-widget.html">RECENT PRODUCTS</a>
+                          </li>
+                          <li><a href="shortcode-widget.html">FREE TEXT WIDGET</a>
+                          </li>
+                          <li><a href="shortcode-widget.html">SLIDER IMAGES</a>
+                          </li>
+                          <li><a href="shortcode-widget.html">SOCIAL ICONS</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#"><i class="__icon fa fa-cubes"></i>MENU OPTIONS</a>
+                        <ul>
+                          <li><a href="#">DROPDOWN MENU</a>
+                          </li>
+                          <li><a href="#">MEGAMENU 2 COLUMNS</a>
+                          </li>
+                          <li><a href="#">MEGAMENU 3 COLUMNS</a>
+                          </li>
+                          <li><a href="#">MEGAMENU 4 COLUMNS</a>
+                          </li>
+                          <li><a href="#">MEGAMENU 5 COLUMNS</a>
+                          </li>
+                          <li><a href="#">MEGAMENU WITH HEADING</a>
+                          </li>
+                          <li><a href="#">OFF CANVAS MENU</a>
+                          </li>
+                          <li><a href="#">STICKY MENU</a>
+                          </li>
+                          <li><a href="#">MENU WITH ICON</a>
+                          </li>
+                          <li><a href="#">MENU WITH FLAG</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li><a href="#"><i class="__icon fa fa-spinner"></i>UPDATING...</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="li-node"><a href="#">BLOG</a>
+                    <ul class="multi-floor-menu menu-right-base ul-node">
+                      <li class="li-node"><a href="#">BLOG LARGE IMAGE</a>
+                        <ul>
+                          <li><a href="blog-fullwidth.html">LARGE IMAGE FULLWIDTH</a>
+                          </li>
+                          <li><a href="blog-sidebar-left.html">LARGE IMAGE SIDEBAR LEFT</a>
+                          </li>
+                          <li><a href="blog-sidebar-right.html">LARGE IMAGE SIDEBAR RIGHT</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#">BLOG LEFT IMAGE</a>
+                        <ul>
+                          <li><a href="blog-left-image-fullwidth.html">LEFT IMAGES IMAGE FULLWIDTH</a>
+                          </li>
+                          <li><a href="blog-left-image-sidebar-left.html">LEFT IMAGES IMAGE SIDEBAR LEFT</a>
+                          </li>
+                          <li><a href="blog-left-image-sidebar-right.html">LEFT IMAGES IMAGE SIDEBAR RIGHT</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#">BLOG TIME LINE</a>
+                        <ul>
+                          <li><a href="blog-timeline-fullwidth.html">TIME LINE FULLWIDTH</a>
+                          </li>
+                          <li><a href="blog-timeline-sidebar-left.html">TIME LINE SIDEBAR LEFT</a>
+                          </li>
+                          <li><a href="blog-timeline-sidebar-right.html">TIME LINE SIDEBAR RIGHT</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#">BLOG MASONRY</a>
+                        <ul>
+                          <li><a href="blog-masonry-wide.html">MASONRY WIDE</a>
+                          </li>
+                          <li><a href="blog-masonry-fullwidth.html">MASONRY FULLWIDTH</a>
+                          </li>
+                          <li><a href="blog-masonry-sidebar-left.html">MASONRY SIDEBAR LEFT</a>
+                          </li>
+                          <li><a href="blog-masonry-sidebar-right.html">MASONRY SIDEBAR RIGHT</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#">BLOG SINGLE</a>
+                        <ul>
+                          <li><a href="blog-single-sidebar-left.html">SINGLE SIDEBAR LEFT</a>
+                          </li>
+                          <li><a href="blog-single-fullwidth.html">SINGLE FULLWIDTH</a>
+                          </li>
+                          <li><a href="blog-single-standard.html">SINGLE STANDARD</a>
+                          </li>
+                          <li><a href="blog-single-audio.html">SINGLE AUDIO</a>
+                          </li>
+                          <li><a href="blog-single-gallery.html">SINGLE GALLERY</a>
+                          </li>
+                          <li><a href="blog-single-quote.html">SINGLE QUOTE</a>
+                          </li>
+                          <li><a href="blog-single-video.html">SINGLE VIDEO</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="li-node"><a href="#">WORKS</a>
+                    <ul class="mega-menu menu-5-col menu-fullwidth menu-hr-heading ul-node">
+                      <li class="li-node"><a href="#">3 COLUMNS</a>
+                        <ul>
+                          <li><a href="portfolio-3-columns-hover-style-1.html">3 COLUMNS STYLE 01</a>
+                          </li>
+                          <li><a href="portfolio-3-columns-hover-style-2.html">3 COLUMNS STYLE 02</a>
+                          </li>
+                          <li><a href="portfolio-3-columns-hover-style-3.html">3 COLUMNS STYLE 03</a>
+                          </li>
+                          <li><a href="portfolio-3-columns-hover-style-4.html">3 COLUMNS STYLE 04</a>
+                          </li>
+                          <li><a href="portfolio-3-columns-hover-style-5.html">3 COLUMNS STYLE 05</a>
+                          </li>
+                          <li><a href="portfolio-3-columns-hover-style-6.html">3 COLUMNS STYLE 06</a>
+                          </li>
+                          <li><a href="portfolio-3-columns-no-space.html">NO SPACE</a>
+                          </li>
+                          <li><a href="portfolio-3-columns-wide.html">WIDE SCREEN</a>
+                          </li>
+                          <li><a href="portfolio-3-columns-wide-no-space.html">WIDE &amp; NO SPACE</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#">4 COLUMNS</a>
+                        <ul>
+                          <li><a href="portfolio-4-columns-hover-style-1.html">4 COLUMNS STYLE 01</a>
+                          </li>
+                          <li><a href="portfolio-4-columns-hover-style-2.html">4 COLUMNS STYLE 02</a>
+                          </li>
+                          <li><a href="portfolio-4-columns-hover-style-3.html">4 COLUMNS STYLE 03</a>
+                          </li>
+                          <li><a href="portfolio-4-columns-hover-style-4.html">4 COLUMNS STYLE 04</a>
+                          </li>
+                          <li><a href="portfolio-4-columns-hover-style-5.html">4 COLUMNS STYLE 05</a>
+                          </li>
+                          <li><a href="portfolio-4-columns-hover-style-6.html">4 COLUMNS STYLE 06</a>
+                          </li>
+                          <li><a href="portfolio-4-columns-no-space.html">NO SPACE</a>
+                          </li>
+                          <li><a href="portfolio-4-columns-wide.html">WIDE SCREEN</a>
+                          </li>
+                          <li><a href="portfolio-4-columns-wide-no-space.html">WIDE &amp; NO SPACE</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#">5 COLUMNS</a>
+                        <ul>
+                          <li><a href="portfolio-5-columns-hover-style-1.html">5 COLUMNS STYLE 01</a>
+                          </li>
+                          <li><a href="portfolio-5-columns-hover-style-2.html">5 COLUMNS STYLE 02</a>
+                          </li>
+                          <li><a href="portfolio-5-columns-hover-style-3.html">5 COLUMNS STYLE 03</a>
+                          </li>
+                          <li><a href="portfolio-5-columns-hover-style-4.html">5 COLUMNS STYLE 04</a>
+                          </li>
+                          <li><a href="portfolio-5-columns-hover-style-5.html">5 COLUMNS STYLE 05</a>
+                          </li>
+                          <li><a href="portfolio-5-columns-hover-style-6.html">5 COLUMNS STYLE 06</a>
+                          </li>
+                          <li><a href="portfolio-5-columns-no-space.html">NO SPACE</a>
+                          </li>
+                          <li> <a href="portfolio-5-columns-wide.html">WIDE SCREEN</a>
+                          </li>
+                          <li><a href="portfolio-5-columns-wide-no-space.html">WIDE &amp; NO SPACE</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#">SPECIAL STYLE</a>
+                        <ul>
+                          <li><a href="portfolio-carousel.html">CAROUSEL</a>
+                          </li>
+                          <li><a href="portfolio-hover-effect.html">HOVER EFFECT<span class="__flag border-danger color-danger">HOT</span></a>
+                          </li>
+                          <li><a href="portfolio-masonry.html">MASONRY</a>
+                          </li>
+                          <li><a href="portfolio-masonry-wide.html">MASONRY WIDE</a>
+                          </li>
+                          <li><a href="portfolio-shortcode-masonry.html">METRO STYLE 01</a>
+                          </li>
+                          <li><a href="portfolio-shortcode-masonry-2.html">METRO STYLE 02</a>
+                          </li>
+                          <li><a href="portfolio-2-columns-hover-style-1.html">2 COLUMNS STYLE 01</a>
+                          </li>
+                          <li><a href="portfolio-2-columns-hover-style-2.html">2 COLUMNS STYLE 02</a>
+                          </li>
+                          <li><a href="portfolio-2-columns-hover-style-3.html">2 COLUMNS STYLE 03</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#">SINGLE PORTFOLIO</a>
+                        <ul>
+                          <li><a href="portfolio-single-1.html">PORTFOLIO SINGLE 01</a>
+                          </li>
+                          <li><a href="portfolio-single-2.html">PORTFOLIO SINGLE 02</a>
+                          </li>
+                          <li><a href="portfolio-single-3.html">PORTFOLIO SINGLE 03</a>
+                          </li>
+                          <li><a href="portfolio-single-4.html">PORTFOLIO SINGLE 04</a>
+                          </li>
+                          <li><a href="portfolio-single-5.html">PORTFOLIO SINGLE 05</a>
+                          </li>
+                          <li><a href="portfolio-single-6.html">PORTFOLIO SINGLE 06</a>
+                          </li>
+                          <li><a href="portfolio-single-7.html">PORTFOLIO SINGLE 07</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="li-node" style="position: relative;"><a href="#">SHOP</a>
+                    <ul class="mega-menu menu-right-base menu-3-col menu-hr-heading ul-node">
+                      <li class="li-node"><a href="#">SHOP CATEGORY</a>
+                        <ul>
+                          <li><a href="shop-category-fullwidth.html">CATEGORY FULLWIDTH</a>
+                          </li>
+                          <li><a href="shop-category-sidebar-left.html">CATEGORY SIDE BAR LEFT</a>
+                          </li>
+                          <li><a href="shop-category-sidebar-right.html">CATEGORY SIDE BAR RIGHT</a>
+                          </li>
+                          <li><a href="shop-category-top-slider.html">CATEGORY TOP SLIDER</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#">SINGLE SHOP</a>
+                        <ul>
+                          <li><a href="shop-single-fullwidth.html">SINGLE FULLWIDTH</a>
+                          </li>
+                          <li><a href="shop-single-sidebar-left.html">SINGLE SIDE BAR LEFT</a>
+                          </li>
+                          <li><a href="shop-single-sidebar-right.html">SINGLE SIDE BAR RIGHT</a>
+                          </li>
+                          <li><a href="shop-single-top-slider.html">SINGLE TOP SLIDER</a>
+                          </li>
+                          <li><a href="shop-single-variable.html">SINGLE VARIABLE</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="li-node"><a href="#">OTHER PAGE</a>
+                        <ul>
+                          <li><a href="shop-account.html">MY ACCOUNT</a>
+                          </li>
+                          <li><a href="shop-cart.html">CART</a>
+                          </li>
+                          <li><a href="shop-checkout.html">CHECK OUT</a>
+                          </li>
+                          <li><a href="shop-order-tracking.html">ORDER TRACKING</a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </nav>
+              <div class="nav-function nav-item">
+                <div class="__cart dropdown"><a href="#" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="cart-open icon-shopping111">
+                    <div class="__quantity bgc-primary">3</div></a>
+                  <div class="dropdown-menu bgc-gray-darkest">
+                    <div class="__cart-item">
+                      <div class="__image"><img src="assets/images/shop/product-img-1-s.jpg" alt="Shop Product" class="img-responsive"></div>
+                      <div class="__info">
+                        <div class="__category font-serif-italic fz-6-s">Women / Clothe</div>
+                        <div class="font-heading fz-6-ss"><a href="#">SKATER DRESS IN LEAF</a></div><span class="__price color-primary font-heading">1 x $280</span>
+                      </div><a href="#" class="__remove icon-185090-delete-garbage-streamline"></a>
+                    </div>
+                    <div class="__cart-item">
+                      <div class="__image"><img src="assets/images/shop/product-img-2-s.jpg" alt="Shop Product" class="img-responsive"></div>
+                      <div class="__info">
+                        <div class="__category font-serif-italic fz-6-s">Women / Clothe</div>
+                        <div class="font-heading fz-6-ss"><a href="#">SKATER DRESS IN LEAF</a></div><span class="__price color-primary font-heading">1 x $280</span>
+                      </div><a href="#" class="__remove icon-185090-delete-garbage-streamline"></a>
+                    </div>
+                    <div class="__cart-item">
+                      <div class="__image"><img src="assets/images/shop/product-img-3-s.jpg" alt="Shop Product" class="img-responsive"></div>
+                      <div class="__info">
+                        <div class="__category font-serif-italic fz-6-s">Women / Clothe</div>
+                        <div class="font-heading fz-6-ss"><a href="#">SKATER DRESS IN LEAF</a></div><span class="__price color-primary font-heading">1 x $280</span>
+                      </div><a href="#" class="__remove icon-185090-delete-garbage-streamline"></a>
+                    </div>
+                    <div class="__middle-row"><a href="#"><i class="icon-185090-delete-garbage-streamline mr-5"></i>Empty Cart</a>
+                      <div class="__total">Subtotal : &nbsp;<span class="color-primary">$740</span></div>
+                    </div>
+                    <div class="__button-group"><a href="shop-cart.html" class="btn btn-primary"><i class="icon icon-svg-icon-16"></i>VIEW CART</a><a href="shop-checkout.html" class="pull-right btn btn-secondary">CHECKOUT</a></div>
+                  </div>
+                </div>
+                <div class="__search"><a href="__modal-search.html" data-modal-open="data-modal-open" class="icon-search-icon"></a>
+                </div>
+                <div class="__offcanvas-button"><a href="#" class="offcanvas-nav-toggle icon-menu27"></a></div>
+              </div>
+            </div>
+            <div class="pull-right nav-item hidden-lg"><a href="#" class="mobile-nav-toggle nav-hamburger"><span></span></a></div>
+          </div>
+        </div>
+      </div>
+
       <nav class="offcanvas-nav bgc-gray-darkest"><a href="#" class="offcanvas-nav-toggle"><i class="icon-wrong6"></i></a>
         <h6 class="size-s smb">CUSTOM PAGES</h6>
         <nav class="nav-single nav-item">

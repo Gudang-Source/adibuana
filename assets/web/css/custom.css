@@ -49,7 +49,7 @@ body{
 .main-nav .left-bg{
   position: absolute;
   background-color: #22A7F0;
-  height: 100px;
+  height: 90px;
   width: 100%;
   left: -100%;
   z-index: 2;
@@ -305,7 +305,7 @@ section#middle-section{
 .header-phone {
     background-color: #22A7F0;
     width: 40%;
-    height: 100px;
+    height: 90px;
     padding: 20px 0 20px 75px;
     position: relative;
     float: left;
@@ -329,7 +329,7 @@ section#middle-section{
 }
 .triangle-arrow {
     border-right: 58px solid transparent;
-    border-top: 100px solid #22A7F0;
+    border-top: 90px solid #22A7F0;
     display: block;
     position: absolute;
     height: 0;
@@ -374,6 +374,18 @@ section.slider{
 }
 .flex-direction-nav a {
   top:40%;
+}
+.flex-caption {
+  position: absolute;
+  width: 30%;
+  padding: 2%;
+  right: 0;
+  bottom: 60px;
+  background: rgba(0,0,0,.5);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+  font-size: 14px;
+  line-height: 18px;
 }
 .panel{
   margin-bottom: 20px;

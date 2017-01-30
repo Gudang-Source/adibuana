@@ -33,7 +33,9 @@ $(function() {
         },
         preDrawCallback: function() {
             $(this).find('tbody tr').slice(-3).find('.dropdown, .btn-group').removeClass('dropup');
-        }
+        },
+        "bSort": false
+        
     });
 
 

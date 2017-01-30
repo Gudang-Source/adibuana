@@ -80,7 +80,8 @@
       $this->db->select('adi_news.*, adi_user.name, adi_news_type.type_eng')
               ->from('adi_news')
               ->join('adi_user', 'adi_news.post_by = adi_user.id')
-              ->join('adi_news_type', 'adi_news.id_type = adi_news_type.id');
+              ->join('adi_news_type', 'adi_news.id_type = adi_news_type.id')
+              ->order_by('adi_news.post_date', 'desc');
       $news = $this->db->get()->result();
       return $news;
     }
@@ -100,4 +101,72 @@
       $detail = $this->db->get()->result();
       return $detail;
     }
+
+    function insert_news($news, $pic="", $thumb="", $bpict=""){
+      $data = [
+        'id'=>rand(10000000000, 99999999999),
+        'id_type'=>$news['tipe'],
+        'author'=>$news['author'],
+        'title_ina'=>$news['title_ina'],
+        'title_eng'=>$news['title_eng'],
+        'lead_ina'=>$news['lead_ina'],
+        'lead_eng'=>$news['lead_eng'],
+        'content_ina'=>$news['konten_ina'],
+        'content_eng'=>$news['konten_eng'],
+        'thumb'=>$thumb,
+        'picture'=>$pic,
+        'bpict'=>$bpict,
+        'banner'=>$news['bv'],
+        'hot'=>$news['hl'],
+        'post_date'=>date('Y-m-d H:i:s'),
+        'modify_date'=>date('Y-m-d H:i:s'),
+        'post_by'=>$this->session->userdata('id_user')
+      ];
+
+      $insert = $this->db->insert('adi_news', $data);
+
+    return $insert;
+    }
+
+    function update_news($id, $news, $pic="", $thumb="", $bpict=""){
+      $data = [
+        'id_type'=>$news['tipe'],
+        'author'=>$news['author'],
+        'title_ina'=>$news['title_ina'],
+        'title_eng'=>$news['title_eng'],
+        'lead_ina'=>$news['lead_ina'],
+        'lead_eng'=>$news['lead_eng'],
+        'content_ina'=>$news['konten_ina'],
+        'content_eng'=>$news['konten_eng'],
+        'banner'=>$news['bv'],
+        'hot'=>$news['hl'],
+        'modify_date'=>date('Y-m-d H:i:s'),
+      ];
+
+      if($pic != ""){
+        $data['picture'] = $pic;
+      }
+      if($thumb != ""){
+        $data['thumb'] = $thumb;
+      }
+      if($bpict != ""){
+        $data['bpict'] = $bpict;
+      }
+
+      $where = [
+        'id'=>$id
+      ];
+
+      $update = $this->db->update('adi_news', $data, $where);
+
+      return $update;
+    }
+
+    function delete_news($id){
+      $where = ['id'=>$id];
+      $delete = $this->db->delete('adi_news', $where);
+      return $delete;
+
+    }
+
   }

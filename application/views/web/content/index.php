@@ -4,13 +4,20 @@
    <div class="flexslider">
      <ul class="slides">
        <li>
-         <img src="assets/images/slider1.jpg" />
+         <img style="height:420px; object-fit:cover" src="assets/images/slider1.jpg" />
+        <p class="flex-caption">Adventurer Cheesecake Brownie</p>
        </li>
        <li>
-         <img src="assets/images/slider2.jpg" />
+         <img style="height:420px; object-fit:cover" src="assets/images/slider2.jpg" />
+        <p class="flex-caption">Adventurer Cheesecake Brownie</p>
        </li>
        <li>
-         <img src="assets/images/slider3.jpg" />
+         <img style="height:420px; object-fit:cover" src="assets/images/slider3.jpg" />
+          <p class="flex-caption">Adventurer Cheesecake Brownie</p>
+       </li>
+       <li>
+         <img style="height:420px; object-fit:cover" src="assets/images/slider4.png" />
+        <p class="flex-caption">Adventurer Cheesecake Brownie</p>
        </li>
      </ul>
    </div>
