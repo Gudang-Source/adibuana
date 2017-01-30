@@ -52,7 +52,7 @@
     $lang['news_event'] = 'Event';
     $lang['news_collage'] = 'Collage News';
     $lang['news_artikel'] = 'Arthicle';
-    $lang['news_announcetment'] = 'Announcetment';
+    $lang['news_announcetment'] = 'Announcement';
     $lang['news_daily'] = 'Daily News';
     $lang['news_edu'] = 'Education';
     $lang['news_sport'] = 'Sport';
@@ -79,7 +79,7 @@
     $lang['berita_baru'] = 'Latest News';
     $lang['lainnya'] = 'More';
     $lang['gallery'] = 'Gallery';
-    $lang['pengumuman'] = 'Announcetment';
+    $lang['pengumuman'] = 'Announcement';
     $lang['peta_lokasi'] = 'Location Map';
     $lang['more'] = 'More >>';
     $lang['kunjungi'] = 'Visit';
@@ -92,3 +92,7 @@
     $lang['prospek'] = 'Prospects for Graduates';
     $lang['post_by'] = 'By';
     $lang['katagori_lain'] = 'OTHER CATEGORIES';
+    $lang['di'] = 'at';
+    $lang['alamat'] = 'Address';
+    $lang['contact'] = 'Contact Us';
+    $lang['form_kkn'] = 'Form Community Service Program';

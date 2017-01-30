@@ -345,7 +345,7 @@
                 </div>
               </div>
               <div class="panel-footer">
-                <a href="#" class="btn btn-border color-secondary"><?php echo $this->lang->line('kunjungi') ?></a>
+                <a href="http://siakad.unipasby.ac.id" class="btn btn-border color-secondary"><?php echo $this->lang->line('kunjungi') ?></a>
               </div>
             </div>
            
@@ -359,7 +359,7 @@
                 </div>
               </div>
               <div class="panel-footer">
-                <a href="#" class="btn btn-border color-secondary"><?php echo $this->lang->line('daftar') ?></a>
+                <a href="<?php echo base_url() ?>kkn" class="btn btn-border color-secondary"><?php echo $this->lang->line('daftar') ?></a>
               </div>
             </div>
           </div>
