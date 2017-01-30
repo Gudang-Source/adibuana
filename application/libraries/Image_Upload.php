@@ -36,7 +36,7 @@
             );
 		    $this->ci->load->library('upload');
             $this->ci->upload->initialize($config);
-            if(file_exists($path.$old_file_name)){
+            if($old_file_name != "" && file_exists($path.$old_file_name)){
                 unlink($path.$old_file_name);
             }
 
