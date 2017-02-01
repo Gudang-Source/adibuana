@@ -25,12 +25,6 @@
             $page = $page->get()->result();
             return $page;
          }
-         function insert(){
-
-         }
-         function update($id){
-
-         }
          function delete($id){
 
          }
@@ -57,5 +51,73 @@
                     ->where('id', $id);
             $event = $event->get()->row();
             return $event;
+         }
+
+         function insert($event, $picture, $thumb, $bpict, $file){
+            $data = [
+                'id'=>rand(1, 100).date("dmYHis"),
+                'author'=>$event['author'],
+                'start_date'=>date_to_date_time($event['start_date']),
+                'end_date'=>date_to_date_time($event['end_date']),
+                'title_ina'=>$event['title_ina'],
+                'title_eng'=>$event['title_eng'],
+                'lead_ina'=>$event['lead_ina'],
+                'lead_eng'=>$event['lead_eng'],
+                'content_ina'=>$event['konten_ina'],
+                'content_eng'=>$event['konten_eng'],
+                'post_date'=>date('Y-m-d H:i:s'),
+                'modify_date'=>date('Y-m-d H:i:s'),
+                'post_by'=>$this->session->userdata('id_user')
+            ];
+            if($picture != ""){
+                $data['picture'] = $picture;
+            }
+            if($thumb != ""){
+                $data['thumb'] = $thumb;
+            }
+            if($bpict != ""){
+                $data['bpict'] = $bpict;
+            }
+            if($file != ""){
+                $data['file'] = $file;
+            }
+
+            $insert = $this->db->insert("adi_event", $data);
+            return $insert;
+         }
+
+         function update($id, $event, $picture, $thumb, $bpict, $file){
+              $data = [
+                'author'=>$event['author'],
+                'start_date'=>date_to_date_time($event['start_date']),
+                'end_date'=>date_to_date_time($event['end_date']),
+                'title_ina'=>$event['title_ina'],
+                'title_eng'=>$event['title_eng'],
+                'lead_ina'=>$event['lead_ina'],
+                'lead_eng'=>$event['lead_eng'],
+                'content_ina'=>$event['konten_ina'],
+                'content_eng'=>$event['konten_eng'],
+                'post_date'=>date('Y-m-d H:i:s'),
+                'modify_date'=>date('Y-m-d H:i:s'),
+                'post_by'=>$this->session->userdata('id_user')
+            ];
+            if($picture != ""){
+                $data['picture'] = $picture;
+            }
+            if($thumb != ""){
+                $data['thumb'] = $thumb;
+            }
+            if($bpict != ""){
+                $data['bpict'] = $bpict;
+            }
+            if($file != ""){
+                $data['file'] = $file;
+            }
+
+            $where = [
+                'id'=>$id
+            ];
+            $update = $this->db->update("adi_event", $data, $where);
+            return $update;
          }
      }

@@ -104,7 +104,7 @@
 
     function insert_news($news, $pic="", $thumb="", $bpict=""){
       $data = [
-        'id'=>rand(10000000000, 99999999999),
+        'id'=>rand(),
         'id_type'=>$news['tipe'],
         'author'=>$news['author'],
         'title_ina'=>$news['title_ina'],

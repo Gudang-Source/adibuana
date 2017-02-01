@@ -304,4 +304,15 @@ function month_3_char($month){
 	return $karakter3[$month];
 }
 
+function date_time_to_date($date_time){
+	list($date, $time) = explode(" ", $date_time);
+	list($y, $m, $d ) = explode("-", $date);
+	return $d.'-'.$m.'-'.$y;
+}
+// format date : 12-12-2012 -> 2012-12-12 00:00:00
+function date_to_date_time($date){
+	list($d, $m, $y ) = explode("-", $date);
+	return $y.'-'.$m.'-'.$d.' 00:00:00';
+}
+
 // ------------------------------------------------------------------------

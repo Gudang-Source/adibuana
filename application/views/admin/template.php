@@ -32,23 +32,45 @@
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/assets/js/plugins/forms/selects/select2.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/assets/js/plugins/forms/styling/uniform.min.js"></script>
 
-	<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/ckeditor/ckeditor.js"></script>
-	<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/ckfinder/ckfinder.js"></script>
-
-  <script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/assets/js/plugins/tables/datatables/datatables.min.js"></script>
+  	<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/assets/js/plugins/tables/datatables/datatables.min.js"></script>
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/assets/js/core/app.js"></script>
   <?php 
     if($this->uri->segment(3) != ''){
     ?>
 	<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/assets/js/pages/form_layouts.js"></script>
-    <script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/assets/js/pages/editor_ckeditor.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/assets/js/pages/picker_date.js"></script>
 	<?php
     } 
   ?>
+
+  <?php 
+	if($this->uri->segment(3) != ""){
+	?>
+	<!-- Theme JS files -->
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/assets/js/core/libraries/jquery_ui/datepicker.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/assets/js/core/libraries/jquery_ui/effects.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/assets/js/plugins/notifications/jgrowl.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/assets/js/plugins/ui/moment/moment.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/assets/js/plugins/pickers/daterangepicker.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/assets/js/plugins/pickers/anytime.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/assets/js/plugins/pickers/pickadate/picker.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/assets/js/plugins/pickers/pickadate/picker.date.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/assets/js/plugins/pickers/pickadate/picker.time.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/assets/js/plugins/pickers/pickadate/legacy.js"></script>
+	<?php
+	}
+	?>
+
+
   <script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/assets/js/pages/datatables_basic.js"></script>
 
-	<!-- /theme JS files -->
+  	<style type="text/css">
+  		.uploader{
+  			margin-top: 10px;
+  		}
+  	</style>
 
+	<!-- /theme JS files -->
 	<script>
 		var base_url = '<?php echo base_url(); ?>';
 	</script>
@@ -344,12 +366,14 @@
 
 		<!-- Footer -->
 		<div class="footer text-muted">
-			&copy; 2015. <a href="#">Limitless Web App Kit</a> by <a href="http://themeforest.net/user/Kopyov" target="_blank">Eugene Kopyov</a>
+			&copy; <?php echo date('Y') ?>. <a href="#">Univesitas Adibuana Surabaya</a> by <a href="http://themeforest.net/user/Kopyov" target="_blank">Eugene Kopyov</a>
 		</div>
 		<!-- /footer -->
 
 	</div>
 	<!-- /page container -->
-
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/ckeditor/ckeditor.js"></script>
+	<script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/ckfinder/ckfinder.js"></script> 
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/admin/assets/js/pages/editor_ckeditor.js"></script>
 </body>
 </html>

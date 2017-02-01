@@ -71,10 +71,16 @@
                   </div>
                 </div>
                 <div class="pull-right">
-                  <ul class="social nav-item">
+                  <div class="search-bar">
+                    <form method="get" action="<?php echo base_url(); ?>pencarian">
+                      <input placeholder="Pencarian" type="text" class="text-search" name="search">
+                      <button type="submit" class="btn btn-default"><i class="icon icon-magnifying-glass"></i></button>
+                    </form>
+                  </div>
+                  <!-- <ul class="social nav-item">
                     <li><a href="#"><i class="icon icon-facebook-1"></i></a></li>
                     <li><a href="#"><i class="icon icon-twitter-1"></i></a></li>
-                  </ul>
+                  </ul> -->
                 </div>
               </div>
             </div>
@@ -275,6 +281,7 @@
                       <li>
                           <a href="#"><?php echo $this->lang->line('menu_contact') ?></a>
                       </li>
+                    </ul>
                   </nav>
                 </div>
               </div>
@@ -324,13 +331,13 @@
         
       </div>
 
-      <div class="main-nav small-nav bgc-blue fixed-tranformed-bg-light nav-fixed border-bottom">
+      <div class="main-nav small-nav bgc-blue nav-fixed border-bottom">
         <div class="container">
           <div class="nav-content-wrapper">
             <div class="pull-left">
               <div class="megatron inline logo-dark">
                 <div class="cell-vertical-wrapper">
-                  <div class="cell-middle"><a href="index.html">
+                  <div class="cell-middle"><a href="<?php echo base_url(); ?>">
                       <div class="logo"><img src="<?php echo base_url(); ?>assets/images/logo.png"></div>
                       </a></div>
                 </div>
@@ -338,688 +345,188 @@
             </div>
             <div class="pull-right visible-lg">
               <nav class="os-menu main-menu">
-                <ul class="ul-node">
-                  <li class="li-node"><a href="#">HOME</a>
-                    <ul class="multi-floor-menu ul-node">
-                      <li><a href="homepage-landing-page.html">LANDING PAGE</a>
+               <ul>
+                      <li><a href="<?php echo base_url() ?>"><?php echo $this->lang->line('menu_home') ?></a>
                       </li>
-                      <li class="li-node"><a href="#">DEMOS</a>
-                        <ul>
-                          <li><a href="demo-construction-homepage.html">DEMO CONSTRUCTION</a>
+                      <li><a href="#"><?php echo $this->lang->line('menu_aboutus') ?></a>
+                        <ul class="multi-floor-menu">
+                          <li><a href="<?php echo base_url() ?>sekilas/para-pendiri-unipa/8617092013100647"><i class="__icon"></i><?php echo $this->lang->line('about_founder') ?></a>
                           </li>
-                          <li><a href="demo-hospital-homepage.html">DEMO HOSPITAL</a>
+                          <li><a href="<?php echo base_url() ?>sekilas/sambutan-rektor/319092013084049"><i class="__icon"></i><?php echo $this->lang->line('about_rector') ?></a>
                           </li>
-                          <li><a href="demo-handyman-homepage.html">DEMO HANDYMAN</a>
+                          <li><a href="<?php echo base_url() ?>sekilas/visi-dan-misi/5325032014161225"><i class="__icon"></i><?php echo $this->lang->line('about_vimi') ?></a>
                           </li>
-                          <li><a href="demo-cleaning-homepage.html">DEMO CLEANING</a>
+                          <li><a href="<?php echo base_url() ?>sekilas/sejarah/E_020"><i class="__icon"></i><?php echo $this->lang->line('about_history') ?></a>
                           </li>
-                          <li><a href="demo-fitness-homepage.html">DEMO FITNESS</a>
+                          <li><a ><i class="__icon"></i><?php echo $this->lang->line('about_map') ?></a>
+                            <ul>
+                              <li><a href="<?php echo base_url() ?>area-fakultas/123"><?php echo $this->lang->line('map1') ?></a>
+                              </li>
+                              <li><a href="<?php echo base_url() ?>area-fakultas/234"><?php echo $this->lang->line('map2') ?></a>
+                              </li>
+                            </ul>
                           </li>
-                          <li><a href="demo-interior-homepage.html">DEMO INTERIOR</a>
+                          <li><a href="<?php echo base_url() ?>sekilas/luas-tanah-dan-disain/1119032014110946"><i class="__icon"></i><?php echo $this->lang->line('about_area') ?></a>
                           </li>
-                          <li><a href="demo-lawyer-homepage.html">DEMO LAWYER</a>
+                          <li><a href="<?php echo base_url() ?>sekilas/jejaring-unipa-surabaya/719092013094952"><i class="__icon"></i><?php echo $this->lang->line('about_networking') ?></a>
                           </li>
-                          <li><a href="demo-logistics-homepage.html">DEMO LOGISTICS</a>
+                          <li><a href="<?php echo base_url() ?>sekilas/daftar-hibah-unipa-surabaya/9719092013115310"><i class="__icon"></i><?php echo $this->lang->line('about_grants') ?></a>
                           </li>
-                          <li><a href="#">UPDATING...</a>
+                          <li><a href="<?php echo base_url() ?>sekilas/logo-hymne-mars/1415012013092135"><i class="__icon"></i><?php echo $this->lang->line('about_logo') ?></a>
+                          </li>
+                          <li><a href="<?php echo base_url() ?>sarana"><i class="__icon"></i><?php echo $this->lang->line('about_facility') ?></a>
+                          </li>
+                          <li><a ><i class="__icon"></i><?php echo $this->lang->line('about_unit') ?></a>
+                              <ul>
+                                  <li><a href="<?php echo base_url() ?>satuan-kerja/kemahasiswaan/8216012013093528"><?php echo $this->lang->line('unit') ?></a>
+                                  </li>
+                              </ul>
                           </li>
                         </ul>
                       </li>
-                      <li class="li-node"><a href="#">CREATIVE</a>
-                        <ul>
-                          <li><a href="homepage-creative-1.html">CREATIVE 01</a>
+                      <li><a href="#"><?php echo $this->lang->line('menu_faculty') ?></a>
+                        <ul class="multi-floor-menu">
+                          <li><a href="<?php echo base_url() ?>fakultas-dan-program-studi/E_033"><i class="__icon"></i><?php echo $this->lang->line('faculty_program') ?></a>
                           </li>
-                          <li><a href="homepage-creative-2.html">CREATIVE 02</a>
+                          <li><a><i class="__icon"></i><?php echo $this->lang->line('faculty_fkip') ?></a>
+                              <ul>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/bimbingan-dan-konseling/6514012013110508"><?php echo $this->lang->line('fkip_bk') ?></a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-kesejahteraan-keluarga/4214012013104259"><?php echo $this->lang->line('fkip_pkk') ?></a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-moral-pancasila-dan-kewarganegaraan/4614012013103909"><?php echo $this->lang->line('fkip_pmpk') ?></a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-bahasa-dan-sastra-indonesia/3312012013112127"><?php echo $this->lang->line('fkip_pbsi') ?></a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-matematika/114012013110833"><?php echo $this->lang->line('fkip_mtk') ?></a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-bahasa-inggris/4214012013100537"><?php echo $this->lang->line('fkip_pbi') ?></a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-kepelatihan-olahraga/5914012013103449"><?php echo $this->lang->line('fkip_pko') ?></a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-seni-rupa/1714012013102837"><?php echo $this->lang->line('fkip_psr') ?></a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-guru-sekolah-dasar/3914012013104611"><?php echo $this->lang->line('fkip_pgsd') ?></a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-guru-paud/8814012013105731"><?php echo $this->lang->line('fkip_pgpaud') ?></a>
+                                  </li>
+                              </ul>
                           </li>
-                          <li><a href="homepage-creative-3.html">CREATIVE 03</a>
+                          <li><a ><i class="__icon"></i><?php echo $this->lang->line('faculty_economy') ?></a>
+                              <ul>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/ekonomi/6912012013115003/akuntansi/5914012013092358"><?php echo $this->lang->line('economy_eko') ?></a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/ekonomi/6912012013115003/manajemen/6214012013093635"><?php echo $this->lang->line('economy_man') ?></a>
+                                  </li>
+                              </ul>
                           </li>
-                        </ul>
-                      </li>
-                      <li class="li-node"><a href="#">BUSINESS</a>
-                        <ul>
-                          <li><a href="homepage-business-1.html">BUSINESS 01</a>
+                          <li><a><i class="__icon"></i><?php echo $this->lang->line('faculty_fmipa') ?></a>
+                              <ul>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fmipa/8320122012121610/biologi/4011012013143843"><?php echo $this->lang->line('fmipa_bio') ?></a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fmipa/8320122012121610/statistika/2011012013150052"><?php echo $this->lang->line('fmipa_statis') ?></a>
+                                  </li>
+                              </ul>
                           </li>
-                          <li><a href="homepage-business-2.html">BUSINESS 02</a>
+                          <li><a ><i class="__icon"></i><?php echo $this->lang->line('faculty_ftsp') ?></a>
+                              <ul>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/ftsp/2412012013124252/teknik-lingkungan/1714012013111816"><?php echo $this->lang->line('ftsp_tl') ?></a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/ftsp/2412012013124252/perencanaan-wilayan-dan-kota/5014012013112103"><?php echo $this->lang->line('ftsp_tatakota') ?></a>
+                                  </li>
+                              </ul>
                           </li>
-                          <li><a href="homepage-business-3.html">BUSINESS 03</a>
+                          <li><a ><i class="__icon"></i><?php echo $this->lang->line('faculty_fti') ?></a>
+                              <ul>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fti/1812012013114634/teknik-elektro/4714012013111529"><?php echo $this->lang->line('fti_elektro') ?></a>
+                                  </li>
+                                  <li><a href="<?php echo base_url() ?>fakultas-detil/fti/1812012013114634/teknik-industri/714012013111042"><?php echo $this->lang->line('fti_industri') ?></a>
+                                  </li>
+                              </ul>
                           </li>
-                        </ul>
-                      </li>
-                      <li class="li-node"><a href="#">ONEPAGE</a>
-                        <ul>
-                          <li><a href="homepage-onepage-1.html">ONEPAGE 01</a>
+                          <li><a ><i class="__icon"></i><?php echo $this->lang->line('faculty_diploma') ?>a</a>
+                              <ul>
+                                  <li><a href="http://kebidanan.unipasby.ac.id"><?php echo $this->lang->line('diploma_bidan') ?></a>
+                                  </li>
+                              </ul>
                           </li>
-                          <li><a href="homepage-onepage-2.html">ONEPAGE 02</a>
-                          </li>
-                          <li><a href="homepage-onepage-3.html">ONEPAGE 03</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="li-node"><a href="#">AGENCY</a>
-                        <ul>
-                          <li><a href="homepage-agency-1.html">AGENCY 01</a>
-                          </li>
-                          <li><a href="homepage-agency-2.html">AGENCY 02</a>
-                          </li>
-                          <li><a href="homepage-agency-3.html">AGENCY 03</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="li-node"><a href="#">VIDEO HEADER</a>
-                        <ul>
-                          <li><a href="homepage-video-1.html">VIDEO HEADER 01</a>
-                          </li>
-                          <li><a href="homepage-video-2.html">VIDEO HEADER 02</a>
-                          </li>
-                          <li><a href="homepage-video-3.html">VIDEO HEADER 03</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="li-node"><a href="#">ALTERNATIVE</a>
-                        <ul>
-                          <li><a href="homepage-alternative-1.html">ALTERNATIVE 01</a>
-                          </li>
-                          <li><a href="homepage-alternative-2.html">ALTERNATIVE 02</a>
-                          </li>
-                          <li><a href="homepage-alternative-3.html">ALTERNATIVE 03</a>
-                          </li>
-                          <li><a href="homepage-alternative-4.html">ALTERNATIVE 04</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a href="homepage-christmas-1.html">CHRISTMAS</a>
-                      </li>
-                      <li class="li-node"><a href="#">PORTFOLIO</a>
-                        <ul>
-                          <li><a href="homepage-portfolio-1.html">PORTFOLIO 01</a>
-                          </li>
-                          <li><a href="homepage-portfolio-2.html">PORTFOLIO 02</a>
-                          </li>
-                          <li><a href="homepage-portfolio-3.html">PORTFOLIO 03</a>
-                          </li>
-                          <li><a href="homepage-portfolio-4.html">PORTFOLIO 04</a>
+                          <li><a ><i class="__icon"></i><?php echo $this->lang->line('faculty_pascasarjana') ?></a>
+                              <ul>
+                                  <li><a href="http://pps-unipasby.ac.id"><?php echo $this->lang->line('pascasarjana_tp') ?></a>
+                                  </li>
+                              </ul>
                           </li>
                         </ul>
                       </li>
-                      <li><a href="homepage-leftmenu.html">LEFTMENU</a>
-                      </li>
-                      <li class="li-node"><a href="#">STORE</a>
-                        <ul>
-                          <li><a href="homepage-store-1.html">HOMEPAGE SHOP 01</a>
+                      <li><a href="#"><?php echo $this->lang->line('menu_news') ?></a>
+                        <ul class="multi-floor-menu">
+                          <li><a href="<?php echo base_url() ?>kegiatan"><i class="__icon"></i><?php echo $this->lang->line('news_event') ?></a>
                           </li>
-                          <li><a href="homepage-store-2.html">HOMEPAGE SHOP 02</a>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/berita-kampus/01"><i class="__icon"></i><?php echo $this->lang->line('news_collage') ?></a>
                           </li>
-                          <li><a href="homepage-store-3.html">HOMEPAGE SHOP 03</a>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/artikel/02"><i class="__icon"></i><?php echo $this->lang->line('news_artikel') ?></a>
+                          </li>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/pengumuman/04"><i class="__icon"></i><?php echo $this->lang->line('news_announcetment') ?></a>
+                          </li>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/umum/8616012013102515"><i class="__icon"></i><?php echo $this->lang->line('news_daily') ?></a>
+                          </li>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/pendidikan/8529012013082338"><i class="__icon"></i><?php echo $this->lang->line('news_edu') ?></a>
+                          </li>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/olahraga/929012013082919"><i class="__icon"></i><?php echo $this->lang->line('news_sport') ?></a>
+                          </li>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/kesehatan/5129012013085629"><i class="__icon"></i><?php echo $this->lang->line('news_health') ?></a>
+                          </li>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/gaya-hidup/6329012013091038"><i class="__icon"></i><?php echo $this->lang->line('news_life') ?></a>
+                          </li>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/kehilangan/8110102013131219"><i class="__icon"></i><?php echo $this->lang->line('news_loss') ?></a>
+                          </li>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/beasiswa/7107022014111113"><i class="__icon"></i><?php echo $this->lang->line('news_bea') ?></a>
+                          </li>
+                          <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/sambutan-rektor/9515022016145900"><i class="__icon"></i><?php echo $this->lang->line('news_rektor') ?></a>
                           </li>
                         </ul>
+                      </li>
+                      <li><a href="#"><?php echo $this->lang->line('menu_ekstra') ?></a>
+                        <ul class="multi-floor-menu">
+                          <li><a href="<?php echo base_url() ?>kkn"><i class="__icon"></i><?php echo $this->lang->line('ekstra_kkn') ?></a>
+                          </li>
+                          <li><a href="http://siakad.unipasby.ac.id"><i class="__icon"></i><?php echo $this->lang->line('ekstra_krs') ?></a>
+                          </li>
+                          <li><a href="<?php echo base_url() ?>karier"><i class="__icon"></i><?php echo $this->lang->line('ekstra_karir') ?></a>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('ekstra_gallery') ?></a>
+                          </li>
+                          <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('ekstra_blog') ?></a>
+                            <ul>
+                                <li>
+                                    <a href="#"><?php echo $this->lang->line('blog_alumni') ?></a>
+                                </li>
+                                <li>
+                                    <a href="#"><?php echo $this->lang->line('blog_dosen') ?></a>
+                                </li>
+                                <li>
+                                    <a href="#"><?php echo $this->lang->line('blog_mhs') ?></a>
+                                </li>
+                                <li>
+                                    <a href="#"><?php echo $this->lang->line('blog_ukm') ?></a>
+                                </li>
+                                <li>
+                                    <a href="#"><?php echo $this->lang->line('blog_referensi') ?></a>
+                                </li>
+                                <li>
+                                    <a href="#"><?php echo $this->lang->line('blog_heatlh') ?></a>
+                                </li>
+                            </ul>
+                          </li>
+
+                        </ul>
+                      </li>
+                      <li>
+                          <a href="#"><?php echo $this->lang->line('menu_contact') ?></a>
                       </li>
                     </ul>
-                  </li>
-                  <li class="li-node" style="position: relative;"><a href="#">PAGES</a>
-                    <ul class="mega-menu menu-3-col menu-hr-heading ul-node">
-                      <li class="li-node"><a href="#">GROUP 01</a>
-                        <ul>
-                          <li><a href="page-about-us-1.html">ABOUT US</a>
-                          </li>
-                          <li><a href="page-about-us-2.html">ABOUT US 2</a>
-                          </li>
-                          <li><a href="page-about-us-3.html">ABOUT US 3</a>
-                          </li>
-                          <li><a href="page-about-us-4.html">ABOUT US 4</a>
-                          </li>
-                          <li><a href="page-about-me.html">ABOUT ME</a>
-                          </li>
-                          <li><a href="page-services.html">SERVICES</a>
-                          </li>
-                          <li><a href="page-faq.html">FAQ</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="li-node"><a href="#">GROUP 02</a>
-                        <ul>
-                          <li><a href="page-contact-us.html">CONTACT US</a>
-                          </li>
-                          <li><a href="page-contact-us-2.html">CONTACT US 2</a>
-                          </li>
-                          <li><a href="page-contact-us-3.html">CONTACT US 3</a>
-                          </li>
-                          <li><a href="page-fullwidth.html">PAGE FULLWIDTH</a>
-                          </li>
-                          <li><a href="page-sidebar-left.html">PAGE SIDEBAR LEFT</a>
-                          </li>
-                          <li><a href="page-sidebar-right.html">PAGE SIDEBAR RIGHT</a>
-                          </li>
-                          <li><a href="page-policy.html">POLICY</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="li-node"><a href="#">GROUP 03</a>
-                        <ul>
-                          <li><a href="404.html">404 ERROR</a>
-                          </li>
-                          <li><a href="page-underconstruction.html">UNDERCONSTRUCTION</a>
-                          </li>
-                          <li><a href="page-search-result.html">SEARCH RESULT</a>
-                          </li>
-                          <li><a href="page-portfolio.html">PAGE PORTFOLIO</a>
-                          </li>
-                          <li><a href="page-portfolio-blog.html">PAGE PORTFOLIO BLOG</a>
-                          </li>
-                          <li><a href="page-login-vs-register.html">LOGIN VS REGISTER</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="li-node"><a href="#">FEATURES</a>
-                    <ul class="mega-menu menu-5-col menu-fullwidth menu-hr-heading ul-node">
-                      <li class="li-node"><a href="#">SHORTCODES 01</a>
-                        <ul>
-                          <li><a href="shortcode-accordion.html"><i class="__icon fa fa-bars"></i>ACCORDION</a>
-                          </li>
-                          <li><a href="shortcode-alert-message.html"><i class="__icon fa fa-exclamation-triangle"></i>ALERT MESSAGE<span class="__flag border-danger color-danger">HOT</span></a>
-                          </li>
-                          <li><a href="shortcode-blockquotes.html"><i class="__icon fa fa-quote-right"></i>BLOCKQUOTES</a>
-                          </li>
-                          <li><a href="shortcode-blogpost.html"><i class="__icon fa fa-pencil-square-o"></i>BLOGPOST</a>
-                          </li>
-                          <li><a href="shortcode-button.html"><i class="__icon fa fa-anchor"></i>BUTTON</a>
-                          </li>
-                          <li><a href="shortcode-call-to-action.html"><i class="__icon fa fa-building"></i>CALL TO ACTION</a>
-                          </li>
-                          <li><a href="shortcode-clients.html"><i class="__icon fa fa-user-secret"></i>CLIENTS</a>
-                          </li>
-                          <li><a href="shortcode-columns.html"><i class="__icon fa fa-columns"></i>COLUMNS</a>
-                          </li>
-                          <li><a href="shortcode-contact-form.html"><i class="__icon fa fa-keyboard-o"></i>CONTACT FORM</a>
-                          </li>
-                          <li><a href="shortcode-counter.html"><i class="__icon fa fa-money"></i>COUNTER</a>
-                          </li>
-                          <li><a href="shortcode-coverbox.html"><i class="__icon fa fa-bicycle"></i>COVERBOX</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="li-node"><a href="#">SHORTCODES 02</a>
-                        <ul>
-                          <li><a href="shortcode-dropcaps.html"><i class="__icon fa fa-align-right"></i>DROPCAPS</a>
-                          </li>
-                          <li><a href="shortcode-expendable-section.html"><i class="__icon fa fa-expand"></i>EXPENDABLE SECTION</a>
-                          </li>
-                          <li><a href="shortcode-google-map.html"><i class="__icon fa fa-google"></i>GOOGLE MAP</a>
-                          </li>
-                          <li><a href="shortcode-heading.html"><i class="__icon fa fa-header"></i>HEADING</a>
-                          </li>
-                          <li><a href="shortcode-hightlight.html"><i class="__icon fa fa-bookmark-o"></i>HIGHTLIGHT</a>
-                          </li>
-                          <li><a href="shortcode-iconboxes.html"><i class="__icon fa fa-asterisk"></i>ICONBOXES</a>
-                          </li>
-                          <li><a href="shortcode-iconboxes-carousel.html"><i class="__icon fa fa-arrows-h"></i>ICONBOXES CAROUSEL</a>
-                          </li>
-                          <li><a href="shortcode-iconlists.html"><i class="__icon fa fa-list"></i>ICONLISTS</a>
-                          </li>
-                          <li><a href="shortcode-icons.html"><i class="__icon fa fa-briefcase"></i>ICONS</a>
-                          </li>
-                          <li><a href="shortcode-interactive-banner.html"><i class="__icon fa fa-diamond"></i>INTERACTIVE BANNER</a>
-                          </li>
-                          <li><a href="shortcode-lists.html"><i class="__icon fa fa-list-ol"></i>LISTS</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="li-node"><a href="#">SHORTCODES 03</a>
-                        <ul>
-                          <li><a href="shortcode-pagination.html"><i class="__icon fa fa-pagelines"></i>PAGINATION</a>
-                          </li>
-                          <li><a href="shortcode-parallax.html"><i class="__icon fa fa-file-image-o"></i>PARALLAX</a>
-                          </li>
-                          <li><a href="shortcode-piechart.html"><i class="__icon fa fa-pie-chart"></i>PIECHART</a>
-                          </li>
-                          <li><a href="shortcode-piechart2.html"><i class="__icon fa fa-pie-chart"></i>PIECHART 02<span class="__flag border-primary color-primary">NEW</span></a>
-                          </li>
-                          <li><a href="shortcode-piechart3.html"><i class="__icon fa fa-pie-chart"></i>PIECHART 03<span class="__flag border-primary color-primary">NEW</span></a>
-                          </li>
-                          <li><a href="shortcode-pricing-table.html"><i class="__icon fa fa-list-alt"></i>PRICING TABLE</a>
-                          </li>
-                          <li><a href="shortcode-process.html"><i class="__icon fa fa-check-square"></i>PROCESS</a>
-                          </li>
-                          <li><a href="shortcode-progressbar.html"><i class="__icon fa fa-server"></i>PROGRESSBAR</a>
-                          </li>
-                          <li><a href="shortcode-qrcode.html"><i class="__icon fa fa-qrcode"></i>QRCODE</a>
-                          </li>
-                          <li><a href="shortcode-separator.html"><i class="__icon fa fa-minus"></i>SEPARATOR</a>
-                          </li>
-                          <li><a href="shortcode-service-table.html"><i class="__icon fa fa-th"></i>SERVICE TABLE</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="li-node"><a href="#">SHORTCODES 04</a>
-                        <ul>
-                          <li><a href="shortcode-tab.html"><i class="__icon fa fa-th-large"></i>TAB</a>
-                          </li>
-                          <li><a href="shortcode-table.html"><i class="__icon fa fa-table"></i>TABLE</a>
-                          </li>
-                          <li><a href="shortcode-team.html"><i class="__icon fa fa-users"></i>TEAM</a>
-                          </li>
-                          <li><a href="shortcode-testimonials.html"><i class="__icon fa fa-comments"></i>TESTIMONIALS</a>
-                          </li>
-                          <li><a href="shortcode-typography.html"><i class="__icon fa fa-text-height"></i>TYPOGRAPHY</a>
-                          </li>
-                          <li><a href="shortcode-vertical-progressbar.html"><i class="__icon fa fa-bar-chart"></i>VERTICAL PROGRESSBAR</a>
-                          </li>
-                          <li><a href="shortcode-widget.html"><i class="__icon fa fa-cube"></i>WIDGET</a>
-                          </li>
-                          <li><a href="shortcode-image-gallery.html"><i class="__icon fa fa-file-image-o"></i>IMAGE GALLERY</a>
-                          </li>
-                          <li><a href="shortcode-image-slider.html"><i class="__icon fa fa-picture-o"></i>IMAGE SLIDER</a>
-                          </li>
-                          <li><a href="shortcode-share-module.html"><i class="__icon fa fa-paper-plane-o"></i>SHARE MODULE</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="li-node"><a href="#">MANY FEATURES</a>
-                        <ul>
-                          <li><a href="#">BOOTSTRAP 3 GRID SYSTEM</a>
-                          </li>
-                          <li><a href="#">HTML5 &amp; CSS3 ANIMATION</a>
-                          </li>
-                          <li><a href="#">AUTOMATE YOUR WORKFLOW</a>
-                          </li>
-                          <li><a href="#">NODE TEMPLATE ENGINE</a>
-                          </li>
-                          <li><a href="#">LESS PRE-PROCESSOR</a>
-                          </li>
-                          <li><a href="#">FONT AWESOME INCLUDED</a>
-                          </li>
-                          <li><a href="#">+1000 ICON FONTS </a>
-                          </li>
-                          <li><a href="#">FULLY RESPONSIVE</a>
-                          </li>
-                          <li><a href="#">FREE GOOGLE FONTS</a>
-                          </li>
-                          <li><a href="#">PARALLAX BACKGROUND</a>
-                          </li>
-                          <li><a href="#">WIDE AND BOXED LAYOUT</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="li-node"><a href="#">OPTIONS</a>
-                    <ul class="multi-floor-menu ul-node">
-                      <li class="li-node"><a href="#"><i class="__icon fa fa-files-o"></i>HEADER OPTIONS</a>
-                        <ul>
-                          <li><a href="header-option-1.html">HEADER STYLE 01</a>
-                          </li>
-                          <li><a href="header-option-2.html">HEADER STYLE 02</a>
-                          </li>
-                          <li><a href="header-option-3.html">HEADER STYLE 03</a>
-                          </li>
-                          <li><a href="header-option-4.html">HEADER STYLE 04</a>
-                          </li>
-                          <li><a href="header-option-5.html">HEADER STYLE 05</a>
-                          </li>
-                          <li><a href="header-option-6.html">HEADER STYLE 06</a>
-                          </li>
-                          <li><a href="header-option-7.html">HEADER STYLE 07</a>
-                          </li>
-                          <li><a href="header-option-8.html">HEADER STYLE 08</a>
-                          </li>
-                          <li><a href="header-option-12.html">HEADER STYLE 09</a>
-                          </li>
-                          <li><a href="header-option-16.html">HEADER STYLE 10</a>
-                          </li>
-                          <li><a href="header-option-20.html">HEADER STYLE 11</a>
-                          </li>
-                          <li><a href="header-option-17.html">HEADER STYLE 12</a>
-                          </li>
-                          <li><a href="#">AND MUCH MORE</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="li-node"><a href="#"><i class="__icon fa fa-magic"></i>FOOTER OPTIONS</a>
-                        <ul>
-                          <li><a href="footer-option-1.html#footer">FOOTER STYLE 01</a>
-                          </li>
-                          <li><a href="footer-option-2.html#footer">FOOTER STYLE 02</a>
-                          </li>
-                          <li><a href="footer-option-3.html#footer">FOOTER STYLE 03</a>
-                          </li>
-                          <li><a href="footer-option-4.html#footer">FOOTER STYLE 04</a>
-                          </li>
-                          <li><a href="footer-option-5.html#footer">FOOTER STYLE 05</a>
-                          </li>
-                          <li><a href="footer-option-6.html#footer">FOOTER STYLE 06</a>
-                          </li>
-                          <li><a href="footer-option-7.html#footer">FOOTER STYLE 07</a>
-                          </li>
-                          <li><a href="footer-option-8.html#footer">FOOTER STYLE 08</a>
-                          </li>
-                          <li><a href="footer-option-9.html#footer">FOOTER STYLE 09</a>
-                          </li>
-                          <li><a href="footer-option-10.html#footer">FOOTER STYLE 10</a>
-                          </li>
-                          <li><a href="#">AND MUCH MORE</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="li-node"><a href="#"><i class="__icon fa fa-youtube-play"></i>VIDEO OPTIONS</a>
-                        <ul>
-                          <li><a href="homepage-video-1.html">YOUTUBE VIDEO</a>
-                          </li>
-                          <li><a href="homepage-video-2.html">HTML5 VIDEO</a>
-                          </li>
-                          <li><a href="homepage-video-3.html">SLIDER &amp; VIDEO</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="li-node"><a href="#"><i class="__icon fa fa-diamond"></i>WIDGET OPTIONS</a>
-                        <ul>
-                          <li><a href="shortcode-widget.html">CATEGORIES</a>
-                          </li>
-                          <li><a href="shortcode-widget.html">RECENT POSTS</a>
-                          </li>
-                          <li><a href="shortcode-widget.html">IMAGES GALLERY</a>
-                          </li>
-                          <li><a href="shortcode-widget.html">RECENT TWEETS</a>
-                          </li>
-                          <li><a href="shortcode-widget.html">POPULAR TAGS</a>
-                          </li>
-                          <li><a href="shortcode-widget.html">SEARCH BOX</a>
-                          </li>
-                          <li><a href="shortcode-widget.html">FILTER BY PRICE</a>
-                          </li>
-                          <li><a href="shortcode-widget.html">ACCORDION WIDGET</a>
-                          </li>
-                          <li><a href="shortcode-widget.html">RECENT PRODUCTS</a>
-                          </li>
-                          <li><a href="shortcode-widget.html">FREE TEXT WIDGET</a>
-                          </li>
-                          <li><a href="shortcode-widget.html">SLIDER IMAGES</a>
-                          </li>
-                          <li><a href="shortcode-widget.html">SOCIAL ICONS</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="li-node"><a href="#"><i class="__icon fa fa-cubes"></i>MENU OPTIONS</a>
-                        <ul>
-                          <li><a href="#">DROPDOWN MENU</a>
-                          </li>
-                          <li><a href="#">MEGAMENU 2 COLUMNS</a>
-                          </li>
-                          <li><a href="#">MEGAMENU 3 COLUMNS</a>
-                          </li>
-                          <li><a href="#">MEGAMENU 4 COLUMNS</a>
-                          </li>
-                          <li><a href="#">MEGAMENU 5 COLUMNS</a>
-                          </li>
-                          <li><a href="#">MEGAMENU WITH HEADING</a>
-                          </li>
-                          <li><a href="#">OFF CANVAS MENU</a>
-                          </li>
-                          <li><a href="#">STICKY MENU</a>
-                          </li>
-                          <li><a href="#">MENU WITH ICON</a>
-                          </li>
-                          <li><a href="#">MENU WITH FLAG</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a href="#"><i class="__icon fa fa-spinner"></i>UPDATING...</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="li-node"><a href="#">BLOG</a>
-                    <ul class="multi-floor-menu menu-right-base ul-node">
-                      <li class="li-node"><a href="#">BLOG LARGE IMAGE</a>
-                        <ul>
-                          <li><a href="blog-fullwidth.html">LARGE IMAGE FULLWIDTH</a>
-                          </li>
-                          <li><a href="blog-sidebar-left.html">LARGE IMAGE SIDEBAR LEFT</a>
-                          </li>
-                          <li><a href="blog-sidebar-right.html">LARGE IMAGE SIDEBAR RIGHT</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="li-node"><a href="#">BLOG LEFT IMAGE</a>
-                        <ul>
-                          <li><a href="blog-left-image-fullwidth.html">LEFT IMAGES IMAGE FULLWIDTH</a>
-                          </li>
-                          <li><a href="blog-left-image-sidebar-left.html">LEFT IMAGES IMAGE SIDEBAR LEFT</a>
-                          </li>
-                          <li><a href="blog-left-image-sidebar-right.html">LEFT IMAGES IMAGE SIDEBAR RIGHT</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="li-node"><a href="#">BLOG TIME LINE</a>
-                        <ul>
-                          <li><a href="blog-timeline-fullwidth.html">TIME LINE FULLWIDTH</a>
-                          </li>
-                          <li><a href="blog-timeline-sidebar-left.html">TIME LINE SIDEBAR LEFT</a>
-                          </li>
-                          <li><a href="blog-timeline-sidebar-right.html">TIME LINE SIDEBAR RIGHT</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="li-node"><a href="#">BLOG MASONRY</a>
-                        <ul>
-                          <li><a href="blog-masonry-wide.html">MASONRY WIDE</a>
-                          </li>
-                          <li><a href="blog-masonry-fullwidth.html">MASONRY FULLWIDTH</a>
-                          </li>
-                          <li><a href="blog-masonry-sidebar-left.html">MASONRY SIDEBAR LEFT</a>
-                          </li>
-                          <li><a href="blog-masonry-sidebar-right.html">MASONRY SIDEBAR RIGHT</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="li-node"><a href="#">BLOG SINGLE</a>
-                        <ul>
-                          <li><a href="blog-single-sidebar-left.html">SINGLE SIDEBAR LEFT</a>
-                          </li>
-                          <li><a href="blog-single-fullwidth.html">SINGLE FULLWIDTH</a>
-                          </li>
-                          <li><a href="blog-single-standard.html">SINGLE STANDARD</a>
-                          </li>
-                          <li><a href="blog-single-audio.html">SINGLE AUDIO</a>
-                          </li>
-                          <li><a href="blog-single-gallery.html">SINGLE GALLERY</a>
-                          </li>
-                          <li><a href="blog-single-quote.html">SINGLE QUOTE</a>
-                          </li>
-                          <li><a href="blog-single-video.html">SINGLE VIDEO</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="li-node"><a href="#">WORKS</a>
-                    <ul class="mega-menu menu-5-col menu-fullwidth menu-hr-heading ul-node">
-                      <li class="li-node"><a href="#">3 COLUMNS</a>
-                        <ul>
-                          <li><a href="portfolio-3-columns-hover-style-1.html">3 COLUMNS STYLE 01</a>
-                          </li>
-                          <li><a href="portfolio-3-columns-hover-style-2.html">3 COLUMNS STYLE 02</a>
-                          </li>
-                          <li><a href="portfolio-3-columns-hover-style-3.html">3 COLUMNS STYLE 03</a>
-                          </li>
-                          <li><a href="portfolio-3-columns-hover-style-4.html">3 COLUMNS STYLE 04</a>
-                          </li>
-                          <li><a href="portfolio-3-columns-hover-style-5.html">3 COLUMNS STYLE 05</a>
-                          </li>
-                          <li><a href="portfolio-3-columns-hover-style-6.html">3 COLUMNS STYLE 06</a>
-                          </li>
-                          <li><a href="portfolio-3-columns-no-space.html">NO SPACE</a>
-                          </li>
-                          <li><a href="portfolio-3-columns-wide.html">WIDE SCREEN</a>
-                          </li>
-                          <li><a href="portfolio-3-columns-wide-no-space.html">WIDE &amp; NO SPACE</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="li-node"><a href="#">4 COLUMNS</a>
-                        <ul>
-                          <li><a href="portfolio-4-columns-hover-style-1.html">4 COLUMNS STYLE 01</a>
-                          </li>
-                          <li><a href="portfolio-4-columns-hover-style-2.html">4 COLUMNS STYLE 02</a>
-                          </li>
-                          <li><a href="portfolio-4-columns-hover-style-3.html">4 COLUMNS STYLE 03</a>
-                          </li>
-                          <li><a href="portfolio-4-columns-hover-style-4.html">4 COLUMNS STYLE 04</a>
-                          </li>
-                          <li><a href="portfolio-4-columns-hover-style-5.html">4 COLUMNS STYLE 05</a>
-                          </li>
-                          <li><a href="portfolio-4-columns-hover-style-6.html">4 COLUMNS STYLE 06</a>
-                          </li>
-                          <li><a href="portfolio-4-columns-no-space.html">NO SPACE</a>
-                          </li>
-                          <li><a href="portfolio-4-columns-wide.html">WIDE SCREEN</a>
-                          </li>
-                          <li><a href="portfolio-4-columns-wide-no-space.html">WIDE &amp; NO SPACE</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="li-node"><a href="#">5 COLUMNS</a>
-                        <ul>
-                          <li><a href="portfolio-5-columns-hover-style-1.html">5 COLUMNS STYLE 01</a>
-                          </li>
-                          <li><a href="portfolio-5-columns-hover-style-2.html">5 COLUMNS STYLE 02</a>
-                          </li>
-                          <li><a href="portfolio-5-columns-hover-style-3.html">5 COLUMNS STYLE 03</a>
-                          </li>
-                          <li><a href="portfolio-5-columns-hover-style-4.html">5 COLUMNS STYLE 04</a>
-                          </li>
-                          <li><a href="portfolio-5-columns-hover-style-5.html">5 COLUMNS STYLE 05</a>
-                          </li>
-                          <li><a href="portfolio-5-columns-hover-style-6.html">5 COLUMNS STYLE 06</a>
-                          </li>
-                          <li><a href="portfolio-5-columns-no-space.html">NO SPACE</a>
-                          </li>
-                          <li> <a href="portfolio-5-columns-wide.html">WIDE SCREEN</a>
-                          </li>
-                          <li><a href="portfolio-5-columns-wide-no-space.html">WIDE &amp; NO SPACE</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="li-node"><a href="#">SPECIAL STYLE</a>
-                        <ul>
-                          <li><a href="portfolio-carousel.html">CAROUSEL</a>
-                          </li>
-                          <li><a href="portfolio-hover-effect.html">HOVER EFFECT<span class="__flag border-danger color-danger">HOT</span></a>
-                          </li>
-                          <li><a href="portfolio-masonry.html">MASONRY</a>
-                          </li>
-                          <li><a href="portfolio-masonry-wide.html">MASONRY WIDE</a>
-                          </li>
-                          <li><a href="portfolio-shortcode-masonry.html">METRO STYLE 01</a>
-                          </li>
-                          <li><a href="portfolio-shortcode-masonry-2.html">METRO STYLE 02</a>
-                          </li>
-                          <li><a href="portfolio-2-columns-hover-style-1.html">2 COLUMNS STYLE 01</a>
-                          </li>
-                          <li><a href="portfolio-2-columns-hover-style-2.html">2 COLUMNS STYLE 02</a>
-                          </li>
-                          <li><a href="portfolio-2-columns-hover-style-3.html">2 COLUMNS STYLE 03</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="li-node"><a href="#">SINGLE PORTFOLIO</a>
-                        <ul>
-                          <li><a href="portfolio-single-1.html">PORTFOLIO SINGLE 01</a>
-                          </li>
-                          <li><a href="portfolio-single-2.html">PORTFOLIO SINGLE 02</a>
-                          </li>
-                          <li><a href="portfolio-single-3.html">PORTFOLIO SINGLE 03</a>
-                          </li>
-                          <li><a href="portfolio-single-4.html">PORTFOLIO SINGLE 04</a>
-                          </li>
-                          <li><a href="portfolio-single-5.html">PORTFOLIO SINGLE 05</a>
-                          </li>
-                          <li><a href="portfolio-single-6.html">PORTFOLIO SINGLE 06</a>
-                          </li>
-                          <li><a href="portfolio-single-7.html">PORTFOLIO SINGLE 07</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="li-node" style="position: relative;"><a href="#">SHOP</a>
-                    <ul class="mega-menu menu-right-base menu-3-col menu-hr-heading ul-node">
-                      <li class="li-node"><a href="#">SHOP CATEGORY</a>
-                        <ul>
-                          <li><a href="shop-category-fullwidth.html">CATEGORY FULLWIDTH</a>
-                          </li>
-                          <li><a href="shop-category-sidebar-left.html">CATEGORY SIDE BAR LEFT</a>
-                          </li>
-                          <li><a href="shop-category-sidebar-right.html">CATEGORY SIDE BAR RIGHT</a>
-                          </li>
-                          <li><a href="shop-category-top-slider.html">CATEGORY TOP SLIDER</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="li-node"><a href="#">SINGLE SHOP</a>
-                        <ul>
-                          <li><a href="shop-single-fullwidth.html">SINGLE FULLWIDTH</a>
-                          </li>
-                          <li><a href="shop-single-sidebar-left.html">SINGLE SIDE BAR LEFT</a>
-                          </li>
-                          <li><a href="shop-single-sidebar-right.html">SINGLE SIDE BAR RIGHT</a>
-                          </li>
-                          <li><a href="shop-single-top-slider.html">SINGLE TOP SLIDER</a>
-                          </li>
-                          <li><a href="shop-single-variable.html">SINGLE VARIABLE</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="li-node"><a href="#">OTHER PAGE</a>
-                        <ul>
-                          <li><a href="shop-account.html">MY ACCOUNT</a>
-                          </li>
-                          <li><a href="shop-cart.html">CART</a>
-                          </li>
-                          <li><a href="shop-checkout.html">CHECK OUT</a>
-                          </li>
-                          <li><a href="shop-order-tracking.html">ORDER TRACKING</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
               </nav>
-              <div class="nav-function nav-item">
-                <div class="__cart dropdown"><a href="#" data-target="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="cart-open icon-shopping111">
-                    <div class="__quantity bgc-primary">3</div></a>
-                  <div class="dropdown-menu bgc-gray-darkest">
-                    <div class="__cart-item">
-                      <div class="__image"><img src="assets/images/shop/product-img-1-s.jpg" alt="Shop Product" class="img-responsive"></div>
-                      <div class="__info">
-                        <div class="__category font-serif-italic fz-6-s">Women / Clothe</div>
-                        <div class="font-heading fz-6-ss"><a href="#">SKATER DRESS IN LEAF</a></div><span class="__price color-primary font-heading">1 x $280</span>
-                      </div><a href="#" class="__remove icon-185090-delete-garbage-streamline"></a>
-                    </div>
-                    <div class="__cart-item">
-                      <div class="__image"><img src="assets/images/shop/product-img-2-s.jpg" alt="Shop Product" class="img-responsive"></div>
-                      <div class="__info">
-                        <div class="__category font-serif-italic fz-6-s">Women / Clothe</div>
-                        <div class="font-heading fz-6-ss"><a href="#">SKATER DRESS IN LEAF</a></div><span class="__price color-primary font-heading">1 x $280</span>
-                      </div><a href="#" class="__remove icon-185090-delete-garbage-streamline"></a>
-                    </div>
-                    <div class="__cart-item">
-                      <div class="__image"><img src="assets/images/shop/product-img-3-s.jpg" alt="Shop Product" class="img-responsive"></div>
-                      <div class="__info">
-                        <div class="__category font-serif-italic fz-6-s">Women / Clothe</div>
-                        <div class="font-heading fz-6-ss"><a href="#">SKATER DRESS IN LEAF</a></div><span class="__price color-primary font-heading">1 x $280</span>
-                      </div><a href="#" class="__remove icon-185090-delete-garbage-streamline"></a>
-                    </div>
-                    <div class="__middle-row"><a href="#"><i class="icon-185090-delete-garbage-streamline mr-5"></i>Empty Cart</a>
-                      <div class="__total">Subtotal : &nbsp;<span class="color-primary">$740</span></div>
-                    </div>
-                    <div class="__button-group"><a href="shop-cart.html" class="btn btn-primary"><i class="icon icon-svg-icon-16"></i>VIEW CART</a><a href="shop-checkout.html" class="pull-right btn btn-secondary">CHECKOUT</a></div>
-                  </div>
-                </div>
-                <div class="__search"><a href="__modal-search.html" data-modal-open="data-modal-open" class="icon-search-icon"></a>
-                </div>
-                <div class="__offcanvas-button"><a href="#" class="offcanvas-nav-toggle icon-menu27"></a></div>
-              </div>
+              
             </div>
             <div class="pull-right nav-item hidden-lg"><a href="#" class="mobile-nav-toggle nav-hamburger"><span></span></a></div>
           </div>
@@ -1787,7 +1294,7 @@
       $(window).load(function(){
         $('.flexslider').flexslider({
           animation: "fade",
-          controlNav: false,
+          controlNav: true,
           start: function(slider){
             $('body').removeClass('loading');
           }

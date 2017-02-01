@@ -312,7 +312,7 @@ $(function() {
     // ------------------------------
 
     // Default functionality
-    $(".datepicker").datepicker();
+    $(".datepicker").datepicker({ dateFormat: 'dd-mm-yy' });
 
 
     // Dates in other months

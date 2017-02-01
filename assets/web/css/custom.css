@@ -599,3 +599,23 @@ section.slider{
 .footer-logo img{
   width: 80px;
 }
+.search-bar{
+  width: 250px;
+  margin-top: 10px;
+}
+.search-bar .text-search{
+  padding: 0px 10px;
+  float: left;
+  margin-bottom: 0;
+  width: 80%;
+}
+.search-bar button[type="submit"]{
+  float: right;
+  background: orange;
+  color: white;
+  padding: 8px 13px;
+  border: none;
+}
+.flex-direction-nav a {
+  height: 80px;
+}

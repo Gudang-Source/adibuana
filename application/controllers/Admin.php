@@ -366,6 +366,22 @@
                     $data['tipe'] = $this->news_model->get_tipe_by_id($id);
                     $this->template_admin->display('admin/content/viewberitatipe', $data);
                     break;
+                case 'insert':
+                    $insert = $this->news_model->insert_type($this->input->post());
+                    if($insert){
+                        redirect(base_url().'admin/news_type');
+                    }else{
+                        redirect(base_url().'admin/news_type/edit/'.$id);
+                    }
+                    break;
+                case 'update':
+                    $update = $this->news_model->update_type($id, $this->input->post());
+                    if($update){
+                        redirect(base_url().'admin/news_type');
+                    }else{
+                        redirect(base_url().'admin/news_type/edit/'.$id);
+                    }
+                    break;
                 default:
                     # code...
                     break;
@@ -373,6 +389,7 @@
         }
 
         function news($aksi='index', $id=null){
+            check_login();
             $this->load->model('NewsModel', 'news_model');
             switch ($aksi) {
                 case 'index':
@@ -399,7 +416,9 @@
 
                     $insert = $this->news_model->insert_news($this->input->post(), $pict['filename'], $thumb['filename'], $banner['filename']);
                     if($insert){
-                        
+                        redirect(base_url().'admin/news');
+                    }else{
+                        redirect(base_url().'admin/news/add');
                     }
                     break;
                 case 'update':
@@ -410,6 +429,11 @@
                     $banner = $this->image_upload->update_image('assets/images/news/', $_FILES, 'banner', 'banner_', $news->bpict);
 
                     $this->news_model->update_news($id, $this->input->post(), $pict['filename'], $thumb['filename'], $banner['filename']);
+                    if($update){
+                        redirect(base_url().'admin/news');
+                    }else{
+                        redirect(base_url().'admin/news/edit/'.$id);
+                    }
                     break;
 
                 case 'delete':
@@ -428,13 +452,13 @@
         }
 
         function news_detail($aksi='index', $id=null){
+            check_login();
             $this->load->model('NewsModel', 'news_model');
             switch ($aksi) {
                 case 'index':
                     $data['detail'] = $this->news_model->get_detail_news();
                     $this->template_admin->display('admin/content/indexberitadetail', $data);
                     break;
-                
                 default:
                     # code...
                     break;
@@ -442,6 +466,7 @@
         }
 
         function event($aksi='index', $id=null){
+            check_login();
             $this->load->model('EventModel', 'event_model');
             switch ($aksi) {
                 case 'index':
@@ -459,6 +484,46 @@
                      $data['event'] = $this->event_model->get_event_by_id($id);
                     $this->template_admin->display('admin/content/viewevent', $data);
                     break;
+                case 'insert':
+                    $pict = $this->image_upload->upload_image('assets/images/event/', $_FILES, 'pic', 'pict_');
+                    $thumb = $this->image_upload->upload_image('assets/images/event/', $_FILES, 'thumb', 'thumb_');
+                    $banner = $this->image_upload->upload_image('assets/images/event/', $_FILES, 'banner', 'banner_');
+
+                    $file = $this->image_upload->upload_file('assets/images/event/', $_FILES, 'file', 'event_file_');
+
+                    $insert = $this->event_model->insert($this->input->post(), $pict['filename'], $thumb['filename'], $banner['filename'], $file['filename']);
+                    if($insert){
+                        redirect(base_url().'admin/event');
+                    }else{
+                        redirect(base_url().'admin/event/add');
+                    }
+                    break;  
+                case 'update':
+                    $event = $this->event_model->get_event_by_id($id);
+                   
+                    $pict = $this->image_upload->update_image('assets/images/event/', $_FILES, 'pic', 'pict_', $event->picture);
+                    $thumb = $this->image_upload->update_image('assets/images/event/', $_FILES, 'thumb', 'thumb_', $event->thumb);
+                    $banner = $this->image_upload->update_image('assets/images/event/', $_FILES, 'banner', 'banner_', $event->bpict);
+
+                    $file = $this->image_upload->update_file('assets/images/event/', $_FILES, 'file', 'event_file_', $event->file);
+
+                    $update = $this->event_model->update($id, $this->input->post(), $pict['filename'], $thumb['filename'], $banner['filename'], $file['filename']);
+                    if($update){
+                        redirect(base_url().'admin/event');
+                    }else{
+                        redirect(base_url().'admin/event/edit/'.$id);
+                    }
+                    break;
+                case 'delete':
+                    $event = $this->event_model->get_event_by_id($id);
+                    $delete = $this->event_model->delete($id);
+                    if($delete){
+                        unlink('assets/images/event/'.$event->picture);
+                        unlink('assets/images/event/'.$event->thumb);
+                        unlink('assets/images/event/'.$event->bpict);
+                        unlink('assets/images/event/'.$event->file);
+                    }
+                    break;
                 default:
                     # code...
                     break;
@@ -466,6 +531,7 @@
         }
 
         function event_detail($aksi='index', $id=null){
+            check_login();
             $this->load->model('EventModel', 'event_model');
             switch ($aksi) {
                 case 'index':
@@ -480,6 +546,7 @@
         }
 
         function career($aksi='index', $id=null){
+            check_login();
             $this->load->model('CareerModel', 'career_model');
             switch ($aksi) {
                 case 'index':
@@ -504,6 +571,7 @@
         }
 
         function detail_career($aksi='index', $id=null){
+            check_login();
             $this->load->model('CareerModel', 'career_model');
             switch ($aksi) {
                 case 'index':
@@ -518,6 +586,7 @@
         }
 
         function gallery_cat($aksi='index', $id=null){
+            check_login();
             $this->load->model('GalleryModel', 'gallery_model');
             switch ($aksi) {
                 case 'index':
@@ -542,6 +611,7 @@
         }
 
         function gallery($aksi='index', $id=null){
+            check_login();
             $this->load->model('GalleryModel', 'gallery_model');
             switch ($aksi) {
                 case 'index':
@@ -568,6 +638,7 @@
         }
 
         function blog_type($aksi='index', $id=null){
+            check_login();
             $this->load->model('BlogModel', 'blog_model');
             switch ($aksi) {
                 case 'index':
@@ -592,6 +663,7 @@
         }
 
         function blog($aksi='index', $id=null){
+            check_login();
             $this->load->model('BlogModel', 'blog_model');
             switch ($aksi) {
                 case 'index':
@@ -641,6 +713,7 @@
         }
 
         function logout(){
+            check_login();
             $this->session->sess_destroy();
             redirect(base_url().'admin');
         }

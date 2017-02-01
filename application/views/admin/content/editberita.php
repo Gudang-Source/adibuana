@@ -79,7 +79,7 @@
                     <div class="form-group">
                       <label class="col-lg-2 control-label">Thumb</label>
                       <div class="col-lg-4">
-                        <img style="width:200px;" src="<?php echo base_url(); ?>assets/images/news/<?php echo $news->thumb; ?>" />
+                        <img class="img-thumbnail" style="width:200px;" src="<?php echo base_url(); ?>assets/images/news/<?php echo $news->thumb; ?>" />
                         <input name="thumb" type="file" class="file-styled">
                         <span class="help-block">Format : jpg, jpeg, png. fix size[ 221x 105 pixels ]</span>
                       </div>
@@ -87,7 +87,7 @@
                     <div class="form-group">
                       <label class="col-lg-2 control-label">Picture</label>
                       <div class="col-lg-4">
-                        <img style="width:200px;" src="<?php echo base_url(); ?>assets/images/news/<?php echo $news->picture; ?>" />
+                        <img class="img-thumbnail" style="width:200px;" src="<?php echo base_url(); ?>assets/images/news/<?php echo $news->picture; ?>" />
                         <input name="pic" type="file" class="file-styled">
                         <span class="help-block">Format : jpg, jpeg, png. Max file size 20Mb</span>
                       </div>
@@ -95,7 +95,7 @@
                     <div class="form-group">
                       <label class="col-lg-2 control-label">Banner</label>
                       <div class="col-lg-4">
-                        <img style="width:200px;" src="<?php echo base_url(); ?>assets/images/news/<?php echo $news->bpict ?>" />
+                        <img class="img-thumbnail" style="width:200px;" src="<?php echo base_url(); ?>assets/images/news/<?php echo $news->bpict ?>" />
                         <input name="banner" type="file" class="file-styled">
                         <span class="help-block">Format : jpg, jpeg, png. max size [ 620 x 290 pixels ]</span>
                       </div>
