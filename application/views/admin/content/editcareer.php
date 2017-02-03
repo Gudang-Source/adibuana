@@ -15,7 +15,7 @@
           </div>
 
           <div class="panel-body">
-                <form class="form-horizontal">
+                <form class="form-horizontal" method="post" action="<?php echo base_url(); ?>admin/career/update/<?php echo $karir->id; ?>" enctype="multipart/form-data">
                   <div class="box-body">
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Author *</label>
@@ -37,14 +37,16 @@
                     </div>
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Start Date *</label>
-                      <div class="col-sm-3">
-                        <input type="date" name="start_date" class="form-control" value="<?php echo $karir->start_date ?>">
+                      <div class="col-sm-3 input-group">
+                        <span class="input-group-addon"><i class="icon-calendar"></i></span>
+                        <input type="date" name="start_date" class="form-control datepicker" value="<?php echo date_time_to_date($karir->start_date) ?>">
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-2 control-label">End Date *</label>
-                      <div class="col-sm-3">
-                        <input type="date" name="end_date" class="form-control" value="<?php echo $karir->end_date ?>">
+                      <div class="col-sm-3 input-group">
+                        <span class="input-group-addon"><i class="icon-calendar"></i></span>
+                        <input type="date" name="end_date" class="form-control datepicker" value="<?php echo date_time_to_date($karir->end_date) ?>">
                       </div>
                     </div>
                     <div class="form-group">
@@ -74,6 +76,7 @@
                     <div class="form-group">
                       <label class="col-lg-2 control-label">Thumb</label>
                       <div class="col-lg-4">
+                        <img class="img-thumbnail" style="width:200px;" src="<?php echo base_url(); ?>assets/images/career/<?php echo $karir->thumb; ?>" />
                         <input name="thumb" type="file" class="file-styled">
                         <span class="help-block">Format : jpg, jpeg, png. fix size[ 221x 105 pixels ]</span>
                       </div>
@@ -81,6 +84,7 @@
                     <div class="form-group">
                       <label class="col-lg-2 control-label">Picture</label>
                       <div class="col-lg-4">
+                        <img class="img-thumbnail" style="width:200px;" src="<?php echo base_url(); ?>assets/images/career/<?php echo $karir->picture; ?>" />
                         <input name="pic" type="file" class="file-styled">
                         <span class="help-block">Format : jpg, jpeg, png. Max file size 20Mb</span>
                       </div>

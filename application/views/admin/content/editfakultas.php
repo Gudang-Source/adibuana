@@ -15,19 +15,17 @@
 					</div>
 
 					<div class="panel-body">
-                <form class="form-horizontal">
+                <form class="form-horizontal" method="post" action="<?php echo base_url().'admin/fakultas/update/'.$fakultas->id_faculty ?>" enctype="multipart/form-data">
                   <div class="box-body">
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Choose Faculty Area*</label>
                       <div class="col-sm-2">
                         <select name="area" class="form-control">
-                          <option value="<?php echo $fakultas->id_area ?>"><?php echo $fakultas->area_eng ?></option>
-                          <option>---------</option>
                           <?php
                             foreach ($area as $q_area) {
-                              echo'
-                                <option value="'.$q_area->id.'"> '.$q_area->area_eng.' </option>
-                              ';
+                              ?>
+                                <option <?php echo $q_area->id == $fakultas->id_area? 'selected':'' ?> value="<?php echo $q_area->id ?>"><?php echo $q_area->area_eng ?></option>
+                              <?php
                             }
                           
                           ?>
@@ -38,13 +36,13 @@
                       <label class="col-sm-2 control-label">Choose Faculty Type*</label>
                       <div class="col-sm-2">
                         <select name="tipe" class="form-control">
-                          <option> <?php echo $fakultas->type_eng ?></option>
-                          <option> </option>
+                          <!-- <option> <?php echo $fakultas->type_eng ?></option> -->
+                          <!-- <option> </option> -->
                           <?php
                             foreach ($tipe as $q_tipe) {
-                              echo'
-                                <option value="'.$q_tipe->id.'"> '.$q_tipe->type_eng.' </option>
-                              ';
+                              ?>
+                              <option <?php echo $q_tipe->id == $fakultas->id_type? 'selected':'' ?> value="<?php echo $q_tipe->id ?>"><?php echo $q_tipe->type_eng ?></option>
+                              <?php
                             }
                           
                           ?>
@@ -84,7 +82,8 @@
                     <div class="form-group">
 											<label class="col-lg-2 control-label">Picture</label>
 											<div class="col-lg-4">
-												<input type="file" class="file-styled">
+                        <img style="width:200px;" src="<?php echo base_url(); ?>assets/images/faculty/<?php echo $fakultas->picture; ?>" />
+												<input type="file" class="file-styled" name="pic">
 												<span class="help-block">Format : jpg, jpeg, png. Max file size 20Mb</span>
 											</div>
 										</div>

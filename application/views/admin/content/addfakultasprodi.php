@@ -15,7 +15,7 @@
 					</div>
 
 					<div class="panel-body">
-                <form class="form-horizontal">
+                <form class="form-horizontal" method="post" action="<?php echo base_url(); ?>admin/faculty_course/insert" enctype="multipart/form-data">
                   <div class="box-body">
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Choose Faculty Course*</label>
@@ -73,13 +73,13 @@
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Cooperation (Indonesia)</label>
                       <div class="col-sm-10">
-                       <textarea id="editor-full-5" name="cooperation_ina" rows="10" cols="100"></textarea>
+                       <textarea id="editor-full-5" name="coo_ina" rows="10" cols="100"></textarea>
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Cooperation (English)</label>
                       <div class="col-sm-10">
-                       <textarea id="editor-full-6" name="cooperation_eng" rows="10" cols="100"></textarea>
+                       <textarea id="editor-full-6" name="coo_eng" rows="10" cols="100"></textarea>
                       </div>
                     </div>
                     <div class="form-group">

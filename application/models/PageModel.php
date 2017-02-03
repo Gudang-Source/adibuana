@@ -29,6 +29,7 @@
             $old_data = $this->get_by_id($id);
 
             $data = [
+                'id'=>rand(10000000000, 99999999999),
                 'title_ina'=>$page['title_ina'],
                 'title_eng'=>$page['title_eng'],
                 'content_ina'=>$page['konten_ina'],
@@ -75,6 +76,8 @@
             return ['success'=>true];
          }
          function delete($id){
-             
+            $where = ['id'=$id];
+            $delete = $this->db->delete('adi_page', $where);
+            return $delete;
          }
      }

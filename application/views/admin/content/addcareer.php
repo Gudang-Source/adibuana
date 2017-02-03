@@ -15,7 +15,7 @@
           </div>
 
           <div class="panel-body">
-                <form class="form-horizontal">
+                <form class="form-horizontal" method="post" action="<?php echo base_url(); ?>admin/career/insert" enctype="multipart/form-data">
                   <div class="box-body">
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Author *</label>
@@ -37,14 +37,16 @@
                     </div>
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Start Date *</label>
-                      <div class="col-sm-3">
-                        <input type="date" name="start_date" class="form-control">
+                      <div class="col-sm-3 input-group">
+                        <span class="input-group-addon"><i class="icon-calendar"></i></span>
+                        <input type="date" name="start_date" class="form-control datepicker">
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-2 control-label">End Date *</label>
-                      <div class="col-sm-3">
-                        <input type="date" name="end_date" class="form-control">
+                      <div class="col-sm-3 input-group">
+                        <span class="input-group-addon"><i class="icon-calendar"></i></span>
+                        <input type="date" name="end_date" class="form-control datepicker">
                       </div>
                     </div>
                     <div class="form-group">

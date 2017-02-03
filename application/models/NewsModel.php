@@ -104,7 +104,7 @@
 
     function insert_news($news, $pic="", $thumb="", $bpict=""){
       $data = [
-        'id'=>rand(),
+        'id'=>rand(10000000000, 99999999999),
         'id_type'=>$news['tipe'],
         'author'=>$news['author'],
         'title_ina'=>$news['title_ina'],
@@ -126,6 +126,20 @@
       $insert = $this->db->insert('adi_news', $data);
 
     return $insert;
+    }
+
+    function insert_type($news){
+      $data = [
+        'id'=>rand(10000000000, 99999999999),
+        'type_ina'=>$news['type_ina'],
+        'type_eng'=>$news['type_eng'],
+        'post_date'=>date('Y-m-d H:i:s'),
+        'modify_date'=>date('Y-m-d H:i:s'),
+        'post_by'=>$this->session->userdata('id_user')
+      ];
+
+        $insert = $this->db->insert['adi_news_type', $data];
+        return $insert;
     }
 
     function update_news($id, $news, $pic="", $thumb="", $bpict=""){
@@ -162,11 +176,30 @@
       return $update;
     }
 
+    function update_type($id, $news){
+      $data = [
+        'type_ina'=>$news['type_ina'],
+        'type_eng'=>$news['type_eng'],
+        'modify_date'=>date('Y-m-d H:i:s')
+      ];
+
+      $where = ['id'=>$id];
+
+      $update = $this->db->update('adi_news_type', $data, $where);
+      return $update;
+    }
+
     function delete_news($id){
       $where = ['id'=>$id];
       $delete = $this->db->delete('adi_news', $where);
       return $delete;
 
+    }
+
+    function delete_type($id){
+      $where = ['id'=>$id];
+      $delete = $this->db->delete('adi_news_type', $where);
+      return $delete;
     }
 
   }

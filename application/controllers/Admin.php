@@ -52,6 +52,12 @@
                     }
                     redirect(base_url().'admin/sekilas');
                     break;
+                case 'delete':
+                    $delete = $this->page_model->delete($id);
+                    if ($delete) {
+                        redirect(base_url().'admin/sekilas');
+                    }
+                    break;
                 default:
                     # code...
                     break;
@@ -89,12 +95,18 @@
                     break;
                 case 'update':
                     $data = $this->page_model->update($id, $this->input->post());
-                     if($data['success']){
+                    if($data['success']){
                         $this->session->set_flashdata('notifikasi', 'Sukses Merubah Data');
                     }else{
                         $this->session->set_flashdata('notifikasi', 'Gagal Merubah Data');
                     }
                     redirect(base_url().'admin/unit');
+                    break;
+                case 'delete':
+                    $delete = $this->page_model->delete($id);
+                    if ($delete) {
+                        redirect(base_url().'admin/unit');
+                    }
                     break;
                 default:
                     # code...
@@ -140,6 +152,12 @@
                     }
                     redirect(base_url().'admin/facility');
                     break;
+                case 'delete':
+                    $delete = $this->page_model->delete($id);
+                    if ($delete) {
+                        redirect(base_url().'admin/facility');
+                    }
+                    break;
                 default:
                     # code...
                     break;
@@ -163,15 +181,35 @@
                     $this->template_admin->display('admin/content/addfasilitasdetail', $data);
                     break;
                 case 'edit':
-                    $data['fasilitas'] = $this->facility_model->get_by_id($id);
-                    $this->template_admin->display('admin/content/editfasilitas',$data);
+                    $data['fasilitas'] = $this->facility_model->get_detail_by_id($id);
+                    $this->template_admin->display('admin/content/editfasilitasdetail',$data);
                     break;
                 case 'insert':
-                    $data = $this->page_model->insert($this->input->post());
-                    if($data){
-
+                    $pict = $this->image_upload->upload_image('assets/images/facility/', $_FILES, 'pic', 'pict_');
+                    $insert = $this->page_model->insert_detail($this->input->post(), $pict['filename']);
+                    if ($insert) {
+                        redirect(base_url().'admin/facility_detail');
                     }else{
-                        
+                        redirect(base_url().'admin/facility_detail/add');
+                    }
+                    break;
+                case 'update':
+                    $detail = $this->facility_model->get_detail_by_id($id);
+                   
+                    $pict = $this->image_upload->update_image('assets/images/facility/', $_FILES, 'pic', 'pict_', $detail->picture);
+                    $update = $this->facility_model->update_detail($id, $this->input->post(), $pict['filename']);
+                    if ($update) {
+                        redirect(base_url().'admin/facility_detail');
+                    }else{
+                        redirect(base_url().'admin/facility_detail/add');
+                    }
+                    break;
+                case 'delete':
+                    $detail = $this->facility_model->get_detail_by_id($id);
+                    $delete = $this->facility_model->delete_detail($id);
+                    if ($delete) {
+                        unlink('assets/images/facility/'.$detail->picture);
+                        redirect(base_url().'admin/facility_detail');
                     }
                     break;
                 default:
@@ -233,6 +271,24 @@
                     $data['area'] = $this->faculty_model->get_area_by_id($id);
                     $this->template_admin->display('admin/content/viewfakultasarea', $data);
                     break;
+                case 'insert':
+                    $insert = $this->faculty_model->insert_area($this->input->post());
+                    if ($insert) {
+                        redirect(base_url().'admin/fakultas_area');
+                    }
+                    break;
+                case 'update':
+                    $update = $this->faculty_model->update_area($id, $this->input->post());
+                    if ($update) {
+                        redirect(base_url().'admin/fakultas_area');
+                    }
+                    break;
+                case 'delete':
+                    $delete = $this->faculty_model->delete_area($id);
+                    if ($delete) {
+                        redirect(base_url().'admin/fakultas_area');
+                    }
+                    break;
                 default:
                     # code...
                     break;
@@ -257,6 +313,24 @@
                 case 'view':
                     $data['fakultas'] = $this->faculty_model->get_tipe_by_id($id);
                     $this->template_admin->display('admin/content/viewfakultastipe', $data);
+                    break;
+                case 'insert':
+                    $insert = $this->faculty_model->insert_tipe($this->input->post());
+                    if ($insert) {
+                        redirect(base_url().'admin/fakultas_tipe');
+                    }
+                    break;
+                case 'update':
+                    $update = $this->faculty_model->update_tipe($id, $this->input->post());
+                    if ($update) {
+                        redirect(base_url().'admin/fakultas_tipe');
+                    }
+                    break;
+                case 'delete':
+                    $delete = $this->faculty_model->delete_tipe($id);
+                    if ($delete) {
+                        redirect(base_url().'admin/fakultas_tipe');
+                    }
                     break;
                 default:
                     # code...
@@ -287,6 +361,30 @@
                     $data['fakultas'] = $this->faculty_model->get_fakultas_by_id($id);
                     $this->template_admin->display('admin/content/viewfakultas', $data);
                     break;
+                case 'insert':
+                    $pict = $this->image_upload->upload_image('assets/images/faculty/', $_FILES, 'pic', 'pict_');
+
+                    $insert = $this->faculty_model->insert_fakultas($this->input->post(), $pict['filename']);
+                    if($insert){
+                        redirect(base_url().'admin/fakultas');
+                    }
+                    break;
+                case 'update':
+                    $fakultas = $this->faculty_model->get_fakultas_by_id($id);
+                   
+                    $pict = $this->image_upload->update_image('assets/images/faculty/', $_FILES, 'pic', 'pict_', $fakultas->picture);
+                    $update = $this->faculty_model->update_fakultas($id, $this->input->post(), $pict['filename']);
+                    if($update){
+                        redirect(base_url().'admin/fakultas');
+                    }
+                    break;
+                case 'delete':
+                    $delete = $this->faculty_model->delete_fakultas($id);
+
+                    if($delete){
+                        redirect(base_url().'admin/fakultas');
+                    }
+                    break;
                 default:
                     # code...
                     break;
@@ -314,6 +412,24 @@
                     $data['jurusan'] = $this->faculty_model->get_course_by_id($id);
                     $this->template_admin->display('admin/content/viewfakultasprodi', $data);
                     break;
+                case 'insert':
+                    $insert = $this->faculty_model->insert_course($this->input->post());
+                    if ($insert) {
+                        redirect(base_url().'admin/faculty_course');
+                    }
+                    break;
+                case 'update':
+                    $update = $this->faculty_model->update_course($id, $this->input->post());
+                    if ($update) {
+                        redirect(base_url().'admin/faculty_course');
+                    }
+                    break;
+                case 'delete':
+                    $delete = $this->faculty_model->delete_course($id);
+                    if ($delete) {
+                        redirect(base_url().'admin/faculty_course');
+                    }
+                    break;
                 default:
                     # code...
                     break;
@@ -340,6 +456,29 @@
                 case 'view':
                     $data['fakultas'] = $this->faculty_model->get_detail_by_id($id);
                     $this->template_admin->display('admin/content/viewfakultasdetil', $data);
+                    break;
+                case 'insert':
+                    $pict = $this->image_upload->upload_image('assets/images/faculty/', $_FILES, 'pic', 'pict_');
+
+                    $insert = $this->faculty_model->insert_detail($this->input->post(), $pict['filename']);
+                    if($insert){
+                        redirect(base_url().'admin/fakultas_detail');
+                    }
+                    break;
+                case 'update':
+                    $detail = $this->faculty_model->get_detail_by_id($id);
+                   
+                    $pict = $this->image_upload->update_image('assets/images/faculty/', $_FILES, 'pic', 'pict_', $detail->picture);
+                    $update = $this->faculty_model->update_detail($id, $this->input->post(), $pict['filename']);
+                    if($update){
+                        redirect(base_url().'admin/fakultas_detail');
+                    }
+                    break;
+                case 'delete':
+                    $delete = $this->faculty_model->delete_detail($id);
+                    if ($delete) {
+                        redirect(base_url().'admin/fakultas_detail');
+                    }
                     break;
                 default:
                     # code...
@@ -380,6 +519,12 @@
                         redirect(base_url().'admin/news_type');
                     }else{
                         redirect(base_url().'admin/news_type/edit/'.$id);
+                    }
+                    break;
+                case 'delete':
+                    $delete = $this->news_model->delete_type($id);
+                    if ($delete) {
+                        redirect(base_url().'admin/news_type');
                     }
                     break;
                 default:
@@ -522,6 +667,7 @@
                         unlink('assets/images/event/'.$event->thumb);
                         unlink('assets/images/event/'.$event->bpict);
                         unlink('assets/images/event/'.$event->file);
+                        redirect(base_url().'admin/event');
                     }
                     break;
                 default:
@@ -564,6 +710,37 @@
                     $data['karir'] = $this->career_model->get_by_id($id);
                     $this->template_admin->display('admin/content/viewcareer', $data);
                     break;
+                case 'insert':
+                    $pict = $this->image_upload->upload_image('assets/images/career/', $_FILES, 'pic', 'pict_');
+                    $thumb = $this->image_upload->upload_image('assets/images/career/', $_FILES, 'thumb', 'thumb_');
+
+                    $insert = $this->career_model->insert($this->input->post(), $pict['filename'], $thumb['filename']);
+                    if ($insert) {
+                        redirect(base_url().'admin/career');
+                    }else{
+                        redirect(base_url().'admin/career/add');
+                    }
+                    break;
+                case 'update':
+                    $karir = $this->career_model->get_by_id($id);
+                    $pict = $this->image_upload->update_image('assets/images/career/', $_FILES, 'pic', 'pict_', $karir->picture);
+                    $thumb = $this->image_upload->update_image('assets/images/career/', $_FILES, 'thumb', 'thumb_', $karir->thumb);
+                    $update = $this->career_model->update($id, $this->input->post(), $pict['filename'], $thumb['filename']);
+                    if ($update) {
+                        redirect(base_url().'admin/career');
+                    }else{
+                        redirect(base_url().'admin/career/edit');
+                    }
+                    break;
+                case 'delete':
+                    $karir = $this->career_model->get_by_id($id);
+                    $delete = $this->career_model->delete($id);
+                    if ($delete) {
+                        unlink('assets/images/career'.$karir->picture);
+                        unlink('assets/images/career'.$karir->thumb);
+                        redirect(base_url().'admin/career');
+                    }
+                    break;
                 default:
                     # code...
                     break;
@@ -604,6 +781,34 @@
                     $data['katagori'] = $this->gallery_model->get_cat_by_id($id);
                     $this->template_admin->display('admin/content/viewgallerycat', $data);
                     break;
+                case 'insert':
+                    $pict = $this->image_upload->upload_image('assets/images/gallery/', $_FILES, 'pic', 'gallery_cat_');
+                    $insert = $this->gallery_model->insert_katagori($this->input->post(), $pict['filename']);
+                    if ($insert) {
+                        redirect(base_url().'admin/gallery_cat');
+                    }else{
+                        redirect(base_url().'admin/gallery_cat/add');
+                    }
+                    break;
+                case 'update':
+                    $katagori = $this->gallery_model->get_cat_by_id($id);
+
+                    $pict = $this->image_upload->update_image('assets/images/gallery/', $_FILES, 'pic', 'gallery_cat_', $katagori->thumb);
+                    $update = $this->gallery_model->update_katagori($id,$this->input->post(), $pict['filename']);
+                    if ($update) {
+                        redirect(base_url().'admin/gallery_cat');
+                    }else{
+                        redirect(base_url().'admin/gallery_cat/edit');
+                    }
+                    break;
+                case 'delete':
+                    $katagori = $this->gallery_model->get_cat_by_id($id);
+                    $delete = $this->gallery_model->delete_katagori($id);
+                    if ($delete) {
+                        unlink('assets/images/gallery'.$katagori->thumb);
+                        redirect(base_url().'admin/gallery_cat');
+                    }
+                    break;
                 default:
                     # code...
                     break;
@@ -631,6 +836,37 @@
                     $data['gallery'] = $this->gallery_model->get_gallery_by_id($id);
                     $this->template_admin->display('admin/content/viewgallery', $data);
                     break;
+                case 'insert':
+                    $pict = $this->image_upload->upload_image('assets/images/gallery/', $_FILES, 'pic', 'pict_');
+                    $thumb = $this->image_upload->upload_image('assets/images/gallery/', $_FILES, 'thumb', 'thumb_');
+
+                    $insert = $this->gallery_model->insert($this->input->post(), $pict['filename'], $thumb['filename']);
+                    if ($insert) {
+                        redirect(base_url().'admin/gallery');
+                    }else{
+                        redirect(base_url().'admin/gallery/add');
+                    }
+                    break;
+                case 'update':
+                    $gal = $this->gallery_model->get_gallery_by_id($id);
+                    $pict = $this->image_upload->update_image('assets/images/gallery/', $_FILES, 'pic', 'pict_', $gal->picture);
+                    $thumb = $this->image_upload->update_image('assets/images/gallery/', $_FILES, 'pic', 'thumb_', $gal->thumb);
+                    $update = $this->gallery_model->update($id, $this->input->post(), $pict['filename'], $thumb['filename']);
+                    if ($update) {
+                        redirect(base_url().'admin/gallery');
+                    }else{
+                        redirect(base_url().'admin/gallery/edit');
+                    }
+                    break;
+                case 'delete':
+                    $gal = $this->gallery_model->get_gallery_by_id($id);
+                    $delete = $this->gallery_model->delete($id);
+                    if ($delete) {
+                        unlink('assets/images/gallery'.$gal->picture);
+                        unlink('assets/images/gallery'.$gal->thumb);
+                        redirect(base_url().'admin/gallery');
+                    }
+                    break;
                 default:
                     # code...
                     break;
@@ -655,6 +891,28 @@
                 case 'view':
                     $data['tipe'] = $this->blog_model->get_type_by_id($id);
                     $this->template_admin->display('admin/content/viewblogtipe', $data);
+                    break;
+                case 'insert':
+                    $insert = $this->blog_model->insert_tipe($this->input->post());
+                    if ($insert) {
+                        redirect(base_url().'admin/blog_type');
+                    }else{
+                        redirect(base_url().'admin/blog_type/add');
+                    }
+                    break;
+                case 'update':
+                    $update = $this->blog_model->update_tipe($id, $this->input->post());
+                    if ($update) {
+                        redirect(base_url().'admin/blog_type');
+                    }else{
+                        redirect(base_url().'admin/blog_type/edit');
+                    }
+                    break;
+                case 'delete':
+                    $delete = $this->blog_model->delete_tipe($id);
+                    if ($delete) {
+                        redirect(base_url().'admin/blog_type');
+                    }
                     break;
                 default:
                     # code...
@@ -682,6 +940,28 @@
                 case 'view':
                     $data['blog'] = $this->blog_model->get_blog_by_id($id);
                     $this->template_admin->display('admin/content/viewblog', $data);
+                    break;
+                case 'insert':
+                    $insert = $this->blog_model->insert_blog($this->input->post());
+                    if ($insert) {
+                        redirect(base_url().'admin/blog');
+                    }else{
+                        redirect(base_url().'admin/blog/add');
+                    }
+                    break;
+                case 'update':
+                    $update = $this->blog_model->update_blog($id, $this->input->post());
+                    if ($update) {
+                        redirect(base_url().'admin/blog');
+                    }else{
+                        redirect(base_url().'admin/blog/edit');
+                    }
+                    break;
+                case 'delete':
+                    $delete = $this->blog_model->delete_blog($id);
+                    if ($delete) {
+                        redirect(base_url().'admin/blog');
+                    }
                     break;
                 default:
                     # code...

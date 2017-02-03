@@ -40,4 +40,97 @@
 			return $gallery;
 		}
 
+		function insert_kategori($katagori, $pic=""){
+			$data = [
+				'id'=>rand(10000000000, 99999999999),
+				'title_ina'=>$katagori['title_ina'],
+				'title_eng'=>$katagori['title_eng'],
+				'lead_ina'=>$katagori['lead_ina'],
+				'lead_eng'=>$katagori['lead_eng'],
+				'thumb'=>$pic,
+				'post_date'=>date('Y-m-d H:i:s'),
+                'modify_date'=>date('Y-m-d H:i:s'),
+                'post_by'=>$this->session->userdata('id_user')
+			];
+
+			$insert = $this->db->insert('adi_gallery_cat', $data);
+			return $insert;
+		}
+
+		function insert($gal, $thumb="", $pic=""){
+			$data = [
+				'id'=>rand(10000000000, 99999999999),
+				'id_cat'=>$gal['katagori'],
+				'title_ina'=>$gal['title_ina'],
+				'title_eng'=>$gal['title_eng'],
+				'lead_ina'=>$gal['lead_ina'],
+				'lead_eng'=>$gal['lead_eng'],
+				'thumb'=>$thumb,
+				'picture'=>$pic,
+				'hot'=>$gal['h1'],
+				'post_date'=>date('Y-m-d H:i:s'),
+                'modify_date'=>date('Y-m-d H:i:s'),
+                'post_by'=>$this->session->userdata('id_user')
+			];
+
+			$insert = $this->db->insert('adi_gallery', $data);
+			return $insert;
+		}
+
+		function update_katagori($id, $katagori, $pic=""){
+			$data = [
+				'title_ina'=>$katagori['title_ina'],
+				'title_eng'=>$katagori['title_eng'],
+				'lead_ina'=>$katagori['lead_ina'],
+				'lead_eng'=>$katagori['lead_eng'],
+                'modify_date'=>date('Y-m-d H:i:s'),
+			];
+
+			if($pic != ""){
+                $data['thumb'] = $pic;
+            }
+
+            $where = ['id'=>$id];
+
+            $update = $this->db->update('adi_gallery_cat', $data, $where);
+            return $update;
+		}
+
+		function update($id, $gal, $thumb="", $pic=""){
+			$data = [
+				'id_cat'=>$gal['katagori'],
+				'title_ina'=>$gal['title_ina'],
+				'title_eng'=>$gal['title_eng'],
+				'lead_ina'=>$gal['lead_ina'],
+				'lead_eng'=>$gal['lead_eng'],
+				'hot'=>$gal['h1'],
+                'modify_date'=>date('Y-m-d H:i:s')
+			];
+
+			if ($thumb != "") {
+				$data['thumb'] = $thumb;
+			}
+
+			if ($pic != "") {
+				$data['picture'] = $pic;
+			}
+
+			$where = ['id'=>$id];
+
+			$update = $this->db->update('adi_gallery', $data, $where);
+			return $update;
+		}
+
+		function delete_katagori($id){
+			$where = ['id'=>$id];
+			$delete = $this->db->delete('adi_gallery_cat', $where);
+			return $delete;
+		}
+
+		function delete($id){
+			$where = ['id'=>$id];
+			$delete = $this->db->delete('adi_gallery', $where);
+			return $delete;
+		}
+
 	}

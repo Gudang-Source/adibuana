@@ -120,4 +120,11 @@
             $update = $this->db->update("adi_event", $data, $where);
             return $update;
          }
+
+         function delete($id){
+          $where = ['id'=>$id];
+
+          $delete = $this->db->delete('adi_event',$where);
+          return $delete;
+         }
      }
