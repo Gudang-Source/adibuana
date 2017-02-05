@@ -39,7 +39,7 @@
             <div class="header">
                 <div class="title">
                   <span><?php echo $this->lang->line('berita_baru') ?></span>
-                  <div class="pull-right"><a class="btn btn-lainnya btn-border  color-secondary"><?php echo $this->lang->line('lainnya') ?> ></a></div>
+                  <div class="pull-right"><a href="<?php echo base_url() ?>berita-dan-pengumuman/berita-kampus/01" class="btn btn-lainnya btn-border  color-secondary"><?php echo $this->lang->line('lainnya') ?> ></a></div>
                 </div>
               </div>
           </header>
@@ -76,7 +76,7 @@
             <div class="header">
                 <div class="title">
                   <span>Agenda</span>
-                  <div class="pull-right"><a class="btn btn-lainnya btn-border  color-secondary"><?php echo $this->lang->line('lainnya') ?> ></a></div>
+                  <div class="pull-right"><a href="<?php echo base_url() ?>kegiatan" class="btn btn-lainnya btn-border  color-secondary"><?php echo $this->lang->line('lainnya') ?> ></a></div>
                 </div>
               </div>
           </header>
@@ -87,7 +87,7 @@
                   ?>
                   <li>
                     <div class="time"><i class="fa fa-clock-o"></i> &nbsp; <?php echo $this->lang->line('tgl_posting') ?> <?php echo convertDateTime($q_agenda->post_date) ?></div>
-                    <p><a><?php echo $this->session->userdata('lang') == 'indonesia'? $q_agenda->title_ina:$q_agenda->title_eng ?></a></p>
+                    <p><a href="<?php echo base_url(); ?>event-detail/<?php echo slugify($q_agenda->title_ina).'/'.$q_agenda->id ?>"><?php echo $this->session->userdata('lang') == 'indonesia'? $q_agenda->title_ina:$q_agenda->title_eng ?></a></p>
                     <hr>
                   </li>
                   <?php
@@ -101,7 +101,7 @@
             <div class="header">
                 <div class="title">
                   <span><?php echo $this->lang->line('gallery') ?></span>
-                  <div class="pull-right"><a class="btn btn-lainnya btn-border  color-secondary"><?php echo $this->lang->line('lainnya') ?> ></a></div>
+                  <div class="pull-right"><a href="<?php echo base_url(); ?>galeri" class="btn btn-lainnya btn-border  color-secondary"><?php echo $this->lang->line('lainnya') ?> ></a></div>
                 </div>
               </div>
           </header>
@@ -131,7 +131,7 @@
             <div class="header">
                 <div class="title">
                   <span><?php echo $this->lang->line('pengumuman') ?> </span>
-                  <div class="pull-right"><a class="btn btn-lainnya btn-border  color-secondary"><?php echo $this->lang->line('lainnya') ?> ></a></div>
+                  <div class="pull-right"><a href="<?php echo base_url(); ?>berita-dan-pengumuman/pengumuman/04" class="btn btn-lainnya btn-border  color-secondary"><?php echo $this->lang->line('lainnya') ?> ></a></div>
                 </div>
               </div>
           </header>

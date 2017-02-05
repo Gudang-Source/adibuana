@@ -36,7 +36,7 @@
 
 								<!-- Main -->
 								<li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
-								<li><a href="index.html"><i class="icon-home4"></i> <span>Home</span></a></li>
+								<li><a href="<?php echo base_url() ?>admin"><i class="icon-home4"></i> <span>Home</span></a></li>
 								<li>
 									<a href="#"><i class="icon-gear"></i> <span>Preferences</span></a>
 									<ul>

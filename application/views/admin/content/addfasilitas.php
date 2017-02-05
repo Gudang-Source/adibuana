@@ -21,13 +21,13 @@
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Type *</label>
                       <div class="col-sm-2">
-                        <select class="form-control">
-                            <option value="appl">Application</option>
-                            <option value="appl">Enginering</option>
-                            <option value="appl">Health</option>
-                            <option value="appl">Laboratory</option>
-                            <option value="appl">Technology</option>
-                            <option value="appl">Etc</option>
+                        <select class="form-control" name="type">
+                          <option value="app">Application</option>
+                          <option value="eng">Enginering</option>
+                          <option value="heal">Health</option>
+                          <option value="lab">Laboratory</option>
+                          <option value="tech">Technology</option>
+                          <option value="etc">Etc</option>
                         </select>
                       </div>
                     </div>

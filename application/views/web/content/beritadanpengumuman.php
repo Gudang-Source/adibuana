@@ -16,6 +16,7 @@
 
 <script>
   var kode_page = '<?php echo $id ?>';
+  nama_halaman = 'beritadanpengumuman';
 </script>
 <div id="page-body" class="page-body">
   <section class="page-section bgc-light">
@@ -46,36 +47,18 @@
                   <div class="widget widget-recent-post">
                     <h6 class="__widget-title">Berita Sering Dibaca</h6>
                     <div class="__widget-content">
-                      <div class="rpost"><a href="#" class="__img"><img src="assets/images/blog/recent-post-thumbnail-1.jpg" alt="thumbnail"/></a>
-                        <div class="__content">
-                          <div class="__title"><a href="#">How To Improve And Refine</a></div>
-                          <div class="__date font-serif-italic color-secondary">July 9, 2014</div>
-                        </div>
-                      </div>
-                      <div class="rpost"><a href="#" class="__img"><img src="assets/images/blog/recent-post-thumbnail-2.jpg" alt="thumbnail"/></a>
-                        <div class="__content">
-                          <div class="__title"><a href="#">How To Improve And Refine</a></div>
-                          <div class="__date font-serif-italic color-secondary">July 9, 2014</div>
-                        </div>
-                      </div>
-                      <div class="rpost"><a href="#" class="__img"><img src="assets/images/blog/recent-post-thumbnail-3.jpg" alt="thumbnail"/></a>
-                        <div class="__content">
-                          <div class="__title"><a href="#">How To Improve And Refine</a></div>
-                          <div class="__date font-serif-italic color-secondary">July 9, 2014</div>
-                        </div>
-                      </div>
-                      <div class="rpost"><a href="#" class="__img"><img src="assets/images/blog/recent-post-thumbnail-4.jpg" alt="thumbnail"/></a>
-                        <div class="__content">
-                          <div class="__title"><a href="#">How To Improve And Refine</a></div>
-                          <div class="__date font-serif-italic color-secondary">July 9, 2014</div>
-                        </div>
-                      </div>
-                      <div class="rpost"><a href="#" class="__img"><img src="assets/images/blog/recent-post-thumbnail-5.jpg" alt="thumbnail"/></a>
-                        <div class="__content">
-                          <div class="__title"><a href="#">How To Improve And Refine</a></div>
-                          <div class="__date font-serif-italic color-secondary">July 9, 2014</div>
-                        </div>
-                      </div>
+                      <?php 
+                        foreach ($most_viewed as $q_berita) {
+                          ?>
+                          <div class="rpost"><a href="#" class="__img"><img src="<?php echo base_url(); ?>assets/images/news/<?php echo $q_berita->picture; ?>" alt="thumbnail"/></a>
+                            <div class="__content">
+                              <div class="__title"><a href="#"><?php echo $q_berita->title_ina; ?></a></div>
+                              <div class="__date font-serif-italic color-secondary">July 9, 2014</div>
+                            </div>
+                          </div>    
+                          <?php
+                        }
+                      ?>
                     </div>
                   </div>
 

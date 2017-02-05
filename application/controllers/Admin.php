@@ -37,18 +37,18 @@
                 case 'insert':
                     $data = $this->page_model->insert($this->input->post());
                     if($data['success']){
-                        $this->session->set_flashdata('notifikasi', 'Sukses Menambah Data');
+                        $this->session->set_flashdata('success', 'Sukses Menambah Data');
                     }else{
-                        $this->session->set_flashdata('notifikasi', 'Gagal Menambah Data');
+                        $this->session->set_flashdata('warning', 'Gagal Menambah Data');
                     }
                     redirect(base_url().'admin/sekilas');
                     break;
                 case 'update':
                     $data = $this->page_model->update($id, $this->input->post());
                     if($data['success']){
-                        $this->session->set_flashdata('notifikasi', 'Sukses Merubah Data');
+                        $this->session->set_flashdata('success', 'Sukses Merubah Data');
                     }else{
-                        $this->session->set_flashdata('notifikasi', 'Gagal Merubah Data');
+                        $this->session->set_flashdata('warning', 'Gagal Merubah Data');
                     }
                     redirect(base_url().'admin/sekilas');
                     break;
@@ -86,9 +86,9 @@
                 case 'insert':
                     $data = $this->page_model->insert($this->input->post());
                     if($data['success']){
-                        $this->session->set_flashdata('notifikasi', 'Sukses Menambah Data');
+                        $this->session->set_flashdata('success', 'Sukses Menambah Data');
                     }else{
-                        $this->session->set_flashdata('notifikasi', 'Gagal Menambah Data');
+                        $this->session->set_flashdata('warning', 'Gagal Menambah Data');
                     
                     }
                     redirect(base_url().'admin/unit');
@@ -96,17 +96,20 @@
                 case 'update':
                     $data = $this->page_model->update($id, $this->input->post());
                     if($data['success']){
-                        $this->session->set_flashdata('notifikasi', 'Sukses Merubah Data');
+                        $this->session->set_flashdata('success', 'Sukses Merubah Data');
                     }else{
-                        $this->session->set_flashdata('notifikasi', 'Gagal Merubah Data');
+                        $this->session->set_flashdata('warning', 'Gagal Merubah Data');
                     }
                     redirect(base_url().'admin/unit');
                     break;
                 case 'delete':
                     $delete = $this->page_model->delete($id);
                     if ($delete) {
-                        redirect(base_url().'admin/unit');
+                        $this->session->set_flashdata('success', 'Sukses Menghapus Data');
+                    }else{
+                        $this->session->set_flashdata('warning', 'Gagal Menghapus Data');
                     }
+                    redirect(base_url().'admin/unit');
                     break;
                 default:
                     # code...
@@ -134,28 +137,32 @@
                     $this->template_admin->display('admin/content/editfasilitas',$data);
                     break;
                 case 'insert':
-                    $data = $this->page_model->insert($this->input->post());
+                    $data = $this->facility_model->insert($this->input->post());
                     if($data['success']){
-                        $this->session->set_flashdata('notifikasi', 'Sukses Menambah Data');
+                        $this->session->set_flashdata('success', 'Sukses Menambah Data');
                     }else{
-                        $this->session->set_flashdata('notifikasi', 'Gagal Menambah Data');
+                        $this->session->set_flashdata('warning', 'Gagal Menambah Data');
                     
                     }
                     redirect(base_url().'admin/facility');
                     break;
                  case 'update':
-                    $data = $this->page_model->update($id, $this->input->post());
+                    $data = $this->facility_model->update($id, $this->input->post());
                    if($data['success']){
-                        $this->session->set_flashdata('notifikasi', 'Sukses Merubah Data');
+                        $this->session->set_flashdata('success', 'Sukses Merubah Data');
                     }else{
-                        $this->session->set_flashdata('notifikasi', 'Gagal Merubah Data');
+                        $this->session->set_flashdata('warning', 'Gagal Merubah Data');
                     }
                     redirect(base_url().'admin/facility');
                     break;
                 case 'delete':
-                    $delete = $this->page_model->delete($id);
+                    $delete = $this->facility_model->delete($id);
                     if ($delete) {
+                        $this->session->set_flashdata('success', 'Sukses Menghapus Data');
                         redirect(base_url().'admin/facility');
+                    }else{
+                        $this->session->set_flashdata('warning', 'Gagal Menghapus Data');
+                         redirect(base_url().'admin/facility');
                     }
                     break;
                 default:
@@ -274,20 +281,29 @@
                 case 'insert':
                     $insert = $this->faculty_model->insert_area($this->input->post());
                     if ($insert) {
-                        redirect(base_url().'admin/fakultas_area');
+                        $this->session->set_flashdata('success', 'Sukses Menambah Data');
+                    }else{
+                        $this->session->set_flashdata('warning', 'Gagal Menambah Data');
                     }
+                    redirect(base_url().'admin/fakultas_area');
                     break;
                 case 'update':
                     $update = $this->faculty_model->update_area($id, $this->input->post());
                     if ($update) {
-                        redirect(base_url().'admin/fakultas_area');
+                        $this->session->set_flashdata('success', 'Sukses Merubah Data');
+                    }else{
+                        $this->session->set_flashdata('warning', 'Gagal Merubah Data');
                     }
+                    redirect(base_url().'admin/fakultas_area');
                     break;
                 case 'delete':
                     $delete = $this->faculty_model->delete_area($id);
                     if ($delete) {
-                        redirect(base_url().'admin/fakultas_area');
+                        $this->session->set_flashdata('success', 'Sukses Menghapus Data');
+                    }else{
+                        $this->session->set_flashdata('warning', 'Gagal Menghapus Data');
                     }
+                    redirect(base_url().'admin/fakultas_area');
                     break;
                 default:
                     # code...
@@ -317,20 +333,29 @@
                 case 'insert':
                     $insert = $this->faculty_model->insert_tipe($this->input->post());
                     if ($insert) {
-                        redirect(base_url().'admin/fakultas_tipe');
+                         $this->session->set_flashdata('success', 'Sukses Menambah Data');
+                    }else{
+                         $this->session->set_flashdata('warning', 'Gagal Menambah Data');
                     }
+                    redirect(base_url().'admin/fakultas_tipe');
                     break;
                 case 'update':
                     $update = $this->faculty_model->update_tipe($id, $this->input->post());
                     if ($update) {
-                        redirect(base_url().'admin/fakultas_tipe');
+                         $this->session->set_flashdata('success', 'Sukses Merubah Data');
+                    }else{
+                         $this->session->set_flashdata('warning', 'Gagal Merubah Data');
                     }
+                    redirect(base_url().'admin/fakultas_tipe');
                     break;
                 case 'delete':
                     $delete = $this->faculty_model->delete_tipe($id);
                     if ($delete) {
-                        redirect(base_url().'admin/fakultas_tipe');
+                         $this->session->set_flashdata('success', 'Sukses Menghapus Data');
+                    }else{
+                         $this->session->set_flashdata('warning', 'Gagal Menghapus Data');
                     }
+                    redirect(base_url().'admin/fakultas_tipe');
                     break;
                 default:
                     # code...
@@ -561,9 +586,11 @@
 
                     $insert = $this->news_model->insert_news($this->input->post(), $pict['filename'], $thumb['filename'], $banner['filename']);
                     if($insert){
+                        $this->session->set_flashdata('success', 'Sukses Menambah Data');
                         redirect(base_url().'admin/news');
                     }else{
-                        redirect(base_url().'admin/news/add');
+                        $this->session->set_flashdata('waning', 'Gagal Menambah Data');
+                        redirect(base_url().'admin/news');
                     }
                     break;
                 case 'update':
@@ -573,11 +600,13 @@
                     $thumb = $this->image_upload->update_image('assets/images/news/', $_FILES, 'thumb', 'thumb_', $news->thumb);
                     $banner = $this->image_upload->update_image('assets/images/news/', $_FILES, 'banner', 'banner_', $news->bpict);
 
-                    $this->news_model->update_news($id, $this->input->post(), $pict['filename'], $thumb['filename'], $banner['filename']);
+                    $update = $this->news_model->update_news($id, $this->input->post(), $pict['filename'], $thumb['filename'], $banner['filename']);
                     if($update){
+                        $this->session->set_flashdata('success', 'Sukses Merubah Data');
                         redirect(base_url().'admin/news');
                     }else{
-                        redirect(base_url().'admin/news/edit/'.$id);
+                        $this->session->set_flashdata('warning', 'Gagal Menambah Data');
+                        redirect(base_url().'admin/news/');
                     }
                     break;
 
@@ -585,10 +614,14 @@
                     $news = $this->news_model->get_news_by_id($id);
                     $delete = $this->news_model->delete_news($id);
                     if($delete){
+                        $this->session->set_flashdata('success', 'Sukses Menghapus Data');
                         unlink('assets/images/news/'.$news->picture);
                         unlink('assets/images/news/'.$news->thumb);
                         unlink('assets/images/news/'.$news->bpict);
+                    }else{
+                        $this->session->set_flashdata('warning', 'Gagal Menghapus Data');
                     }
+                    redirect(base_url().'admin/news');
                     break;
                 default:
                     # code...

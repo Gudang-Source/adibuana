@@ -608,14 +608,63 @@ section.slider{
   float: left;
   margin-bottom: 0;
   width: 80%;
+  border-radius: 2px;
 }
 .search-bar button[type="submit"]{
   float: right;
-  background: orange;
+  background: #4ab776;
   color: white;
-  padding: 8px 13px;
+  padding: 8px 12px;
   border: none;
 }
 .flex-direction-nav a {
-  height: 80px;
+  background: black;
+  padding: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  padding: 0px 18px 0px 12px;
+}
+.flex-direction-nav a::before{
+  font-size: 20px !important;
+  color: white;
+}
+.flex-control-paging li a:hover {
+  background: white;
+}
+.flex-control-paging li a {
+  background: #22a7f0;
+}
+.flex-control-paging li a.flex-active {
+    background: white;
+}
+.flex-control-nav {
+    z-index: 1000;
+    bottom: 0;
+}
+ol li::before {
+    content: "";
+}
+.deskripsi-fasilitas{
+  margin-top: 5px;
+  text-align: center;
+  height: 150px;
+}
+.deskripsi-fasilitas h3{
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+.deskripsi-fasilitas p{
+  line-height: 1.5;
+  font-size: 12px;
+}
+
+#listkegiatan .post{
+  padding-bottom: 20px !important; 
+  padding-top: 30px !important;
+}
+
+#detilkegiatan p{
+  margin-bottom: 0px !important;
+  line-height: 1.5;
 }

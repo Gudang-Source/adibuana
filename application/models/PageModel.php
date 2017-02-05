@@ -29,12 +29,12 @@
             $old_data = $this->get_by_id($id);
 
             $data = [
-                'id'=>rand(10000000000, 99999999999),
+                'id'=>rand(),
                 'title_ina'=>$page['title_ina'],
                 'title_eng'=>$page['title_eng'],
                 'content_ina'=>$page['konten_ina'],
                 'content_eng'=>$page['konten_eng'],
-                'post_data'=>date('Y-m-d H:i:s')
+                'post_date'=>date('Y-m-d H:i:s')
             ];
 
             $upload = $this->image_upload->upload_image($path_image, $_FILES, 'foto_sekilas');
@@ -43,9 +43,7 @@
                 $data['picture'] = $upload['filename'];
             }
 
-            $where = ['id'=>$id];
-
-            $this->db->update('adi_page', $data, $where);
+            $this->db->insert('adi_page', $data);
             return ['success'=>true];
          }
          function update($id, $page){
@@ -75,8 +73,9 @@
             $this->db->update('adi_page', $data, $where);
             return ['success'=>true];
          }
+
          function delete($id){
-            $where = ['id'=$id];
+            $where = ['id'=>$id];
             $delete = $this->db->delete('adi_page', $where);
             return $delete;
          }

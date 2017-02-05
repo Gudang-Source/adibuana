@@ -41,6 +41,8 @@
 
     <script>
       var base_url = '<?php echo base_url(); ?>';
+      var kode_page = "";
+      var nama_halaman = "";
     </script>
 
   </head>
@@ -1275,7 +1277,22 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDytkyUX2xb4hze3Gn949SwtKYZx2f2VEQ"></script>    
     <script type="text/javascript" src="<?php echo base_url() ?>assets/web/js/adibuana.js"></script>
 
-    
+    <?php 
+      if($this->uri->segment(1) == 'kkn'){
+        ?>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/web/js/kkn.js"></script>
+        <?php
+      }elseif ($this->uri->segment(1) == 'sarana') {
+        ?>
+        <script type="text/javascript" src="vendors/jquery-ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="vendors/slick-carousel/slick/slick.js"></script>
+        <script type="text/javascript" src="vendors/isotope/dist/isotope.pkgd.min.js"></script>
+        <script type="text/javascript" src="vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <script type="text/javascript" src="vendors/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+        <script type="text/javascript" src="vendors/jquery-modal/jquery.modal.min.js"></script>
+        <?php
+      }
+    ?>
 
     <script type="text/javascript">
       $(document).ready(function() {

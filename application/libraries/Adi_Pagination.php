@@ -104,6 +104,16 @@ class Adi_Pagination {
 				}
 				$paging .= '<li class="'.$active.'"><a nilai="'.$i.'" class="'.$active.'" href="?'.http_build_query(array_merge($_GET, ['page'=>$i])).'">'.$i.'</a></li>';
 			}
+		}
+		elseif($pages <= 4){
+			for ($i=1; $i <= 4; $i++) {
+				if($current_page == $i){
+					$active = 'active';
+				}else{
+					$active = '';
+				}
+				$paging .= '<li class="'.$active.'"><a nilai="'.$i.'" class="'.$active.'" href="?'.http_build_query(array_merge($_GET, ['page'=>$i])).'">'.$i.'</a></li>';
+			}
 		}else{
 			for ($i=$current_page - 2; $i <= $pages; $i++) {
 				if($current_page == $i){

@@ -34,6 +34,16 @@
       return $this->db->get()->result();
     }
 
+    function get_most_viewed($id_type){
+      $this->db->select('*')
+            ->from('adi_news')
+            ->where('id_type', $id_type)
+            ->order_by('hit', 'desc')
+            ->limit(5);
+      $berita = $this->db->get()->result();
+      return $berita;
+    }
+
     function get_berita_katagori($id, $limit, $offset){
         $this->db->select('*')
             ->from('adi_news')
@@ -138,7 +148,7 @@
         'post_by'=>$this->session->userdata('id_user')
       ];
 
-        $insert = $this->db->insert['adi_news_type', $data];
+        $insert = $this->db->insert(['adi_news_type', $data]);
         return $insert;
     }
 

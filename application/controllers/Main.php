@@ -55,6 +55,7 @@
                 $data['id'] = $id;
                 $data['berita'] = $this->news_model->get_tipe_by_id($id);
                 $data['kategori'] = $this->news_model->get_all_kategori();
+                $data['most_viewed'] = $this->news_model->get_most_viewed($id);
                 $this->template_website->display('web/content/beritadanpengumuman', $data);
             }
         }
@@ -118,16 +119,56 @@
         }
         function galeri(){
             $data = $this->data;
+            $this->load->model('GalleryModel', 'gallery_model');
+            $data['kategori_galeri'] = $this->gallery_model->get_cat_and_gallery();
+            $this->template_website->display('web/content/galeri', $data);
+        }
 
-            $this->template_website->display('web/content/galeri');
+        function kategori_galeri(){
+
         }
 
         function kegiatan(){
             $data = $this->data;
             $this->load->model('EventModel', 'event_model');
 
-            $data['kegiatan'] = $this->event_model->get_by_id();
-            $this->template_website->display('web/content/listkegiatan', $data);
+            if($this->input->is_ajax_request()){
+                $this->load->library('Adi_Pagination', 'adi_pagination');
+
+                $per_page = 10;
+                $page = $this->input->get('page');
+                if($page == null){
+                    $page = 0;
+                }else{
+                    $page = $page - 1;
+                }
+
+                $total_data = sizeof($this->event_model->get_event(9999999, 0));
+
+                $data['paging'] = $this->adi_pagination->adibuana_pagination(base_url().'kegiatan/', $per_page, $page, $total_data);
+
+                $data['kegiatan'] = $this->event_model->get_event($per_page, $page*$per_page);
+                $data['halaman'] = $page;
+                $this->load->view('web/content/ajax/kegiatan', $data);
+            }else{
+                // $data['kegiatan'] = $this->event_model->get_by_id();
+                $this->template_website->display('web/content/listkegiatan', $data);
+            }  
+        }
+        function detilkegiatan($slug, $id){
+            $data = $this->data;
+            $this->load->model('EventModel', 'event_model');
+
+            $data['kegiatan'] = $this->event_model->get_event_by_id($id);
+            $data['most_viewed'] = $this->event_model->get_most_viewed();
+
+            $this->template_website->display('web/content/detilkegiatan', $data);
+        }
+        function pencarian(){
+            $keyword = $this->input->get('keyword');
+
+            
+            $this->template_website->display('web/content/pencarian');
         }
         function login(){
 
@@ -149,6 +190,7 @@
                     break;
                 case 'printpdf':
                     $this->load->library('pdf');
+                    $this->kkn->insert($this->input->post());
                     $data['kkn'] = $this->input->post();
                     $this->pdf->load_view('web/content/kknpdf', $data);
                     $this->pdf->set_paper("A4", 'portrait');

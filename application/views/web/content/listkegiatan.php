@@ -1,39 +1,36 @@
-<div id="page-body" class="page-body">
-        <section class="page-section bgc-light">
-          <div class="container">
-          <?php
-              foreach ($kegiatan as $q_kegiatan) {
-                echo'
-                  <div class="post  post-index post-left-image">
-                    <div class="__header"><a href="#"><img src="http://www.unipasby.ac.id/css/data_images/event/';?><?php echo $q_kegiatan->picture; ?><?php echo'" alt="NO PICTURE" class="img-responsive"/></a>
-                    </div>
-                    <div class="__main">
-                      <div class="__title"><a href="blog-single-standard.html">';?><?php echo $this->session->userdata('lang') == 'indonesia'? $q_kegiatan->title_ina:$q_kegiatan->title_eng; ?><?php echo'</a></div>
-                      <div class="__meta"><span>Posted:&nbsp;<span class="__value">'?><?php echo $q_kegiatan->post_date; ?><?php echo'</span></span><span>By:&nbsp;<span class="__value">'?><?php echo $q_kegiatan->author; ?><?php echo'</span></span><span>Categories:&nbsp;<span class="__value">HTML/CSS</span></span>
-                      </div>
-                      <div class="__content">';?><?php echo $this->session->userdata('lang') == 'indonesia'? $q_kegiatan->lead_ina:$q_kegiatan->lead_eng; ?> <?php echo' </div>
-                      <div class="post-index-group-button"><a href="blog-single-standard.html" class="btn btn-primary">'.$this->lang->line('more').'</a></div>
-                    </div>
-                  </div>
-
-
-                ';
-              }
-            
-            ?>
-            <div class="container text-center section-block">
-            <nav>
-              <ul class="pagination">
-                <li><a href="#" aria-label="Previous"><span aria-hidden="true">&#10094;</span></a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">4</a></li>
-                <li><a href="#">5</a></li>
-                <li><a href="#" aria-label="Next"><span aria-hidden="true">&#10095;</span></a></li>
-              </ul>
-            </nav>
+      <!--Page Header-->
+      <header class="page-header common-header bgc-dark-o-5">
+        <div data-parallax="scroll" data-position="center -550px" data-image-src="https://unipasurabaya.files.wordpress.com/2012/09/cropped-unipa-mng.jpg" data-speed="0.3" class="parallax-background"></div>
+        <div class="container text-center cell-vertical-wrapper">
+          <div class="cell-middle">
+            <h1 class="text-responsive nmb" id="size-header">Kegiatan</h1>
           </div>
+        </div>
+        <div class="ab-bottom col-xs-12">
+          <div class="container">
+            <div class="breadcrumb bgc-dark-o-6"><span class="__content italic font-serif fz-6-ss"><span><a href="index.html">Beranda</a></span><span><a href="#">Kegiatan</a></span><span>
+          </div>
+        </div>
+      </header>
+      <!--End Page Header-->
+      <script type="text/javascript">
+          nama_halaman = 'kegiatan';
+      </script>
+      <div id="page-body" class="page-body">
+        <section class="page-section bgc-light" id="list-kegiatan">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-10 col-md-offset-1">
+                <div id="kegiatan">
+                    <script>
+                      var hal_kegiatan = ''+<?php echo $this->input->get('page')+'' ?>;
+                      if(hal_kegiatan == 0){
+                        hal_kegiatan = 1;
+                      }
+                    </script>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </div>

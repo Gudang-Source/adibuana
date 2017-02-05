@@ -25,14 +25,14 @@
             $page = $page->get()->result();
             return $page;
          }
-         function delete($id){
-
-         }
-
-         function get_event(){
+         
+         function get_event($limit = 9999999, $offset = 0){
             $this->db->select('adi_event.*, adi_user.name')
                     ->from('adi_event')
-                    ->join('adi_user', 'adi_event.post_by = adi_user.id');
+                    ->join('adi_user', 'adi_event.post_by = adi_user.id')
+                    ->order_by('adi_event.post_date', 'desc')
+                    ->limit($limit)
+                    ->offset($offset);
             $event = $this->db->get()->result();
             return $event;
          }
@@ -51,6 +51,15 @@
                     ->where('id', $id);
             $event = $event->get()->row();
             return $event;
+         }
+
+         function get_most_viewed(){
+          $event = $this->db->select('*')
+                  ->from('adi_event')
+                  ->order_by('adi_event.hit', 'desc')
+                  ->limit(5);
+          $event = $event->get()->result();
+          return $event;
          }
 
          function insert($event, $picture, $thumb, $bpict, $file){

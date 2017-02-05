@@ -23,4 +23,36 @@
                 return true;
             }
         }
+
+        function insert($kkn){
+            $data = [
+                // 'id'=>$kkn['id'],
+                'nim'=>$kkn['nim'],
+                'nourut'=>$kkn['nourut'],
+                'nama'=>$kkn['nama'],
+                'prodi'=>$kkn['prodi'],
+                'ket'=>$kkn['ket'],
+                'angkatan'=>$kkn['angkatan'],
+                'kelas'=>$kkn['kelas'],
+                'jenkel'=>$kkn['jenkel'],
+                'agama'=>$kkn['agama'],
+                'tmplahir'=>$kkn['tempat_lahir'],
+                'tgllahir'=>$kkn['tanggal_lahir'],
+                'alamat'=>$kkn['alamat'],
+                'kos'=>$kkn['kos'],
+                'kota'=>$kkn['kota'],
+                'kecamatan'=>$kkn['kec'],
+                'hp'=>$kkn['hp'],
+                'status'=>$kkn['status'],
+                'jaket'=>$kkn['jaket'],
+                'lokasi'=>$kkn['lokasi'],
+                'acc'=>'inactive',
+                'post_date'=>date('Y-m-d'),
+                'modify_date'=>date('Y-m-d')
+            ];
+
+            $insert = $this->db->insert('adi_kkn', $data);
+            
+            return $insert;
+        }
     }

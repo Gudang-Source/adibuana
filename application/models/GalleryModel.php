@@ -14,6 +14,14 @@
 			return $cat_gal;
 		}
 
+		function get_gallery_by_cat($cat){
+			$this->db->select('*')
+					->from('adi_gallery')
+					->where('id_cat', $cat);
+			$gallery = $this->db->get()->result();
+			return $gallery;
+		}
+
 		function get_cat_by_id($id){
 			$katagori = $this->db->select('*')
 								->from('adi_gallery_cat')
@@ -131,6 +139,13 @@
 			$where = ['id'=>$id];
 			$delete = $this->db->delete('adi_gallery', $where);
 			return $delete;
+		}
+		function get_cat_and_gallery(){
+			$cat = $this->get_gallery_cat();
+			foreach ($cat as $q_cat) {
+				$q_cat->galeri = $this->get_gallery_by_cat($q_cat->id);
+			}
+			return $cat;
 		}
 
 	}
