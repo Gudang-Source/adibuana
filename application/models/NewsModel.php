@@ -148,7 +148,7 @@
         'post_by'=>$this->session->userdata('id_user')
       ];
 
-        $insert = $this->db->insert(['adi_news_type', $data]);
+        $insert = $this->db->insert('adi_news_type', $data);
         return $insert;
     }
 

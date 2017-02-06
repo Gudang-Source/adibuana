@@ -15,7 +15,7 @@
 					</div>
 
 					<div class="panel-body">
-                <form class="form-horizontal" method="post" action="<?php echo base_url(); ?>admin/facility_detail/update" enctype="multipart/form-data">
+                <form class="form-horizontal" method="post" action="<?php echo base_url() ?>admin/facility_detail/update/<?php echo $fasilitas->id ?>" enctype="multipart/form-data">
                   <div class="box-body">
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Facility*</label>
@@ -61,7 +61,7 @@
                   </div><!-- /.box-body -->
                   <div class="box-footer">
                     <div class="text-right">
-                      <a href="<?php echo base_url(); ?>admin/fakultas_tipe"><button type="button" class="btn btn-default">Back</button></a>
+                      <a href="<?php echo base_url(); ?>admin/facility_detail"><button type="button" class="btn btn-default">Back</button></a>
                       <button type="submit" class="btn btn-primary">Submit form <i class="icon-arrow-right14 position-right"></i></button>
                     </div>
                   </div><!-- /.box-footer -->

@@ -15,7 +15,7 @@
 					</div>
 
 					<div class="panel-body">
-                <form class="form-horizontal">
+                <form class="form-horizontal" method="post" action="<?php echo base_url(); ?>admin/news_type/insert" enctype="multipart/form-data">
                   <div class="box-body">
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Type (Indonesian)*</label>

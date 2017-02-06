@@ -180,8 +180,8 @@
                     $this->template_admin->display('admin/content/indexfasilitasdetil', $data);
                     break;
                 case 'view':
-                    $data['fasilitas'] = $this->facility_model->get_by_id($id);
-                    $this->template_admin->display('admin/content/viewfasilitas',$data);
+                    $data['fasilitas'] = $this->facility_model->get_detail_by_id($id);
+                    $this->template_admin->display('admin/content/viewfasilitasdetail',$data);
                     break;
                 case 'add':
                     $data['fasilitas'] = $this->facility_model->get_all() ;
@@ -208,7 +208,7 @@
                     if ($update) {
                         redirect(base_url().'admin/facility_detail');
                     }else{
-                        redirect(base_url().'admin/facility_detail/add');
+                        redirect(base_url().'admin/facility_detail/edit/'.$id);
                     }
                     break;
                 case 'delete':
@@ -535,7 +535,7 @@
                     if($insert){
                         redirect(base_url().'admin/news_type');
                     }else{
-                        redirect(base_url().'admin/news_type/edit/'.$id);
+                        redirect(base_url().'admin/news_type/add/');
                     }
                     break;
                 case 'update':
@@ -870,8 +870,9 @@
                     $this->template_admin->display('admin/content/viewgallery', $data);
                     break;
                 case 'insert':
-                    $pict = $this->image_upload->upload_image('assets/images/gallery/', $_FILES, 'pic', 'pict_');
-                    $thumb = $this->image_upload->upload_image('assets/images/gallery/', $_FILES, 'thumb', 'thumb_');
+                    $id_katagori = $this->input->post('katagori');
+                    $pict = $this->image_upload->upload_image('assets/images/gallery/'.$id_katagori.'/', $_FILES, 'pic', 'pict_');
+                    $thumb = $this->image_upload->upload_image('assets/images/gallery/'.$id_katagori.'/', $_FILES, 'thumb', 'thumb_');
 
                     $insert = $this->gallery_model->insert($this->input->post(), $pict['filename'], $thumb['filename']);
                     if ($insert) {
@@ -882,8 +883,8 @@
                     break;
                 case 'update':
                     $gal = $this->gallery_model->get_gallery_by_id($id);
-                    $pict = $this->image_upload->update_image('assets/images/gallery/', $_FILES, 'pic', 'pict_', $gal->picture);
-                    $thumb = $this->image_upload->update_image('assets/images/gallery/', $_FILES, 'pic', 'thumb_', $gal->thumb);
+                    $pict = $this->image_upload->update_image('assets/images/gallery/'.$gal->id_cat.'/', $_FILES, 'pic', 'pict_', $gal->picture);
+                    $thumb = $this->image_upload->update_image('assets/images/gallery/'.$gal->id_cat.'/', $_FILES, 'pic', 'thumb_', $gal->thumb);
                     $update = $this->gallery_model->update($id, $this->input->post(), $pict['filename'], $thumb['filename']);
                     if ($update) {
                         redirect(base_url().'admin/gallery');

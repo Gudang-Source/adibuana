@@ -59,13 +59,18 @@
 
 
 									<div class="form-group">
-										<label class="col-lg-3 control-label">Picture</label>
+										<label class="col-lg-3 control-label">Thumbnail</label>
 										<div class="col-lg-9">
-											<img src="<?php echo base_url() ?>assets/images/gallery/<?php echo $gallery->id_cat ?>/<?php echo $gallery->picture ?>">
+											<img src="<?php echo base_url() ?>assets/images/gallery/<?php echo $gallery->id_cat ?>/<?php echo $gallery->thumb ?>">
 										</div>
 									</div>
 								</div>
 							</div>
+							<div class="box-footer">
+	                            <div class="text-right">
+		                            <a href="<?php echo base_url(); ?>admin/gallery"><button type="button" class="btn btn-default">Back</button></a>
+	                            </div>
+	                        </div>
 						</form>
 						<!-- /static mode -->
 

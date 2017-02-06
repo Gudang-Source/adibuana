@@ -57,7 +57,6 @@
 										<li><a href="<?php echo base_url(); ?>admin/unit">Unit</a></li>
 										<li><a href="<?php echo base_url(); ?>admin/facility">Facility Management</a></li>
 										<li><a href="<?php echo base_url(); ?>admin/facility_detail">Detail Facility Management</a></li>
-										<li><a href="<?php echo base_url(); ?>admin/link">Link Management</a></li>
                     					<li><a href="<?php echo base_url(); ?>admin/kkn">KKN Online</a></li>
 									</ul>
 								</li>

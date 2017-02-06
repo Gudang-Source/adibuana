@@ -81,19 +81,24 @@
                                     <div class="form-group">
 										<label class="col-lg-3 control-label">Thumb</label>
 										<div class="col-lg-4">
-											<img class="img-responsive" src="http://unipasby.ac.id/css/data_images/facility/<?php echo $fasilitas->thumb ?>" alt="">
+											<img class="img-responsive" src="<?php echo base_url() ?>assets/images/facility/<?php echo $fasilitas->thumb ?>" alt="">
 										</div>
 									</div>
 
                                     <div class="form-group">
 										<label class="col-lg-3 control-label">Picture</label>
 										<div class="col-lg-5">
-											<img class="img-responsive" src="http://unipasby.ac.id/css/data_images/facility/<?php echo $fasilitas->picture ?>" alt="">
+											<img class="img-responsive" src="<?php echo base_url() ?>assets/images/facility/<?php echo $fasilitas->picture ?>" alt="">
 
 										</div>
 									</div>
 								</div>
 							</div>
+							<div class="box-footer">
+	                            <div class="text-right">
+		                            <a href="<?php echo base_url(); ?>admin/facility"><button type="button" class="btn btn-default">Back</button></a>
+	                            </div>
+	                        </div>
 						</form>
 						<!-- /static mode -->
 

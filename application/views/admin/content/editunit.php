@@ -51,6 +51,7 @@
                         </div><!-- /.box-body -->
                         <div class="box-footer">
                             <div class="text-right">
+                            <a href="<?php echo base_url(); ?>admin/unit"><button type="button" class="btn btn-default">Back</button></a>
                             <button type="submit" class="btn btn-primary">Submit form <i class="icon-arrow-right14 position-right"></i></button>
                             </div>
                         </div><!-- /.box-footer -->

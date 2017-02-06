@@ -57,8 +57,27 @@
 										</div>
 									</div>
 
+									<div class="form-group">
+										<label class="col-lg-3 control-label">Thumb</label>
+										<div class="col-lg-9">
+											<img src="<?php echo base_url() ?>assets/images/news/<?php echo $news->thumb ?>">
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-3 control-label">Picture</label>
+										<div class="col-lg-9">
+											<img src="<?php echo base_url() ?>assets/images/news/<?php echo $news->picture ?>">
+										</div>
+									</div>
+
 								</div>
 							</div>
+							<div class="box-footer">
+	                            <div class="text-right">
+		                            <a href="<?php echo base_url(); ?>admin/news"><button type="button" class="btn btn-default">Back</button></a>
+	                            </div>
+	                        </div>
 						</form>
 						<!-- /static mode -->
 

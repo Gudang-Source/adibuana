@@ -57,6 +57,11 @@
 									</div>
 								</div>
 							</div>
+							<div class="box-footer">
+	                            <div class="text-right">
+		                            <a href="<?php echo base_url(); ?>admin/sekilas"><button type="button" class="btn btn-default">Back</button></a>
+	                            </div>
+	                        </div>
 						</form>
 						<!-- /static mode -->
 

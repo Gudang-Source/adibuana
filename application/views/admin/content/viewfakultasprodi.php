@@ -50,9 +50,56 @@
 										</div>
 									</div>
 
+									<div class="form-group">
+										<label class="col-lg-3 control-label">Facility (Indonesia)</label>
+										<div class="col-lg-9">
+											<div class="form-control-static"><?php echo $jurusan->facility_ina ?></div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-3 control-label">Facility (English)</label>
+										<div class="col-lg-9">
+											<div class="form-control-static"><?php echo $jurusan->facility_eng ?></div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-3 control-label">Cooperation (Indonesia)</label>
+										<div class="col-lg-9">
+											<div class="form-control-static"><?php echo $jurusan->coo_ina ?></div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-3 control-label">Cooperation (English)</label>
+										<div class="col-lg-9">
+											<div class="form-control-static"><?php echo $jurusan->coo_eng ?></div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-3 control-label">Prospect (Indonesia)</label>
+										<div class="col-lg-9">
+											<div class="form-control-static"><?php echo $jurusan->plulus_ina ?></div>
+										</div>
+									</div>
+
+									<div class="form-group">
+										<label class="col-lg-3 control-label">Prospect (English)</label>
+										<div class="col-lg-9">
+											<div class="form-control-static"><?php echo $jurusan->plulus_eng ?></div>
+										</div>
+									</div>
+
                                      
 								</div>
 							</div>
+							<div class="box-footer">
+	                            <div class="text-right">
+		                            <a href="<?php echo base_url(); ?>admin/faculty_course"><button type="button" class="btn btn-default">Back</button></a>
+	                            </div>
+	                        </div>
 						</form>
 						<!-- /static mode -->
 

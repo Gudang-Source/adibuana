@@ -10,7 +10,7 @@
 						<form class="form-horizontal" action="#">
 							<div class="panel panel-flat">
 								<div class="panel-heading">
-									<h5 class="panel-title">View <?php echo $unit->title_ina ?></h5>
+									<h5 class="panel-title">View <?php echo $fasilitas->title_ina ?></h5>
 									<div class="heading-elements">
 										<ul class="icons-list">
 					                		<li><a data-action="collapse"></a></li>
@@ -21,45 +21,40 @@
 								</div>
 
 								<div class="panel-body">
+									
 									<div class="form-group">
-										<label class="col-lg-3 control-label">Page</label>
+										<label class="col-lg-3 control-label">Facility</label>
 										<div class="col-lg-9">
-											<div class="form-control-static"><?php echo $unit->page ?></div>
+											<div class="form-control-static"><?php echo $fasilitas->nama_fasilitas ?></div>
 										</div>
 									</div>
 
                                     <div class="form-group">
 										<label class="col-lg-3 control-label">Title Ina</label>
 										<div class="col-lg-9">
-											<div class="form-control-static"><?php echo $unit->title_ina ?></div>
+											<div class="form-control-static"><?php echo $fasilitas->title_ina ?></div>
 										</div>
 									</div>
 
                                     <div class="form-group">
 										<label class="col-lg-3 control-label">Title Eng</label>
 										<div class="col-lg-9">
-											<div class="form-control-static"><?php echo $unit->title_eng ?></div>
+											<div class="form-control-static"><?php echo $fasilitas->title_eng ?></div>
 										</div>
 									</div>
 
                                     <div class="form-group">
-										<label class="col-lg-3 control-label">Content Ina</label>
-										<div class="col-lg-9">
-											<div class="form-control-static"><?php echo $unit->content_ina ?></div>
-										</div>
-									</div>
+										<label class="col-lg-3 control-label">Picture</label>
+										<div class="col-lg-5">
+											<img class="img-responsive" src="<?php echo base_url() ?>assets/images/facility/<?php echo $fasilitas->picture ?>" alt="">
 
-                                    <div class="form-group">
-										<label class="col-lg-3 control-label">Content Eng</label>
-										<div class="col-lg-9">
-											<div class="form-control-static"><?php echo $unit->content_eng ?></div>
 										</div>
 									</div>
 								</div>
 							</div>
 							<div class="box-footer">
 	                            <div class="text-right">
-		                            <a href="<?php echo base_url(); ?>admin/unit"><button type="button" class="btn btn-default">Back</button></a>
+		                            <a href="<?php echo base_url(); ?>admin/facility_detail"><button type="button" class="btn btn-default">Back</button></a>
 	                            </div>
 	                        </div>
 						</form>
