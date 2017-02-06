@@ -36,15 +36,14 @@
             );
 		    $this->ci->load->library('upload');
             $this->ci->upload->initialize($config);
-            if($old_file_name != "" && file_exists($path.$old_file_name)){
-                unlink($path.$old_file_name);
-            }
-
 		    $uploading = $this->ci->upload->do_upload($index);
             if($uploading){
+                if($old_file_name != "" && file_exists($path.$old_file_name)){
+                    unlink($path.$old_file_name);
+                }
                 return ['success'=>true, 'filename'=>$new_file_name];
             }else{
-                return ['success'=>false, 'filename'=>$old_file_name];
+                return ['success'=>false, 'filename'=>''];
             }
         }
 

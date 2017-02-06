@@ -1,6 +1,26 @@
 <!-- Main content -->
 			<div class="content-wrapper">
 
+                 <?php 
+                    if($this->session->flashdata('success')){
+                        ?>
+                        <div class="alert bg-success alert-styled-left">
+                            <button type="button" class="close" data-dismiss="alert"><span>×</span><span class="sr-only">Close</span></button>
+                            <span class="text-semibold">Berhasil!</span> <?php echo $this->session->flashdata('success'); ?>
+                        </div>
+                        <?php
+                    }
+
+                    if($this->session->flashdata('warning')){
+                        ?>
+                        <div class="alert bg-warning alert-styled-left">
+                            <button type="button" class="close" data-dismiss="alert"><span>×</span><span class="sr-only">Close</span></button>
+                            <span class="text-semibold">Perhatian!</span> <?php echo $this->session->flashdata('warning'); ?>
+                        </div>
+                        <?php
+                    }
+                ?>
+                
 				<!-- Basic datatable -->
 				<div class="panel panel-flat">
 					<div class="panel-heading">

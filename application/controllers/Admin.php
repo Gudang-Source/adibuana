@@ -440,20 +440,29 @@
                 case 'insert':
                     $insert = $this->faculty_model->insert_course($this->input->post());
                     if ($insert) {
-                        redirect(base_url().'admin/faculty_course');
+                        $this->session->set_flashdata('success', 'Sukses Menambah Data');
+                    }else{
+                        $this->session->set_flashdata('warning', 'Gagal Menambah Data');
                     }
+                        redirect(base_url().'admin/faculty_course');
                     break;
                 case 'update':
                     $update = $this->faculty_model->update_course($id, $this->input->post());
                     if ($update) {
-                        redirect(base_url().'admin/faculty_course');
+                        $this->session->set_flashdata('success', 'Sukses Merubah Data');
+                    }else{
+                        $this->session->set_flashdata('warning', 'Gagal Merubah Data');
                     }
+                    redirect(base_url().'admin/faculty_course');
                     break;
                 case 'delete':
                     $delete = $this->faculty_model->delete_course($id);
                     if ($delete) {
-                        redirect(base_url().'admin/faculty_course');
+                        $this->session->set_flashdata('success', 'Sukses Menghapus Data');
+                    }else{
+                        $this->session->set_flashdata('warning', 'Gagal Menghapus Data');
                     }
+                    redirect(base_url().'admin/faculty_course');
                     break;
                 default:
                     # code...
@@ -533,24 +542,29 @@
                 case 'insert':
                     $insert = $this->news_model->insert_type($this->input->post());
                     if($insert){
-                        redirect(base_url().'admin/news_type');
+                        $this->session->set_flashdata('success', 'Sukses Menambah Data');
                     }else{
-                        redirect(base_url().'admin/news_type/add/');
+                        $this->session->set_flashdata('warning', 'Gagal Menambah Data'); 
                     }
+                    redirect(base_url().'admin/news_type');
                     break;
                 case 'update':
                     $update = $this->news_model->update_type($id, $this->input->post());
                     if($update){
-                        redirect(base_url().'admin/news_type');
+                        $this->session->set_flashdata('success', 'Sukses Merubah Data');
                     }else{
-                        redirect(base_url().'admin/news_type/edit/'.$id);
+                        $this->session->set_flashdata('warning', 'Gagal Merubah Data');
                     }
+                    redirect(base_url().'admin/news_type');
                     break;
                 case 'delete':
                     $delete = $this->news_model->delete_type($id);
                     if ($delete) {
-                        redirect(base_url().'admin/news_type');
+                        $this->session->set_flashdata('success', 'Sukses Menghapus Data');
+                    }else{
+                        $this->session->set_flashdata('warning', 'Gagal Menghapus Data');
                     }
+                    redirect(base_url().'admin/news_type');
                     break;
                 default:
                     # code...
@@ -671,10 +685,11 @@
 
                     $insert = $this->event_model->insert($this->input->post(), $pict['filename'], $thumb['filename'], $banner['filename'], $file['filename']);
                     if($insert){
-                        redirect(base_url().'admin/event');
+                        $this->session->set_flashdata('success', 'Sukses Menambah Data');
                     }else{
-                        redirect(base_url().'admin/event/add');
+                        $this->session->set_flashdata('warning', 'Gagal Menambah Data');
                     }
+                    redirect(base_url().'admin/event');
                     break;  
                 case 'update':
                     $event = $this->event_model->get_event_by_id($id);
@@ -687,10 +702,11 @@
 
                     $update = $this->event_model->update($id, $this->input->post(), $pict['filename'], $thumb['filename'], $banner['filename'], $file['filename']);
                     if($update){
-                        redirect(base_url().'admin/event');
+                        $this->session->set_flashdata('success', 'Sukses Merubah Data');
                     }else{
-                        redirect(base_url().'admin/event/edit/'.$id);
+                        $this->session->set_flashdata('warning', 'Gagal Merubah Data');
                     }
+                    redirect(base_url().'admin/event');
                     break;
                 case 'delete':
                     $event = $this->event_model->get_event_by_id($id);
@@ -700,8 +716,11 @@
                         unlink('assets/images/event/'.$event->thumb);
                         unlink('assets/images/event/'.$event->bpict);
                         unlink('assets/images/event/'.$event->file);
-                        redirect(base_url().'admin/event');
+                        $this->session->set_flashdata('success', 'Sukses Menghapus Data');
+                    }else{
+                        $this->session->set_flashdata('warning', 'Gagal Menghapus Data');   
                     }
+                    redirect(base_url().'admin/event');
                     break;
                 default:
                     # code...
@@ -816,12 +835,13 @@
                     break;
                 case 'insert':
                     $pict = $this->image_upload->upload_image('assets/images/gallery/', $_FILES, 'pic', 'gallery_cat_');
-                    $insert = $this->gallery_model->insert_katagori($this->input->post(), $pict['filename']);
+                    $insert = $this->gallery_model->insert_kategori($this->input->post(), $pict['filename']);
                     if ($insert) {
-                        redirect(base_url().'admin/gallery_cat');
+                        $this->session->set_flashdata('success', 'Sukses Menambah Data');
                     }else{
-                        redirect(base_url().'admin/gallery_cat/add');
+                        $this->session->set_flashdata('warning', 'Gagal Menambah Data');
                     }
+                    redirect(base_url().'admin/gallery_cat');
                     break;
                 case 'update':
                     $katagori = $this->gallery_model->get_cat_by_id($id);
@@ -829,18 +849,22 @@
                     $pict = $this->image_upload->update_image('assets/images/gallery/', $_FILES, 'pic', 'gallery_cat_', $katagori->thumb);
                     $update = $this->gallery_model->update_katagori($id,$this->input->post(), $pict['filename']);
                     if ($update) {
-                        redirect(base_url().'admin/gallery_cat');
+                        $this->session->set_flashdata('success', 'Sukses Merubah Data');
                     }else{
-                        redirect(base_url().'admin/gallery_cat/edit');
+                        $this->session->set_flashdata('warning', 'Gagal Merubah Data');
                     }
+                    redirect(base_url().'admin/gallery_cat');
                     break;
                 case 'delete':
                     $katagori = $this->gallery_model->get_cat_by_id($id);
                     $delete = $this->gallery_model->delete_katagori($id);
                     if ($delete) {
                         unlink('assets/images/gallery'.$katagori->thumb);
-                        redirect(base_url().'admin/gallery_cat');
+                        $this->session->set_flashdata('success', 'Sukses Menghapus Data');
+                    }else{
+                        $this->session->set_flashdata('warning', 'Sukses Menghapus Data');
                     }
+                    redirect(base_url().'admin/gallery_cat');
                     break;
                 default:
                     # code...

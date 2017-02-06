@@ -93,7 +93,7 @@
                   <label class="col-lg-2 control-label">Banner</label>
                   <div class="col-lg-4">
                     <img style="width:200px;" src="<?php echo base_url(); ?>assets/images/event/<?php echo $event->bpict ?>" />
-                    <input class="img-thumbnail" name="banner" type="file" class="file-styled">
+                    <input name="banner" type="file" class="file-styled">
                     <span class="help-block">Format : jpg, jpeg, png. max size [ 620 x 290 pixels ]</span>
                   </div>
                 </div>
