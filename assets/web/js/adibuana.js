@@ -3,6 +3,8 @@ window.onload = function(){
         get_berita();
     }else if(nama_halaman == 'kegiatan'){
         get_kegiatan();
+    }else if(nama_halaman == 'karir'){
+        get_karir();
     }
 }
 $(document).ajaxStop($.unblockUI);
@@ -36,6 +38,21 @@ $.ajax({
     });   
 }
 
+function get_karir(){
+$.ajax({
+        method:'get',
+        url:base_url+'karier/',
+        data:{page:hal_karir},
+        beforeSend:function(){
+            $.blockUI({ message: $('.message-load-content') }); 
+        },
+        success:function(result){
+            $('#karir').html(result);
+            pagination_button();
+        }
+    });   
+}
+
 function pagination_button(){
     $('ul.pagination li a').on('click', function(e){
         e.preventDefault();
@@ -46,6 +63,9 @@ function pagination_button(){
         }else if(nama_halaman == 'kegiatan'){
             hal_kegiatan = $(this).attr('nilai');
             get_kegiatan();
+        }else if(nama_halaman == 'karir'){
+            hal_karir = $(this).attr('nilai');
+            get_karir();
         }
         window.history.replaceState("Berita", "Berita", $(this).attr('href'));
             $('html, body').animate({

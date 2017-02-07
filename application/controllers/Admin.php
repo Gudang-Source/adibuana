@@ -659,9 +659,11 @@
 
         function event($aksi='index', $id=null){
             check_login();
+
             $this->load->model('EventModel', 'event_model');
             switch ($aksi) {
                 case 'index':
+                    $this->check_access('EVE_DISP');
                     $data['event'] = $this->event_model->get_event();
                     $this->template_admin->display('admin/content/indexevent', $data);
                     break;
@@ -677,6 +679,7 @@
                     $this->template_admin->display('admin/content/viewevent', $data);
                     break;
                 case 'insert':
+                    $this->check_access('EVE_CRT');
                     $pict = $this->image_upload->upload_image('assets/images/event/', $_FILES, 'pic', 'pict_');
                     $thumb = $this->image_upload->upload_image('assets/images/event/', $_FILES, 'thumb', 'thumb_');
                     $banner = $this->image_upload->upload_image('assets/images/event/', $_FILES, 'banner', 'banner_');
@@ -692,6 +695,7 @@
                     redirect(base_url().'admin/event');
                     break;  
                 case 'update':
+                    $this->check_access('EVE_UPDT');
                     $event = $this->event_model->get_event_by_id($id);
                    
                     $pict = $this->image_upload->update_image('assets/images/event/', $_FILES, 'pic', 'pict_', $event->picture);
@@ -709,6 +713,7 @@
                     redirect(base_url().'admin/event');
                     break;
                 case 'delete':
+                    $this->check_access('EVE_DEL');
                     $event = $this->event_model->get_event_by_id($id);
                     $delete = $this->event_model->delete($id);
                     if($delete){
@@ -1047,6 +1052,20 @@
                 }
             }else{
                 echo "Not Allowed";
+            }
+        }
+
+        function check_access($access){
+            $status_access = FALSE;
+            $user = $this->db->get_where('adi_user', ['username'=>$this->session->userdata('username')])->row();
+            $application = explode(PHP_EOL, $user->application);
+            foreach ($application as $appl) {
+                if($appl == $access){
+                    $status_access = TRUE;
+                }
+            }
+            if(!$status_access){
+                die($this->load->view('admin/content/error_403', '', TRUE));
             }
         }
 

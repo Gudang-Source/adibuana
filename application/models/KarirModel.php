@@ -16,6 +16,16 @@
             return $page;
 
          }
+         function get_karir($limit, $offset){
+            $karir = $this->db->select('*')
+                    ->from('adi_career')
+                    ->order_by('post_date', 'DESC')
+                    ->limit($limit)
+                    ->offset($offset);
+            $karir = $karir->get()->result();
+            return $karir;
+
+         }
          function insert(){
 
          }
