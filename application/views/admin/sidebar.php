@@ -46,7 +46,7 @@
 								<li>
 									<a href="#"><i class="icon-image3"></i> <span>Header And Banner</span></a>
 									<ul>
-										<li><a href="../../layout_1/LTR/index.html" id="layout1">Layout 1</a></li>
+										<li><a href="<?php echo base_url(); ?>admin/Slider" id="layout1">Slider</a></li>
 										<li><a href="../../layout_2/LTR/index.html" id="layout2">Layout 2</a></li>
 									</ul>
 								</li>

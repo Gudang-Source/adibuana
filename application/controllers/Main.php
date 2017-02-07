@@ -19,10 +19,12 @@
             $data['hal'] = 'index';
             $this->load->model('NewsModel', 'news_model');
             $this->load->model('EventModel', 'event_model');
+            $this->load->model('SliderModel', 'slider_model');
 
             $data['berita_terbaru'] = $this->news_model->get_berita_terbaru();
             $data['pengumuman_terbaru'] = $this->news_model->get_pengumuman_terbaru();
             $data['agenda_terbaru'] = $this->event_model->get_agenda_terbaru();
+            $data['slider'] = $this->slider_model->get_all();
 
             $data['kategori_berita'] = $this->news_model->get_news_type_with_content();
             $this->template_website->display('web/content/index', $data);

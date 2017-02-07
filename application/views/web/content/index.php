@@ -3,22 +3,17 @@
 <section class="slider">
    <div class="flexslider">
      <ul class="slides">
-       <li>
-         <img style="height:420px; object-fit:cover" src="assets/images/slider1.jpg" />
-        <p class="flex-caption">Adventurer Cheesecake Brownie</p>
-       </li>
-       <li>
-         <img style="height:420px; object-fit:cover" src="assets/images/slider2.jpg" />
-        <p class="flex-caption">Adventurer Cheesecake Brownie</p>
-       </li>
-       <li>
-         <img style="height:420px; object-fit:cover" src="assets/images/slider3.jpg" />
-          <p class="flex-caption">Adventurer Cheesecake Brownie</p>
-       </li>
-       <li>
-         <img style="height:420px; object-fit:cover" src="assets/images/slider4.png" />
-        <p class="flex-caption">Adventurer Cheesecake Brownie</p>
-       </li>
+      <?php
+        foreach ($slider as $q_slider) {
+         ?>
+            <li>
+              <img style="height:420px; object-fit:cover" src="<?php echo base_url(); ?>assets/images/slider/<?php echo$q_slider->picture ?>" />
+              <p class="flex-caption"><?php echo $q_slider->judul_slider ?></p>
+            </li>
+         <?php
+        }
+      ?>
+       
      </ul>
    </div>
  </section>
