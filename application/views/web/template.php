@@ -258,22 +258,22 @@
                           <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('ekstra_blog') ?></a>
                             <ul>
                                 <li>
-                                    <a href="#"><?php echo $this->lang->line('blog_alumni') ?></a>
+                                    <a href="<?php echo base_url() ?>/blog/1"><?php echo $this->lang->line('blog_alumni') ?></a>
                                 </li>
                                 <li>
-                                    <a href="#"><?php echo $this->lang->line('blog_dosen') ?></a>
+                                    <a href="<?php echo base_url() ?>/blog/2"><?php echo $this->lang->line('blog_dosen') ?></a>
                                 </li>
                                 <li>
-                                    <a href="#"><?php echo $this->lang->line('blog_mhs') ?></a>
+                                    <a href="<?php echo base_url() ?>/blog/3"><?php echo $this->lang->line('blog_mhs') ?></a>
                                 </li>
                                 <li>
-                                    <a href="#"><?php echo $this->lang->line('blog_ukm') ?></a>
+                                    <a href="<?php echo base_url() ?>/blog/5"><?php echo $this->lang->line('blog_ukm') ?></a>
                                 </li>
                                 <li>
-                                    <a href="#"><?php echo $this->lang->line('blog_referensi') ?></a>
+                                    <a href="<?php echo base_url() ?>/blog/6"><?php echo $this->lang->line('blog_referensi') ?></a>
                                 </li>
                                 <li>
-                                    <a href="#"><?php echo $this->lang->line('blog_heatlh') ?></a>
+                                    <a href="<?php echo base_url() ?>/blog/7"><?php echo $this->lang->line('blog_heatlh') ?></a>
                                 </li>
                             </ul>
                           </li>

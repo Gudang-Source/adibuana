@@ -131,14 +131,18 @@
                 $this->load->view('web/content/ajax/karier', $data);
             }else{
                 $this->template_website->display('web/content/karier', $data);
-            }
-
-            
-           
+            }  
         }
-        function blog(){
 
+        function blog($id){
+            $data = $this->data;
+            $this->load->model('BlogModel', 'blog_model');
+            $data['blog'] = $this->blog_model->get_blog_by_type($id);
+            $data['type'] = $this->blog_model->get_blog_type();
+            $data['type_blog'] = $this->blog_model->get_type_by_id($id);
+            $this->template_website->display('web/content/blog', $data);
         }
+
         function galeri(){
             $data = $this->data;
             $this->load->model('GalleryModel', 'gallery_model');

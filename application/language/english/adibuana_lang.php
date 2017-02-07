@@ -96,3 +96,4 @@
     $lang['alamat'] = 'Address';
     $lang['contact'] = 'Contact Us';
     $lang['form_kkn'] = 'Form Community Service Program';
+    $lang['blog_lain'] = 'OTHER BLOG';

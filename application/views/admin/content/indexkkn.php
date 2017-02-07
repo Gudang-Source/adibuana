@@ -4,7 +4,7 @@
 				<!-- Basic datatable -->
 				<div class="panel panel-flat">
 					<div class="panel-heading">
-						<h5 class="panel-title">Data KKN Online <span><a class="btn btn-primary" href="<?php echo base_url(); ?>admin/facility/add">Tambah</a></span> </h5>
+						<h5 class="panel-title">Data KKN Online</h5>
 					</div>
 
 					

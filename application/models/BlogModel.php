@@ -42,6 +42,14 @@ class BlogModel extends CI_Model
 		return $blog;
 	}
 
+	function get_blog_by_type($id){
+		$blog = $this->db->select('*')
+						->from('adi_blog')
+						->where('id_type', $id);
+		$blog = $blog->get()->result();
+		return $blog;
+	}
+
 	function insert_tipe($tipe){
 		$data = [
 			'title_ina'=>$tipe['type_ina'],

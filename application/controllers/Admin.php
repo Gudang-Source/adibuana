@@ -20,6 +20,7 @@
             $this->load->model('PageModel', 'page_model');
             switch ($aksi) {
                 case 'index':
+                    $this->check_access('PGE_DISP');
                     $data['sekilas'] = $this->page_model->get_page('E_02');
                     $this->template_admin->display('admin/content/indexsekilas',$data);
                     break;
@@ -35,6 +36,7 @@
                     $this->template_admin->display('admin/content/editsekilas',$data);
                     break;
                 case 'insert':
+                    $this->check_access('PGE_CRT');
                     $data = $this->page_model->insert($this->input->post());
                     if($data['success']){
                         $this->session->set_flashdata('success', 'Sukses Menambah Data');
@@ -44,6 +46,7 @@
                     redirect(base_url().'admin/sekilas');
                     break;
                 case 'update':
+                    $this->check_access('PGE_UPDT');
                     $data = $this->page_model->update($id, $this->input->post());
                     if($data['success']){
                         $this->session->set_flashdata('success', 'Sukses Merubah Data');
@@ -53,6 +56,7 @@
                     redirect(base_url().'admin/sekilas');
                     break;
                 case 'delete':
+                    $this->check_access('PGE_DEL');
                     $delete = $this->page_model->delete($id);
                     if ($delete) {
                         redirect(base_url().'admin/sekilas');
@@ -69,6 +73,7 @@
             $this->load->model('PageModel', 'page_model');
             switch ($aksi) {
                 case 'index':
+                    $this->check_access('PGE_DISP');
                     $data['unit'] = $this->page_model->get_page('E_12');
                     $this->template_admin->display('admin/content/indexunit', $data);
                     break;
@@ -84,6 +89,7 @@
                     $this->template_admin->display('admin/content/editunit',$data);
                     break;
                 case 'insert':
+                    $this->check_access('PGE_CRT');
                     $data = $this->page_model->insert($this->input->post());
                     if($data['success']){
                         $this->session->set_flashdata('success', 'Sukses Menambah Data');
@@ -94,6 +100,7 @@
                     redirect(base_url().'admin/unit');
                     break;
                 case 'update':
+                    $this->check_access('PGE_UPDT');
                     $data = $this->page_model->update($id, $this->input->post());
                     if($data['success']){
                         $this->session->set_flashdata('success', 'Sukses Merubah Data');
@@ -103,6 +110,7 @@
                     redirect(base_url().'admin/unit');
                     break;
                 case 'delete':
+                    $this->check_access('PGE_DEL');
                     $delete = $this->page_model->delete($id);
                     if ($delete) {
                         $this->session->set_flashdata('success', 'Sukses Menghapus Data');
@@ -122,6 +130,7 @@
             $this->load->model('FacilityModel', 'facility_model');
             switch ($aksi) {
                 case 'index':
+                    $this->check_access('FCL_DISP');
                     $data['fasilitas'] = $this->facility_model->get_all();
                     $this->template_admin->display('admin/content/indexfasilitas', $data);
                     break;
@@ -137,6 +146,7 @@
                     $this->template_admin->display('admin/content/editfasilitas',$data);
                     break;
                 case 'insert':
+                    $this->check_access('FCL_CRT');
                     $data = $this->facility_model->insert($this->input->post());
                     if($data['success']){
                         $this->session->set_flashdata('success', 'Sukses Menambah Data');
@@ -147,6 +157,7 @@
                     redirect(base_url().'admin/facility');
                     break;
                  case 'update':
+                    $this->check_access('FCL_UPDT');
                     $data = $this->facility_model->update($id, $this->input->post());
                    if($data['success']){
                         $this->session->set_flashdata('success', 'Sukses Merubah Data');
@@ -156,6 +167,7 @@
                     redirect(base_url().'admin/facility');
                     break;
                 case 'delete':
+                    $this->check_access('FCL_DEL');
                     $delete = $this->facility_model->delete($id);
                     if ($delete) {
                         $this->session->set_flashdata('success', 'Sukses Menghapus Data');
@@ -176,6 +188,7 @@
             $this->load->model('FacilityModel', 'facility_model');
             switch ($aksi) {
                 case 'index':
+                    $this->check_access('FCL_DISP');
                     $data['fasilitasdetil'] = $this->facility_model->get_detil_fasilitas();
                     $this->template_admin->display('admin/content/indexfasilitasdetil', $data);
                     break;
@@ -192,6 +205,7 @@
                     $this->template_admin->display('admin/content/editfasilitasdetail',$data);
                     break;
                 case 'insert':
+                    $this->check_access('FCL_CRT');
                     $pict = $this->image_upload->upload_image('assets/images/facility/', $_FILES, 'pic', 'pict_');
                     $insert = $this->page_model->insert_detail($this->input->post(), $pict['filename']);
                     if ($insert) {
@@ -201,6 +215,7 @@
                     }
                     break;
                 case 'update':
+                    $this->check_access('FCL_UPDT');
                     $detail = $this->facility_model->get_detail_by_id($id);
                    
                     $pict = $this->image_upload->update_image('assets/images/facility/', $_FILES, 'pic', 'pict_', $detail->picture);
@@ -212,6 +227,7 @@
                     }
                     break;
                 case 'delete':
+                    $this->check_access('FCL_DEL');
                     $detail = $this->facility_model->get_detail_by_id($id);
                     $delete = $this->facility_model->delete_detail($id);
                     if ($delete) {
@@ -231,6 +247,7 @@
             $this->load->model('KknModel', 'kkn_model');
             switch ($aksi) {
                 case 'index':
+                    $this->check_access('KKN_DISP');
                     $data['kkn'] = $this->kkn_model->get_all();
                     $this->template_admin->display('admin/content/indexkkn', $data);
                     break;
@@ -264,6 +281,7 @@
             $this->load->model('FacultyModel', 'faculty_model');
             switch ($aksi) {
                 case 'index':
+                    $this->check_access('FCT_DISP');
                     $data['area'] = $this->faculty_model->get_fakultas_area();
                     $this->template_admin->display('admin/content/indexfakultasarea', $data);
                     break;
@@ -279,6 +297,7 @@
                     $this->template_admin->display('admin/content/viewfakultasarea', $data);
                     break;
                 case 'insert':
+                    $this->check_access('FCT_CRT');
                     $insert = $this->faculty_model->insert_area($this->input->post());
                     if ($insert) {
                         $this->session->set_flashdata('success', 'Sukses Menambah Data');
@@ -288,6 +307,7 @@
                     redirect(base_url().'admin/fakultas_area');
                     break;
                 case 'update':
+                    $this->check_access('FCT_UPDT');
                     $update = $this->faculty_model->update_area($id, $this->input->post());
                     if ($update) {
                         $this->session->set_flashdata('success', 'Sukses Merubah Data');
@@ -297,6 +317,7 @@
                     redirect(base_url().'admin/fakultas_area');
                     break;
                 case 'delete':
+                    $this->check_access('FCT_DEL');
                     $delete = $this->faculty_model->delete_area($id);
                     if ($delete) {
                         $this->session->set_flashdata('success', 'Sukses Menghapus Data');
@@ -316,6 +337,7 @@
             $this->load->model('FacultyModel', 'faculty_model');
             switch ($aksi) {
                 case 'index':
+                    $this->check_access('FCT_DISP');
                     $data['tipe'] = $this->faculty_model->get_fakultas_tipe();
                     $this->template_admin->display('admin/content/indexfakultastipe', $data);
                     break;
@@ -331,6 +353,7 @@
                     $this->template_admin->display('admin/content/viewfakultastipe', $data);
                     break;
                 case 'insert':
+                    $this->check_access('FCT_CRT');
                     $insert = $this->faculty_model->insert_tipe($this->input->post());
                     if ($insert) {
                          $this->session->set_flashdata('success', 'Sukses Menambah Data');
@@ -340,6 +363,7 @@
                     redirect(base_url().'admin/fakultas_tipe');
                     break;
                 case 'update':
+                    $this->check_access('FCT_UPDT');
                     $update = $this->faculty_model->update_tipe($id, $this->input->post());
                     if ($update) {
                          $this->session->set_flashdata('success', 'Sukses Merubah Data');
@@ -349,6 +373,7 @@
                     redirect(base_url().'admin/fakultas_tipe');
                     break;
                 case 'delete':
+                    $this->check_access('FCT_DEL');
                     $delete = $this->faculty_model->delete_tipe($id);
                     if ($delete) {
                          $this->session->set_flashdata('success', 'Sukses Menghapus Data');
@@ -368,6 +393,7 @@
             $this->load->model('FacultyModel', 'faculty_model');
             switch ($aksi) {
                 case 'index':
+                    $this->check_access('FCT_DISP');
                     $data['fakultas'] = $this->faculty_model->get_fakultas();
                     $this->template_admin->display('admin/content/indexfakultas', $data);
                     break;
@@ -387,6 +413,7 @@
                     $this->template_admin->display('admin/content/viewfakultas', $data);
                     break;
                 case 'insert':
+                    $this->check_access('FCT_CRT');
                     $pict = $this->image_upload->upload_image('assets/images/faculty/', $_FILES, 'pic', 'pict_');
 
                     $insert = $this->faculty_model->insert_fakultas($this->input->post(), $pict['filename']);
@@ -395,6 +422,7 @@
                     }
                     break;
                 case 'update':
+                    $this->check_access('FCT_UPDT');
                     $fakultas = $this->faculty_model->get_fakultas_by_id($id);
                    
                     $pict = $this->image_upload->update_image('assets/images/faculty/', $_FILES, 'pic', 'pict_', $fakultas->picture);
@@ -404,6 +432,7 @@
                     }
                     break;
                 case 'delete':
+                    $this->check_access('FCT_DEL');
                     $delete = $this->faculty_model->delete_fakultas($id);
 
                     if($delete){
@@ -421,6 +450,7 @@
             $this->load->model('FacultyModel', 'faculty_model');
             switch ($aksi) {
                 case 'index':
+                    $this->check_access('FCT_DISP');
                     $data['course'] = $this->faculty_model->get_fakultas_course();
                     $this->template_admin->display('admin/content/indexfakultascourse', $data);
                     break;
@@ -438,6 +468,7 @@
                     $this->template_admin->display('admin/content/viewfakultasprodi', $data);
                     break;
                 case 'insert':
+                    $this->check_access('FCT_CRT');
                     $insert = $this->faculty_model->insert_course($this->input->post());
                     if ($insert) {
                         $this->session->set_flashdata('success', 'Sukses Menambah Data');
@@ -447,6 +478,7 @@
                         redirect(base_url().'admin/faculty_course');
                     break;
                 case 'update':
+                    $this->check_access('FCT_UPDT');
                     $update = $this->faculty_model->update_course($id, $this->input->post());
                     if ($update) {
                         $this->session->set_flashdata('success', 'Sukses Merubah Data');
@@ -456,6 +488,7 @@
                     redirect(base_url().'admin/faculty_course');
                     break;
                 case 'delete':
+                    $this->check_access('FCT_DEL');
                     $delete = $this->faculty_model->delete_course($id);
                     if ($delete) {
                         $this->session->set_flashdata('success', 'Sukses Menghapus Data');
@@ -475,6 +508,7 @@
             $this->load->model('FacultyModel', 'faculty_model');
             switch ($aksi) {
                 case 'index':
+                    $this->check_access('FCT_DISP');
                     $data['detail'] = $this->faculty_model->get_fakultas_detail();
                     $this->template_admin->display('admin/content/indexfakultasdetil', $data);
                     break;
@@ -492,6 +526,7 @@
                     $this->template_admin->display('admin/content/viewfakultasdetil', $data);
                     break;
                 case 'insert':
+                    $this->check_access('FCT_CRT');
                     $pict = $this->image_upload->upload_image('assets/images/faculty/', $_FILES, 'pic', 'pict_');
 
                     $insert = $this->faculty_model->insert_detail($this->input->post(), $pict['filename']);
@@ -500,6 +535,7 @@
                     }
                     break;
                 case 'update':
+                    $this->check_access('FCT_UPDT');
                     $detail = $this->faculty_model->get_detail_by_id($id);
                    
                     $pict = $this->image_upload->update_image('assets/images/faculty/', $_FILES, 'pic', 'pict_', $detail->picture);
@@ -509,6 +545,7 @@
                     }
                     break;
                 case 'delete':
+                    $this->check_access('FCT_DEL');
                     $delete = $this->faculty_model->delete_detail($id);
                     if ($delete) {
                         redirect(base_url().'admin/fakultas_detail');
@@ -525,6 +562,7 @@
             $this->load->model('NewsModel', 'news_model');
             switch ($aksi) {
                 case 'index':
+                    $this->check_access('NSM_DISP');
                     $data['tipe'] = $this->news_model->get_news_type();
                     $this->template_admin->display('admin/content/indexberitatipe', $data);
                     break;
@@ -540,6 +578,7 @@
                     $this->template_admin->display('admin/content/viewberitatipe', $data);
                     break;
                 case 'insert':
+                    $this->check_access('NSM_CRT');
                     $insert = $this->news_model->insert_type($this->input->post());
                     if($insert){
                         $this->session->set_flashdata('success', 'Sukses Menambah Data');
@@ -549,6 +588,7 @@
                     redirect(base_url().'admin/news_type');
                     break;
                 case 'update':
+                    $this->check_access('NSM_UPDT');
                     $update = $this->news_model->update_type($id, $this->input->post());
                     if($update){
                         $this->session->set_flashdata('success', 'Sukses Merubah Data');
@@ -558,6 +598,7 @@
                     redirect(base_url().'admin/news_type');
                     break;
                 case 'delete':
+                    $this->check_access('NSM_DEL');
                     $delete = $this->news_model->delete_type($id);
                     if ($delete) {
                         $this->session->set_flashdata('success', 'Sukses Menghapus Data');
@@ -577,6 +618,7 @@
             $this->load->model('NewsModel', 'news_model');
             switch ($aksi) {
                 case 'index':
+                    $this->check_access('NSM_DISP');
                     $data['news'] = $this->news_model->get_news();
                     $this->template_admin->display('admin/content/indexberita', $data);
                     break;
@@ -594,6 +636,7 @@
                     $this->template_admin->display('admin/content/viewberita', $data);
                     break;
                 case 'insert':
+                    $this->check_access('NSM_CRT');
                     $pict = $this->image_upload->upload_image('assets/images/news/', $_FILES, 'pic', 'pict_');
                     $thumb = $this->image_upload->upload_image('assets/images/news/', $_FILES, 'thumb', 'thumb_');
                     $banner = $this->image_upload->upload_image('assets/images/news/', $_FILES, 'banner', 'banner_');
@@ -608,6 +651,7 @@
                     }
                     break;
                 case 'update':
+                    $this->check_access('NSM_UPDT');
                     $news = $this->news_model->get_news_by_id($id);
                    
                     $pict = $this->image_upload->update_image('assets/images/news/', $_FILES, 'pic', 'pict_', $news->picture);
@@ -625,6 +669,7 @@
                     break;
 
                 case 'delete':
+                    $this->check_access('NSM_DEL');
                     $news = $this->news_model->get_news_by_id($id);
                     $delete = $this->news_model->delete_news($id);
                     if($delete){
@@ -648,6 +693,7 @@
             $this->load->model('NewsModel', 'news_model');
             switch ($aksi) {
                 case 'index':
+                    $this->check_access('NSM_DISP');
                     $data['detail'] = $this->news_model->get_detail_news();
                     $this->template_admin->display('admin/content/indexberitadetail', $data);
                     break;
@@ -738,6 +784,7 @@
             $this->load->model('EventModel', 'event_model');
             switch ($aksi) {
                 case 'index':
+                    $this->check_access('EVE_DISP');
                     $data['detail'] = $this->event_model->get_detail_event();
                     $this->template_admin->display('admin/content/indexeventdetail', $data);
                     break;
@@ -753,6 +800,7 @@
             $this->load->model('CareerModel', 'career_model');
             switch ($aksi) {
                 case 'index':
+                    $this->check_access('CARE_DISP');
                     $data['career'] = $this->career_model->get_career();
                     $this->template_admin->display('admin/content/indexcareer', $data);
                     break;
@@ -768,6 +816,7 @@
                     $this->template_admin->display('admin/content/viewcareer', $data);
                     break;
                 case 'insert':
+                    $this->check_access('CARE_CRT');
                     $pict = $this->image_upload->upload_image('assets/images/career/', $_FILES, 'pic', 'pict_');
                     $thumb = $this->image_upload->upload_image('assets/images/career/', $_FILES, 'thumb', 'thumb_');
 
@@ -779,6 +828,7 @@
                     }
                     break;
                 case 'update':
+                    $this->check_access('CARE_UPDT');
                     $karir = $this->career_model->get_by_id($id);
                     $pict = $this->image_upload->update_image('assets/images/career/', $_FILES, 'pic', 'pict_', $karir->picture);
                     $thumb = $this->image_upload->update_image('assets/images/career/', $_FILES, 'thumb', 'thumb_', $karir->thumb);
@@ -790,6 +840,7 @@
                     }
                     break;
                 case 'delete':
+                    $this->check_access('CARE_DEL');
                     $karir = $this->career_model->get_by_id($id);
                     $delete = $this->career_model->delete($id);
                     if ($delete) {
@@ -809,6 +860,7 @@
             $this->load->model('CareerModel', 'career_model');
             switch ($aksi) {
                 case 'index':
+                    $this->check_access('CARE_DISP');
                     $data['detail'] = $this->career_model->get_detail_career();
                     $this->template_admin->display('admin/content/indexcareerdetail', $data);
                     break;
@@ -824,6 +876,7 @@
             $this->load->model('GalleryModel', 'gallery_model');
             switch ($aksi) {
                 case 'index':
+                    $this->check_access('GAL_DISP');
                     $data['cat_gal'] = $this->gallery_model->get_gallery_cat();
                     $this->template_admin->display('admin/content/indexgallerycat', $data);
                     break;
@@ -839,6 +892,7 @@
                     $this->template_admin->display('admin/content/viewgallerycat', $data);
                     break;
                 case 'insert':
+                    $this->check_access('GAL_CRT');
                     $pict = $this->image_upload->upload_image('assets/images/gallery/', $_FILES, 'pic', 'gallery_cat_');
                     $insert = $this->gallery_model->insert_kategori($this->input->post(), $pict['filename']);
                     if ($insert) {
@@ -849,6 +903,7 @@
                     redirect(base_url().'admin/gallery_cat');
                     break;
                 case 'update':
+                    $this->check_access('GAL_UPDT');
                     $katagori = $this->gallery_model->get_cat_by_id($id);
 
                     $pict = $this->image_upload->update_image('assets/images/gallery/', $_FILES, 'pic', 'gallery_cat_', $katagori->thumb);
@@ -861,6 +916,7 @@
                     redirect(base_url().'admin/gallery_cat');
                     break;
                 case 'delete':
+                    $this->check_access('GAL_DEL');
                     $katagori = $this->gallery_model->get_cat_by_id($id);
                     $delete = $this->gallery_model->delete_katagori($id);
                     if ($delete) {
@@ -882,6 +938,7 @@
             $this->load->model('GalleryModel', 'gallery_model');
             switch ($aksi) {
                 case 'index':
+                    $this->check_access('GAL_DISP');
                     $data['gallery'] = $this->gallery_model->get_gallery();
                     $this->template_admin->display('admin/content/indexgallery', $data);
                     break;
@@ -899,6 +956,7 @@
                     $this->template_admin->display('admin/content/viewgallery', $data);
                     break;
                 case 'insert':
+                    $this->check_access('GAL_CRT');
                     $id_katagori = $this->input->post('katagori');
                     $pict = $this->image_upload->upload_image('assets/images/gallery/'.$id_katagori.'/', $_FILES, 'pic', 'pict_');
                     $thumb = $this->image_upload->upload_image('assets/images/gallery/'.$id_katagori.'/', $_FILES, 'thumb', 'thumb_');
@@ -911,6 +969,7 @@
                     }
                     break;
                 case 'update':
+                    $this->check_access('GAL_UPDT');
                     $gal = $this->gallery_model->get_gallery_by_id($id);
                     $pict = $this->image_upload->update_image('assets/images/gallery/'.$gal->id_cat.'/', $_FILES, 'pic', 'pict_', $gal->picture);
                     $thumb = $this->image_upload->update_image('assets/images/gallery/'.$gal->id_cat.'/', $_FILES, 'pic', 'thumb_', $gal->thumb);
@@ -922,6 +981,7 @@
                     }
                     break;
                 case 'delete':
+                    $this->check_access('GAL_DEL');
                     $gal = $this->gallery_model->get_gallery_by_id($id);
                     $delete = $this->gallery_model->delete($id);
                     if ($delete) {
@@ -941,6 +1001,7 @@
             $this->load->model('BlogModel', 'blog_model');
             switch ($aksi) {
                 case 'index':
+                    $this->check_access('BLG_DISP');
                     $data['tipe'] = $this->blog_model->get_blog_type();
                     $this->template_admin->display('admin/content/indexblogtipe', $data);
                     break;
@@ -956,6 +1017,7 @@
                     $this->template_admin->display('admin/content/viewblogtipe', $data);
                     break;
                 case 'insert':
+                    $this->check_access('BLG_CRT');
                     $insert = $this->blog_model->insert_tipe($this->input->post());
                     if ($insert) {
                         redirect(base_url().'admin/blog_type');
@@ -964,6 +1026,7 @@
                     }
                     break;
                 case 'update':
+                    $this->check_access('BLG_UPDT');
                     $update = $this->blog_model->update_tipe($id, $this->input->post());
                     if ($update) {
                         redirect(base_url().'admin/blog_type');
@@ -972,6 +1035,7 @@
                     }
                     break;
                 case 'delete':
+                    $this->check_access('BLG_DEL');
                     $delete = $this->blog_model->delete_tipe($id);
                     if ($delete) {
                         redirect(base_url().'admin/blog_type');
@@ -988,6 +1052,7 @@
             $this->load->model('BlogModel', 'blog_model');
             switch ($aksi) {
                 case 'index':
+                    $this->check_access('BLG_DISP');
                     $data['blog'] = $this->blog_model->get_blog();
                     $this->template_admin->display('admin/content/indexblog', $data);  
                     break;
@@ -1005,6 +1070,7 @@
                     $this->template_admin->display('admin/content/viewblog', $data);
                     break;
                 case 'insert':
+                    $this->check_access('BLG_CRT');
                     $insert = $this->blog_model->insert_blog($this->input->post());
                     if ($insert) {
                         redirect(base_url().'admin/blog');
@@ -1013,6 +1079,7 @@
                     }
                     break;
                 case 'update':
+                    $this->check_access('BLG_UPDT');
                     $update = $this->blog_model->update_blog($id, $this->input->post());
                     if ($update) {
                         redirect(base_url().'admin/blog');
@@ -1021,6 +1088,7 @@
                     }
                     break;
                 case 'delete':
+                    $this->check_access('BLG_DEL');
                     $delete = $this->blog_model->delete_blog($id);
                     if ($delete) {
                         redirect(base_url().'admin/blog');
@@ -1031,6 +1099,58 @@
                     break;
             }
         }
+
+        function slider($aksi='index', $id=null){
+            check_login();
+            $this->load->model('SliderModel', 'slider_model');
+            switch ($aksi) {
+                case 'index':
+                    $data['slider'] = $this->slider_model->get_all();
+                    $this->template_admin->display('admin/content/indexslider', $data); 
+                    break;
+                case 'add':
+                    $this->template_admin->display('admin/content/addslider'); 
+                    break;
+                case 'edit':
+                    $data['slider'] = $this->slider_model->get_by_id($id);
+                    $this->template_admin->display('admin/content/editslider', $data); 
+                    break;
+                case 'view':
+                    $data['slider'] = $this->slider_model->get_by_id($id);
+                    $this->template_admin->display('admin/content/viewslider', $data);
+                    break;
+                case 'insert':
+                    $pict = $this->image_upload->upload_image('assets/images/slider/', $_FILES, 'pic', 'pict_');
+                    $insert = $this->slider_model->insert($this->input->post(), $pict['filename']);
+                    if ($insert) {
+                        redirect(base_url().'admin/slider');
+                    }else{
+                        redirect(base_url().'admin/slider/add');
+                    }
+                    break;
+                case 'update':
+                    $slider = $this->slider_model->get_by_id($id);
+                    $pict = $this->image_upload->update_image('assets/images/slider/', $_FILES, 'pic', 'pict_', $slider->picture);
+
+                    $update = $this->slider_model->update($id, $this->input->post(), $pict['filename']);
+                    if ($update) {
+                        redirect(base_url().'admin/slider');
+                    }
+                    break;
+                case 'delete':
+                    $slider = $this->slider_model->get_by_id($id);
+                    $delete = $this->slider_model->delete($id);
+                    if ($delete) {
+                        unlink('assets/images/slider/'.$slider->picture);
+                        redirect(base_url().'admin/slider');
+                    }
+                    break;
+                default:
+                    # code...
+                    break;
+            }
+        }
+
         function login(){
             $this->load->model('UserModel', 'user_model');
             //ajax login

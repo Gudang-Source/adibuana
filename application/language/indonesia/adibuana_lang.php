@@ -96,3 +96,4 @@
     $lang['alamat'] = 'Alamat';
     $lang['contact'] = 'Kontak Kami';
     $lang['form_kkn'] = 'Form Kuliah Kerja Nyata';
+    $lang['blog_lain'] = 'BLOG LAIN';
