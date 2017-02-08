@@ -253,7 +253,7 @@
                           </li>
                           <li><a href="<?php echo base_url() ?>karier"><i class="__icon"></i><?php echo $this->lang->line('ekstra_karir') ?></a>
                           </li>
-                          <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('ekstra_gallery') ?></a>
+                          <li><a href="<?php echo base_url() ?>galeri"><i class="__icon"></i><?php echo $this->lang->line('ekstra_gallery') ?></a>
                           </li>
                           <li><a href="#"><i class="__icon"></i><?php echo $this->lang->line('ekstra_blog') ?></a>
                             <ul>
