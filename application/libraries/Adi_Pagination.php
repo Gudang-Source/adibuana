@@ -85,7 +85,7 @@ class Adi_Pagination {
 				}
 				$paging .= '<li class="'.$active.'"><a nilai="'.$i.'" href="?'.http_build_query(array_merge($_GET, ['page'=>$i])).'">'.$i.'</a></li>';
 			}
-		}elseif($current_page <= 2 && $current_page > 5){
+		}elseif($current_page <= 2 && $pages <= 5){
 			for ($i=1; $i <= $pages; $i++) {
 				if($current_page == $i){
 					$active = 'active';

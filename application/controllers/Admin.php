@@ -1227,7 +1227,7 @@
         function check_access($access){
             $status_access = FALSE;
             $user = $this->db->get_where('adi_user', ['username'=>$this->session->userdata('username')])->row();
-            $application = explode(PHP_EOL, $user->application);
+            $application = explode(" ", $user->application);
             foreach ($application as $appl) {
                 if($appl == $access){
                     $status_access = TRUE;

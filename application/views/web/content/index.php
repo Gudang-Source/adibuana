@@ -8,7 +8,7 @@
          ?>
             <li>
               <img style="height:420px; object-fit:cover" src="<?php echo base_url(); ?>assets/images/slider/<?php echo$q_slider->picture ?>" />
-              <p class="flex-caption"><?php echo $q_slider->judul_slider ?></p>
+              <p class="flex-caption"><a href="<?php echo $q_slider->link_slider ?>"><?php echo $q_slider->judul_slider ?></a></p>
             </li>
          <?php
         }
@@ -103,16 +103,15 @@
 
            <div class="image-slider">
               <div class="slider slide direction-nav control-nav">
-                <div class="__item">
-                  <div class="__image"><img src="http://www.unipasby.ac.id/css/data_images/gallery/3225042016094321/pict_7D155F17FB2A65D9F3A187D7813C0E43.JPG" alt="portfolio image"/></div>
-                </div>
-                <div class="__item">
-                  <div class="__image"><img src="http://www.unipasby.ac.id/css/data_images/gallery/3225042016094321/pict_7D155F17FB2A65D9F3A187D7813C0E43.JPG" alt="portfolio image"/></div>
-                </div>
-                <div class="__item">
-                  <div class="__image"><img src="http://www.unipasby.ac.id/css/data_images/gallery/3225042016094321/pict_7D155F17FB2A65D9F3A187D7813C0E43.JPG" alt="portfolio image"/></div>
-                </div>
-              </div>
+                <?php 
+                  foreach ($galeri as $q_galeri) {
+                    ?>
+                     <div class="__item">
+                      <div class="__image"><img style="width:100%; height: 300px; object-fit: cover;" src="<?php echo base_url(); ?>assets/images/gallery/<?php echo $q_galeri->id_cat ?>/<?php echo $q_galeri->picture ?>"></div>
+                    </div>
+                    <?php
+                  }
+                ?>
             </div>
         </div>
     </div>
@@ -269,7 +268,7 @@
                         }
                       ?>
                       <div class="text-right">
-                        <a href="#" class="btn btn-border btn-lainnya color-secondary"><?php echo $this->lang->line('lainnya') ?> >></a>
+                        <a href="<?php echo base_url(); ?>berita-dan-pengumuman/<?php echo slugify($q_kategori->type_ina) ?>/<?php echo $q_kategori->id ?>" class="btn btn-border btn-lainnya color-secondary"><?php echo $this->lang->line('lainnya') ?> >></a>
                       </div>
                     </div>
                     <?php

@@ -30,6 +30,13 @@
 			return $katagori;
 		}
 
+		function get_newest(){
+			$galeri = $this->db->select('*')
+						->from('adi_gallery')
+						->limit(10);
+			return $galeri->get()->result();
+		}
+
 		function get_gallery(){
 			$this->db->select('adi_gallery.*, adi_user.name, adi_gallery_cat.title_eng as katagori')
 					->from('adi_gallery')

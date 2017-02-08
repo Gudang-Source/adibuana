@@ -20,11 +20,13 @@
             $this->load->model('NewsModel', 'news_model');
             $this->load->model('EventModel', 'event_model');
             $this->load->model('SliderModel', 'slider_model');
+            $this->load->model('GalleryModel', 'gallery_model');
 
             $data['berita_terbaru'] = $this->news_model->get_berita_terbaru();
             $data['pengumuman_terbaru'] = $this->news_model->get_pengumuman_terbaru();
             $data['agenda_terbaru'] = $this->event_model->get_agenda_terbaru();
             $data['slider'] = $this->slider_model->get_all();
+            $data['galeri'] = $this->gallery_model->get_newest();
 
             $data['kategori_berita'] = $this->news_model->get_news_type_with_content();
             $this->template_website->display('web/content/index', $data);
@@ -195,10 +197,31 @@
         }
         function pencarian(){
             $data = $this->data;
-            $keyword = $this->input->get('keyword');
+            $this->load->model('NewsModel', 'news_model');
 
-            
-            $this->template_website->display('web/content/pencarian', $data);
+            if($this->input->is_ajax_request()){
+                 $this->load->library('Adi_Pagination', 'adi_pagination');
+
+                $per_page = 10;
+                $page = $this->input->get('page');
+                $keyword = $this->input->get('keyword');
+                if($page == null){
+                    $page = 0;
+                }else{
+                    $page = $page - 1;
+                }
+
+                $total_data = sizeof($this->news_model->cari($keyword, 99999999, 0));
+
+                $data['paging'] = $this->adi_pagination->adibuana_pagination(base_url().'pencarian', $per_page, $page, $total_data);
+
+                // $data['karir'] = $this->karir_model->get_karir($per_page, $page*$per_page);
+                $data['berita_katagori'] = $this->news_model->cari($keyword, $per_page, $page*$per_page);
+                $data['halaman'] = $page;
+                $this->load->view('web/content/ajax/pencarian', $data);
+            }else{
+                $this->template_website->display('web/content/pencarian', $data);
+            }            
         }
         function login(){
 

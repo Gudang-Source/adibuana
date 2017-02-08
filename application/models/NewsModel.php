@@ -221,4 +221,12 @@
       return $delete;
     }
 
+    function cari($keyword, $limit, $offset){
+      $this->db->select('*')
+              ->from('adi_news')
+              ->like('title_ina', $keyword)
+              ->limit($limit)
+              ->offset($offset);
+      return $this->db->get()->result();
+    }
   }

@@ -5,6 +5,8 @@ window.onload = function(){
         get_kegiatan();
     }else if(nama_halaman == 'karir'){
         get_karir();
+    }else if(nama_halaman == 'pencarian'){
+        get_pencarian();
     }
 }
 $(document).ajaxStop($.unblockUI);
@@ -18,6 +20,20 @@ function get_berita(){
         },
         success:function(result){
             $('#beritadanpengumuman').html(result);
+            pagination_button();
+        }
+    });
+}
+function get_pencarian(){
+    $.ajax({
+        method:'get',
+        url:base_url+'pencarian',
+        data:{page:hal_pencarian, keyword:kata},
+        beforeSend:function(){
+            $.blockUI({ message: $('.message-load-content') }); 
+        },
+        success:function(result){
+            $('#pencarian').html(result);
             pagination_button();
         }
     });
@@ -66,6 +82,9 @@ function pagination_button(){
         }else if(nama_halaman == 'karir'){
             hal_karir = $(this).attr('nilai');
             get_karir();
+        }else if(nama_halaman == 'pencarian'){
+            hal_pencarian = $(this).attr('nilai');
+            get_pencarian();
         }
         window.history.replaceState("Berita", "Berita", $(this).attr('href'));
             $('html, body').animate({

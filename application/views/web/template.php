@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title><?php echo $this->lang->line('title') ?></title>
-    <meta name="description" content="Megatron - Multipurpose Responsive HTML5 Template">
+    <meta name="description" content="Universitas Adibuana Surabaya">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-touch-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-touch-icon-60x60.png">
@@ -95,7 +95,7 @@
                 <div class="pull-left">
                   <div class="megatron inline logo-light">
                     <div class="cell-vertical-wrapper">
-                      <div class="cell-middle"><a href="index.html">
+                      <div class="cell-middle"><a href="<?php echo base_url() ?>">
                           <div class="logo"><img src="<?php echo base_url(); ?>assets/images/logo.png">
                           </div>
                           </a></div>
@@ -578,437 +578,98 @@
           <li><a href="#"><i class="icon icon-linkedin-1"></i></a></li>
         </ul>
       </nav>
-      <div class="mobile-nav"><a href="#" class="mobile-nav-toggle"><i class="icon-close47"></i></a><a href="index.html" class="megatron">
+      <div class="mobile-nav"><a href="#" class="mobile-nav-toggle"><i class="icon-close47"></i></a><a href="<?php echo base_url() ?>" class="megatron">
           <div class="logo"><svg viewBox="0 0 100 100"> <g> <path d="M64.264,31.886v56.803l-14.319,8.259l-14.319-8.259v-74.3L14.157,26.771v41.271l7.156,4.128V30.905   l13.467-7.768v8.26l-6.311,3.64V84.56L7,72.178v-49.54L42.781,2v82.553l7.162,4.132l7.163-4.132V27.758L64.264,31.886z    M43.626,26.294l6.317-3.644L71.42,35.038V84.56l21.469-12.382v-49.54L57.106,2v15.546l7.157,4.128v-7.285l21.469,12.382v41.271   l-7.156,4.128V30.905L49.943,14.391l-6.317,3.644V26.294z"/> </g> </svg>
           </div>
           <div class="brand">MEGATRON</div></a>
         <nav class="os-menu mobile-menu">
           <ul>
-            <li><a href="#">HOME</a>
+            <li><a href="<?php echo base_url(); ?>">Beranda</a></li>
+            <li><a href="#">Tentang Kami</a>
               <ul>
-                <li><a href="homepage-landing-page.html">LANDING PAGE</a>
+               <li><a href="<?php echo base_url() ?>sekilas/para-pendiri-unipa/8617092013100647"><i class="__icon"></i><?php echo $this->lang->line('about_founder') ?></a>
                 </li>
-                <li><a href="#">DEMOS</a>
+                <li><a href="<?php echo base_url() ?>sekilas/sambutan-rektor/319092013084049"><i class="__icon"></i><?php echo $this->lang->line('about_rector') ?></a>
+                </li>
+                <li><a href="<?php echo base_url() ?>sekilas/visi-dan-misi/5325032014161225"><i class="__icon"></i><?php echo $this->lang->line('about_vimi') ?></a>
+                </li>
+                <li><a href="<?php echo base_url() ?>sekilas/sejarah/E_020"><i class="__icon"></i><?php echo $this->lang->line('about_history') ?></a>
+                </li>
+                <li><a ><i class="__icon"></i><?php echo $this->lang->line('about_map') ?></a>
                   <ul>
-                    <li><a href="demo-construction-homepage.html">DEMO CONSTRUCTION</a>
+                    <li><a href="<?php echo base_url() ?>area-fakultas/123"><?php echo $this->lang->line('map1') ?></a>
                     </li>
-                    <li><a href="demo-hospital-homepage.html">DEMO HOSPITAL</a>
-                    </li>
-                    <li><a href="demo-handyman-homepage.html">DEMO HANDYMAN</a>
-                    </li>
-                    <li><a href="demo-cleaning-homepage.html">DEMO CLEANING</a>
-                    </li>
-                    <li><a href="demo-fitness-homepage.html">DEMO FITNESS</a>
-                    </li>
-                    <li><a href="demo-interior-homepage.html">DEMO INTERIOR</a>
-                    </li>
-                    <li><a href="demo-lawyer-homepage.html">DEMO LAWYER</a>
-                    </li>
-                    <li><a href="demo-logistics-homepage.html">DEMO LOGISTICS</a>
-                    </li>
-                    <li><a href="#">UPDATING...</a>
+                    <li><a href="<?php echo base_url() ?>area-fakultas/234"><?php echo $this->lang->line('map2') ?></a>
                     </li>
                   </ul>
                 </li>
-                <li><a href="#">CREATIVE</a>
-                  <ul>
-                    <li><a href="homepage-creative-1.html">CREATIVE 01</a>
-                    </li>
-                    <li><a href="homepage-creative-2.html">CREATIVE 02</a>
-                    </li>
-                    <li><a href="homepage-creative-3.html">CREATIVE 03</a>
-                    </li>
-                  </ul>
+                <li><a href="<?php echo base_url() ?>sekilas/luas-tanah-dan-disain/1119032014110946"><i class="__icon"></i><?php echo $this->lang->line('about_area') ?></a>
                 </li>
-                <li><a href="#">BUSINESS</a>
-                  <ul>
-                    <li><a href="homepage-business-1.html">BUSINESS 01</a>
-                    </li>
-                    <li><a href="homepage-business-2.html">BUSINESS 02</a>
-                    </li>
-                    <li><a href="homepage-business-3.html">BUSINESS 03</a>
-                    </li>
-                  </ul>
+                <li><a href="<?php echo base_url() ?>sekilas/jejaring-unipa-surabaya/719092013094952"><i class="__icon"></i><?php echo $this->lang->line('about_networking') ?></a>
                 </li>
-                <li><a href="#">ONEPAGE</a>
-                  <ul>
-                    <li><a href="homepage-onepage-1.html">ONEPAGE 01</a>
-                    </li>
-                    <li><a href="homepage-onepage-2.html">ONEPAGE 02</a>
-                    </li>
-                    <li><a href="homepage-onepage-3.html">ONEPAGE 03</a>
-                    </li>
-                  </ul>
+                <li><a href="<?php echo base_url() ?>sekilas/daftar-hibah-unipa-surabaya/9719092013115310"><i class="__icon"></i><?php echo $this->lang->line('about_grants') ?></a>
                 </li>
-                <li><a href="#">AGENCY</a>
-                  <ul>
-                    <li><a href="homepage-agency-1.html">AGENCY 01</a>
-                    </li>
-                    <li><a href="homepage-agency-2.html">AGENCY 02</a>
-                    </li>
-                    <li><a href="homepage-agency-3.html">AGENCY 03</a>
-                    </li>
-                  </ul>
+                <li><a href="<?php echo base_url() ?>sekilas/logo-hymne-mars/1415012013092135"><i class="__icon"></i><?php echo $this->lang->line('about_logo') ?></a>
                 </li>
-                <li><a href="#">VIDEO HEADER</a>
-                  <ul>
-                    <li><a href="homepage-video-1.html">VIDEO HEADER 01</a>
-                    </li>
-                    <li><a href="homepage-video-2.html">VIDEO HEADER 02</a>
-                    </li>
-                    <li><a href="homepage-video-3.html">VIDEO HEADER 03</a>
-                    </li>
-                  </ul>
+                <li><a href="<?php echo base_url() ?>sarana"><i class="__icon"></i><?php echo $this->lang->line('about_facility') ?></a>
                 </li>
-                <li><a href="#">ALTERNATIVE</a>
-                  <ul>
-                    <li><a href="homepage-alternative-1.html">ALTERNATIVE 01</a>
-                    </li>
-                    <li><a href="homepage-alternative-2.html">ALTERNATIVE 02</a>
-                    </li>
-                    <li><a href="homepage-alternative-3.html">ALTERNATIVE 03</a>
-                    </li>
-                    <li><a href="homepage-alternative-4.html">ALTERNATIVE 04</a>
-                    </li>
-                  </ul>
-                </li>
-                <li><a href="homepage-christmas-1.html">CHRISTMAS</a>
-                </li>
-                <li><a href="#">PORTFOLIO</a>
-                  <ul>
-                    <li><a href="homepage-portfolio-1.html">PORTFOLIO 01</a>
-                    </li>
-                    <li><a href="homepage-portfolio-2.html">PORTFOLIO 02</a>
-                    </li>
-                    <li><a href="homepage-portfolio-3.html">PORTFOLIO 03</a>
-                    </li>
-                    <li><a href="homepage-portfolio-4.html">PORTFOLIO 04</a>
-                    </li>
-                  </ul>
-                </li>
-                <li><a href="homepage-leftmenu.html">LEFTMENU</a>
-                </li>
-                <li><a href="#">STORE</a>
-                  <ul>
-                    <li><a href="homepage-store-1.html">HOMEPAGE SHOP 01</a>
-                    </li>
-                    <li><a href="homepage-store-2.html">HOMEPAGE SHOP 02</a>
-                    </li>
-                    <li><a href="homepage-store-3.html">HOMEPAGE SHOP 03</a>
-                    </li>
-                  </ul>
+                <li><a ><i class="__icon"></i><?php echo $this->lang->line('about_unit') ?></a>
+                    <ul>
+                        <li><a href="<?php echo base_url() ?>satuan-kerja/kemahasiswaan/8216012013093528"><?php echo $this->lang->line('unit') ?></a>
+                        </li>
+                    </ul>
                 </li>
               </ul>
             </li>
-            <li><a href="#">PAGES</a>
+            <li><a href="#">Fakultas</a>
               <ul>
-                <li><a href="#">GROUP 01</a>
-                  <ul>
-                    <li><a href="page-about-us-1.html">ABOUT US</a>
-                    </li>
-                    <li><a href="page-about-us-2.html">ABOUT US 2</a>
-                    </li>
-                    <li><a href="page-about-us-3.html">ABOUT US 3</a>
-                    </li>
-                    <li><a href="page-about-us-4.html">ABOUT US 4</a>
-                    </li>
-                    <li><a href="page-about-me.html">ABOUT ME</a>
-                    </li>
-                    <li><a href="page-services.html">SERVICES</a>
-                    </li>
-                    <li><a href="page-faq.html">FAQ</a>
-                    </li>
-                  </ul>
-                </li>
-                <li><a href="#">GROUP 02</a>
-                  <ul>
-                    <li><a href="page-contact-us.html">CONTACT US</a>
-                    </li>
-                    <li><a href="page-contact-us-2.html">CONTACT US 2</a>
-                    </li>
-                    <li><a href="page-contact-us-3.html">CONTACT US 3</a>
-                    </li>
-                    <li><a href="page-fullwidth.html">PAGE FULLWIDTH</a>
-                    </li>
-                    <li><a href="page-sidebar-left.html">PAGE SIDEBAR LEFT</a>
-                    </li>
-                    <li><a href="page-sidebar-right.html">PAGE SIDEBAR RIGHT</a>
-                    </li>
-                    <li><a href="page-policy.html">POLICY</a>
-                    </li>
-                  </ul>
-                </li>
-                <li><a href="#">GROUP 03</a>
-                  <ul>
-                    <li><a href="404.html">404 ERROR</a>
-                    </li>
-                    <li><a href="page-underconstruction.html">UNDERCONSTRUCTION</a>
-                    </li>
-                    <li><a href="page-search-result.html">SEARCH RESULT</a>
-                    </li>
-                    <li><a href="page-portfolio.html">PAGE PORTFOLIO</a>
-                    </li>
-                    <li><a href="page-portfolio-blog.html">PAGE PORTFOLIO BLOG</a>
-                    </li>
-                    <li><a href="page-login-vs-register.html">LOGIN VS REGISTER</a>
-                    </li>
-                  </ul>
-                </li>
+                 <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/bimbingan-dan-konseling/6514012013110508"><?php echo $this->lang->line('fkip_bk') ?></a>
+                  </li>
+                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-kesejahteraan-keluarga/4214012013104259"><?php echo $this->lang->line('fkip_pkk') ?></a>
+                  </li>
+                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-moral-pancasila-dan-kewarganegaraan/4614012013103909"><?php echo $this->lang->line('fkip_pmpk') ?></a>
+                  </li>
+                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-bahasa-dan-sastra-indonesia/3312012013112127"><?php echo $this->lang->line('fkip_pbsi') ?></a>
+                  </li>
+                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-matematika/114012013110833"><?php echo $this->lang->line('fkip_mtk') ?></a>
+                  </li>
+                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-bahasa-inggris/4214012013100537"><?php echo $this->lang->line('fkip_pbi') ?></a>
+                  </li>
+                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-kepelatihan-olahraga/5914012013103449"><?php echo $this->lang->line('fkip_pko') ?></a>
+                  </li>
+                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-seni-rupa/1714012013102837"><?php echo $this->lang->line('fkip_psr') ?></a>
+                  </li>
+                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-guru-sekolah-dasar/3914012013104611"><?php echo $this->lang->line('fkip_pgsd') ?></a>
+                  </li>
+                  <li><a href="<?php echo base_url() ?>fakultas-detil/fkip/6012012013102735/pendidikan-guru-paud/8814012013105731"><?php echo $this->lang->line('fkip_pgpaud') ?></a>
+                  </li>
               </ul>
             </li>
-            <li><a href="#">FEATURES</a>
+            <li><a href="#">Berita</a>
               <ul>
-                <li><a href="#">SHORTCODES 01</a>
-                  <ul>
-                    <li><a href="shortcode-accordion.html"><i class="__icon fa fa-bars"></i>ACCORDION</a>
-                    </li>
-                    <li><a href="shortcode-alert-message.html"><i class="__icon fa fa-exclamation-triangle"></i>ALERT MESSAGE<span class="__flag border-danger color-danger">HOT</span></a>
-                    </li>
-                    <li><a href="shortcode-blockquotes.html"><i class="__icon fa fa-quote-right"></i>BLOCKQUOTES</a>
-                    </li>
-                    <li><a href="shortcode-blogpost.html"><i class="__icon fa fa-pencil-square-o"></i>BLOGPOST</a>
-                    </li>
-                    <li><a href="shortcode-button.html"><i class="__icon fa fa-anchor"></i>BUTTON</a>
-                    </li>
-                    <li><a href="shortcode-call-to-action.html"><i class="__icon fa fa-building"></i>CALL TO ACTION</a>
-                    </li>
-                    <li><a href="shortcode-clients.html"><i class="__icon fa fa-user-secret"></i>CLIENTS</a>
-                    </li>
-                    <li><a href="shortcode-columns.html"><i class="__icon fa fa-columns"></i>COLUMNS</a>
-                    </li>
-                    <li><a href="shortcode-contact-form.html"><i class="__icon fa fa-keyboard-o"></i>CONTACT FORM</a>
-                    </li>
-                    <li><a href="shortcode-counter.html"><i class="__icon fa fa-money"></i>COUNTER</a>
-                    </li>
-                    <li><a href="shortcode-coverbox.html"><i class="__icon fa fa-bicycle"></i>COVERBOX</a>
-                    </li>
-                  </ul>
+                <li><a href="<?php echo base_url() ?>kegiatan"><i class="__icon"></i><?php echo $this->lang->line('news_event') ?></a>
                 </li>
-                <li><a href="#">SHORTCODES 02</a>
-                  <ul>
-                    <li><a href="shortcode-dropcaps.html"><i class="__icon fa fa-align-right"></i>DROPCAPS</a>
-                    </li>
-                    <li><a href="shortcode-expendable-section.html"><i class="__icon fa fa-expand"></i>EXPENDABLE SECTION</a>
-                    </li>
-                    <li><a href="shortcode-google-map.html"><i class="__icon fa fa-google"></i>GOOGLE MAP</a>
-                    </li>
-                    <li><a href="shortcode-heading.html"><i class="__icon fa fa-header"></i>HEADING</a>
-                    </li>
-                    <li><a href="shortcode-hightlight.html"><i class="__icon fa fa-bookmark-o"></i>HIGHTLIGHT</a>
-                    </li>
-                    <li><a href="shortcode-iconboxes.html"><i class="__icon fa fa-asterisk"></i>ICONBOXES</a>
-                    </li>
-                    <li><a href="shortcode-iconboxes-carousel.html"><i class="__icon fa fa-arrows-h"></i>ICONBOXES CAROUSEL</a>
-                    </li>
-                    <li><a href="shortcode-iconlists.html"><i class="__icon fa fa-list"></i>ICONLISTS</a>
-                    </li>
-                    <li><a href="shortcode-icons.html"><i class="__icon fa fa-briefcase"></i>ICONS</a>
-                    </li>
-                    <li><a href="shortcode-interactive-banner.html"><i class="__icon fa fa-diamond"></i>INTERACTIVE BANNER</a>
-                    </li>
-                    <li><a href="shortcode-lists.html"><i class="__icon fa fa-list-ol"></i>LISTS</a>
-                    </li>
-                  </ul>
+                <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/berita-kampus/01"><i class="__icon"></i><?php echo $this->lang->line('news_collage') ?></a>
                 </li>
-                <li><a href="#">SHORTCODES 03</a>
-                  <ul>
-                    <li><a href="shortcode-pagination.html"><i class="__icon fa fa-pagelines"></i>PAGINATION</a>
-                    </li>
-                    <li><a href="shortcode-parallax.html"><i class="__icon fa fa-file-image-o"></i>PARALLAX</a>
-                    </li>
-                    <li><a href="shortcode-piechart.html"><i class="__icon fa fa-pie-chart"></i>PIECHART</a>
-                    </li>
-                    <li><a href="shortcode-piechart2.html"><i class="__icon fa fa-pie-chart"></i>PIECHART 02<span class="__flag border-primary color-primary">NEW</span></a>
-                    </li>
-                    <li><a href="shortcode-piechart3.html"><i class="__icon fa fa-pie-chart"></i>PIECHART 03<span class="__flag border-primary color-primary">NEW</span></a>
-                    </li>
-                    <li><a href="shortcode-pricing-table.html"><i class="__icon fa fa-list-alt"></i>PRICING TABLE</a>
-                    </li>
-                    <li><a href="shortcode-process.html"><i class="__icon fa fa-check-square"></i>PROCESS</a>
-                    </li>
-                    <li><a href="shortcode-progressbar.html"><i class="__icon fa fa-server"></i>PROGRESSBAR</a>
-                    </li>
-                    <li><a href="shortcode-qrcode.html"><i class="__icon fa fa-qrcode"></i>QRCODE</a>
-                    </li>
-                    <li><a href="shortcode-separator.html"><i class="__icon fa fa-minus"></i>SEPARATOR</a>
-                    </li>
-                    <li><a href="shortcode-service-table.html"><i class="__icon fa fa-th"></i>SERVICE TABLE</a>
-                    </li>
-                  </ul>
+                <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/artikel/02"><i class="__icon"></i><?php echo $this->lang->line('news_artikel') ?></a>
                 </li>
-                <li><a href="#">SHORTCODES 04</a>
-                  <ul>
-                    <li><a href="shortcode-tab.html"><i class="__icon fa fa-th-large"></i>TAB</a>
-                    </li>
-                    <li><a href="shortcode-table.html"><i class="__icon fa fa-table"></i>TABLE</a>
-                    </li>
-                    <li><a href="shortcode-team.html"><i class="__icon fa fa-users"></i>TEAM</a>
-                    </li>
-                    <li><a href="shortcode-testimonials.html"><i class="__icon fa fa-comments"></i>TESTIMONIALS</a>
-                    </li>
-                    <li><a href="shortcode-typography.html"><i class="__icon fa fa-text-height"></i>TYPOGRAPHY</a>
-                    </li>
-                    <li><a href="shortcode-vertical-progressbar.html"><i class="__icon fa fa-bar-chart"></i>VERTICAL PROGRESSBAR</a>
-                    </li>
-                    <li><a href="shortcode-widget.html"><i class="__icon fa fa-cube"></i>WIDGET</a>
-                    </li>
-                    <li><a href="shortcode-image-gallery.html"><i class="__icon fa fa-file-image-o"></i>IMAGE GALLERY</a>
-                    </li>
-                    <li><a href="shortcode-image-slider.html"><i class="__icon fa fa-picture-o"></i>IMAGE SLIDER</a>
-                    </li>
-                    <li><a href="shortcode-share-module.html"><i class="__icon fa fa-paper-plane-o"></i>SHARE MODULE</a>
-                    </li>
-                  </ul>
+                <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/pengumuman/04"><i class="__icon"></i><?php echo $this->lang->line('news_announcetment') ?></a>
                 </li>
-                <li><a href="#">MANY FEATURES</a>
-                  <ul>
-                    <li><a href="#">BOOTSTRAP 3 GRID SYSTEM</a>
-                    </li>
-                    <li><a href="#">HTML5 &amp; CSS3 ANIMATION</a>
-                    </li>
-                    <li><a href="#">AUTOMATE YOUR WORKFLOW</a>
-                    </li>
-                    <li><a href="#">NODE TEMPLATE ENGINE</a>
-                    </li>
-                    <li><a href="#">LESS PRE-PROCESSOR</a>
-                    </li>
-                    <li><a href="#">FONT AWESOME INCLUDED</a>
-                    </li>
-                    <li><a href="#">+1000 ICON FONTS </a>
-                    </li>
-                    <li><a href="#">FULLY RESPONSIVE</a>
-                    </li>
-                    <li><a href="#">FREE GOOGLE FONTS</a>
-                    </li>
-                    <li><a href="#">PARALLAX BACKGROUND</a>
-                    </li>
-                    <li><a href="#">WIDE AND BOXED LAYOUT</a>
-                    </li>
-                  </ul>
+                <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/umum/8616012013102515"><i class="__icon"></i><?php echo $this->lang->line('news_daily') ?></a>
                 </li>
-              </ul>
-            </li>
-            <li><a href="#">OPTIONS</a>
-              <ul>
-                <li><a href="#"><i class="__icon fa fa-files-o"></i>HEADER OPTIONS</a>
-                  <ul>
-                    <li><a href="header-option-1.html">HEADER STYLE 01</a>
-                    </li>
-                    <li><a href="header-option-2.html">HEADER STYLE 02</a>
-                    </li>
-                    <li><a href="header-option-3.html">HEADER STYLE 03</a>
-                    </li>
-                    <li><a href="header-option-4.html">HEADER STYLE 04</a>
-                    </li>
-                    <li><a href="header-option-5.html">HEADER STYLE 05</a>
-                    </li>
-                    <li><a href="header-option-6.html">HEADER STYLE 06</a>
-                    </li>
-                    <li><a href="header-option-7.html">HEADER STYLE 07</a>
-                    </li>
-                    <li><a href="header-option-8.html">HEADER STYLE 08</a>
-                    </li>
-                    <li><a href="header-option-12.html">HEADER STYLE 09</a>
-                    </li>
-                    <li><a href="header-option-16.html">HEADER STYLE 10</a>
-                    </li>
-                    <li><a href="header-option-20.html">HEADER STYLE 11</a>
-                    </li>
-                    <li><a href="header-option-17.html">HEADER STYLE 12</a>
-                    </li>
-                    <li><a href="#">AND MUCH MORE</a>
-                    </li>
-                  </ul>
+                <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/pendidikan/8529012013082338"><i class="__icon"></i><?php echo $this->lang->line('news_edu') ?></a>
                 </li>
-                <li><a href="#"><i class="__icon fa fa-magic"></i>FOOTER OPTIONS</a>
-                  <ul>
-                    <li><a href="footer-option-1.html#footer">FOOTER STYLE 01</a>
-                    </li>
-                    <li><a href="footer-option-2.html#footer">FOOTER STYLE 02</a>
-                    </li>
-                    <li><a href="footer-option-3.html#footer">FOOTER STYLE 03</a>
-                    </li>
-                    <li><a href="footer-option-4.html#footer">FOOTER STYLE 04</a>
-                    </li>
-                    <li><a href="footer-option-5.html#footer">FOOTER STYLE 05</a>
-                    </li>
-                    <li><a href="footer-option-6.html#footer">FOOTER STYLE 06</a>
-                    </li>
-                    <li><a href="footer-option-7.html#footer">FOOTER STYLE 07</a>
-                    </li>
-                    <li><a href="footer-option-8.html#footer">FOOTER STYLE 08</a>
-                    </li>
-                    <li><a href="footer-option-9.html#footer">FOOTER STYLE 09</a>
-                    </li>
-                    <li><a href="footer-option-10.html#footer">FOOTER STYLE 10</a>
-                    </li>
-                    <li><a href="#">AND MUCH MORE</a>
-                    </li>
-                  </ul>
+                <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/olahraga/929012013082919"><i class="__icon"></i><?php echo $this->lang->line('news_sport') ?></a>
                 </li>
-                <li><a href="#"><i class="__icon fa fa-youtube-play"></i>VIDEO OPTIONS</a>
-                  <ul>
-                    <li><a href="homepage-video-1.html">YOUTUBE VIDEO</a>
-                    </li>
-                    <li><a href="homepage-video-2.html">HTML5 VIDEO</a>
-                    </li>
-                    <li><a href="homepage-video-3.html">SLIDER &amp; VIDEO</a>
-                    </li>
-                  </ul>
+                <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/kesehatan/5129012013085629"><i class="__icon"></i><?php echo $this->lang->line('news_health') ?></a>
                 </li>
-                <li><a href="#"><i class="__icon fa fa-diamond"></i>WIDGET OPTIONS</a>
-                  <ul>
-                    <li><a href="shortcode-widget.html">CATEGORIES</a>
-                    </li>
-                    <li><a href="shortcode-widget.html">RECENT POSTS</a>
-                    </li>
-                    <li><a href="shortcode-widget.html">IMAGES GALLERY</a>
-                    </li>
-                    <li><a href="shortcode-widget.html">RECENT TWEETS</a>
-                    </li>
-                    <li><a href="shortcode-widget.html">POPULAR TAGS</a>
-                    </li>
-                    <li><a href="shortcode-widget.html">SEARCH BOX</a>
-                    </li>
-                    <li><a href="shortcode-widget.html">FILTER BY PRICE</a>
-                    </li>
-                    <li><a href="shortcode-widget.html">ACCORDION WIDGET</a>
-                    </li>
-                    <li><a href="shortcode-widget.html">RECENT PRODUCTS</a>
-                    </li>
-                    <li><a href="shortcode-widget.html">FREE TEXT WIDGET</a>
-                    </li>
-                    <li><a href="shortcode-widget.html">SLIDER IMAGES</a>
-                    </li>
-                    <li><a href="shortcode-widget.html">SOCIAL ICONS</a>
-                    </li>
-                  </ul>
+                <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/gaya-hidup/6329012013091038"><i class="__icon"></i><?php echo $this->lang->line('news_life') ?></a>
                 </li>
-                <li><a href="#"><i class="__icon fa fa-cubes"></i>MENU OPTIONS</a>
-                  <ul>
-                    <li><a href="#">DROPDOWN MENU</a>
-                    </li>
-                    <li><a href="#">MEGAMENU 2 COLUMNS</a>
-                    </li>
-                    <li><a href="#">MEGAMENU 3 COLUMNS</a>
-                    </li>
-                    <li><a href="#">MEGAMENU 4 COLUMNS</a>
-                    </li>
-                    <li><a href="#">MEGAMENU 5 COLUMNS</a>
-                    </li>
-                    <li><a href="#">MEGAMENU WITH HEADING</a>
-                    </li>
-                    <li><a href="#">OFF CANVAS MENU</a>
-                    </li>
-                    <li><a href="#">STICKY MENU</a>
-                    </li>
-                    <li><a href="#">MENU WITH ICON</a>
-                    </li>
-                    <li><a href="#">MENU WITH FLAG</a>
-                    </li>
-                  </ul>
+                <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/kehilangan/8110102013131219"><i class="__icon"></i><?php echo $this->lang->line('news_loss') ?></a>
                 </li>
-                <li><a href="#"><i class="__icon fa fa-spinner"></i>UPDATING...</a>
+                <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/beasiswa/7107022014111113"><i class="__icon"></i><?php echo $this->lang->line('news_bea') ?></a>
+                </li>
+                <li><a href="<?php echo base_url() ?>berita-dan-pengumuman/sambutan-rektor/9515022016145900"><i class="__icon"></i><?php echo $this->lang->line('news_rektor') ?></a>
                 </li>
               </ul>
             </li>
@@ -1274,7 +935,13 @@
     <script type="text/javascript" src="<?php echo base_url() ?>assets/web/js/jquery.flexslider-min.js"></script>
     <script type="text/javascript" src="<?php echo base_url() ?>assets/select2/js/select2.min.js"></script>
     <script type="text/javascript" src="<?php echo base_url() ?>assets/block-ui/jquery.blockUI.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDytkyUX2xb4hze3Gn949SwtKYZx2f2VEQ"></script>    
+    <?php 
+     if($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index'){
+      ?>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDytkyUX2xb4hze3Gn949SwtKYZx2f2VEQ"></script>    
+      <?php
+     }
+    ?>
     <script type="text/javascript" src="<?php echo base_url() ?>assets/web/js/adibuana.js"></script>
 
     <?php 
@@ -1284,12 +951,12 @@
         <?php
       }elseif ($this->uri->segment(1) == 'sarana') {
         ?>
-        <script type="text/javascript" src="vendors/jquery-ui/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="vendors/slick-carousel/slick/slick.js"></script>
-        <script type="text/javascript" src="vendors/isotope/dist/isotope.pkgd.min.js"></script>
-        <script type="text/javascript" src="vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
-        <script type="text/javascript" src="vendors/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
-        <script type="text/javascript" src="vendors/jquery-modal/jquery.modal.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/vendors/jquery-ui/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/vendors/slick-carousel/slick/slick.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/vendors/isotope/dist/isotope.pkgd.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/vendors/imagesloaded/imagesloaded.pkgd.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/vendors/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/vendors/jquery-modal/jquery.modal.min.js"></script>
         <?php
       }
     ?>
@@ -1305,8 +972,14 @@
     <!--End Javascript Library-->
 
         <script type="text/javascript">
-    
-      create_kampus_map();
+      <?php 
+        if($this->uri->segment(1) == '' || $this->uri->segment(1) == 'index'){
+          ?>
+          create_kampus_map();
+          <?php
+        }
+      ?>
+      
 
       $(window).load(function(){
         $('.flexslider').flexslider({

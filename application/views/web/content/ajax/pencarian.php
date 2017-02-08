@@ -1,4 +1,11 @@
           <?php
+
+              if(sizeof($berita_katagori) == 0){
+                ?>
+                <center>Tidak Ditemukan Hasil Pencarian Dengan Kata Kunci "<?php echo $this->input->get('keyword') ?>"</center>
+                <?php
+              }
+
               foreach ($berita_katagori as $q_katagori) {
                   ?>
                   <div class="post  post-index post-left-image">
@@ -9,7 +16,7 @@
                             <?php
                         }else{
                             ?>
-                            <div class="__header"><a href="#"><img src="<?php echo base_url(); ?>assets/images/news/<?php echo $q_katagori->picture; ?>" alt="CREATIVE BRANDING MOCKUP " class="img-responsive"/></a>
+                            <div class="__header"><a href="#"><img src="<?php echo base_url(); ?>assets/images/news/<?php echo $q_katagori->picture; ?>" class="img-responsive"/></a>
                             <?php
                         }
                     ?>
@@ -39,14 +46,15 @@
             
             ?>
             <script>
+            var kata = '<?php echo $this->input->get('keyword') ?>';
             <?php 
             if($halaman == 0){
                 ?>
-                hal_pengumuman = 1;
+                hal_pencarian = 1;
                 <?php
             }else{
                 ?>
-                hal_pengumuman = <?php echo $halaman ?>;
+                hal_pencarian = <?php echo $halaman ?>;
                 <?php
             }
             ?>
