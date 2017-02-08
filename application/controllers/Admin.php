@@ -990,10 +990,11 @@
 
                     $insert = $this->gallery_model->insert($this->input->post(), $pict['filename'], $thumb['filename']);
                     if ($insert) {
-                        redirect(base_url().'admin/gallery');
+                        $this->session->set_flashdata('success', 'Sukses Menambah Data');
                     }else{
-                        redirect(base_url().'admin/gallery/add');
+                        $this->session->set_flashdata('warning', 'Gagal Menambah Data');
                     }
+                    redirect(base_url().'admin/gallery');
                     break;
                 case 'update':
                     $this->check_access('GAL_UPDT');
@@ -1001,11 +1002,12 @@
                     $pict = $this->image_upload->update_image('assets/images/gallery/'.$gal->id_cat.'/', $_FILES, 'pic', 'pict_', $gal->picture);
                     $thumb = $this->image_upload->update_image('assets/images/gallery/'.$gal->id_cat.'/', $_FILES, 'pic', 'thumb_', $gal->thumb);
                     $update = $this->gallery_model->update($id, $this->input->post(), $pict['filename'], $thumb['filename']);
-                    if ($update) {
-                        redirect(base_url().'admin/gallery');
+                     if ($update) {
+                        $this->session->set_flashdata('success', 'Sukses Merubah Data');
                     }else{
-                        redirect(base_url().'admin/gallery/edit');
+                        $this->session->set_flashdata('warning', 'Gagal Merubah Data');
                     }
+                    redirect(base_url().'admin/gallery');
                     break;
                 case 'delete':
                     $this->check_access('GAL_DEL');
@@ -1014,8 +1016,11 @@
                     if ($delete) {
                         unlink('assets/images/gallery'.$gal->picture);
                         unlink('assets/images/gallery'.$gal->thumb);
-                        redirect(base_url().'admin/gallery');
-                    }
+                        $this->session->set_flashdata('success', 'Sukses Menghapus Data');
+                    }else{
+                        $this->session->set_flashdata('warning', 'Sukses Menghapus Data');
+                    }                        
+                    redirect(base_url().'admin/gallery');
                     break;
                 default:
                     # code...
@@ -1047,26 +1052,31 @@
                     $this->check_access('BLG_CRT');
                     $insert = $this->blog_model->insert_tipe($this->input->post());
                     if ($insert) {
-                        redirect(base_url().'admin/blog_type');
+                        $this->session->set_flashdata('success', 'Sukses Menambah Data');
                     }else{
-                        redirect(base_url().'admin/blog_type/add');
+                        $this->session->set_flashdata('warning', 'Gagal Menambah Data');
                     }
+                    redirect(base_url().'admin/blog_type');
                     break;
                 case 'update':
                     $this->check_access('BLG_UPDT');
                     $update = $this->blog_model->update_tipe($id, $this->input->post());
                     if ($update) {
-                        redirect(base_url().'admin/blog_type');
+                        $this->session->set_flashdata('success', 'Sukses Merubah Data');
                     }else{
-                        redirect(base_url().'admin/blog_type/edit');
+                        $this->session->set_flashdata('warning', 'Gagal Merubah Data');
                     }
+                    redirect(base_url().'admin/blog_type');
                     break;
                 case 'delete':
                     $this->check_access('BLG_DEL');
                     $delete = $this->blog_model->delete_tipe($id);
                     if ($delete) {
-                        redirect(base_url().'admin/blog_type');
+                        $this->session->set_flashdata('success', 'Sukses Menghapus Data');
+                    }else{
+                        $this->session->set_flashdata('warning', 'Gagal Menghapus Data');
                     }
+                    redirect(base_url().'admin/blog_type');
                     break;
                 default:
                     # code...
@@ -1100,26 +1110,31 @@
                     $this->check_access('BLG_CRT');
                     $insert = $this->blog_model->insert_blog($this->input->post());
                     if ($insert) {
-                        redirect(base_url().'admin/blog');
+                        $this->session->set_flashdata('success', 'Sukses Menambah Data');
                     }else{
-                        redirect(base_url().'admin/blog/add');
+                        $this->session->set_flashdata('warning', 'Gagal Menambah Data');
                     }
+                    redirect(base_url().'admin/blog');
                     break;
                 case 'update':
                     $this->check_access('BLG_UPDT');
                     $update = $this->blog_model->update_blog($id, $this->input->post());
                     if ($update) {
-                        redirect(base_url().'admin/blog');
+                        $this->session->set_flashdata('success', 'Sukses Merubah Data');
                     }else{
-                        redirect(base_url().'admin/blog/edit');
+                        $this->session->set_flashdata('warning', 'Gagal Merubah Data');
                     }
+                    redirect(base_url().'admin/blog');
                     break;
                 case 'delete':
                     $this->check_access('BLG_DEL');
                     $delete = $this->blog_model->delete_blog($id);
                     if ($delete) {
-                        redirect(base_url().'admin/blog');
+                        $this->session->set_flashdata('success', 'Sukses Menghapus Data');
+                    }else{
+                        $this->session->set_flashdata('warning', 'Gagal Menghapus Data');
                     }
+                    redirect(base_url().'admin/blog');
                     break;
                 default:
                     # code...
@@ -1150,10 +1165,11 @@
                     $pict = $this->image_upload->upload_image('assets/images/slider/', $_FILES, 'pic', 'pict_');
                     $insert = $this->slider_model->insert($this->input->post(), $pict['filename']);
                     if ($insert) {
-                        redirect(base_url().'admin/slider');
+                        $this->session->set_flashdata('success', 'Sukses Menambah Data');
                     }else{
-                        redirect(base_url().'admin/slider/add');
+                        $this->session->set_flashdata('warning', 'Gagal Menambah Data');
                     }
+                    redirect(base_url().'admin/slider');
                     break;
                 case 'update':
                     $slider = $this->slider_model->get_by_id($id);
@@ -1161,16 +1177,22 @@
 
                     $update = $this->slider_model->update($id, $this->input->post(), $pict['filename']);
                     if ($update) {
-                        redirect(base_url().'admin/slider');
+                        $this->session->set_flashdata('success', 'Sukses Merubah Data');
+                    }else{
+                        $this->session->set_flashdata('warning', 'Gagal Merubah Data');
                     }
+                    redirect(base_url().'admin/slider');
                     break;
                 case 'delete':
                     $slider = $this->slider_model->get_by_id($id);
                     $delete = $this->slider_model->delete($id);
                     if ($delete) {
                         unlink('assets/images/slider/'.$slider->picture);
-                        redirect(base_url().'admin/slider');
+                        $this->session->set_flashdata('success', 'Sukses Menghapus Data');
+                    }else{
+                        $this->session->set_flashdata('warning', 'Gagal Menghapus Data');
                     }
+                    redirect(base_url().'admin/slider');
                     break;
                 default:
                     # code...

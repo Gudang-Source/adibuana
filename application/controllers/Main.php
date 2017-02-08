@@ -68,6 +68,7 @@
 
           $data['berita'] = $this->news_model->get_berita_by_id($id);
           $data['kategori'] = $this->news_model->get_all_kategori();
+          $data['most_viewed'] = $this->news_model->most_viewed();
 
           $this->template_website->display('web/content/detilberitadanpengumuman', $data);
         }

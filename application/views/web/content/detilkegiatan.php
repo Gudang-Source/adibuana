@@ -43,30 +43,6 @@
                       ?>                    
                     </div>
                   </div>
-
-                  <div class="widget widget-twitter">
-                    <h6 class="__widget-title">Tweet Terakhir</h6>
-                    <div class="__widget-content">
-                      <div class="twiter-item"><i class="__icon fa fa-twitter color-secondary"></i>
-                        <div class="__content">
-                          <div class="__title">#Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div><a href="#" class="__link color-secondary">http://bly.shotlinks.com</a>
-                          <div class="__time font-serif-italic">October 23, 2015</div>
-                        </div>
-                      </div>
-                      <div class="twiter-item"><i class="__icon fa fa-twitter color-secondary"></i>
-                        <div class="__content">
-                          <div class="__title">#Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div><a href="#" class="__link color-secondary">http://bly.shotlinks.com</a>
-                          <div class="__time font-serif-italic">October 23, 2015</div>
-                        </div>
-                      </div>
-                      <div class="twiter-item"><i class="__icon fa fa-twitter color-secondary"></i>
-                        <div class="__content">
-                          <div class="__title">#Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div><a href="#" class="__link color-secondary">http://bly.shotlinks.com</a>
-                          <div class="__time font-serif-italic">October 23, 2015</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </aside>
               </div>
               <div class="col-md-8 col-xs-12">

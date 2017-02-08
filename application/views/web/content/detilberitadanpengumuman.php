@@ -28,69 +28,28 @@
                   <div class="widget widget-recent-post">
                     <h6 class="__widget-title">Berita Sering Dibaca</h6>
                     <div class="__widget-content">
-                      <div class="rpost"><a href="#" class="__img"><img src="assets/images/blog/recent-post-thumbnail-1.jpg" alt="thumbnail"/></a>
-                        <div class="__content">
-                          <div class="__title"><a href="#">How To Improve And Refine</a></div>
-                          <div class="__date font-serif-italic color-secondary">July 9, 2014</div>
-                        </div>
-                      </div>
-                      <div class="rpost"><a href="#" class="__img"><img src="assets/images/blog/recent-post-thumbnail-2.jpg" alt="thumbnail"/></a>
-                        <div class="__content">
-                          <div class="__title"><a href="#">How To Improve And Refine</a></div>
-                          <div class="__date font-serif-italic color-secondary">July 9, 2014</div>
-                        </div>
-                      </div>
-                      <div class="rpost"><a href="#" class="__img"><img src="assets/images/blog/recent-post-thumbnail-3.jpg" alt="thumbnail"/></a>
-                        <div class="__content">
-                          <div class="__title"><a href="#">How To Improve And Refine</a></div>
-                          <div class="__date font-serif-italic color-secondary">July 9, 2014</div>
-                        </div>
-                      </div>
-                      <div class="rpost"><a href="#" class="__img"><img src="assets/images/blog/recent-post-thumbnail-4.jpg" alt="thumbnail"/></a>
-                        <div class="__content">
-                          <div class="__title"><a href="#">How To Improve And Refine</a></div>
-                          <div class="__date font-serif-italic color-secondary">July 9, 2014</div>
-                        </div>
-                      </div>
-                      <div class="rpost"><a href="#" class="__img"><img src="assets/images/blog/recent-post-thumbnail-5.jpg" alt="thumbnail"/></a>
-                        <div class="__content">
-                          <div class="__title"><a href="#">How To Improve And Refine</a></div>
-                          <div class="__date font-serif-italic color-secondary">July 9, 2014</div>
-                        </div>
-                      </div>
+                      <?php 
+                        foreach ($most_viewed as $q_berita) {
+                          ?>
+                          <div class="rpost"><a href="#" class="__img"><img src="<?php echo base_url(); ?>assets/images/news/<?php echo $q_berita->picture; ?>" alt="thumbnail"/></a>
+                            <div class="__content">
+                              <div class="__title"><a href="#"><?php echo $q_berita->title_ina; ?></a></div>
+                              <div class="__date font-serif-italic color-secondary">July 9, 2014</div>
+                            </div>
+                          </div>    
+                          <?php
+                        }
+                      ?>
                     </div>
                   </div>
 
-                  <div class="widget widget-twitter">
-                    <h6 class="__widget-title">Tweet Terakhir</h6>
-                    <div class="__widget-content">
-                      <div class="twiter-item"><i class="__icon fa fa-twitter color-secondary"></i>
-                        <div class="__content">
-                          <div class="__title">#Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div><a href="#" class="__link color-secondary">http://bly.shotlinks.com</a>
-                          <div class="__time font-serif-italic">October 23, 2015</div>
-                        </div>
-                      </div>
-                      <div class="twiter-item"><i class="__icon fa fa-twitter color-secondary"></i>
-                        <div class="__content">
-                          <div class="__title">#Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div><a href="#" class="__link color-secondary">http://bly.shotlinks.com</a>
-                          <div class="__time font-serif-italic">October 23, 2015</div>
-                        </div>
-                      </div>
-                      <div class="twiter-item"><i class="__icon fa fa-twitter color-secondary"></i>
-                        <div class="__content">
-                          <div class="__title">#Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div><a href="#" class="__link color-secondary">http://bly.shotlinks.com</a>
-                          <div class="__time font-serif-italic">October 23, 2015</div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
                 </aside>
               </div>
               <div class="col-md-8 col-xs-12">
                 <div class="post">
                   <div class="__main">
                     <div class="__title"><a href="blog-single-standard.html"><?php echo $berita->title_ina ?></a></div>
-                    <div class="__meta"><span>Posted:&nbsp;<span class="__value">October 16, 2015 </span></span><span><?php echo $this->lang->line('post_by') ?>:&nbsp;<span class="__value">Admin</span></span><span>Categories:&nbsp;<span class="__value">HTML/CSS</span></span>
+                    <div class="__meta"><span>Posted:&nbsp;<span class="__value">October 16, 2015 </span></span><span><?php echo $this->lang->line('post_by') ?>:&nbsp;<span class="__value">Admin</span></span>
                     </div>
 
                     <div class="__header blog-detail-thumb"><img src="http://www.unipasby.ac.id/css/data_images/news/<?php echo $berita->thumb ?>" alt="<?php echo $berita->title_ina ?>" class="img-responsive"/>

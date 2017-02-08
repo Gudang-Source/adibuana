@@ -44,6 +44,15 @@
       return $berita;
     }
 
+    function most_viewed(){
+          $news = $this->db->select('*')
+                  ->from('adi_news')
+                  ->order_by('adi_news.hit', 'desc')
+                  ->limit(5);
+          $news = $news->get()->result();
+          return $news;
+    }
+
     function get_berita_katagori($id, $limit, $offset){
         $this->db->select('*')
             ->from('adi_news')
