@@ -21,7 +21,7 @@
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Type *</label>
                       <div class="col-sm-2">
-                        <select class="form-control">
+                        <select class="form-control" name="type">
                             <option <?php echo $fasilitas->type == 'app' ?'selected':'' ?> value="app">Application</option>
                             <option <?php echo $fasilitas->type == 'eng' ?'selected':'' ?> value="eng">Enginering</option>
                             <option <?php echo $fasilitas->type == 'heal' ?'selected':'' ?> value="heal">Health</option>
@@ -47,37 +47,37 @@
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Lead Indonesian</label>
                       <div class="col-sm-10">
-                       <textarea id="editor-full" name="konten_ina" rows="10" cols="100"><?php echo $fasilitas->lead_ina; ?></textarea>
+                       <textarea id="editor-full" name="lead_ina" rows="10" cols="100"><?php echo $fasilitas->lead_ina; ?></textarea>
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Lead English</label>
                       <div class="col-sm-10">
-                       <textarea id="editor-full-2" name="konten_eng" rows="10" cols="100"><?php echo $fasilitas->lead_eng; ?></textarea>
+                       <textarea id="editor-full-2" name="lead_eng" rows="10" cols="100"><?php echo $fasilitas->lead_eng; ?></textarea>
                       </div>
                     </div>
                      <div class="form-group">
                       <label class="col-sm-2 control-label">Tools Indonesian</label>
                       <div class="col-sm-10">
-                       <textarea id="editor-full-3" name="konten_ina" rows="10" cols="100"><?php echo $fasilitas->tools_ina ?></textarea>
+                       <textarea id="editor-full-3" name="tools_ina" rows="10" cols="100"><?php echo $fasilitas->tools_ina ?></textarea>
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Tools English</label>
                       <div class="col-sm-10">
-                       <textarea id="editor-full-4" name="konten_eng" rows="10" cols="100"><?php echo $fasilitas->tools_eng ?></textarea>
+                       <textarea id="editor-full-4" name="tools_eng" rows="10" cols="100"><?php echo $fasilitas->tools_eng ?></textarea>
                       </div>
                     </div>
                      <div class="form-group">
                       <label class="col-sm-2 control-label">Etc Indonesian</label>
                       <div class="col-sm-10">
-                       <textarea id="editor-full-5" name="konten_ina" rows="10" cols="100"><?php echo $fasilitas->etc_ina ?></textarea>
+                       <textarea id="editor-full-5" name="etc_ina" rows="10" cols="100"><?php echo $fasilitas->etc_ina ?></textarea>
                       </div>
                     </div>
                     <div class="form-group">
                       <label class="col-sm-2 control-label">Etc English</label>
                       <div class="col-sm-10">
-                       <textarea id="editor-full-6" name="konten_eng" rows="10" cols="100"><?php echo $fasilitas->etc_eng ?></textarea>
+                       <textarea id="editor-full-6" name="etc_eng" rows="10" cols="100"><?php echo $fasilitas->etc_eng ?></textarea>
                       </div>
                     </div>
 

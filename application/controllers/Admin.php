@@ -845,7 +845,7 @@
                 case 'insert':
                     $this->check_access('CARE_CRT');
                     $pict = $this->image_upload->upload_image('assets/images/career/', $_FILES, 'pic', 'pict_');
-                    $thumb = $this->image_upload->upload_image('assets/images/career/', $_FILES, 'thumb', 'thumb_');
+                    $thumb = $this->image_upload->upload_image('assets/images/career/', $_FILES, 'thumb', 'career_thumb_');
 
                     $insert = $this->career_model->insert($this->input->post(), $pict['filename'], $thumb['filename']);
                     if ($insert) {
@@ -858,7 +858,7 @@
                     $this->check_access('CARE_UPDT');
                     $karir = $this->career_model->get_by_id($id);
                     $pict = $this->image_upload->update_image('assets/images/career/', $_FILES, 'pic', 'pict_', $karir->picture);
-                    $thumb = $this->image_upload->update_image('assets/images/career/', $_FILES, 'thumb', 'thumb_', $karir->thumb);
+                    $thumb = $this->image_upload->update_image('assets/images/career/', $_FILES, 'thumb', 'career_thumb_', $karir->thumb);
                     $update = $this->career_model->update($id, $this->input->post(), $pict['filename'], $thumb['filename']);
                     if ($update) {
                         redirect(base_url().'admin/career');

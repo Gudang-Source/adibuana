@@ -74,14 +74,14 @@
 									<div class="form-group">
 										<label class="col-lg-3 control-label">Thumb</label>
 										<div class="col-lg-9">
-											<img src="<?php echo base_url() ?>assets/images/faculty/<?php echo $fakultas->thumb ?>">
+											<img class="img-responsive" src="<?php echo base_url() ?>assets/images/faculty/<?php echo $fakultas->thumb ?>">
 										</div>
 									</div>
 
 									<div class="form-group">
 										<label class="col-lg-3 control-label">Picture</label>
 										<div class="col-lg-9">
-											<img src="<?php echo base_url() ?>assets/images/faculty/<?php echo $fakultas->picture ?>">
+											<img class="img-responsive" src="<?php echo base_url() ?>assets/images/faculty/<?php echo $fakultas->picture ?>">
 										</div>
 									</div>
 

@@ -29,6 +29,15 @@
 			return $karir;
 		}
 
+		function get_karir_by_id($id){
+			$karir = $this->db->select('adi_career.*, adi_user.name')
+							->from('adi_career')
+							->join('adi_user', 'adi_career.post_by = adi_user.id')
+							->where('adi_career.id', $id);
+			$karir = $karir->get()->row();
+			return $karir;
+		}
+
 		function insert($karir, $pic="", $thumb=""){
 			$data = [
 				'id'=>rand(10000000000, 99999999999),

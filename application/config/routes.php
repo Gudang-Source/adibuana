@@ -70,3 +70,4 @@ $route['area-fakultas/(:any)'] = 'main/area_fakultas/$1';
 $route['galeri'] = 'main/galeri';
 $route['pencarian'] = 'main/pencarian';
 $route['blog/(:any)'] = 'main/blog/$1';
+$route['karir-detail/(:any)/(:any)'] = 'main/karir_detail/$1/$2';

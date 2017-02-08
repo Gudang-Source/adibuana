@@ -252,4 +252,13 @@
             $data['area'] = $this->faculty_model->get_area_by_id($id);
             $this->template_website->display('web/content/peta_kampus', $data);
         }
+
+        function karir_detail($slug, $id){
+            $data = $this->data;
+            $this->load->model('CareerModel', 'career_model');
+
+            $data['karir'] = $this->career_model->get_karir_by_id($id);
+
+            $this->template_website->display('web/content/detilkarir', $data);
+        }
     }

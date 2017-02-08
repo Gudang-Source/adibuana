@@ -22,7 +22,7 @@
           <div class="__meta"><span>Diterbitkan :&nbsp;<span class="__value"><?php echo convertDateTime($q_karir->post_date); ?></span></span><span>Oleh :&nbsp;<span class="__value"><?php echo $q_karir->author; ?></span></span>
           </div>
           <div class="__content"><?php echo $this->session->userdata('lang') == 'indonesia'? $q_karir->lead_ina:$q_karir->lead_eng; ?></div>
-          <div class="post-index-group-button"><a href="<?php echo base_url().'event-detail/'.slugify($q_karir->title_ina).'/'.$q_karir->id ?>" class="btn btn-primary"><?php echo $this->lang->line('more') ?></a></div>
+          <div class="post-index-group-button"><a href="<?php echo base_url().'karir-detail/'.slugify($q_karir->title_ina).'/'.$q_karir->id ?>" class="btn btn-primary"><?php echo $this->lang->line('more') ?></a></div>
         </div>
       </div>
 
