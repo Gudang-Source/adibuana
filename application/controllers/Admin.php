@@ -15,6 +15,33 @@
            
         }
 
+        function change($aksi='index', $id=null){
+            $data = $this->data;
+            check_login();
+            $this->load->model('UserModel', 'user_model');
+            switch ($aksi) {
+                case 'index':
+                    $this->template_admin->display('admin/content/editpassword', $data);
+                    break;
+                case 'update':
+                    if($this->input->post('password') == $this->input->post('password2')){
+                         $change = $this->user_model->change_passowrd($this->input->post());
+                        if($change){
+                            $this->session->set_flashdata('success', 'Sukses Merubah Data');
+                        }else{
+                            $this->session->set_flashdata('warning', 'Gagal Merubah Data');
+                        }
+                    }else{
+                        $this->session->set_flashdata('warning', 'Password Tidak Sama');
+                    }
+                    redirect('admin/change');
+                    break;
+                default:
+                    # code...
+                    break;
+            }
+        }
+
         function sekilas($aksi='index', $id=null){
             check_login();
             $this->load->model('PageModel', 'page_model');
