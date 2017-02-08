@@ -33,7 +33,7 @@
                               }
                             ?>
                             <div class="__content" style="min-height: 75px">
-                              <div class="__title"><a href="#"><?php echo $q_kegiatan->title_ina ?></a></div>
+                              <div class="__title"><a href="#"><?php echo $this->session->userdata('lang') == 'indonesia'? $q_kegiatan->title_ina:$q_kegiatan->title_eng ?></a></div>
                               <div class="__date font-serif-italic color-secondary"><i class="fa fa-clock"></i> <?php echo $q_kegiatan->post_date ?></div>
                               <div class="__date font-serif-italic color-secondary">Dilihat : <?php echo $q_kegiatan->hit ?></div>
                             </div>
@@ -72,14 +72,14 @@
               <div class="col-md-8 col-xs-12">
                 <div class="post">
                   <div class="__main">
-                    <div class="__title"><a href="blog-single-standard.html"><?php echo $kegiatan->title_ina ?></a></div>
-                    <div class="__meta"><span>Di terbitkan :&nbsp;<span class="__value"> <?php echo convertDateTime($q_kegiatan->post_date) ?> </span></span><span>Oleh :&nbsp;<span class="__value"><?php echo $q_kegiatan->author; ?></span></span>
+                    <div class="__title"><a href="blog-single-standard.html"><?php echo $this->session->userdata('lang') == 'indonesia'? $kegiatan->title_ina:$kegiatan->title_eng ?></a></div>
+                    <div class="__meta"><span>Posted :&nbsp;<span class="__value"> <?php echo convertDateTime($q_kegiatan->post_date) ?> </span></span><span><?php echo $this->lang->line('post_by') ?> :&nbsp;<span class="__value"><?php echo $q_kegiatan->author; ?></span></span>
                     </div>
 
                     <div class="__header blog-detail-thumb"><img class="img-thumbnail" src="<?php echo base_url().'assets/images/event/'.$kegiatan->picture ?>" alt="<?php echo $kegiatan->title_ina ?>" class="img-responsive"/>
                     </div>
 
-                    <div class="__content"><p><?php echo $kegiatan->content_ina; ?></p></div>
+                    <div class="__content"><p><?php echo $this->session->userdata('lang') == 'indonesia'? $kegiatan->content_ina:$kegiatan->content_eng; ?></p></div>
                   </div>
                 </div>
 

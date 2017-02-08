@@ -90,7 +90,7 @@
     $lang['fasilitas'] = 'Facility';
     $lang['kerja_sama'] = 'Cooperation';
     $lang['prospek'] = 'Prospects for Graduates';
-    $lang['post_by'] = 'By';
+    $lang['post_by'] = 'Post By';
     $lang['katagori_lain'] = 'OTHER CATEGORIES';
     $lang['di'] = 'at';
     $lang['alamat'] = 'Address';

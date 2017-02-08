@@ -90,7 +90,7 @@
                 <div class="post">
                   <div class="__main">
                     <div class="__title"><a href="blog-single-standard.html"><?php echo $berita->title_ina ?></a></div>
-                    <div class="__meta"><span>Posted:&nbsp;<span class="__value">October 16, 2015 </span></span><span>By:&nbsp;<span class="__value">Admin</span></span><span>Categories:&nbsp;<span class="__value">HTML/CSS</span></span>
+                    <div class="__meta"><span>Posted:&nbsp;<span class="__value">October 16, 2015 </span></span><span><?php echo $this->lang->line('post_by') ?>:&nbsp;<span class="__value">Admin</span></span><span>Categories:&nbsp;<span class="__value">HTML/CSS</span></span>
                     </div>
 
                     <div class="__header blog-detail-thumb"><img src="http://www.unipasby.ac.id/css/data_images/news/<?php echo $berita->thumb ?>" alt="<?php echo $berita->title_ina ?>" class="img-responsive"/>
