@@ -68,9 +68,14 @@
                         </ul>
                       </div>
                     </div>
-
-
                   </div>
+                </div>
+                <div class="pull-left">
+                  <div class="nav-info nav-item">
+                    <i class="fa fa-facebook-square" aria-hidden="true" style="margin-left: 10px; color: blue;"></i>
+                    <i class="fa fa-twitter" aria-hidden="true" style="color: #22A7F0;"></i>
+                  </div>
+                  
                 </div>
                 <div class="pull-right">
                   <div class="search-bar">
