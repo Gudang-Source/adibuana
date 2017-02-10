@@ -33,8 +33,8 @@
                           ?>
                           <div class="rpost"><a href="#" class="__img"><img src="<?php echo base_url(); ?>assets/images/news/<?php echo $q_berita->picture; ?>" alt="thumbnail"/></a>
                             <div class="__content">
-                              <div class="__title"><a href="#"><?php echo $q_berita->title_ina; ?></a></div>
-                              <div class="__date font-serif-italic color-secondary">July 9, 2014</div>
+                              <div class="__title"><a href="<?php echo base_url().'detil-berita-dan-pengumuman/'.slugify($q_berita->title_ina).'/'.$q_berita->id ?>"><?php echo $q_berita->title_ina; ?></a></div>
+                              <div class="__date font-serif-italic color-secondary"><?php echo $q_berita->post_date ?></div>
                             </div>
                           </div>    
                           <?php
@@ -49,7 +49,7 @@
                 <div class="post">
                   <div class="__main">
                     <div class="__title"><a href="blog-single-standard.html"><?php echo $berita->title_ina ?></a></div>
-                    <div class="__meta"><span>Posted:&nbsp;<span class="__value">October 16, 2015 </span></span><span><?php echo $this->lang->line('post_by') ?>:&nbsp;<span class="__value">Admin</span></span>
+                    <div class="__meta"><span>Posted:&nbsp;<span class="__value"><?php echo $berita->post_date ?></span></span><span><?php echo $this->lang->line('post_by') ?>:&nbsp;<span class="__value">Admin</span></span>
                     </div>
 
                     <div class="__header blog-detail-thumb"><img src="http://www.unipasby.ac.id/css/data_images/news/<?php echo $berita->thumb ?>" alt="<?php echo $berita->title_ina ?>" class="img-responsive"/>

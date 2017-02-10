@@ -8,7 +8,7 @@
         </div>
         <div class="ab-bottom col-xs-12">
           <div class="container">
-            <div class="breadcrumb bgc-dark-o-6"><span class="__content italic font-serif fz-6-ss"><span><a href="index.html">Beranda</a></span><span><a href="#"><?php echo ucwords($this->session->userdata('lang') == 'indonesia'? $berita->type_ina:$berita->type_eng) ?></a></span><span>
+            <div class="breadcrumb bgc-dark-o-6"><span class="__content italic font-serif fz-6-ss"><span><a href="<?php echo base_url() ?>">Beranda</a></span><span><a href="<?php echo base_url().'berita-dan-pengumuman/'.$berita->type_ina.'/'.$berita->id ?>"><?php echo ucwords($this->session->userdata('lang') == 'indonesia'? $berita->type_ina:$berita->type_eng) ?></a></span><span>
           </div>
         </div>
       </header>
@@ -52,7 +52,7 @@
                           ?>
                           <div class="rpost"><a href="#" class="__img"><img src="<?php echo base_url(); ?>assets/images/news/<?php echo $q_berita->picture; ?>" alt="thumbnail"/></a>
                             <div class="__content">
-                              <div class="__title"><a href="#"><?php echo $q_berita->title_ina; ?></a></div>
+                              <div class="__title"><a href="<?php echo base_url().'detil-berita-dan-pengumuman/'.slugify($q_berita->title_ina).'/'.$q_berita->id ?>"><?php echo $q_berita->title_ina; ?></a></div>
                               <div class="__date font-serif-italic color-secondary">July 9, 2014</div>
                             </div>
                           </div>    

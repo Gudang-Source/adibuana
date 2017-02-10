@@ -15,7 +15,7 @@
                     ?>
                     </div>
                     <div class="__main">
-                      <div class="__title"><a href="blog-single-standard.html"><?php echo $this->session->userdata('lang') == 'indonesia'? $q_katagori->title_ina:$q_katagori->title_eng; ?></a></div>
+                      <div class="__title"><a href="<?php echo base_url().'detil-berita-dan-pengumuman/'.slugify($q_katagori->title_ina).'/'.$q_katagori->id ?>"><?php echo $this->session->userdata('lang') == 'indonesia'? $q_katagori->title_ina:$q_katagori->title_eng; ?></a></div>
                       <?php 
                         if($q_katagori->post_date == '0000-00-00 00:00:00'){
                             ?>
