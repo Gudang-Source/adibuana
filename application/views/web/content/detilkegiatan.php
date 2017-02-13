@@ -33,7 +33,7 @@
                               }
                             ?>
                             <div class="__content" style="min-height: 75px">
-                              <div class="__title"><a href="#"><?php echo $this->session->userdata('lang') == 'indonesia'? $q_kegiatan->title_ina:$q_kegiatan->title_eng ?></a></div>
+                              <div class="__title"><a href="<?php echo base_url().'event-detail/'.slugify($q_kegiatan->title_ina).'/'.$q_kegiatan->id ?>"><?php echo $this->session->userdata('lang') == 'indonesia'? $q_kegiatan->title_ina:$q_kegiatan->title_eng ?></a></div>
                               <div class="__date font-serif-italic color-secondary"><i class="fa fa-clock"></i> <?php echo $q_kegiatan->post_date ?></div>
                               <div class="__date font-serif-italic color-secondary">Dilihat : <?php echo $q_kegiatan->hit ?></div>
                             </div>

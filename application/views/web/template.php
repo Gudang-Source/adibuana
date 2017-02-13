@@ -68,14 +68,19 @@
                         </ul>
                       </div>
                     </div>
-
-
                   </div>
+                </div>
+                <div class="pull-left">
+                  <div class="nav-info nav-item">
+                    <a href="https://www.facebook.com/adibuana.unipasby.ac.id" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true" style="margin-left: 10px; color: blue;"></i></a>
+                    <a href="https://twitter.com/unipasby" target="_blank"><i class="fa fa-twitter" aria-hidden="true" style="color: #22A7F0;"></i></a>
+                  </div>
+                  
                 </div>
                 <div class="pull-right">
                   <div class="search-bar">
                     <form method="get" action="<?php echo base_url(); ?>pencarian">
-                      <input placeholder="Pencarian" type="text" class="text-search" name="search">
+                      <input placeholder="Pencarian" type="text" class="text-search" name="keyword">
                       <button type="submit" class="btn btn-default"><i class="icon icon-magnifying-glass"></i></button>
                     </form>
                   </div>
