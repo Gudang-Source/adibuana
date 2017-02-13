@@ -48,7 +48,7 @@
          function get_event_by_id($id){
             $event = $this->db->select('*')
                     ->from('adi_event')
-                    ->where('id', $id);
+                    ->where('adi_event.id', $id);
             $event = $event->get()->row();
             return $event;
          }

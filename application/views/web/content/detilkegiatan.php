@@ -56,6 +56,16 @@
                     </div>
 
                     <div class="__content"><p><?php echo $this->session->userdata('lang') == 'indonesia'? $kegiatan->content_ina:$kegiatan->content_eng; ?></p></div>
+
+                    <?php 
+                      if($detail_kegiatan->file_name != ''){
+                        ?>
+                        <a href="<?php echo base_url(); ?>assets/images/event/<?php echo $detail_kegiatan->file_name; ?>">Download</a>
+                        <?php
+                      }
+                    ?>
+                    
+
                   </div>
                 </div>
 

@@ -155,6 +155,14 @@
             $this->template_website->display('web/content/galeri', $data);
         }
 
+        function detailgaleri($seo, $id){
+            $data = $this->data;
+            $this->load->model('GalleryModel', 'gallery_model');
+            $data['galeri'] = $this->gallery_model->get_gallery_by_cat($id);
+
+            $this->template_website->display('web/content/detailgaleri', $data);
+        }
+
         function kategori_galeri(){
 
         }
@@ -192,7 +200,7 @@
 
             $data['kegiatan'] = $this->event_model->get_event_by_id($id);
             $data['most_viewed'] = $this->event_model->get_most_viewed();
-
+            $data['detail_kegiatan'] = $this->db->get_where('adi_event_detail', ['id_event'=>$id])->row();
             $this->template_website->display('web/content/detilkegiatan', $data);
         }
         function pencarian(){
@@ -242,13 +250,19 @@
                     $this->template_website->display('web/content/kkn', $data);
                     break;
                 case 'printpdf':
+                    $this->load->model('KknModel', 'kkn_model');
                     $this->load->library('pdf');
-                    $this->kkn->insert($this->input->post());
+                    $insert = $this->kkn_model->insert($this->input->post());
                     $data['kkn'] = $this->input->post();
                     $this->pdf->load_view('web/content/kknpdf', $data);
                     $this->pdf->set_paper("A4", 'portrait');
                     $this->pdf->render();
                     $this->pdf->stream("KKN.pdf");
+
+                    if($insert){
+                        redirect(base_url().'kkn');
+                    }
+
                 break;
                 default:
                     # code...

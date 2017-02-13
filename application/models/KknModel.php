@@ -28,27 +28,27 @@
             $data = [
                 // 'id'=>$kkn['id'],
                 'nim'=>$kkn['nim'],
-                'nourut'=>$kkn['nourut'],
+                'nourut'=>$kkn['no_urut'],
                 'nama'=>$kkn['nama'],
                 'prodi'=>$kkn['prodi'],
-                'ket'=>$kkn['ket'],
+                'ket'=>$kkn['konsentrasi'],
                 'angkatan'=>$kkn['angkatan'],
                 'kelas'=>$kkn['kelas'],
                 'jenkel'=>$kkn['jenkel'],
                 'agama'=>$kkn['agama'],
                 'tmplahir'=>$kkn['tempat_lahir'],
                 'tgllahir'=>$kkn['tanggal_lahir'],
-                'alamat'=>$kkn['alamat'],
-                'kos'=>$kkn['kos'],
+                'alamat'=>$kkn['alamat_asal'],
+                'kos'=>$kkn['alamat_sekarang'],
                 'kota'=>$kkn['kota'],
                 'kecamatan'=>$kkn['kec'],
-                'hp'=>$kkn['hp'],
-                'status'=>$kkn['status'],
+                'hp'=>$kkn['nomorhp'],
+                'status'=>$kkn['status_kerja'],
                 'jaket'=>$kkn['jaket'],
-                'lokasi'=>$kkn['lokasi'],
+                'lokasi'=>"",
                 'acc'=>'inactive',
-                'post_date'=>date('Y-m-d'),
-                'modify_date'=>date('Y-m-d')
+                'post_date'=>date('Y-m-d H:i:s'),
+                'modify_date'=>date('Y-m-d H:i:s')
             ];
 
             $insert = $this->db->insert('adi_kkn', $data);

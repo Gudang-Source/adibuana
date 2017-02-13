@@ -40,14 +40,13 @@
 								<li>
 									<a href="#"><i class="icon-gear"></i> <span>Preferences</span></a>
 									<ul>
-										<li><a href="layout_navbar_fixed.html">Change Password</a></li>
+										<li><a href="<?php echo base_url() ?>admin/change">Change Password</a></li>
 									</ul>
 								</li>
 								<li>
 									<a href="#"><i class="icon-image3"></i> <span>Header And Banner</span></a>
 									<ul>
-										<li><a href="<?php echo base_url(); ?>admin/Slider" id="layout1">Slider</a></li>
-										<li><a href="../../layout_2/LTR/index.html" id="layout2">Layout 2</a></li>
+										<li><a href="<?php echo base_url(); ?>admin/slider" id="layout1">Slider</a></li>
 									</ul>
 								</li>
 								<li>

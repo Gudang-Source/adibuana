@@ -68,6 +68,7 @@ $route['sarana'] = 'main/sarana';
 $route['fakultas-dan-program-studi/(:any)'] = 'main/fakultas_prodi/$1';
 $route['area-fakultas/(:any)'] = 'main/area_fakultas/$1'; 
 $route['galeri'] = 'main/galeri';
+$route['detail-galeri/(:any)/(:any)'] = 'main/detailgaleri/$1/$2';
 $route['pencarian'] = 'main/pencarian';
 $route['blog/(:any)'] = 'main/blog/$1';
 $route['karir-detail/(:any)/(:any)'] = 'main/karir_detail/$1/$2';

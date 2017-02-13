@@ -1200,6 +1200,58 @@
             }
         }
 
+        function user($aksi='index', $id=null){
+            check_login();
+            $this->load->model('UserModel', 'user_model');
+            switch ($aksi) {
+                case 'index':
+                    $data['users'] = $this->user_model->get_all();
+                    $this->template_admin->display('admin/content/indexuser', $data);
+                    break;
+                case 'add':
+                    $this->template_admin->display('admin/content/adduser');
+                    break;
+                case 'edit':
+                    $data['user'] = $this->user_model->get_by_id($id);
+                    $this->template_admin->display('admin/content/edituser', $data);
+                    break;
+                case 'insert':
+                    $thumb = $this->image_upload->upload_image('assets/images/user/', $_FILES, 'thumb', 'thumb_');
+                    $insert = $this->user_model->insert($this->input->post(), $thumb['filename']);
+                    if ($insert) {
+                        $this->session->set_flashdata('success', 'Sukses Menambah Data');
+                    }else{
+                        $this->session->set_flashdata('warning', 'Gagal Menambah Data');
+                    }
+                    redirect(base_url().'admin/user');
+                    break;
+                case 'update':
+                    $user = $this->user_model->get_by_id($id);
+                    $thumb = $this->image_upload->update_image('assets/images/user/', $_FILES, 'thumb', 'thumb', $user->pic_user);
+                    $update = $this->user_model->update($id, $this->input->post(), $thumb['filename']);
+                    if ($update) {
+                        $this->session->set_flashdata('success', 'Sukses Merubah Data');
+                    }else{
+                        $this->session->set_flashdata('warning', 'Gagal Merubah Data');
+                    }
+                    redirect(base_url().'admin/user');
+                    break;
+                case 'delete':
+                    $delete = $this->user_model->delete($id);
+                    if ($delete) {
+                        unlink('assets/images/slider/'.$slider->picture);
+                        $this->session->set_flashdata('success', 'Sukses Menghapus Data');
+                    }else{
+                        $this->session->set_flashdata('warning', 'Gagal Menghapus Data');
+                    }
+                    redirect(base_url().'admin/user');
+                    break;
+                default:
+                    # code...
+                    break;
+            }
+        }
+
         function login(){
             $this->load->model('UserModel', 'user_model');
             //ajax login
